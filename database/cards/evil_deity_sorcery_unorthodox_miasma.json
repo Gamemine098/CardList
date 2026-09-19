@@ -7,9 +7,7 @@
   "image": "database/images/evil_deity_sorcery_unorthodox_miasma.webp",
   "type": "SPELL",
   "worlds": [],
-  "attributes": [
-    "HUNDRED_DEMONS"
-  ],
+  "attributes": ["HUNDRED_DEMONS"],
   "call_cost": [],
   "use_restrictions": [],
   "rules": [],
@@ -69,9 +67,7 @@
             },
             {
               "id": "COUNTER_PROTECT_HUNDRED_DEMONS",
-              "keywords": [
-                "COUNTER"
-              ],
+              "keywords": ["COUNTER"],
               "effects": [
                 {
                   "type": "PROTECTION",

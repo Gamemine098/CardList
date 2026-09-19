@@ -1,0 +1,134 @@
+{
+  "card_id": "DRAGODS_SHINE_RE_S",
+  "name": {
+    "en": "Dragod's Shine \"Re:S\"",
+    "th": "ดราก็อต • ชายน์ \"Re:S\""
+  },
+  "image": null,
+  "type": "SPELL",
+  "worlds": ["DRAGON_WORLD"],
+  "attributes": ["DEITY_DRAGON_TRIBE", "GET"],
+  "call_cost": [],
+  "cast_cost": [
+    {
+      "type": "PAY_LIFE",
+      "amount": 1
+    }
+  ],
+  "use_restrictions": [
+    {
+      "type": "CARD_USE_LIMIT",
+      "action": "CAST",
+      "count": 1,
+      "period": "TURN",
+      "source": {
+        "kind": "CARD",
+        "card_id": "DRAGODS_SHINE_RE_S"
+      }
+    }
+  ],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "DRAGODS_SHINE_RE_S-A01",
+      "kind": "ACT",
+      "keywords": [],
+      "skill_restrictions": [],
+      "cost": [],
+      "effects": [
+        {
+          "type": "CHOICE",
+          "choose": 1,
+          "options": [
+            {
+              "id": "SEARCH_ITEM",
+              "effects": [
+                {
+                  "type": "MOVE_CARD",
+                  "from": "DECK",
+                  "to": "HAND",
+                  "target": {
+                    "type": "SELECT",
+                    "card_type": "ITEM",
+                    "maximum": 1
+                  }
+                },
+                {
+                  "type": "SHUFFLE_DECK"
+                }
+              ]
+            },
+            {
+              "id": "SALVAGE_MONSTERS",
+              "effects": [
+                {
+                  "type": "MOVE_CARD",
+                  "from": "DROP",
+                  "to": "HAND",
+                  "target": {
+                    "type": "SELECT",
+                    "card_type": "MONSTER",
+                    "filter": {
+                      "type": "OR",
+                      "filters": [
+                        {
+                          "type": "WORLD",
+                          "value": "DRAGON_WORLD"
+                        },
+                        {
+                          "type": "ATTRIBUTE",
+                          "value": "DRAGOD"
+                        }
+                      ]
+                    },
+                    "distinct_names": true,
+                    "maximum": 2
+                  }
+                },
+                {
+                  "type": "IF",
+                  "condition": {
+                    "type": "TARGET_SELECTED_MATCH",
+                    "filter": {
+                      "type": "ATTRIBUTE",
+                      "value": "DEITY_DRAGON_TRIBE"
+                    },
+                    "minimum": 1
+                  },
+                  "then": [
+                    {
+                      "type": "PUT_TOP_DECK_TO_GAUGE",
+                      "amount": 2
+                    }
+                  ],
+                  "else": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Cast Cost] [Pay 1 life]\nChoose and use one of the following two. You may only cast \"Dragod's Shine \"Re:S\"\" once per turn.\n• Put up to one item from your deck into your hand, and shuffle your deck.\n• Put up to two <Dragon World> or 《Dragod》 monsters with different card names from your drop zone into your hand. If you put one or more 《Deity Dragon Tribe》 into your hand, put the top two cards of your deck into your gauge.",
+          "segments": [
+            {
+              "text": "[Cast Cost]",
+              "style": "COST"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Pay 1 life]",
+              "style": "COST"
+            },
+            {
+              "text": "\nChoose and use one of the following two. You may only cast \"Dragod's Shine \"Re:S\"\" once per turn.\n• Put up to one item from your deck into your hand, and shuffle your deck.\n• Put up to two <Dragon World> or 《Dragod》 monsters with different card names from your drop zone into your hand. If you put one or more 《Deity Dragon Tribe》 into your hand, put the top two cards of your deck into your gauge."
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -7,9 +7,7 @@
   "image": "database/images/yamigedo_sd.webp",
   "type": "MONSTER",
   "worlds": [],
-  "attributes": [
-    "HUNDRED_DEMONS"
-  ],
+  "attributes": ["HUNDRED_DEMONS"],
   "stats": {
     "size": 0,
     "power": 1000,
@@ -23,9 +21,7 @@
     {
       "id": "YAMIGEDO_SD-A01",
       "kind": "ACT",
-      "keywords": [
-        "COUNTER"
-      ],
+      "keywords": ["COUNTER"],
       "skill_restrictions": [],
       "activation_condition": {
         "type": "TURN_PLAYER",
@@ -175,17 +171,12 @@
     {
       "id": "YAMIGEDO_SD-A02",
       "kind": "AUTO",
-      "keywords": [
-        "SOUL",
-        "THUNDER_MINE"
-      ],
+      "keywords": ["SOUL", "THUNDER_MINE"],
       "skill_restrictions": [],
       "activation_condition": {
         "type": "CARD_IN_ZONE",
         "card": "THIS_CARD",
-        "zones": [
-          "SOUL"
-        ],
+        "zones": ["SOUL"],
         "host_card_type": "MONSTER"
       },
       "trigger": {

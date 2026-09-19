@@ -6,14 +6,8 @@
   },
   "image": "database/images/demonic_way_of_hundred_demons_akishoki_re_s.webp",
   "type": "SPELL",
-  "worlds": [
-    "KATANA_WORLD"
-  ],
-  "attributes": [
-    "DEMON_WAY",
-    "DRAW",
-    "HUNDRED_DEMONS"
-  ],
+  "worlds": ["KATANA_WORLD"],
+  "attributes": ["DEMON_WAY", "DRAW", "HUNDRED_DEMONS"],
   "call_cost": [],
   "use_restrictions": [],
   "rules": [],
@@ -39,10 +33,7 @@
         "owner": "SELF",
         "zone": "FIELD",
         "filter": {
-          "attributes_any": [
-            "HUNDRED_DEMONS",
-            "SKULL_WARRIOR"
-          ]
+          "attributes_any": ["HUNDRED_DEMONS", "SKULL_WARRIOR"]
         }
       },
       "cost": [
@@ -61,10 +52,7 @@
           "condition": {
             "type": "COUNT_CARDS_COMPARE",
             "owner": "SELF",
-            "zones": [
-              "DROP",
-              "REMOVE"
-            ],
+            "zones": ["DROP", "REMOVE"],
             "operator": "GREATER_THAN_OR_EQUAL",
             "value": 10
           },

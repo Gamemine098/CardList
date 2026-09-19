@@ -1,0 +1,100 @@
+{
+  "card_id": "SURVIVAL_CHANCE_RE_S",
+  "name": {
+    "en": "Survival Chance \"Re:S\"",
+    "th": "ฝ่าวิกฤติ \"Re:S\""
+  },
+  "image": null,
+  "type": "SPELL",
+  "worlds": ["DANGER_WORLD"],
+  "attributes": ["BATTLE_AURA"],
+  "call_cost": [],
+  "use_restrictions": [],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "SURVIVAL_CHANCE_RE_S-A01",
+      "kind": "ACT",
+      "keywords": ["COUNTER"],
+      "skill_restrictions": [
+        {
+          "type": "ACTIVATION_LIMIT",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "SURVIVAL_CHANCE_RE_S",
+            "ability_id": "SURVIVAL_CHANCE_RE_S-A01"
+          }
+        }
+      ],
+      "trigger": {
+        "type": "COUNTER_TIMING"
+      },
+      "cost": [
+        {
+          "type": "PAY_VARIABLE_LIFE",
+          "minimum": 1,
+          "maximum_rule": "LESS_THAN_CURRENT_LIFE"
+        }
+      ],
+      "effects": [
+        {
+          "type": "REPEAT",
+          "count": {
+            "type": "INTEGER_DIVISION",
+            "dividend": "PAID_LIFE",
+            "divisor": 3
+          },
+          "effects": [
+            {
+              "type": "PUT_TOP_DECK_TO_GAUGE",
+              "amount": 1
+            },
+            {
+              "type": "DRAW",
+              "amount": 1
+            },
+            {
+              "type": "DAMAGE_PROTECTION",
+              "target": "SELF",
+              "reduction": 1,
+              "duration": {
+                "type": "UNTIL_END_OF_NEXT_TURN",
+                "anchor_player": "SELF"
+              }
+            }
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Cn/Turn] [Cost] [Pay 1 or more life], for every 3 life you paid, put the top card of your deck into your gauge, draw a card, and for this turn and the next turn, damage you take is reduced by 1.(You cannot pay equal to or more than the amount of your life!)",
+          "segments": [
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Cost]",
+              "style": "COST"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Pay 1 or more life]",
+              "style": "COST"
+            },
+            {
+              "text": ", for every 3 life you paid, put the top card of your deck into your gauge, draw a card, and for this turn and the next turn, damage you take is reduced by 1.(You cannot pay equal to or more than the amount of your life!)"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -6,13 +6,8 @@
   },
   "image": "database/images/hundred_demons_formation_thunder_mine_stance.webp",
   "type": "SPELL",
-  "worlds": [
-    "DRAGON_WORLD"
-  ],
-  "attributes": [
-    "HUNDRED_DEMONS",
-    "SUMMON"
-  ],
+  "worlds": ["DRAGON_WORLD"],
+  "attributes": ["HUNDRED_DEMONS", "SUMMON"],
   "call_cost": [],
   "use_restrictions": [],
   "rules": [
@@ -29,10 +24,7 @@
     {
       "id": "HUNDRED_DEMONS_FORMATION_THUNDER_MINE_STANCE-A01",
       "kind": "ACT",
-      "keywords": [
-        "COUNTER",
-        "SET"
-      ],
+      "keywords": ["COUNTER", "SET"],
       "skill_restrictions": [
         {
           "type": "ACTIVATION_LIMIT",

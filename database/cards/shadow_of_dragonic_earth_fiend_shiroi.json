@@ -6,15 +6,8 @@
   },
   "image": "database/images/shadow_of_dragonic_earth_fiend_shiroi.webp",
   "type": "MONSTER",
-  "worlds": [
-    "ANCIENT_WORLD",
-    "LEGEND_WORLD"
-  ],
-  "attributes": [
-    "HUNDRED_DEMONS",
-    "WYDAR_SARKAL",
-    "WILD_DRAGON"
-  ],
+  "worlds": ["ANCIENT_WORLD", "LEGEND_WORLD"],
+  "attributes": ["HUNDRED_DEMONS", "WYDAR_SARKAL", "WILD_DRAGON"],
   "stats": {
     "size": 0,
     "power": 2000,
@@ -44,10 +37,7 @@
     {
       "id": "SHADOW_OF_DRAGONIC_EARTH_FIEND_SHIROI-A01",
       "kind": "AUTO",
-      "keywords": [
-        "DROP",
-        "DUO"
-      ],
+      "keywords": ["DROP", "DUO"],
       "skill_restrictions": [
         {
           "type": "NAMED_ABILITY_LIMIT",
@@ -69,9 +59,7 @@
         "type": "CARD_IN_ZONE",
         "card": "THIS_CARD",
         "owner": "SELF",
-        "zones": [
-          "DROP"
-        ]
+        "zones": ["DROP"]
       },
       "optional": true,
       "cost": [],
@@ -199,9 +187,7 @@
     {
       "id": "SHADOW_OF_DRAGONIC_EARTH_FIEND_SHIROI-A02",
       "kind": "CONT",
-      "keywords": [
-        "DUO"
-      ],
+      "keywords": ["DUO"],
       "skill_restrictions": [],
       "activation_condition": {
         "type": "AND",
@@ -210,11 +196,7 @@
             "type": "CARD_EXISTS",
             "card_id": "SHADOW_OF_DRAGONIC_SKY_FIEND_KUROI",
             "owner": "SELF",
-            "zones": [
-              "FIELD",
-              "DROP",
-              "SOUL_FACE_UP"
-            ]
+            "zones": ["FIELD", "DROP", "SOUL_FACE_UP"]
           },
           {
             "type": "PHASE_IS",
@@ -337,9 +319,7 @@
     {
       "id": "SHADOW_OF_DRAGONIC_EARTH_FIEND_SHIROI-A03",
       "kind": "AUTO",
-      "keywords": [
-        "THUNDER_MINE"
-      ],
+      "keywords": ["THUNDER_MINE"],
       "skill_restrictions": [],
       "trigger": {
         "type": "EVENT",
@@ -412,17 +392,13 @@
     {
       "id": "SHADOW_OF_DRAGONIC_EARTH_FIEND_SHIROI-A04",
       "kind": "CONT",
-      "keywords": [
-        "DOUBLE_ATTACK"
-      ],
+      "keywords": ["DOUBLE_ATTACK"],
       "skill_restrictions": [],
       "effects": [
         {
           "type": "ATTACK_RULE",
           "target": "THIS_CARD",
-          "rules": [
-            "DOUBLE_ATTACK"
-          ]
+          "rules": ["DOUBLE_ATTACK"]
         }
       ],
       "effect_text": {

@@ -6,14 +6,8 @@
   },
   "image": "database/images/evil_sorcery_ivory_fiend_curse.webp",
   "type": "SPELL",
-  "worlds": [
-    "ANCIENT_WORLD",
-    "LEGEND_WORLD"
-  ],
-  "attributes": [
-    "HUNDRED_DEMONS",
-    "DEFENSE"
-  ],
+  "worlds": ["ANCIENT_WORLD", "LEGEND_WORLD"],
+  "attributes": ["HUNDRED_DEMONS", "DEFENSE"],
   "call_cost": [],
   "use_restrictions": [],
   "rules": [],
@@ -21,9 +15,7 @@
     {
       "id": "EVIL_SORCERY_IVORY_FIEND_CURSE-A01",
       "kind": "ACT",
-      "keywords": [
-        "COUNTER"
-      ],
+      "keywords": ["COUNTER"],
       "skill_restrictions": [
         {
           "type": "CARD_USE_LIMIT",
@@ -102,10 +94,7 @@
                     "owner": "SELF",
                     "keyword": "THUNDER_MINE"
                   },
-                  "rules": [
-                    "CANNOT_BE_REDUCED",
-                    "CANNOT_BE_AVOIDED"
-                  ],
+                  "rules": ["CANNOT_BE_REDUCED", "CANNOT_BE_AVOIDED"],
                   "occurrences": {
                     "type": "COUNT_BUDDYGIFT",
                     "state": "FACE_UP"

@@ -6,15 +6,8 @@
   },
   "image": "database/images/shadow_of_dragonic_sky_fiend_kuroi.webp",
   "type": "MONSTER",
-  "worlds": [
-    "ANCIENT_WORLD",
-    "LEGEND_WORLD"
-  ],
-  "attributes": [
-    "HUNDRED_DEMONS",
-    "WYDAR_SARKAL",
-    "WILD_DRAGON"
-  ],
+  "worlds": ["ANCIENT_WORLD", "LEGEND_WORLD"],
+  "attributes": ["HUNDRED_DEMONS", "WYDAR_SARKAL", "WILD_DRAGON"],
   "stats": {
     "size": 0,
     "power": 1000,
@@ -44,10 +37,7 @@
     {
       "id": "SHADOW_OF_DRAGONIC_SKY_FIEND_KUROI-A01",
       "kind": "ACT",
-      "keywords": [
-        "COUNTER",
-        "DUO"
-      ],
+      "keywords": ["COUNTER", "DUO"],
       "skill_restrictions": [
         {
           "type": "NAMED_ABILITY_LIMIT",
@@ -190,9 +180,7 @@
     {
       "id": "SHADOW_OF_DRAGONIC_SKY_FIEND_KUROI-A02",
       "kind": "CONT",
-      "keywords": [
-        "DUO"
-      ],
+      "keywords": ["DUO"],
       "skill_restrictions": [],
       "activation_condition": {
         "type": "AND",
@@ -201,11 +189,7 @@
             "type": "CARD_EXISTS",
             "card_id": "SHADOW_OF_DRAGONIC_EARTH_FIEND_SHIROI",
             "owner": "SELF",
-            "zones": [
-              "FIELD",
-              "DROP",
-              "SOUL_FACE_UP"
-            ]
+            "zones": ["FIELD", "DROP", "SOUL_FACE_UP"]
           },
           {
             "type": "TURN_PLAYER",
@@ -362,9 +346,7 @@
     {
       "id": "SHADOW_OF_DRAGONIC_SKY_FIEND_KUROI-A03",
       "kind": "AUTO",
-      "keywords": [
-        "THUNDER_MINE"
-      ],
+      "keywords": ["THUNDER_MINE"],
       "skill_restrictions": [
         {
           "type": "ACTIVATION_LIMIT",
@@ -461,17 +443,13 @@
     {
       "id": "SHADOW_OF_DRAGONIC_SKY_FIEND_KUROI-A04",
       "kind": "CONT",
-      "keywords": [
-        "PENETRATE"
-      ],
+      "keywords": ["PENETRATE"],
       "skill_restrictions": [],
       "effects": [
         {
           "type": "ATTACK_RULE",
           "target": "THIS_CARD",
-          "rules": [
-            "PENETRATE"
-          ]
+          "rules": ["PENETRATE"]
         }
       ],
       "effect_text": {

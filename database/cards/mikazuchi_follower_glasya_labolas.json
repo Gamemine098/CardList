@@ -6,13 +6,8 @@
   },
   "image": "database/images/mikazuchi_follower_glasya_labolas.webp",
   "type": "MONSTER",
-  "worlds": [
-    "MAGIC_WORLD"
-  ],
-  "attributes": [
-    "HUNDRED_DEMONS",
-    "SEVENTY_TWO_PILLARS"
-  ],
+  "worlds": ["MAGIC_WORLD"],
+  "attributes": ["HUNDRED_DEMONS", "SEVENTY_TWO_PILLARS"],
   "stats": {
     "size": 0,
     "power": 2000,
@@ -26,9 +21,7 @@
     {
       "id": "MIKAZUCHI_FOLLOWER_GLASYA_LABOLAS-A01",
       "kind": "AUTO",
-      "keywords": [
-        "THUNDER_MINE"
-      ],
+      "keywords": ["THUNDER_MINE"],
       "skill_restrictions": [
         {
           "type": "ACTIVATION_LIMIT",

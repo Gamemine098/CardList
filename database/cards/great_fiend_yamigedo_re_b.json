@@ -7,9 +7,7 @@
   "image": "database/images/great_fiend_yamigedo_re_b.webp",
   "type": "MONSTER",
   "worlds": [],
-  "attributes": [
-    "HUNDRED_DEMONS"
-  ],
+  "attributes": ["HUNDRED_DEMONS"],
   "stats": {
     "size": 3,
     "power": 8000,
@@ -125,10 +123,7 @@
         {
           "type": "PUT_SOUL",
           "target": "THIS_CARD",
-          "from_zones": [
-            "HAND",
-            "DECK"
-          ],
+          "from_zones": ["HAND", "DECK"],
           "filter": {
             "attribute": "HUNDRED_DEMONS",
             "distinct": "CARD_NAME"
@@ -229,9 +224,7 @@
     {
       "id": "GREAT_FIEND_YAMIGEDO_RE_B-A03",
       "kind": "AUTO",
-      "keywords": [
-        "THUNDER_MINE"
-      ],
+      "keywords": ["THUNDER_MINE"],
       "skill_restrictions": [],
       "trigger": {
         "type": "EVENT",
@@ -321,17 +314,13 @@
     {
       "id": "GREAT_FIEND_YAMIGEDO_RE_B-A04",
       "kind": "CONT",
-      "keywords": [
-        "TRIPLE_ATTACK"
-      ],
+      "keywords": ["TRIPLE_ATTACK"],
       "skill_restrictions": [],
       "effects": [
         {
           "type": "ATTACK_RULE",
           "target": "THIS_CARD",
-          "rules": [
-            "TRIPLE_ATTACK"
-          ]
+          "rules": ["TRIPLE_ATTACK"]
         }
       ],
       "effect_text": {
@@ -358,9 +347,7 @@
     {
       "id": "GREAT_FIEND_YAMIGEDO_RE_B-A05",
       "kind": "CONT",
-      "keywords": [
-        "SOULGUARD"
-      ],
+      "keywords": ["SOULGUARD"],
       "skill_restrictions": [],
       "effects": [
         {

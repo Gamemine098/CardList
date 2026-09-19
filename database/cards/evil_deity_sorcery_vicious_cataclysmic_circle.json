@@ -7,11 +7,7 @@
   "image": "database/images/evil_deity_sorcery_vicious_cataclysmic_circle.webp",
   "type": "SPELL",
   "worlds": [],
-  "attributes": [
-    "HUNDRED_DEMONS",
-    "GET",
-    "SUMMON"
-  ],
+  "attributes": ["HUNDRED_DEMONS", "GET", "SUMMON"],
   "call_cost": [],
   "use_restrictions": [],
   "rules": [],
@@ -88,9 +84,7 @@
             },
             {
               "id": "COUNTER_CALL_HUNDRED_DEMONS",
-              "keywords": [
-                "COUNTER"
-              ],
+              "keywords": ["COUNTER"],
               "effects": [
                 {
                   "type": "CALL",

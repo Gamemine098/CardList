@@ -6,13 +6,8 @@
   },
   "image": "database/images/stranger_dilemma.webp",
   "type": "MONSTER",
-  "worlds": [
-    "HERO_WORLD"
-  ],
-  "attributes": [
-    "HUNDRED_DEMONS",
-    "DARKHERO"
-  ],
+  "worlds": ["HERO_WORLD"],
+  "attributes": ["HUNDRED_DEMONS", "DARKHERO"],
   "stats": {
     "size": 1,
     "power": 3000,
@@ -26,9 +21,7 @@
     {
       "id": "STRANGER_DILEMMA-A01",
       "kind": "AUTO",
-      "keywords": [
-        "THUNDER_MINE"
-      ],
+      "keywords": ["THUNDER_MINE"],
       "skill_restrictions": [
         {
           "type": "ACTIVATION_LIMIT",

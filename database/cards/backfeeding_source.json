@@ -7,9 +7,7 @@
   "image": "database/images/backfeeding_source.webp",
   "type": "SPELL",
   "worlds": [],
-  "attributes": [
-    "HUNDRED_DEMONS"
-  ],
+  "attributes": ["HUNDRED_DEMONS"],
   "call_cost": [],
   "use_restrictions": [],
   "rules": [],
@@ -17,9 +15,7 @@
     {
       "id": "BACKFEEDING_SOURCE-A01",
       "kind": "ACT",
-      "keywords": [
-        "COUNTER"
-      ],
+      "keywords": ["COUNTER"],
       "skill_restrictions": [
         {
           "type": "CARD_USE_LIMIT",
@@ -79,9 +75,7 @@
                 "owner": "SELF",
                 "cause": "CARD_EFFECT"
               },
-              "rules": [
-                "CANNOT_BE_REDUCED"
-              ],
+              "rules": ["CANNOT_BE_REDUCED"],
               "duration": {
                 "type": "UNTIL_END_OF_TURN"
               }

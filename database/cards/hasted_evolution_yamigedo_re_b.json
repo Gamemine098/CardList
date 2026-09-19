@@ -7,9 +7,7 @@
   "image": "database/images/hasted_evolution_yamigedo_re_b.webp",
   "type": "MONSTER",
   "worlds": [],
-  "attributes": [
-    "HUNDRED_DEMONS"
-  ],
+  "attributes": ["HUNDRED_DEMONS"],
   "stats": {
     "size": 0,
     "power": 1000,
@@ -23,11 +21,7 @@
     {
       "id": "HASTED_EVOLUTION_YAMIGEDO_RE_B-A01",
       "kind": "ACT",
-      "keywords": [
-        "COUNTER",
-        "FIELD",
-        "HAND"
-      ],
+      "keywords": ["COUNTER", "FIELD", "HAND"],
       "skill_restrictions": [
         {
           "type": "NAMED_ABILITY_LIMIT",
@@ -48,10 +42,7 @@
             "type": "CARD_IN_ZONE",
             "card": "THIS_CARD",
             "owner": "SELF",
-            "zones": [
-              "FIELD",
-              "HAND"
-            ]
+            "zones": ["FIELD", "HAND"]
           },
           {
             "type": "PHASE_IS",
@@ -63,10 +54,7 @@
       "cost": [
         {
           "type": "MOVE_CARD",
-          "from_zones": [
-            "FIELD",
-            "HAND"
-          ],
+          "from_zones": ["FIELD", "HAND"],
           "to": "DROP",
           "target": {
             "type": "THIS_CARD"
@@ -83,10 +71,7 @@
               "effects": [
                 {
                   "type": "CALL",
-                  "from_zones": [
-                    "DECK",
-                    "DROP"
-                  ],
+                  "from_zones": ["DECK", "DROP"],
                   "to": "FIELD",
                   "target": {
                     "type": "SELECT",
@@ -146,10 +131,7 @@
               "effects": [
                 {
                   "type": "CALL",
-                  "from_zones": [
-                    "DECK",
-                    "DROP"
-                  ],
+                  "from_zones": ["DECK", "DROP"],
                   "to": "FIELD",
                   "target": {
                     "type": "SELECT",
@@ -357,9 +339,7 @@
     {
       "id": "HASTED_EVOLUTION_YAMIGEDO_RE_B-A02",
       "kind": "AUTO",
-      "keywords": [
-        "THUNDER_MINE"
-      ],
+      "keywords": ["THUNDER_MINE"],
       "skill_restrictions": [
         {
           "type": "ACTIVATION_LIMIT",

@@ -7,9 +7,7 @@
   "image": "database/images/light_specter_yamigedo_mikazuchi.webp",
   "type": "MONSTER",
   "worlds": [],
-  "attributes": [
-    "HUNDRED_DEMONS"
-  ],
+  "attributes": ["HUNDRED_DEMONS"],
   "stats": {
     "size": 3,
     "power": 8000,
@@ -61,10 +59,7 @@
       "effects": [
         {
           "type": "CALL",
-          "from_zones": [
-            "HAND",
-            "DROP"
-          ],
+          "from_zones": ["HAND", "DROP"],
           "to": "FIELD",
           "position": {
             "type": "ON_TOP_OF",
@@ -177,9 +172,7 @@
     {
       "id": "LIGHT_SPECTER_YAMIGEDO_MIKAZUCHI-A02",
       "kind": "AUTO",
-      "keywords": [
-        "THUNDER_MINE"
-      ],
+      "keywords": ["THUNDER_MINE"],
       "skill_restrictions": [],
       "trigger": {
         "type": "ATTACK_DECLARED",
@@ -262,17 +255,13 @@
     {
       "id": "LIGHT_SPECTER_YAMIGEDO_MIKAZUCHI-A03",
       "kind": "CONT",
-      "keywords": [
-        "DOUBLE_ATTACK"
-      ],
+      "keywords": ["DOUBLE_ATTACK"],
       "skill_restrictions": [],
       "effects": [
         {
           "type": "ATTACK_RULE",
           "target": "THIS_CARD",
-          "rules": [
-            "DOUBLE_ATTACK"
-          ]
+          "rules": ["DOUBLE_ATTACK"]
         }
       ],
       "effect_text": {
@@ -299,9 +288,7 @@
     {
       "id": "LIGHT_SPECTER_YAMIGEDO_MIKAZUCHI-A04",
       "kind": "CONT",
-      "keywords": [
-        "SOULGUARD"
-      ],
+      "keywords": ["SOULGUARD"],
       "skill_restrictions": [],
       "effects": [
         {

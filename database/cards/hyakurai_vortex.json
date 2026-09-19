@@ -7,9 +7,7 @@
   "image": "database/images/hyakurai_vortex.webp",
   "type": "SPELL",
   "worlds": [],
-  "attributes": [
-    "HUNDRED_DEMONS"
-  ],
+  "attributes": ["HUNDRED_DEMONS"],
   "call_cost": [],
   "use_restrictions": [],
   "rules": [
@@ -26,9 +24,7 @@
     {
       "id": "HYAKURAI_VORTEX-A01",
       "kind": "CONT",
-      "keywords": [
-        "SET"
-      ],
+      "keywords": ["SET"],
       "skill_restrictions": [],
       "effects": [
         {
@@ -129,9 +125,7 @@
     {
       "id": "HYAKURAI_VORTEX-A02",
       "kind": "AUTO",
-      "keywords": [
-        "SET"
-      ],
+      "keywords": ["SET"],
       "skill_restrictions": [
         {
           "type": "ACTIVATION_LIMIT",

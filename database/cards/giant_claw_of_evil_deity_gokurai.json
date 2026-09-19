@@ -7,10 +7,7 @@
   "image": "database/images/giant_claw_of_evil_deity_gokurai.webp",
   "type": "ITEM",
   "worlds": [],
-  "attributes": [
-    "HUNDRED_DEMONS",
-    "WEAPON"
-  ],
+  "attributes": ["HUNDRED_DEMONS", "WEAPON"],
   "stats": {
     "power": 7000,
     "critical": 2
@@ -86,9 +83,7 @@
         {
           "type": "ATTACK_RULE",
           "target": "THIS_CARD_ATTACK",
-          "rules": [
-            "CAN_ATTACK_WITH_MONSTER_IN_CENTER"
-          ],
+          "rules": ["CAN_ATTACK_WITH_MONSTER_IN_CENTER"],
           "duration": {
             "type": "WHILE_SOURCE_ACTIVE"
           }
@@ -207,17 +202,13 @@
     {
       "id": "GIANT_CLAW_OF_EVIL_DEITY_GOKURAI-A04",
       "kind": "CONT",
-      "keywords": [
-        "PENETRATE"
-      ],
+      "keywords": ["PENETRATE"],
       "skill_restrictions": [],
       "effects": [
         {
           "type": "ATTACK_RULE",
           "target": "THIS_CARD",
-          "rules": [
-            "PENETRATE"
-          ]
+          "rules": ["PENETRATE"]
         }
       ],
       "effect_text": {
@@ -244,17 +235,13 @@
     {
       "id": "GIANT_CLAW_OF_EVIL_DEITY_GOKURAI-A05",
       "kind": "CONT",
-      "keywords": [
-        "DOUBLE_ATTACK"
-      ],
+      "keywords": ["DOUBLE_ATTACK"],
       "skill_restrictions": [],
       "effects": [
         {
           "type": "ATTACK_RULE",
           "target": "THIS_CARD",
-          "rules": [
-            "DOUBLE_ATTACK"
-          ]
+          "rules": ["DOUBLE_ATTACK"]
         }
       ],
       "effect_text": {

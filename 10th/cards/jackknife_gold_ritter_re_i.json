@@ -1,0 +1,209 @@
+{
+  "card_id": "JACKKNIFE_GOLD_RITTER_RE_I",
+  "name": {
+    "en": "Jackknife \"Gold Ritter Re:I\"",
+    "th": "แจ็คไนฟ์ \"โกลด์ริตเตอร์\" \"Re:I\""
+  },
+  "image": null,
+  "type": "ITEM",
+  "worlds": ["DRAGON_WORLD"],
+  "attributes": ["ARMORDRAGON", "DRAGON_KNIGHT", "WEAPON"],
+  "stats": {
+    "power": 15000,
+    "critical": 4,
+    "defense": 15000
+  },
+  "call_cost": [],
+  "equip_cost": [
+    {
+      "type": "CONDITION",
+      "condition": {
+        "type": "STAT_COMPARE",
+        "target": "SELF_LIFE",
+        "operator": "LESS_THAN_OR_EQUAL",
+        "value": 5
+      }
+    },
+    {
+      "type": "MOVE_CARD",
+      "from": "FIELD",
+      "to": "DROP",
+      "target": {
+        "type": "SELECT",
+        "card_type": "MONSTER",
+        "minimum_souls": 2,
+        "count": 1
+      }
+    },
+    {
+      "type": "PAY_GAUGE",
+      "amount": 2
+    }
+  ],
+  "use_restrictions": [],
+  "rules": [
+    {
+      "type": "CARD_NAME_ALIAS",
+      "alias": "Jackknife \"Gold Ritter\""
+    }
+  ],
+  "abilities": [
+    {
+      "id": "JACKKNIFE_GOLD_RITTER_RE_I-A01",
+      "kind": "CONT",
+      "keywords": [],
+      "skill_restrictions": [],
+      "effects": [
+        {
+          "type": "PROTECTION",
+          "target": "THIS_CARD",
+          "action": "DESTROY",
+          "source": "ALL",
+          "duration": {
+            "type": "WHILE_SOURCE_ACTIVE"
+          }
+        },
+        {
+          "type": "PROTECTION",
+          "target": "THIS_CARD",
+          "action": "RETURN_TO_HAND",
+          "source": "ALL",
+          "duration": {
+            "type": "WHILE_SOURCE_ACTIVE"
+          }
+        },
+        {
+          "type": "DAMAGE_PROTECTION",
+          "target": "SELF",
+          "action": "PREVENT",
+          "source": "OPPONENT_CARD_EFFECT",
+          "duration": {
+            "type": "WHILE_SOURCE_ACTIVE"
+          }
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "This card cannot be destroyed, nor returned to your hand, and you cannot take damage by your opponent's card effects.",
+          "segments": [
+            {
+              "text": "This card cannot be destroyed, nor returned to your hand, and you cannot take damage by your opponent's card effects."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "JACKKNIFE_GOLD_RITTER_RE_I-A02",
+      "kind": "CONT",
+      "keywords": [],
+      "skill_restrictions": [],
+      "activation_condition": {
+        "type": "CARD_EXISTS",
+        "zone": "FIELD",
+        "card_type": "MONSTER",
+        "name_contains": "Jackknife"
+      },
+      "effects": [
+        {
+          "type": "PROTECTION",
+          "target": {
+            "type": "FILTER",
+            "zone": "FIELD",
+            "name_contains": "Jackknife"
+          },
+          "action": "DESTROY",
+          "source": "OPPONENT_CARD_EFFECT",
+          "duration": {
+            "type": "WHILE_SOURCE_ACTIVE"
+          }
+        },
+        {
+          "type": "PROTECTION",
+          "target": {
+            "type": "FILTER",
+            "zone": "FIELD",
+            "name_contains": "Jackknife"
+          },
+          "action": "LEAVE_FIELD",
+          "source": "OPPONENT_CARD_EFFECT",
+          "duration": {
+            "type": "WHILE_SOURCE_ACTIVE"
+          }
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "If a monster with \"Jackknife\" in its card name is on your field, all cards with \"Jackknife\" in their card names on your field cannot be destroyed or leave the field by your opponent's card effects.",
+          "segments": [
+            {
+              "text": "If a monster with \"Jackknife\" in its card name is on your field, all cards with \"Jackknife\" in their card names on your field cannot be destroyed or leave the field by your opponent's card effects."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "JACKKNIFE_GOLD_RITTER_RE_I-A03",
+      "kind": "CONT",
+      "keywords": [],
+      "skill_restrictions": [],
+      "effects": [
+        {
+          "type": "DAMAGE_RULE",
+          "source": "LINK_ATTACK",
+          "replacement_value": 2,
+          "duration": {
+            "type": "WHILE_SOURCE_ACTIVE"
+          }
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "Damage dealt to you from link attacks become 2 instead.",
+          "segments": [
+            {
+              "text": "Damage dealt to you from link attacks become 2 instead."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "JACKKNIFE_GOLD_RITTER_RE_I-A04",
+      "kind": "CONT",
+      "keywords": ["PENETRATE"],
+      "skill_restrictions": [],
+      "effects": [],
+      "effect_text": {
+        "en": {
+          "plain": "[Penetrate]",
+          "segments": [
+            {
+              "text": "[Penetrate]",
+              "style": "KEYWORD"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "JACKKNIFE_GOLD_RITTER_RE_I-A05",
+      "kind": "CONT",
+      "keywords": ["DOUBLE_ATTACK"],
+      "skill_restrictions": [],
+      "effects": [],
+      "effect_text": {
+        "en": {
+          "plain": "[Double Attack]",
+          "segments": [
+            {
+              "text": "[Double Attack]",
+              "style": "KEYWORD"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

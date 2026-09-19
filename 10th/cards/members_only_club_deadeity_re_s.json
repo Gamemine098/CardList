@@ -1,0 +1,165 @@
+{
+  "card_id": "MEMBERS_ONLY_CLUB_DEADEITY_RE_S",
+  "name": {
+    "en": "Members Only Club, Deadeity \"Re:S\"",
+    "th": "คลับเฉพาะสมาชิก, เซนNOจิน \"Re:S\""
+  },
+  "image": null,
+  "type": "SPELL",
+  "worlds": ["DANGER_WORLD"],
+  "attributes": ["GODPUNK"],
+  "call_cost": [],
+  "use_restrictions": [
+    {
+      "type": "SET_LIMIT",
+      "count": 1,
+      "source": {
+        "kind": "CARD",
+        "card_id": "MEMBERS_ONLY_CLUB_DEADEITY_RE_S"
+      }
+    }
+  ],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "MEMBERS_ONLY_CLUB_DEADEITY_RE_S-A01",
+      "kind": "CONT",
+      "keywords": ["SET"],
+      "skill_restrictions": [],
+      "effects": [],
+      "effect_text": {
+        "en": {
+          "plain": "[Set]",
+          "segments": [
+            {
+              "text": "[Set]",
+              "style": "KEYWORD"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "MEMBERS_ONLY_CLUB_DEADEITY_RE_S-A02",
+      "kind": "CONT",
+      "keywords": [],
+      "skill_restrictions": [],
+      "effects": [
+        {
+          "type": "PROTECTION",
+          "target": {
+            "type": "FILTER",
+            "zone": "FIELD",
+            "card_type": "SPELL",
+            "attributes": ["GODPUNK"]
+          },
+          "action": "DESTROY",
+          "source": "OPPONENT_CARD_EFFECT",
+          "duration": {
+            "type": "WHILE_SOURCE_ACTIVE"
+          }
+        },
+        {
+          "type": "PROTECTION",
+          "target": {
+            "type": "FILTER",
+            "zone": "FIELD",
+            "card_type": "SPELL",
+            "attributes": ["GODPUNK"]
+          },
+          "action": "RETURN_TO_HAND",
+          "source": "OPPONENT_CARD_EFFECT",
+          "duration": {
+            "type": "WHILE_SOURCE_ACTIVE"
+          }
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "All《Godpunk》spells on your field cannot be destroyed or returned to hand by your opponent's card effects.",
+          "segments": [
+            {
+              "text": "All《Godpunk》spells on your field cannot be destroyed or returned to hand by your opponent's card effects."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "MEMBERS_ONLY_CLUB_DEADEITY_RE_S-A03",
+      "kind": "AUTO",
+      "keywords": [],
+      "skill_restrictions": [],
+      "trigger": {
+        "type": "PHASE_START",
+        "phase": "ATTACK"
+      },
+      "effects": [
+        {
+          "type": "CHOICE",
+          "choose": 1,
+          "options": [
+            {
+              "id": "DESTROY_AND_CALL",
+              "effects": [
+                {
+                  "type": "DESTROY",
+                  "target": {
+                    "type": "SELECT",
+                    "target_player": "OPPONENT",
+                    "zone": "FIELD",
+                    "count": 1
+                  }
+                },
+                {
+                  "type": "CALL",
+                  "from": "DROP",
+                  "to": "FIELD",
+                  "targets": [
+                    {
+                      "type": "SELECT",
+                      "card_type": "MONSTER",
+                      "count": 1
+                    }
+                  ],
+                  "pay_call_cost": true
+                }
+              ]
+            },
+            {
+              "id": "DAMAGE_AND_HEAL",
+              "effects": [
+                {
+                  "type": "DAMAGE",
+                  "target": "OPPONENT",
+                  "amount": 2
+                },
+                {
+                  "type": "GAIN_LIFE",
+                  "amount": 2
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "At the start of each player's attack phase, choose and use one of the following two.\n• Destroy a card on your opponent's field, and call a monster from your drop zone by paying its [Call Cost].\n• Deal 2 damage to your opponent, and you gain 2 life!\nYou may only [Set] one \"Members Only Club, Deadeity \"Re:S\"\" on your field.",
+          "segments": [
+            {
+              "text": "At the start of each player's attack phase, choose and use one of the following two.\n• Destroy a card on your opponent's field, and call a monster from your drop zone by paying its [Call Cost].\n• Deal 2 damage to your opponent, and you gain 2 life!\nYou may only "
+            },
+            {
+              "text": "[Set]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " one \"Members Only Club, Deadeity \"Re:S\"\" on your field."
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

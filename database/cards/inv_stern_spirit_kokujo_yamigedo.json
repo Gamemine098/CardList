@@ -7,9 +7,7 @@
   "image": "database/images/inv_stern_spirit_kokujo_yamigedo.webp",
   "type": "MONSTER",
   "worlds": [],
-  "attributes": [
-    "HUNDRED_DEMONS"
-  ],
+  "attributes": ["HUNDRED_DEMONS"],
   "stats": {
     "size": 3,
     "power": 8000,
@@ -46,9 +44,7 @@
     {
       "id": "INV_STERN_SPIRIT_KOKUJO_YAMIGEDO-A01",
       "kind": "AUTO",
-      "keywords": [
-        "THUNDER_MINE"
-      ],
+      "keywords": ["THUNDER_MINE"],
       "skill_restrictions": [],
       "trigger": {
         "type": "EVENT",
@@ -224,17 +220,13 @@
     {
       "id": "INV_STERN_SPIRIT_KOKUJO_YAMIGEDO-A03",
       "kind": "CONT",
-      "keywords": [
-        "DOUBLE_ATTACK"
-      ],
+      "keywords": ["DOUBLE_ATTACK"],
       "skill_restrictions": [],
       "effects": [
         {
           "type": "ATTACK_RULE",
           "target": "THIS_CARD",
-          "rules": [
-            "DOUBLE_ATTACK"
-          ]
+          "rules": ["DOUBLE_ATTACK"]
         }
       ],
       "effect_text": {
@@ -261,9 +253,7 @@
     {
       "id": "INV_STERN_SPIRIT_KOKUJO_YAMIGEDO-A04",
       "kind": "CONT",
-      "keywords": [
-        "SOULGUARD"
-      ],
+      "keywords": ["SOULGUARD"],
       "skill_restrictions": [],
       "effects": [
         {

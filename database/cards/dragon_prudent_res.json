@@ -6,14 +6,8 @@
   },
   "image": "database/images/dragon_prudent_res.webp",
   "type": "SPELL",
-  "worlds": [
-    "ANCIENT_WORLD"
-  ],
-  "attributes": [
-    "HUNDRED_DEMONS",
-    "DRAGON",
-    "DEFENSE"
-  ],
+  "worlds": ["ANCIENT_WORLD"],
+  "attributes": ["HUNDRED_DEMONS", "DRAGON", "DEFENSE"],
   "call_cost": [],
   "use_restrictions": [],
   "rules": [],
@@ -21,9 +15,7 @@
     {
       "id": "DRAGON_PRUDENT_RES-A01",
       "kind": "ACT",
-      "keywords": [
-        "COUNTER"
-      ],
+      "keywords": ["COUNTER"],
       "skill_restrictions": [
         {
           "type": "ACTIVATION_LIMIT",

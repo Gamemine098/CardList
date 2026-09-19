@@ -6,14 +6,8 @@
   },
   "image": "database/images/jail_liberator_befrien.webp",
   "type": "MONSTER",
-  "worlds": [
-    "DARKNESS_DRAGON_WORLD"
-  ],
-  "attributes": [
-    "HUNDRED_DEMONS",
-    "BLACK_DRAGON",
-    "DESTRUCTION"
-  ],
+  "worlds": ["DARKNESS_DRAGON_WORLD"],
+  "attributes": ["HUNDRED_DEMONS", "BLACK_DRAGON", "DESTRUCTION"],
   "stats": {
     "size": 1,
     "power": 3000,
@@ -115,9 +109,7 @@
     {
       "id": "JAIL_LIBERATOR_BEFRIEN-A02",
       "kind": "CONT",
-      "keywords": [
-        "SOUL"
-      ],
+      "keywords": ["SOUL"],
       "skill_restrictions": [],
       "activation_condition": {
         "type": "OR",
@@ -126,9 +118,7 @@
             "type": "CARD_IN_ZONE",
             "card": "THIS_CARD",
             "owner": "SELF",
-            "zones": [
-              "FIELD"
-            ]
+            "zones": ["FIELD"]
           },
           {
             "type": "AND",
@@ -137,9 +127,7 @@
                 "type": "CARD_IN_ZONE",
                 "card": "THIS_CARD",
                 "owner": "SELF",
-                "zones": [
-                  "SOUL"
-                ]
+                "zones": ["SOUL"]
               },
               {
                 "type": "SOUL_HOST_HAS_ATTRIBUTE",
@@ -176,9 +164,7 @@
               "attribute": "HUNDRED_DEMONS"
             }
           },
-          "rules": [
-            "PENETRATE"
-          ],
+          "rules": ["PENETRATE"],
           "duration": {
             "type": "WHILE_SOURCE_ACTIVE"
           }
@@ -267,9 +253,7 @@
     {
       "id": "JAIL_LIBERATOR_BEFRIEN-A03",
       "kind": "AUTO",
-      "keywords": [
-        "THUNDER_MINE"
-      ],
+      "keywords": ["THUNDER_MINE"],
       "skill_restrictions": [],
       "trigger": {
         "type": "EVENT",

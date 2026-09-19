@@ -6,13 +6,8 @@
   },
   "image": "database/images/soaring_flame_lindwurm_re_b.webp",
   "type": "MONSTER",
-  "worlds": [
-    "LEGEND_WORLD"
-  ],
-  "attributes": [
-    "HUNDRED_DEMONS",
-    "WYDAR_SARKAL"
-  ],
+  "worlds": ["LEGEND_WORLD"],
+  "attributes": ["HUNDRED_DEMONS", "WYDAR_SARKAL"],
   "stats": {
     "size": 1,
     "power": 3000,
@@ -26,9 +21,7 @@
     {
       "id": "SOARING_FLAME_LINDWURM_RE_B-A01",
       "kind": "ACT",
-      "keywords": [
-        "HAND"
-      ],
+      "keywords": ["HAND"],
       "skill_restrictions": [
         {
           "type": "NAMED_ABILITY_LIMIT",
@@ -46,9 +39,7 @@
         "type": "CARD_IN_ZONE",
         "card": "THIS_CARD",
         "owner": "SELF",
-        "zones": [
-          "HAND"
-        ]
+        "zones": ["HAND"]
       },
       "cost": [
         {
@@ -87,10 +78,7 @@
                 "owner": "SELF",
                 "zone": "FIELD",
                 "filter": {
-                  "attributes_any": [
-                    "HUNDRED_DEMONS",
-                    "WYDAR_SARKAL"
-                  ]
+                  "attributes_any": ["HUNDRED_DEMONS", "WYDAR_SARKAL"]
                 }
               },
               "then": [
@@ -240,9 +228,7 @@
     {
       "id": "SOARING_FLAME_LINDWURM_RE_B-A02",
       "kind": "AUTO",
-      "keywords": [
-        "THUNDER_MINE"
-      ],
+      "keywords": ["THUNDER_MINE"],
       "skill_restrictions": [
         {
           "type": "ACTIVATION_LIMIT",

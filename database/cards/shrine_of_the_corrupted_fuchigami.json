@@ -7,10 +7,7 @@
   "image": "database/images/shrine_of_the_corrupted_fuchigami.webp",
   "type": "SPELL",
   "worlds": [],
-  "attributes": [
-    "HUNDRED_DEMONS",
-    "DRAW"
-  ],
+  "attributes": ["HUNDRED_DEMONS", "DRAW"],
   "call_cost": [],
   "use_restrictions": [],
   "rules": [
@@ -27,9 +24,7 @@
     {
       "id": "SHRINE_OF_THE_CORRUPTED_FUCHIGAMI-A01",
       "kind": "AUTO",
-      "keywords": [
-        "SET"
-      ],
+      "keywords": ["SET"],
       "skill_restrictions": [
         {
           "type": "ACTIVATION_LIMIT",

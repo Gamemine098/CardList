@@ -7,10 +7,7 @@
   "image": "database/images/evil_deity_of_cataclysm_hyakugan_yamigedo_sky_half_re_b.webp",
   "type": "MONSTER",
   "worlds": [],
-  "attributes": [
-    "HUNDRED_DEMONS",
-    "DEITY"
-  ],
+  "attributes": ["HUNDRED_DEMONS", "DEITY"],
   "stats": {
     "size": 3,
     "critical": 3,

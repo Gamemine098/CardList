@@ -7,9 +7,7 @@
   "image": "database/images/cataclysmic_invasion_re_s.webp",
   "type": "SPELL",
   "worlds": [],
-  "attributes": [
-    "HUNDRED_DEMONS"
-  ],
+  "attributes": ["HUNDRED_DEMONS"],
   "call_cost": [],
   "use_restrictions": [],
   "rules": [],
@@ -91,9 +89,7 @@
             },
             {
               "id": "COUNTER_RECOVER_MONSTER",
-              "keywords": [
-                "COUNTER"
-              ],
+              "keywords": ["COUNTER"],
               "effects": [
                 {
                   "type": "MOVE_CARD",
@@ -112,10 +108,7 @@
                 },
                 {
                   "type": "MOVE_CARD",
-                  "from_zones": [
-                    "DROP",
-                    "REMOVE"
-                  ],
+                  "from_zones": ["DROP", "REMOVE"],
                   "to": "HAND",
                   "target": {
                     "type": "SELECT",

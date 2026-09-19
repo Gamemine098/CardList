@@ -7,10 +7,7 @@
   "image": "database/images/evil_deity_of_cataclysm_hyakugan_yamigedo_earth_half_re_b.webp",
   "type": "MONSTER",
   "worlds": [],
-  "attributes": [
-    "HUNDRED_DEMONS",
-    "DEITY"
-  ],
+  "attributes": ["HUNDRED_DEMONS", "DEITY"],
   "stats": {
     "power": 1000000
   },
@@ -31,9 +28,7 @@
     {
       "id": "EVIL_DEITY_OF_CATACLYSM_HYAKUGAN_YAMIGEDO_EARTH_HALF_RE_B-A01",
       "kind": "ACT",
-      "keywords": [
-        "COUNTER"
-      ],
+      "keywords": ["COUNTER"],
       "skill_restrictions": [
         {
           "type": "NAMED_ABILITY_LIMIT",
@@ -193,9 +188,7 @@
           "condition": {
             "type": "COST_MILLED_CARDS_HAVE",
             "card_type": "SPELL",
-            "keywords": [
-              "SET"
-            ]
+            "keywords": ["SET"]
           },
           "then": [
             {
@@ -203,9 +196,7 @@
               "targets": {
                 "type": "COST_MILLED_CARDS",
                 "card_type": "SPELL",
-                "keywords": [
-                  "SET"
-                ]
+                "keywords": ["SET"]
               },
               "optional": true,
               "pay_cast_cost": true
@@ -283,17 +274,13 @@
     {
       "id": "EVIL_DEITY_OF_CATACLYSM_HYAKUGAN_YAMIGEDO_EARTH_HALF_RE_B-A03",
       "kind": "CONT",
-      "keywords": [
-        "TRIPLE_ATTACK"
-      ],
+      "keywords": ["TRIPLE_ATTACK"],
       "skill_restrictions": [],
       "effects": [
         {
           "type": "ATTACK_RULE",
           "target": "THIS_CARD",
-          "rules": [
-            "TRIPLE_ATTACK"
-          ]
+          "rules": ["TRIPLE_ATTACK"]
         }
       ],
       "effect_text": {

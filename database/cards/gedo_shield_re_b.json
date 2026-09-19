@@ -6,13 +6,8 @@
   },
   "image": "database/images/gedo_shield_re_b.webp",
   "type": "SPELL",
-  "worlds": [
-    "DRAGON_WORLD"
-  ],
-  "attributes": [
-    "HUNDRED_DEMONS",
-    "DEFENSE"
-  ],
+  "worlds": ["DRAGON_WORLD"],
+  "attributes": ["HUNDRED_DEMONS", "DEFENSE"],
   "call_cost": [],
   "use_restrictions": [],
   "rules": [],
@@ -20,9 +15,7 @@
     {
       "id": "GEDO_SHIELD_RE_B-A01",
       "kind": "ACT",
-      "keywords": [
-        "COUNTER"
-      ],
+      "keywords": ["COUNTER"],
       "skill_restrictions": [],
       "activation_condition": {
         "type": "AND",
