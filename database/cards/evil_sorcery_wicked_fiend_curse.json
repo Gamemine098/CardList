@@ -1,0 +1,446 @@
+{
+  "card_id": "EVIL_SORCERY_WICKED_FIEND_CURSE",
+  "name": {
+    "en": "Evil Sorcery, Wicked Fiend Curse",
+    "th": "มนตราปีศาจ, คำสาปอสูรทมิฬ"
+  },
+  "image": "database/images/evil_sorcery_wicked_fiend_curse.webp",
+  "type": "SPELL",
+  "worlds": [
+    "ANCIENT_WORLD",
+    "LEGEND_WORLD"
+  ],
+  "attributes": [
+    "HUNDRED_DEMONS",
+    "DRAW",
+    "GET"
+  ],
+  "call_cost": [],
+  "use_restrictions": [],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "EVIL_SORCERY_WICKED_FIEND_CURSE-A01",
+      "kind": "ACT",
+      "keywords": [],
+      "skill_restrictions": [
+        {
+          "type": "CARD_USE_LIMIT",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "EVIL_SORCERY_WICKED_FIEND_CURSE",
+            "ability_id": "EVIL_SORCERY_WICKED_FIEND_CURSE-A01"
+          }
+        }
+      ],
+      "cost": [
+        {
+          "type": "PAY_LIFE",
+          "amount": 1
+        }
+      ],
+      "effects": [
+        {
+          "type": "CHOICE",
+          "choose": 1,
+          "options": [
+            {
+              "id": "CHARGE_AND_FETCH",
+              "effects": [
+                {
+                  "type": "CHARGE_GAUGE",
+                  "amount": 2
+                },
+                {
+                  "type": "IF",
+                  "condition": {
+                    "type": "FLAG_IS",
+                    "name": "Parade of Hundred Demons"
+                  },
+                  "then": [
+                    {
+                      "type": "MOVE_CARD",
+                      "from": "GAUGE",
+                      "to": "HAND",
+                      "target": {
+                        "type": "SELECT",
+                        "zone": "GAUGE",
+                        "owner": "SELF",
+                        "maximum": 1
+                      },
+                      "optional": true
+                    }
+                  ],
+                  "else": [
+                    {
+                      "type": "MOVE_CARD",
+                      "from": "GAUGE",
+                      "to": "HAND",
+                      "targets": [
+                        {
+                          "type": "SELECT",
+                          "zone": "GAUGE",
+                          "owner": "SELF",
+                          "card_type": "MONSTER",
+                          "count": 1
+                        },
+                        {
+                          "type": "SELECT",
+                          "zone": "GAUGE",
+                          "owner": "SELF",
+                          "card_type": "ITEM",
+                          "count": 1
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "COUNTER_PROTECTION",
+              "keywords": [
+                "COUNTER"
+              ],
+              "effects": [
+                {
+                  "type": "DRAW",
+                  "amount": 1
+                },
+                {
+                  "type": "PROTECTION",
+                  "target": {
+                    "type": "CARDS_ON_FIELD",
+                    "owner": "SELF"
+                  },
+                  "action": "REST",
+                  "source": "OPPONENT_CARD_EFFECT",
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                },
+                {
+                  "type": "IF",
+                  "condition": {
+                    "type": "CARD_EXISTS",
+                    "owner": "SELF",
+                    "zones": [
+                      "FIELD",
+                      "DROP",
+                      "SOUL"
+                    ],
+                    "filter": {
+                      "keyword": "DUO"
+                    }
+                  },
+                  "then": [
+                    {
+                      "type": "PROTECTION",
+                      "target": {
+                        "type": "CARDS_ON_FIELD",
+                        "owner": "SELF",
+                        "filter": {
+                          "attribute": "HUNDRED_DEMONS"
+                        }
+                      },
+                      "action": "DESTROY",
+                      "source": "OPPONENT_CARD_EFFECT",
+                      "duration": {
+                        "type": "UNTIL_END_OF_TURN"
+                      }
+                    },
+                    {
+                      "type": "PROTECTION",
+                      "target": {
+                        "type": "SOUL",
+                        "of": {
+                          "type": "CARDS_ON_FIELD",
+                          "owner": "SELF",
+                          "filter": {
+                            "attribute": "HUNDRED_DEMONS"
+                          }
+                        }
+                      },
+                      "action": "REMOVE_SOUL",
+                      "source": "OPPONENT_CARD_EFFECT",
+                      "duration": {
+                        "type": "UNTIL_END_OF_TURN"
+                      }
+                    }
+                  ],
+                  "else": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Cn/Turn] Choose one of the following.\n• Charge two gauge. Then, look at all of your gauge, and put one monster and item each from among them into your hand. If your flag is \"Parade of Hundred Demons\", you may instead look at all of your gauge, and put one card from among them into your hand.\n• [Counter] Draw a card! Then, for this turn, all cards on your field cannot be [Rest] by your opponent's card effects, and if you have a card with [Duo] on your field, in your drop, or in the soul of your cards, for this turn, all 《Hundred Demons》 on your field cannot be destroyed, and their souls cannot be dropped, by your opponent's card effects.",
+          "segments": [
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " Choose one of the following.\n• Charge two "
+            },
+            {
+              "text": "gauge",
+              "style": "ZONE"
+            },
+            {
+              "text": ". Then, look at all of your "
+            },
+            {
+              "text": "gauge",
+              "style": "ZONE"
+            },
+            {
+              "text": ", and put one "
+            },
+            {
+              "text": "monster",
+              "style": "CARD_REFERENCE"
+            },
+            {
+              "text": " and "
+            },
+            {
+              "text": "item",
+              "style": "CARD_REFERENCE"
+            },
+            {
+              "text": " each from among them into your "
+            },
+            {
+              "text": "hand",
+              "style": "ZONE"
+            },
+            {
+              "text": ". If your flag is \"Parade of Hundred Demons\", you may instead look at all of your "
+            },
+            {
+              "text": "gauge",
+              "style": "ZONE"
+            },
+            {
+              "text": ", and put one card from among them into your "
+            },
+            {
+              "text": "hand",
+              "style": "ZONE"
+            },
+            {
+              "text": ".\n• "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " Draw a card! Then, for "
+            },
+            {
+              "text": "this turn",
+              "style": "TURN"
+            },
+            {
+              "text": ", all cards on your "
+            },
+            {
+              "text": "field",
+              "style": "ZONE"
+            },
+            {
+              "text": " cannot be "
+            },
+            {
+              "text": "[Rest]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " by your opponent's card effects, and if you have a card with "
+            },
+            {
+              "text": "[Duo]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " on your "
+            },
+            {
+              "text": "field",
+              "style": "ZONE"
+            },
+            {
+              "text": ", in your "
+            },
+            {
+              "text": "drop",
+              "style": "ZONE"
+            },
+            {
+              "text": ", or in the "
+            },
+            {
+              "text": "soul",
+              "style": "ZONE"
+            },
+            {
+              "text": " of your cards, for "
+            },
+            {
+              "text": "this turn",
+              "style": "TURN"
+            },
+            {
+              "text": ", all "
+            },
+            {
+              "text": "《Hundred Demons》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": " on your "
+            },
+            {
+              "text": "field",
+              "style": "ZONE"
+            },
+            {
+              "text": " cannot be destroyed, and their souls cannot be dropped, by your opponent's card effects."
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Cn/Turn] เลือกใช้ 1 อย่างต่อไปนี้\n• เราชาร์จ 2 เกจ จากนั้น, ดูเกจของเราทุกใบ, นำมอนสเตอร์และไอเท็มจากในนั้นอย่างละ 1 ใบและนำการ์ดเหล่านั้นขึ้นมือเรา, หากแฟลกเราเป็น \"ขบวนร้อยอสูร\", สามารถเปลี่ยนเป็น, ดูเกจทุกใบของเรา, นำการ์ดไม่เกิน 1 ใบจากในนั้นขึ้นมือเราแทนได้\n• [Counter] เราจั่วการ์ด 1 ใบ! จากนั้นในเทิร์นนี้การ์ดบนสนามเราทุกใบไม่ถูก [Rest] จากความสามารถการ์ดคู่แข่ง หากเรามีการ์ดที่มี [Duo] อยู่ในสนาม, ดรอบ, โซลของเราในเทิร์นนี้, 《ร้อยอสูร》บนสนามเราทุกใบจะไม่ถูกทำลายและไม่ถูกถอดโซลจากความสามารถการ์ดคู่แข่ง",
+          "segments": [
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " เลือกใช้ 1 อย่างต่อไปนี้\n• เราชาร์จ 2 เกจ จากนั้น, ดู"
+            },
+            {
+              "text": "เกจ",
+              "style": "ZONE"
+            },
+            {
+              "text": "ของเราทุกใบ, นำมอนสเตอร์และไอเท็มจากในนั้นอย่างละ 1 ใบและนำการ์ดเหล่านั้นขึ้น"
+            },
+            {
+              "text": "มือ",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรา, หากแฟลกเราเป็น \"ขบวนร้อยอสูร\", สามารถเปลี่ยนเป็น, ดู"
+            },
+            {
+              "text": "เกจ",
+              "style": "ZONE"
+            },
+            {
+              "text": "ทุกใบของเรา, นำการ์ดไม่เกิน 1 ใบจากในนั้นขึ้น"
+            },
+            {
+              "text": "มือ",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราแทนได้\n• "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " เราจั่วการ์ด 1 ใบ! จากนั้นใน"
+            },
+            {
+              "text": "เทิร์นนี้",
+              "style": "TURN"
+            },
+            {
+              "text": "การ์ดบน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราทุกใบไม่ถูก "
+            },
+            {
+              "text": "[Rest]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " จากความสามารถการ์ดคู่แข่ง หากเรามีการ์ดที่มี "
+            },
+            {
+              "text": "[Duo]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " อยู่ใน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "ดรอบ",
+              "style": "ZONE"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "โซล",
+              "style": "ZONE"
+            },
+            {
+              "text": "ของเราใน"
+            },
+            {
+              "text": "เทิร์นนี้",
+              "style": "TURN"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "《ร้อยอสูร》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": "บน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราทุกใบจะไม่ถูกทำลายและไม่ถูกถอด"
+            },
+            {
+              "text": "โซล",
+              "style": "ZONE"
+            },
+            {
+              "text": "จากความสามารถการ์ดคู่แข่ง"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

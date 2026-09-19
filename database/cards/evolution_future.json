@@ -1,0 +1,344 @@
+{
+  "card_id": "EVOLUTION_FUTURE",
+  "name": {
+    "en": "Evolution Future",
+    "th": "อีโวลูชัน・ฟิวเจอร์"
+  },
+  "image": "database/images/evolution_future.webp",
+  "type": "SPELL",
+  "worlds": [
+    "DRAGON_WORLD"
+  ],
+  "attributes": [
+    "HUNDRED_DEMONS",
+    "DEFENSE"
+  ],
+  "call_cost": [],
+  "use_restrictions": [],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "EVOLUTION_FUTURE-A01",
+      "kind": "ACT",
+      "keywords": [
+        "COUNTER"
+      ],
+      "skill_restrictions": [],
+      "activation_condition": {
+        "type": "AND",
+        "conditions": [
+          {
+            "type": "TURN_PLAYER",
+            "player": "SELF"
+          },
+          {
+            "type": "PLAYER_CONTROLS_CARD",
+            "owner": "SELF",
+            "zone": "FIELD",
+            "filter": {
+              "card_type": "MONSTER",
+              "or": [
+                {
+                  "name_contains": "Drum"
+                },
+                {
+                  "name_contains": "Yamigedo"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "trigger": {
+        "type": "COUNTER_TIMING"
+      },
+      "cost": [
+        {
+          "type": "MOVE_CARD",
+          "from": "HAND",
+          "to": {
+            "type": "SOUL",
+            "of": {
+              "type": "SELECT",
+              "zone": "FIELD",
+              "owner": "SELF",
+              "card_type": "MONSTER",
+              "count": 1
+            }
+          },
+          "target": {
+            "type": "THIS_CARD"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "DRAW",
+          "amount": 1
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Counter] During your turn, if a monster with \"Drum\" or \"Yamigedo\" in its card name is on your field, [Cost] [Put this card into the soul of a monster on your field], draw a card.",
+          "segments": [
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " During "
+            },
+            {
+              "text": "your turn",
+              "style": "TURN"
+            },
+            {
+              "text": ", if a "
+            },
+            {
+              "text": "monster",
+              "style": "CARD_REFERENCE"
+            },
+            {
+              "text": " with \"Drum\" or \"Yamigedo\" in its card name is on your "
+            },
+            {
+              "text": "field",
+              "style": "ZONE"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "[Cost] [Put this card into the soul of a monster on your field]",
+              "style": "COST"
+            },
+            {
+              "text": ", draw a card."
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Counter] ในระหว่างเทิร์นเรา, หากบนสนามเรามีมอนสเตอร์ที่มี \"ดรัม\" หรือ \"ยามิเกโด\" ในชื่อการ์ด, [Cost] [นำการ์ดนี้เข้าสู่โซลของมอนสเตอร์บนสนามเรา 1 ใบ] เราจั่วการ์ด 1 ใบ",
+          "segments": [
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " ในระหว่าง"
+            },
+            {
+              "text": "เทิร์นเรา",
+              "style": "TURN"
+            },
+            {
+              "text": ", หากบน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรามีมอนสเตอร์ที่มี \"ดรัม\" หรือ \"ยามิเกโด\" ในชื่อการ์ด, "
+            },
+            {
+              "text": "[Cost] [นำการ์ดนี้เข้าสู่โซลของมอนสเตอร์บนสนามเรา 1 ใบ]",
+              "style": "COST"
+            },
+            {
+              "text": " เราจั่วการ์ด 1 ใบ"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "EVOLUTION_FUTURE-A02",
+      "kind": "ACT",
+      "keywords": [
+        "COUNTER",
+        "SOUL"
+      ],
+      "skill_restrictions": [
+        {
+          "type": "ACTIVATION_LIMIT",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "EVOLUTION_FUTURE",
+            "ability_id": "EVOLUTION_FUTURE-A02"
+          }
+        }
+      ],
+      "activation_condition": {
+        "type": "AND",
+        "conditions": [
+          {
+            "type": "CARD_IN_ZONE",
+            "card": "THIS_CARD",
+            "zones": [
+              "SOUL"
+            ],
+            "host_card_type": "MONSTER"
+          },
+          {
+            "type": "TURN_PLAYER",
+            "player": "OPPONENT"
+          },
+          {
+            "type": "DURING_ATTACK"
+          }
+        ]
+      },
+      "trigger": {
+        "type": "COUNTER_TIMING"
+      },
+      "cost": [
+        {
+          "type": "PAY_GAUGE",
+          "amount": 1
+        }
+      ],
+      "effects": [
+        {
+          "type": "NEGATE_ATTACK"
+        },
+        {
+          "type": "CHOICE",
+          "choose": 1,
+          "options": [
+            {
+              "id": "DAMAGE_SELF",
+              "effects": [
+                {
+                  "type": "DAMAGE",
+                  "target": "SELF",
+                  "amount": 1
+                }
+              ]
+            },
+            {
+              "id": "DAMAGE_OPPONENT",
+              "effects": [
+                {
+                  "type": "DAMAGE",
+                  "target": "OPPONENT",
+                  "amount": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "【Soul:Monster】: [1/Turn] [Counter] 【Act】 During an attack on your opponent's turn, [Cost] [Pay 1 gauge], nullify the attack, and deal 1 damage to you or your opponent.",
+          "segments": [
+            {
+              "text": "【Soul:Monster】",
+              "style": "ZONE"
+            },
+            {
+              "text": ": "
+            },
+            {
+              "text": "[1/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " 【Act】 During an attack on your "
+            },
+            {
+              "text": "opponent's turn",
+              "style": "TURN"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "[Cost] [Pay 1 gauge]",
+              "style": "COST"
+            },
+            {
+              "text": ", nullify the attack, and deal "
+            },
+            {
+              "text": "1 damage",
+              "style": "DAMAGE"
+            },
+            {
+              "text": " to you or your "
+            },
+            {
+              "text": "opponent",
+              "style": "PLAYER"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        "th": {
+          "plain": "【โซล:มอนสเตอร์】: [1/Turn] [Counter] 【Act】 ในระหว่างการโจมตีในเทิร์นคู่แข่ง, [Cost] [จ่าย 1 เกจ], ยกเลิกการโจมตี จากนั้นสร้างความเสียหายใส่เราหรือคู่แข่ง 1 ไลฟ์",
+          "segments": [
+            {
+              "text": "【โซล:มอนสเตอร์】",
+              "style": "ZONE"
+            },
+            {
+              "text": ": "
+            },
+            {
+              "text": "[1/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " 【Act】 ในระหว่างการโจมตีใน"
+            },
+            {
+              "text": "เทิร์นคู่แข่ง",
+              "style": "TURN"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "[Cost] [จ่าย 1 เกจ]",
+              "style": "COST"
+            },
+            {
+              "text": ", ยกเลิกการโจมตี จากนั้นสร้างความเสียหายใส่เราหรือ"
+            },
+            {
+              "text": "คู่แข่ง",
+              "style": "PLAYER"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "1 ไลฟ์",
+              "style": "DAMAGE"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,334 @@
+{
+  "card_id": "LIGHT_SPECTER_YAMIGEDO_MIKAZUCHI",
+  "name": {
+    "en": "Light Specter, Yamigedo Mikazuchi",
+    "th": "วิญญาณอารักษ์แห่งแสง, ยามิเกโด・มิคาซึจิ"
+  },
+  "image": "database/images/light_specter_yamigedo_mikazuchi.webp",
+  "type": "MONSTER",
+  "worlds": [],
+  "attributes": [
+    "HUNDRED_DEMONS"
+  ],
+  "stats": {
+    "size": 3,
+    "power": 8000,
+    "critical": 2,
+    "defense": 8000
+  },
+  "call_cost": [
+    {
+      "type": "MOVE_CARD",
+      "from": "FIELD",
+      "to": {
+        "type": "SOUL",
+        "of": "THIS_CARD"
+      },
+      "target": {
+        "type": "SELECT",
+        "zone": "FIELD",
+        "owner": "SELF",
+        "card_type": "MONSTER",
+        "filter": {
+          "attribute": "HUNDRED_DEMONS"
+        },
+        "minimum": 1
+      }
+    },
+    {
+      "type": "PAY_GAUGE",
+      "amount": 2
+    }
+  ],
+  "use_restrictions": [],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "LIGHT_SPECTER_YAMIGEDO_MIKAZUCHI-A01",
+      "kind": "AUTO",
+      "keywords": [],
+      "skill_restrictions": [],
+      "trigger": {
+        "type": "TURN_END",
+        "player": "SELF"
+      },
+      "cost": [
+        {
+          "type": "PAY_LIFE",
+          "amount": 1
+        }
+      ],
+      "effects": [
+        {
+          "type": "CALL",
+          "from_zones": [
+            "HAND",
+            "DROP"
+          ],
+          "to": "FIELD",
+          "position": {
+            "type": "ON_TOP_OF",
+            "target": "THIS_CARD"
+          },
+          "target": {
+            "type": "SELECT",
+            "card_type": "MONSTER",
+            "filter": {
+              "name_contains": "Yamigedo"
+            },
+            "maximum": 1
+          },
+          "pay_call_cost": false
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "At the end of your turn, [Cost] [Pay 1 life], call up to one monster with \"Yamigedo\" in its card name from your hand or drop zone on top of this card without paying its [Call Cost].",
+          "segments": [
+            {
+              "text": "At the end of "
+            },
+            {
+              "text": "your turn",
+              "style": "TURN"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "[Cost] [Pay 1 life]",
+              "style": "COST"
+            },
+            {
+              "text": ", call up to one "
+            },
+            {
+              "text": "monster",
+              "style": "CARD_REFERENCE"
+            },
+            {
+              "text": " with \"Yamigedo\" in its card name from your "
+            },
+            {
+              "text": "hand",
+              "style": "ZONE"
+            },
+            {
+              "text": " or "
+            },
+            {
+              "text": "drop zone",
+              "style": "ZONE"
+            },
+            {
+              "text": " on top of this card without paying its "
+            },
+            {
+              "text": "[Call Cost]",
+              "style": "COST"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        "th": {
+          "plain": "เมื่อจบเทิร์นเรา, [Cost] [จ่าย 1 ไลฟ์], คอลมอนสเตอร์ที่มี \"ยามิเกโด\" ในชื่อการ์ด จากบนมือหรือดรอบเราไม่เกิน 1 ใบทับการ์ดใบนี้โดยไม่ต้องจ่าย [Call Cost]",
+          "segments": [
+            {
+              "text": "เมื่อจบ"
+            },
+            {
+              "text": "เทิร์นเรา",
+              "style": "TURN"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "[Cost] [จ่าย 1 ไลฟ์]",
+              "style": "COST"
+            },
+            {
+              "text": ", คอลมอนสเตอร์ที่มี \"ยามิเกโด\" ในชื่อการ์ด จากบน"
+            },
+            {
+              "text": "มือ",
+              "style": "ZONE"
+            },
+            {
+              "text": "หรือ"
+            },
+            {
+              "text": "ดรอบ",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราไม่เกิน 1 ใบทับการ์ดใบนี้โดยไม่ต้องจ่าย "
+            },
+            {
+              "text": "[Call Cost]",
+              "style": "COST"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "LIGHT_SPECTER_YAMIGEDO_MIKAZUCHI-A02",
+      "kind": "AUTO",
+      "keywords": [
+        "THUNDER_MINE"
+      ],
+      "skill_restrictions": [],
+      "trigger": {
+        "type": "ATTACK_DECLARED",
+        "actor": "OPPONENT",
+        "is_link_attack": false
+      },
+      "effects": [
+        {
+          "type": "DAMAGE",
+          "target": "OPPONENT",
+          "amount": 1
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "\"Thunder Mine\" When a card on your opponent's field attacks alone, deal 1 damage to your opponent!",
+          "segments": [
+            {
+              "text": "\"Thunder Mine\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " When a card on your "
+            },
+            {
+              "text": "opponent",
+              "style": "PLAYER"
+            },
+            {
+              "text": "'s "
+            },
+            {
+              "text": "field",
+              "style": "ZONE"
+            },
+            {
+              "text": " attacks alone, deal "
+            },
+            {
+              "text": "1 damage",
+              "style": "DAMAGE"
+            },
+            {
+              "text": " to your opponent!"
+            }
+          ]
+        },
+        "th": {
+          "plain": "\"ธันเดอร์ไมน์\" เมื่อการ์ดบนสนามคู่แข่งทำการโจมตีที่ไม่ใช่ลิงค์แอทแทค, สร้างความเสียหายใส่คู่แข่ง 1 ไลฟ์!",
+          "segments": [
+            {
+              "text": "\"ธันเดอร์ไมน์\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " เมื่อการ์ดบน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "คู่แข่ง",
+              "style": "PLAYER"
+            },
+            {
+              "text": "ทำการโจมตีที่ไม่ใช่ลิงค์แอทแทค, สร้างความเสียหายใส่คู่แข่ง "
+            },
+            {
+              "text": "1 ไลฟ์",
+              "style": "DAMAGE"
+            },
+            {
+              "text": "!"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "LIGHT_SPECTER_YAMIGEDO_MIKAZUCHI-A03",
+      "kind": "CONT",
+      "keywords": [
+        "DOUBLE_ATTACK"
+      ],
+      "skill_restrictions": [],
+      "effects": [
+        {
+          "type": "ATTACK_RULE",
+          "target": "THIS_CARD",
+          "rules": [
+            "DOUBLE_ATTACK"
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Double Attack]",
+          "segments": [
+            {
+              "text": "[Double Attack]",
+              "style": "KEYWORD"
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Double Attack]",
+          "segments": [
+            {
+              "text": "[Double Attack]",
+              "style": "KEYWORD"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "LIGHT_SPECTER_YAMIGEDO_MIKAZUCHI-A04",
+      "kind": "CONT",
+      "keywords": [
+        "SOULGUARD"
+      ],
+      "skill_restrictions": [],
+      "effects": [
+        {
+          "type": "SOULGUARD",
+          "target": "THIS_CARD"
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Soulguard]",
+          "segments": [
+            {
+              "text": "[Soulguard]",
+              "style": "KEYWORD"
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Soulguard]",
+          "segments": [
+            {
+              "text": "[Soulguard]",
+              "style": "KEYWORD"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

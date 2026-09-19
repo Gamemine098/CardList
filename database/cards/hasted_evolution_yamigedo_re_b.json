@@ -1,0 +1,467 @@
+{
+  "card_id": "HASTED_EVOLUTION_YAMIGEDO_RE_B",
+  "name": {
+    "en": "Hasted Evolution, Yamigedo \"Re:B\"",
+    "th": "กลิ่นอายแห่งวิวัฒนาการ, ยามิเกโด \"Re:B\""
+  },
+  "image": "database/images/hasted_evolution_yamigedo_re_b.webp",
+  "type": "MONSTER",
+  "worlds": [],
+  "attributes": [
+    "HUNDRED_DEMONS"
+  ],
+  "stats": {
+    "size": 0,
+    "power": 1000,
+    "critical": 0,
+    "defense": 1000
+  },
+  "call_cost": [],
+  "use_restrictions": [],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "HASTED_EVOLUTION_YAMIGEDO_RE_B-A01",
+      "kind": "ACT",
+      "keywords": [
+        "COUNTER",
+        "FIELD",
+        "HAND"
+      ],
+      "skill_restrictions": [
+        {
+          "type": "NAMED_ABILITY_LIMIT",
+          "ability_name": "Evil Deity Evolution",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "HASTED_EVOLUTION_YAMIGEDO_RE_B",
+            "ability_id": "HASTED_EVOLUTION_YAMIGEDO_RE_B-A01"
+          }
+        }
+      ],
+      "activation_condition": {
+        "type": "AND",
+        "conditions": [
+          {
+            "type": "CARD_IN_ZONE",
+            "card": "THIS_CARD",
+            "owner": "SELF",
+            "zones": [
+              "FIELD",
+              "HAND"
+            ]
+          },
+          {
+            "type": "PHASE_IS",
+            "phase": "FINAL",
+            "player": "SELF"
+          }
+        ]
+      },
+      "cost": [
+        {
+          "type": "MOVE_CARD",
+          "from_zones": [
+            "FIELD",
+            "HAND"
+          ],
+          "to": "DROP",
+          "target": {
+            "type": "THIS_CARD"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "CHOICE",
+          "choose": 1,
+          "options": [
+            {
+              "id": "CALL_SIZE_3_YAMIGEDO",
+              "effects": [
+                {
+                  "type": "CALL",
+                  "from_zones": [
+                    "DECK",
+                    "DROP"
+                  ],
+                  "to": "FIELD",
+                  "target": {
+                    "type": "SELECT",
+                    "card_type": "MONSTER",
+                    "filter": {
+                      "name_contains": "Yamigedo",
+                      "stat_compare": {
+                        "stat": "SIZE",
+                        "operator": "EQUAL",
+                        "value": 3
+                      }
+                    },
+                    "maximum": 1
+                  },
+                  "pay_call_cost": true,
+                  "shuffle": true,
+                  "then": {
+                    "type": "CHOICE",
+                    "optional": true,
+                    "options": [
+                      {
+                        "id": "REMOVE_SELF",
+                        "effects": [
+                          {
+                            "type": "MOVE_CARD",
+                            "from": "DROP",
+                            "to": "REMOVE",
+                            "target": {
+                              "type": "THIS_CARD"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "id": "PUT_TO_CALLED_SOUL",
+                        "effects": [
+                          {
+                            "type": "MOVE_CARD",
+                            "from": "DROP",
+                            "to": {
+                              "type": "SOUL",
+                              "of": "CALLED_CARD"
+                            },
+                            "target": {
+                              "type": "THIS_CARD"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "CALL_GREAT_EVIL_DEITY_PAIR",
+              "effects": [
+                {
+                  "type": "CALL",
+                  "from_zones": [
+                    "DECK",
+                    "DROP"
+                  ],
+                  "to": "FIELD",
+                  "target": {
+                    "type": "SELECT",
+                    "filter": {
+                      "keyword": "GREAT_EVIL_DEITY"
+                    },
+                    "maximum": 2
+                  },
+                  "pay_call_cost": true,
+                  "shuffle": true,
+                  "then": {
+                    "type": "CHOICE",
+                    "optional": true,
+                    "options": [
+                      {
+                        "id": "REMOVE_SELF",
+                        "effects": [
+                          {
+                            "type": "MOVE_CARD",
+                            "from": "DROP",
+                            "to": "REMOVE",
+                            "target": {
+                              "type": "THIS_CARD"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "id": "PUT_TO_CALLED_SOUL",
+                        "effects": [
+                          {
+                            "type": "MOVE_CARD",
+                            "from": "DROP",
+                            "to": {
+                              "type": "SOUL",
+                              "of": "CALLED_CARD"
+                            },
+                            "target": {
+                              "type": "THIS_CARD"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "【Field/Hand】: [Counter] 【Act】 [An/Turn] \"Evil Deity Evolution\" You may only use this ability during your final phase. [Cost] [Drop this card], call up to one size 3 monster with \"Yamigedo\" in its name, or up to two [Great Evil Deity] cards, from your deck or drop by paying the [Call Cost]. If you searched your deck, shuffle it. Then, you may remove this card or put it into the soul of the monster called by this ability.",
+          "segments": [
+            {
+              "text": "【Field/Hand】",
+              "style": "ZONE"
+            },
+            {
+              "text": ": "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " 【Act】 "
+            },
+            {
+              "text": "[An/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " \"Evil Deity Evolution\" You may only use this ability during "
+            },
+            {
+              "text": "your final phase",
+              "style": "PHASE"
+            },
+            {
+              "text": ". "
+            },
+            {
+              "text": "[Cost] [Drop this card]",
+              "style": "COST"
+            },
+            {
+              "text": ", call up to one size 3 monster with \"Yamigedo\" in its name, or up to two "
+            },
+            {
+              "text": "[Great Evil Deity]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " cards, from your "
+            },
+            {
+              "text": "deck",
+              "style": "ZONE"
+            },
+            {
+              "text": " or "
+            },
+            {
+              "text": "drop",
+              "style": "ZONE"
+            },
+            {
+              "text": " by paying the "
+            },
+            {
+              "text": "[Call Cost]",
+              "style": "COST"
+            },
+            {
+              "text": ". If you searched your deck, shuffle it. Then, you may remove this card or put it into the "
+            },
+            {
+              "text": "soul",
+              "style": "ZONE"
+            },
+            {
+              "text": " of the monster called by this ability."
+            }
+          ]
+        },
+        "th": {
+          "plain": "【สนาม / มือ】: [An/Turn] [Counter] 【Act】 \"เทพปีศาจวิวัฒนาการ\" ใช้ความสามารถนี้ได้ในไฟนอลเฟสเราเท่านั้น, [Cost] [นำการ์ดนี้ลงดรอบ] คอลมอนสเตอร์ไซส์ 3 ที่มี \"ยามิเกโด\" ในชื่อการ์ดไม่เกิน 1 ใบหรือการ์ดที่มี Great Evil Deity ไม่เกิน 2 ใบจากกองการ์ดหรือดรอบเราโดยจ่าย [Call Cost] , หากค้นหาจากกองการ์ด, สับกองการ์ด, จากนั้นสามารถรีมูฟการ์ดนี้หรือนำการ์ดนี้เข้าสู่โซลของมอนสเตอร์ที่ถูกคอลด้วยความสามารถนี้",
+          "segments": [
+            {
+              "text": "【สนาม / มือ】",
+              "style": "ZONE"
+            },
+            {
+              "text": ": "
+            },
+            {
+              "text": "[An/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " 【Act】 \"เทพปีศาจวิวัฒนาการ\" ใช้ความสามารถนี้ได้ใน"
+            },
+            {
+              "text": "ไฟนอลเฟสเรา",
+              "style": "PHASE"
+            },
+            {
+              "text": "เท่านั้น, "
+            },
+            {
+              "text": "[Cost] [นำการ์ดนี้ลงดรอบ]",
+              "style": "COST"
+            },
+            {
+              "text": " คอลมอนสเตอร์ไซส์ 3 ที่มี \"ยามิเกโด\" ในชื่อการ์ดไม่เกิน 1 ใบหรือการ์ดที่มี "
+            },
+            {
+              "text": "Great Evil Deity",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " ไม่เกิน 2 ใบจาก"
+            },
+            {
+              "text": "กองการ์ด",
+              "style": "ZONE"
+            },
+            {
+              "text": "หรือ"
+            },
+            {
+              "text": "ดรอบ",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราโดยจ่าย "
+            },
+            {
+              "text": "[Call Cost]",
+              "style": "COST"
+            },
+            {
+              "text": " , หากค้นหาจากกองการ์ด, สับกองการ์ด, จากนั้นสามารถรีมูฟการ์ดนี้หรือนำการ์ดนี้เข้าสู่"
+            },
+            {
+              "text": "โซล",
+              "style": "ZONE"
+            },
+            {
+              "text": "ของมอนสเตอร์ที่ถูกคอลด้วยความสามารถนี้"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "HASTED_EVOLUTION_YAMIGEDO_RE_B-A02",
+      "kind": "AUTO",
+      "keywords": [
+        "THUNDER_MINE"
+      ],
+      "skill_restrictions": [
+        {
+          "type": "ACTIVATION_LIMIT",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "HASTED_EVOLUTION_YAMIGEDO_RE_B",
+            "ability_id": "HASTED_EVOLUTION_YAMIGEDO_RE_B-A02"
+          }
+        }
+      ],
+      "trigger": {
+        "type": "EVENT",
+        "event": "CAST",
+        "actor": "OPPONENT",
+        "target": {
+          "card_type": "SPELL"
+        }
+      },
+      "effects": [
+        {
+          "type": "DAMAGE",
+          "target": "OPPONENT",
+          "amount": 1
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[1/Turn] \"Thunder Mine\" When your opponent casts a spell, deal 1 damage to your opponent!",
+          "segments": [
+            {
+              "text": "[1/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "\"Thunder Mine\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " When your "
+            },
+            {
+              "text": "opponent",
+              "style": "PLAYER"
+            },
+            {
+              "text": " casts a "
+            },
+            {
+              "text": "spell",
+              "style": "CARD_REFERENCE"
+            },
+            {
+              "text": ", deal "
+            },
+            {
+              "text": "1 damage",
+              "style": "DAMAGE"
+            },
+            {
+              "text": " to your opponent!"
+            }
+          ]
+        },
+        "th": {
+          "plain": "[1/Turn] \"ธันเดอร์ ไมน์\" เมื่อคู่แข่งร่ายเวทมนตร์, สร้างความเสียหายใส่คู่แข่ง 1 ไลฟ์!",
+          "segments": [
+            {
+              "text": "[1/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "\"ธันเดอร์ ไมน์\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " เมื่อ"
+            },
+            {
+              "text": "คู่แข่ง",
+              "style": "PLAYER"
+            },
+            {
+              "text": "ร่ายเวทมนตร์, สร้างความเสียหายใส่คู่แข่ง "
+            },
+            {
+              "text": "1 ไลฟ์",
+              "style": "DAMAGE"
+            },
+            {
+              "text": "!"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

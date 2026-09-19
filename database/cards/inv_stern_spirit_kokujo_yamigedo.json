@@ -1,0 +1,296 @@
+{
+  "card_id": "INV_STERN_SPIRIT_KOKUJO_YAMIGEDO",
+  "name": {
+    "en": "INV Stern Spirit, Kokujo Yamigedo",
+    "th": "วิญญาณอันแข็งแกร่งเบื้องหลัง, โคคุโจยามิเกโด"
+  },
+  "image": "database/images/inv_stern_spirit_kokujo_yamigedo.webp",
+  "type": "MONSTER",
+  "worlds": [],
+  "attributes": [
+    "HUNDRED_DEMONS"
+  ],
+  "stats": {
+    "size": 3,
+    "power": 8000,
+    "critical": 2,
+    "defense": 8000
+  },
+  "call_cost": [
+    {
+      "type": "MOVE_CARD",
+      "from": "FIELD",
+      "to": {
+        "type": "SOUL",
+        "of": "THIS_CARD"
+      },
+      "target": {
+        "type": "SELECT",
+        "zone": "FIELD",
+        "owner": "SELF",
+        "card_type": "MONSTER",
+        "filter": {
+          "attribute": "HUNDRED_DEMONS"
+        },
+        "minimum": 1
+      }
+    },
+    {
+      "type": "PAY_GAUGE",
+      "amount": 3
+    }
+  ],
+  "use_restrictions": [],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "INV_STERN_SPIRIT_KOKUJO_YAMIGEDO-A01",
+      "kind": "AUTO",
+      "keywords": [
+        "THUNDER_MINE"
+      ],
+      "skill_restrictions": [],
+      "trigger": {
+        "type": "EVENT",
+        "event": "ENTER_FIELD",
+        "target": {
+          "card_type": "MONSTER",
+          "owner": "OPPONENT",
+          "zone": "FIELD"
+        }
+      },
+      "effects": [
+        {
+          "type": "DAMAGE",
+          "target": "OPPONENT",
+          "amount": 1
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "\"Thunder Mine\" When a monster enters your opponent's field, deal 1 damage to your opponent!",
+          "segments": [
+            {
+              "text": "\"Thunder Mine\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " When a "
+            },
+            {
+              "text": "monster",
+              "style": "CARD_REFERENCE"
+            },
+            {
+              "text": " enters your "
+            },
+            {
+              "text": "opponent",
+              "style": "PLAYER"
+            },
+            {
+              "text": "'s "
+            },
+            {
+              "text": "field",
+              "style": "ZONE"
+            },
+            {
+              "text": ", deal "
+            },
+            {
+              "text": "1 damage",
+              "style": "DAMAGE"
+            },
+            {
+              "text": " to your opponent!"
+            }
+          ]
+        },
+        "th": {
+          "plain": "\"ธันเดอร์ ไมน์\" เมื่อมีมอนสเตอร์เข้าสู่สนามคู่แข่ง, สร้างความเสียหายใส่คู่แข่ง 1 ไลฟ์!",
+          "segments": [
+            {
+              "text": "\"ธันเดอร์ ไมน์\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " เมื่อมีมอนสเตอร์เข้าสู่"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "คู่แข่ง",
+              "style": "PLAYER"
+            },
+            {
+              "text": ", สร้างความเสียหายใส่คู่แข่ง "
+            },
+            {
+              "text": "1 ไลฟ์",
+              "style": "DAMAGE"
+            },
+            {
+              "text": "!"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "INV_STERN_SPIRIT_KOKUJO_YAMIGEDO-A02",
+      "kind": "ACT",
+      "keywords": [],
+      "skill_restrictions": [],
+      "cost": [
+        {
+          "type": "TARGET_SELECTION",
+          "target_id": "TARGET_CARD",
+          "selector": {
+            "type": "SELECT",
+            "zone": "FIELD",
+            "owner": "OPPONENT",
+            "card_type": "MONSTER",
+            "count": 1
+          }
+        },
+        {
+          "type": "MOVE_CARD",
+          "from": "HAND",
+          "to": "DROP",
+          "target": {
+            "type": "SELECT",
+            "zone": "HAND",
+            "owner": "SELF",
+            "filter": {
+              "or": [
+                {
+                  "card_type": "MONSTER",
+                  "attribute": "HUNDRED_DEMONS"
+                },
+                {
+                  "keyword": "OMNI_LORD"
+                }
+              ]
+            },
+            "count": 1
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "DESTROY",
+          "target": {
+            "type": "TARGET_REFERENCE",
+            "target_id": "TARGET_CARD"
+          }
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "【Act】 [Cost] [Choose a monster on your opponent's field, and drop a 《Hundred Demons》 monster or a card with [Omni Lord] from your hand], destroy the chosen card.",
+          "segments": [
+            {
+              "text": "【Act】 "
+            },
+            {
+              "text": "[Cost] [Choose a monster on your opponent's field, and drop a 《Hundred Demons》 monster or a card with [Omni Lord] from your hand]",
+              "style": "COST"
+            },
+            {
+              "text": ", destroy the chosen card."
+            }
+          ]
+        },
+        "th": {
+          "plain": "【Act】 [Cost] [เลือกมอนสเตอร์ 1 ใบ บนสนามคู่แข่งและทิ้งมอนสเตอร์《ร้อยอสูร》หรือการ์ดที่มี Omni Lord จากบนมือเรา 1 ใบ] ทำลายการ์ดที่เลือกนั้น",
+          "segments": [
+            {
+              "text": "【Act】 "
+            },
+            {
+              "text": "[Cost] [เลือกมอนสเตอร์ 1 ใบ บนสนามคู่แข่งและทิ้งมอนสเตอร์《ร้อยอสูร》หรือการ์ดที่มี Omni Lord จากบนมือเรา 1 ใบ]",
+              "style": "COST"
+            },
+            {
+              "text": " ทำลายการ์ดที่เลือกนั้น"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "INV_STERN_SPIRIT_KOKUJO_YAMIGEDO-A03",
+      "kind": "CONT",
+      "keywords": [
+        "DOUBLE_ATTACK"
+      ],
+      "skill_restrictions": [],
+      "effects": [
+        {
+          "type": "ATTACK_RULE",
+          "target": "THIS_CARD",
+          "rules": [
+            "DOUBLE_ATTACK"
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Double Attack]",
+          "segments": [
+            {
+              "text": "[Double Attack]",
+              "style": "KEYWORD"
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Double Attack]",
+          "segments": [
+            {
+              "text": "[Double Attack]",
+              "style": "KEYWORD"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "INV_STERN_SPIRIT_KOKUJO_YAMIGEDO-A04",
+      "kind": "CONT",
+      "keywords": [
+        "SOULGUARD"
+      ],
+      "skill_restrictions": [],
+      "effects": [
+        {
+          "type": "SOULGUARD",
+          "target": "THIS_CARD"
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Soulguard]",
+          "segments": [
+            {
+              "text": "[Soulguard]",
+              "style": "KEYWORD"
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Soulguard]",
+          "segments": [
+            {
+              "text": "[Soulguard]",
+              "style": "KEYWORD"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

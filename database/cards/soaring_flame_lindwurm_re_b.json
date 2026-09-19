@@ -1,0 +1,350 @@
+{
+  "card_id": "SOARING_FLAME_LINDWURM_RE_B",
+  "name": {
+    "en": "Soaring Flame, Lindwurm \"Re:B\"",
+    "th": "เปลวเพลิงที่พาดผ่านท้องฟ้า, ลินด์บลุม \"Re:B\""
+  },
+  "image": "database/images/soaring_flame_lindwurm_re_b.webp",
+  "type": "MONSTER",
+  "worlds": [
+    "LEGEND_WORLD"
+  ],
+  "attributes": [
+    "HUNDRED_DEMONS",
+    "WYDAR_SARKAL"
+  ],
+  "stats": {
+    "size": 1,
+    "power": 3000,
+    "critical": 2,
+    "defense": 3000
+  },
+  "call_cost": [],
+  "use_restrictions": [],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "SOARING_FLAME_LINDWURM_RE_B-A01",
+      "kind": "ACT",
+      "keywords": [
+        "HAND"
+      ],
+      "skill_restrictions": [
+        {
+          "type": "NAMED_ABILITY_LIMIT",
+          "ability_name": "Midnight Flame",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "SOARING_FLAME_LINDWURM_RE_B",
+            "ability_id": "SOARING_FLAME_LINDWURM_RE_B-A01"
+          }
+        }
+      ],
+      "activation_condition": {
+        "type": "CARD_IN_ZONE",
+        "card": "THIS_CARD",
+        "owner": "SELF",
+        "zones": [
+          "HAND"
+        ]
+      },
+      "cost": [
+        {
+          "type": "MOVE_CARD",
+          "from": "HAND",
+          "to": "REMOVE",
+          "target": {
+            "type": "THIS_CARD"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "SEQUENCE",
+          "effects": [
+            {
+              "type": "MOVE_CARD",
+              "from": "DROP",
+              "to": "DECK",
+              "position": "BOTTOM",
+              "target": {
+                "type": "SELECT",
+                "zone": "DROP",
+                "owner": "SELF",
+                "maximum": 2
+              }
+            },
+            {
+              "type": "CHARGE_GAUGE",
+              "amount": 2
+            },
+            {
+              "type": "IF",
+              "condition": {
+                "type": "PLAYER_CONTROLS_CARD",
+                "owner": "SELF",
+                "zone": "FIELD",
+                "filter": {
+                  "attributes_any": [
+                    "HUNDRED_DEMONS",
+                    "WYDAR_SARKAL"
+                  ]
+                }
+              },
+              "then": [
+                {
+                  "type": "DRAW",
+                  "maximum": 2,
+                  "optional": true
+                }
+              ],
+              "else": []
+            }
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "【Hand】: 【Act】 [An/Turn] \"Midnight Flame\" [Cost] [Remove this card], put up to two cards from your drop on the bottom of your deck. Then, charge two gauge, and if you have a 《Hundred Demons》 or 《Wydar Sarkal》 on your field, draw up to two cards!",
+          "segments": [
+            {
+              "text": "【Hand】",
+              "style": "ZONE"
+            },
+            {
+              "text": ": 【Act】 "
+            },
+            {
+              "text": "[An/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " \"Midnight Flame\" "
+            },
+            {
+              "text": "[Cost] [Remove this card]",
+              "style": "COST"
+            },
+            {
+              "text": ", put up to two cards from your "
+            },
+            {
+              "text": "drop",
+              "style": "ZONE"
+            },
+            {
+              "text": " on the bottom of your "
+            },
+            {
+              "text": "deck",
+              "style": "ZONE"
+            },
+            {
+              "text": ". Then, charge two "
+            },
+            {
+              "text": "gauge",
+              "style": "ZONE"
+            },
+            {
+              "text": ", and if you have a "
+            },
+            {
+              "text": "《Hundred Demons》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": " or "
+            },
+            {
+              "text": "《Wydar Sarkal》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": " on your "
+            },
+            {
+              "text": "field",
+              "style": "ZONE"
+            },
+            {
+              "text": ", draw up to two cards!"
+            }
+          ]
+        },
+        "th": {
+          "plain": "【มือ】: [An/Turn] 【Act】 \"เพลิงรัตติกาล\" [Cost] [รีมูฟการ์ดใบนี้], นำการ์ดจากดรอบเราไม่เกิน 2 ใบกลับไปเรียงใต้กองการ์ดเรา, จากนั้น เราชาร์จ 2 เกจ หากบนสนามเรามี《ร้อยอสูร》หรือ《วีเดอร์ซาฮา》เราจั่วการ์ดไม่เกิน 2 ใบ!",
+          "segments": [
+            {
+              "text": "【มือ】",
+              "style": "ZONE"
+            },
+            {
+              "text": ": "
+            },
+            {
+              "text": "[An/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " 【Act】 \"เพลิงรัตติกาล\" "
+            },
+            {
+              "text": "[Cost] [รีมูฟการ์ดใบนี้]",
+              "style": "COST"
+            },
+            {
+              "text": ", นำการ์ดจาก"
+            },
+            {
+              "text": "ดรอบ",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราไม่เกิน 2 ใบกลับไปเรียงใต้"
+            },
+            {
+              "text": "กองการ์ด",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรา, จากนั้น เราชาร์จ 2 เกจ หากบน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรามี"
+            },
+            {
+              "text": "《ร้อยอสูร》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": "หรือ"
+            },
+            {
+              "text": "《วีเดอร์ซาฮา》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": "เราจั่วการ์ดไม่เกิน 2 ใบ!"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "SOARING_FLAME_LINDWURM_RE_B-A02",
+      "kind": "AUTO",
+      "keywords": [
+        "THUNDER_MINE"
+      ],
+      "skill_restrictions": [
+        {
+          "type": "ACTIVATION_LIMIT",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "SOARING_FLAME_LINDWURM_RE_B",
+            "ability_id": "SOARING_FLAME_LINDWURM_RE_B-A02"
+          }
+        }
+      ],
+      "trigger": {
+        "type": "EVENT",
+        "event": "EQUIP",
+        "actor": "OPPONENT",
+        "target": {
+          "card_type": "ITEM"
+        }
+      },
+      "effects": [
+        {
+          "type": "DAMAGE",
+          "target": "OPPONENT",
+          "amount": 1
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[1/Turn] \"Thunder Mine\" When your opponent equips an item, deal 1 damage to your opponent!",
+          "segments": [
+            {
+              "text": "[1/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "\"Thunder Mine\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " When your "
+            },
+            {
+              "text": "opponent",
+              "style": "PLAYER"
+            },
+            {
+              "text": " equips an "
+            },
+            {
+              "text": "item",
+              "style": "CARD_REFERENCE"
+            },
+            {
+              "text": ", deal "
+            },
+            {
+              "text": "1 damage",
+              "style": "DAMAGE"
+            },
+            {
+              "text": " to your opponent!"
+            }
+          ]
+        },
+        "th": {
+          "plain": "[1/Turn] \"ธันเดอร์ ไมน์\" เมื่อคู่แข่งสวมใส่ไอเท็ม, สร้างความเสียหายใส่คู่แข่ง 1 ไลฟ์!",
+          "segments": [
+            {
+              "text": "[1/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "\"ธันเดอร์ ไมน์\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " เมื่อ"
+            },
+            {
+              "text": "คู่แข่ง",
+              "style": "PLAYER"
+            },
+            {
+              "text": "สวมใส่ไอเท็ม, สร้างความเสียหายใส่คู่แข่ง "
+            },
+            {
+              "text": "1 ไลฟ์",
+              "style": "DAMAGE"
+            },
+            {
+              "text": "!"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "card_id": "PARADE_OF_HUNDRED_DEMONS",
+  "name": {
+    "en": "Parade of Hundred Demons",
+    "th": "ขบวนร้อยอสูร"
+  },
+  "image": "database/images/parade_of_hundred_demons.webp",
+  "type": "FLAG",
+  "worlds": [],
+  "attributes": [],
+  "call_cost": [],
+  "use_restrictions": [],
+  "rules": [
+    {
+      "type": "ALLOW_CARD_ATTRIBUTE",
+      "attribute": "HUNDRED_DEMONS"
+    },
+    {
+      "type": "ALLOW_GENERIC"
+    }
+  ],
+  "abilities": []
+}

@@ -1,0 +1,1921 @@
+[
+  {
+    "schema_version": 2,
+    "card_id": "DRUM_BUNKER_DRAGON_RE_B",
+    "card_number": "10th/0001",
+    "name": {
+      "en": "Drum Bunker Dragon \"Re:B\"",
+      "th": "ดรัมบังเกอร์・ดราก้อน “Re:B”"
+    },
+    "image": null,
+    "type": "MONSTER",
+    "worlds": [
+      "DRAGON_WORLD"
+    ],
+    "attributes": [
+      "ARMORDRAGON",
+      "RED_DRAGON"
+    ],
+    "stats": {
+      "size": 2,
+      "power": 5000,
+      "critical": 3,
+      "defense": 5000
+    },
+    "call_cost": [
+      {
+        "type": "PAY_GAUGE",
+        "amount": 1
+      },
+      {
+        "type": "PUT_TOP_DECK_TO_SOUL",
+        "amount": 1
+      }
+    ],
+    "use_restrictions": [],
+    "rules": [],
+    "abilities": [
+      {
+        "id": "DRUM_BUNKER_DRAGON_RE_B-A01",
+        "kind": "AUTO",
+        "keywords": [],
+        "skill_restrictions": [],
+        "trigger": {
+          "type": "DAMAGE_RECEIVED",
+          "target": "SELF"
+        },
+        "activation_condition": {
+          "type": "AND",
+          "conditions": [
+            {
+              "type": "CARD_IN_ZONE",
+              "card": "THIS_CARD",
+              "zones": [
+                "SOUL"
+              ]
+            },
+            {
+              "type": "SOUL_HOST_MATCH",
+              "card": "THIS_CARD",
+              "filter": {
+                "type": "NAME_CONTAINS",
+                "value": "Drum"
+              }
+            }
+          ]
+        },
+        "optional": true,
+        "cost": [],
+        "effects": [
+          {
+            "type": "IF",
+            "condition": {
+              "type": "USER_CHOICE",
+              "prompt": "Pay 1 gauge to put chosen monster into drop zone?"
+            },
+            "then": [
+              {
+                "type": "PAY_GAUGE",
+                "amount": 1
+              },
+              {
+                "type": "MOVE_CARD",
+                "from": "FIELD",
+                "to": "DROP",
+                "target": {
+                  "type": "SELECT",
+                  "target_player": "OPPONENT",
+                  "zone": "FIELD",
+                  "card_type": "MONSTER",
+                  "maximum": 1
+                }
+              }
+            ],
+            "else": []
+          }
+        ],
+        "effect_text": {
+          "en": {
+            "plain": "When you take damage, if this card is in the soul of a monster with \"Drum\" in its card name, choose up to one monster on your opponent's field, and you may pay 1 gauge. If you do, put the chosen card into the drop zone.",
+            "segments": [
+              {
+                "text": "When you take damage, if this card is in the soul of a monster with \"Drum\" in its card name, choose up to one monster on your opponent's field, and you may pay 1 gauge. If you do, put the chosen card into the drop zone."
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "DRUM_BUNKER_DRAGON_RE_B-A02",
+        "kind": "ACT",
+        "keywords": [
+          "COUNTER"
+        ],
+        "skill_restrictions": [
+          {
+            "type": "NAMED_ABILITY_LIMIT",
+            "ability_name": "Drill Ram Bunker of Bonds",
+            "count": 1,
+            "period": "TURN",
+            "source": {
+              "kind": "CARD",
+              "card_id": "DRUM_BUNKER_DRAGON_RE_B",
+              "ability_id": "DRUM_BUNKER_DRAGON_RE_B-A02"
+            }
+          }
+        ],
+        "trigger": {
+          "type": "COUNTER_TIMING"
+        },
+        "activation_condition": {
+          "type": "TURN",
+          "turn": "YOUR_TURN"
+        },
+        "optional": false,
+        "cost": [],
+        "effects": [
+          {
+            "type": "SEQUENCE",
+            "effects": [
+              {
+                "type": "CALL",
+                "from": "DECK",
+                "to": "FIELD",
+                "targets": [
+                  {
+                    "type": "SELECT",
+                    "card_type": "MONSTER",
+                    "name_contains": "Drum",
+                    "maximum": 1
+                  }
+                ],
+                "placement": {
+                  "type": "ON_TOP_OF",
+                  "card": "THIS_CARD"
+                },
+                "pay_call_cost": false
+              },
+              {
+                "type": "SHUFFLE_DECK"
+              },
+              {
+                "type": "DAMAGE",
+                "target": "SELF",
+                "amount": 1
+              }
+            ]
+          }
+        ],
+        "effect_text": {
+          "en": {
+            "plain": "[Counter] 【Act】 \"Drill Ram Bunker of Bonds\" During your turn, call up to one monster with \"Drum\" in its card name from your deck on top of this card without paying its [Call Cost], and shuffle your deck. Then, you take 1 damage! You may only use \"Drill Ram Bunker of Bonds\" once per turn.",
+            "segments": [
+              {
+                "text": "[Counter]",
+                "style": "KEYWORD"
+              },
+              {
+                "text": " "
+              },
+              {
+                "text": "【Act】",
+                "style": "KEYWORD"
+              },
+              {
+                "text": " "
+              },
+              {
+                "text": "\"Drill Ram Bunker of Bonds\"",
+                "style": "ABILITY_NAME"
+              },
+              {
+                "text": " During your turn, call up to one monster with \"Drum\" in its card name from your deck on top of this card without paying its [Call Cost], and shuffle your deck. Then, you take 1 damage! You may only use \"Drill Ram Bunker of Bonds\" once per turn."
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "DRUM_BUNKER_DRAGON_RE_B-A03",
+        "kind": "CONT",
+        "keywords": [
+          "DOUBLE_ATTACK"
+        ],
+        "skill_restrictions": [],
+        "effects": [],
+        "effect_text": {
+          "en": {
+            "plain": "[Double Attack]",
+            "segments": [
+              {
+                "text": "[Double Attack]",
+                "style": "KEYWORD"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "DRUM_BUNKER_DRAGON_RE_B-A04",
+        "kind": "CONT",
+        "keywords": [
+          "SOULGUARD"
+        ],
+        "skill_restrictions": [],
+        "effects": [],
+        "effect_text": {
+          "en": {
+            "plain": "[Soulguard]",
+            "segments": [
+              {
+                "text": "[Soulguard]",
+                "style": "KEYWORD"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "card_id": "SUPER_SUN_DRAGON_BALLE_SOLEIL_RE_B",
+    "card_number": "10th/0002",
+    "name": {
+      "en": "Super Sun Dragon, Balle Soleil \"Re:B\"",
+      "th": "สุดยอดมังกรสุริยัน, บัล โซเลย์​ \"Re:B\""
+    },
+    "image": null,
+    "type": "MONSTER",
+    "worlds": [
+      "DRAGON_WORLD",
+      "STAR_DRAGON_WORLD",
+      "DARKNESS_DRAGON_WORLD"
+    ],
+    "attributes": [
+      "SUN_DRAGON",
+      "NEODRAGON",
+      "BLACK_DRAGON"
+    ],
+    "stats": {
+      "size": 3,
+      "power": 7000,
+      "critical": 2,
+      "defense": 7000
+    },
+    "call_cost": [
+      {
+        "type": "PUT_TO_SOUL",
+        "from": "FIELD",
+        "card_type": "MONSTER",
+        "minimum": 1
+      },
+      {
+        "type": "PAY_GAUGE",
+        "amount": 2
+      }
+    ],
+    "use_restrictions": [],
+    "rules": [],
+    "abilities": [
+      {
+        "id": "SUPER_SUN_DRAGON_BALLE_SOLEIL_RE_B-A01",
+        "kind": "CONT",
+        "keywords": [],
+        "skill_restrictions": [],
+        "activation_condition": {
+          "type": "CARD_HAS_SOUL",
+          "card": "THIS_CARD",
+          "minimum": 1
+        },
+        "effects": [
+          {
+            "type": "DAMAGE_PROTECTION",
+            "target": "SELF",
+            "reduction": 3,
+            "source_exception": "YOUR_CARD_EFFECT",
+            "duration": {
+              "type": "WHILE_SOURCE_ACTIVE"
+            }
+          },
+          {
+            "type": "MODIFY_STAT",
+            "target": "THIS_CARD",
+            "stat": "POWER",
+            "amount": 10000,
+            "duration": {
+              "type": "WHILE_SOURCE_ACTIVE"
+            }
+          },
+          {
+            "type": "MODIFY_STAT",
+            "target": "THIS_CARD",
+            "stat": "DEFENSE",
+            "amount": 10000,
+            "duration": {
+              "type": "WHILE_SOURCE_ACTIVE"
+            }
+          },
+          {
+            "type": "MODIFY_STAT",
+            "target": "THIS_CARD",
+            "stat": "CRITICAL",
+            "amount": 2,
+            "duration": {
+              "type": "WHILE_SOURCE_ACTIVE"
+            }
+          }
+        ],
+        "effect_text": {
+          "en": {
+            "plain": "[CONT] If this card has souls, damage dealt to you other than by your card effects is reduced by 3, and this card gets power+10000, defense+10000 and critical+2!",
+            "segments": [
+              {
+                "text": "[CONT]",
+                "style": "KEYWORD"
+              },
+              {
+                "text": " If this card has souls, damage dealt to you other than by your card effects is reduced by 3, and this card gets power+10000, defense+10000 and critical+2!"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "SUPER_SUN_DRAGON_BALLE_SOLEIL_RE_B-A02",
+        "kind": "ACT",
+        "keywords": [
+          "COUNTER"
+        ],
+        "skill_restrictions": [],
+        "trigger": {
+          "type": "COUNTER_TIMING"
+        },
+        "cost": [
+          {
+            "type": "PAY_GAUGE",
+            "amount": 1
+          }
+        ],
+        "effects": [
+          {
+            "type": "SEQUENCE",
+            "effects": [
+              {
+                "type": "REMOVE_SOUL",
+                "target": {
+                  "type": "SELECT",
+                  "target_player": "OPPONENT",
+                  "zone": "FIELD",
+                  "position": "CENTER",
+                  "card_type": "MONSTER",
+                  "maximum": 1
+                },
+                "amount": 1,
+                "to": "DROP"
+              },
+              {
+                "type": "MOVE_CARD",
+                "from": "FIELD",
+                "to": "DROP",
+                "target": {
+                  "type": "SELECT",
+                  "target_player": "OPPONENT",
+                  "zone": "FIELD",
+                  "position": "CENTER",
+                  "card_type": "MONSTER",
+                  "maximum": 1
+                }
+              }
+            ]
+          }
+        ],
+        "effect_text": {
+          "en": {
+            "plain": "[Counter] 【Act】 Choose a monster on your opponent's center, [Cost] [Pay 1 gauge], drop a soul from the chosen card, and put that card into the drop zone!",
+            "segments": [
+              {
+                "text": "[Counter]",
+                "style": "KEYWORD"
+              },
+              {
+                "text": " "
+              },
+              {
+                "text": "【Act】",
+                "style": "KEYWORD"
+              },
+              {
+                "text": " Choose a monster on your opponent's center, "
+              },
+              {
+                "text": "[Cost]",
+                "style": "COST"
+              },
+              {
+                "text": " "
+              },
+              {
+                "text": "[Pay 1 gauge]",
+                "style": "COST"
+              },
+              {
+                "text": ", drop a soul from the chosen card, and put that card into the drop zone!"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "SUPER_SUN_DRAGON_BALLE_SOLEIL_RE_B-A03",
+        "kind": "CONT",
+        "keywords": [
+          "TRIPLE_ATTACK"
+        ],
+        "skill_restrictions": [],
+        "effects": [],
+        "effect_text": {
+          "en": {
+            "plain": "[Triple Attack]",
+            "segments": [
+              {
+                "text": "[Triple Attack]",
+                "style": "KEYWORD"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "SUPER_SUN_DRAGON_BALLE_SOLEIL_RE_B-A04",
+        "kind": "CONT",
+        "keywords": [
+          "SOULGUARD"
+        ],
+        "skill_restrictions": [],
+        "effects": [],
+        "effect_text": {
+          "en": {
+            "plain": "[Soulguard]",
+            "segments": [
+              {
+                "text": "[Soulguard]",
+                "style": "KEYWORD"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "card_id": "DEMON_LORD_DRAGON_BATZZ_RE_B",
+    "card_number": "10th/0003",
+    "name": {
+      "en": "Demon Lord Dragon, Batzz \"Re:B\"",
+      "th": "มังกรจอมมาร บัตซ์ “Re:B”"
+    },
+    "image": null,
+    "type": "MONSTER",
+    "worlds": [
+      "DRAGON_WORLD"
+    ],
+    "attributes": [
+      "THUNDER_EMPIRE",
+      "DRAGON"
+    ],
+    "stats": {
+      "size": 2,
+      "power": 13000,
+      "critical": 2,
+      "defense": 6000
+    },
+    "call_cost": [
+      {
+        "type": "PAY_GAUGE",
+        "amount": 2
+      }
+    ],
+    "use_restrictions": [],
+    "rules": [],
+    "abilities": [
+      {
+        "id": "DEMON_LORD_DRAGON_BATZZ_RE_B-A01",
+        "kind": "CONT",
+        "keywords": [],
+        "skill_restrictions": [],
+        "activation_condition": {
+          "type": "TURN",
+          "turn": "YOUR_TURN"
+        },
+        "effects": [
+          {
+            "type": "PROTECTION",
+            "target": "THIS_CARD",
+            "action": "LEAVE_FIELD",
+            "source": "OPPONENT_CARD_EFFECT",
+            "duration": {
+              "type": "WHILE_SOURCE_ACTIVE"
+            }
+          },
+          {
+            "type": "PROTECTION",
+            "target": "THIS_CARD",
+            "action": "REST",
+            "source": "OPPONENT_CARD_EFFECT",
+            "duration": {
+              "type": "WHILE_SOURCE_ACTIVE"
+            }
+          },
+          {
+            "type": "PROTECTION",
+            "target": {
+              "type": "ABILITIES",
+              "of": "THIS_CARD"
+            },
+            "action": "NULLIFY",
+            "source": "OPPONENT_CARD_EFFECT",
+            "duration": {
+              "type": "WHILE_SOURCE_ACTIVE"
+            }
+          },
+          {
+            "type": "PROTECTION",
+            "target": "THIS_CARD",
+            "action": "DESTROY",
+            "source": "ALL",
+            "duration": {
+              "type": "WHILE_SOURCE_ACTIVE"
+            }
+          }
+        ],
+        "effect_text": {
+          "en": {
+            "plain": "During your turn, this card cannot leave the field or be [Rest] and its abilities cannot be nullified by your opponent's card effects, and it cannot be destroyed.",
+            "segments": [
+              {
+                "text": "During your turn, this card cannot leave the field or be "
+              },
+              {
+                "text": "[Rest]",
+                "style": "KEYWORD"
+              },
+              {
+                "text": " and its abilities cannot be nullified by your opponent's card effects, and it cannot be destroyed."
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "DEMON_LORD_DRAGON_BATZZ_RE_B-A02",
+        "kind": "AUTO",
+        "keywords": [],
+        "skill_restrictions": [
+          {
+            "type": "ACTIVATION_LIMIT",
+            "count": 1,
+            "period": "TURN",
+            "source": {
+              "kind": "CARD",
+              "card_id": "DEMON_LORD_DRAGON_BATZZ_RE_B",
+              "ability_id": "DEMON_LORD_DRAGON_BATZZ_RE_B-A02"
+            }
+          }
+        ],
+        "trigger": {
+          "type": "ATTACK_DECLARED",
+          "attacker": "THIS_CARD"
+        },
+        "effects": [
+          {
+            "type": "IF",
+            "condition": {
+              "type": "STAT_COMPARE",
+              "target": "SELF_LIFE",
+              "operator": "LESS_THAN_OR_EQUAL",
+              "value": 4
+            },
+            "then": [
+              {
+                "type": "MODIFY_STAT",
+                "target": "THIS_CARD",
+                "stat": "POWER",
+                "amount": 10000,
+                "duration": {
+                  "type": "UNTIL_END_OF_TURN"
+                }
+              },
+              {
+                "type": "MODIFY_STAT",
+                "target": "THIS_CARD",
+                "stat": "CRITICAL",
+                "amount": 1,
+                "duration": {
+                  "type": "UNTIL_END_OF_TURN"
+                }
+              },
+              {
+                "type": "GRANT_KEYWORD",
+                "target": "THIS_CARD",
+                "keyword": "HEXTUPLE_ATTACK",
+                "duration": {
+                  "type": "UNTIL_END_OF_TURN"
+                }
+              }
+            ],
+            "else": [
+              {
+                "type": "GRANT_KEYWORD",
+                "target": "THIS_CARD",
+                "keyword": "TRIPLE_ATTACK",
+                "duration": {
+                  "type": "UNTIL_END_OF_TURN"
+                }
+              }
+            ]
+          }
+        ],
+        "effect_text": {
+          "en": {
+            "plain": "When this card attacks, for this turn, this card gets [Triple Attack]. If you have 4 life or less, for this turn, this card gets power+10000, critical+1 and [Hextuple Attack] instead!! This ability only activates once per turn.",
+            "segments": [
+              {
+                "text": "When this card attacks, for this turn, this card gets "
+              },
+              {
+                "text": "[Triple Attack]",
+                "style": "KEYWORD"
+              },
+              {
+                "text": ". If you have 4 life or less, for this turn, this card gets power+10000, critical+1 and "
+              },
+              {
+                "text": "[Hextuple Attack]",
+                "style": "KEYWORD"
+              },
+              {
+                "text": " instead!! This ability only activates once per turn."
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "DEMON_LORD_DRAGON_BATZZ_RE_B-A03",
+        "kind": "CONT",
+        "keywords": [
+          "PENETRATE"
+        ],
+        "skill_restrictions": [],
+        "effects": [],
+        "effect_text": {
+          "en": {
+            "plain": "[Penetrate]",
+            "segments": [
+              {
+                "text": "[Penetrate]",
+                "style": "KEYWORD"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "card_id": "DEITY_GARGANTUA_DRAGON_RE_B",
+    "card_number": "10th/0004",
+    "name": {
+      "en": "Deity Gargantua Dragon \"Re:B\"",
+      "th": "ชิน・การ์แกนทัวร์・ดราก้อน “Re:B”"
+    },
+    "image": null,
+    "type": "MONSTER",
+    "worlds": [],
+    "attributes": [
+      "DRAGOD",
+      "DEITY_DRAGON_TRIBE"
+    ],
+    "stats": {
+      "size": 2,
+      "power": 10000,
+      "critical": 3,
+      "defense": 5000
+    },
+    "call_cost": [
+      {
+        "type": "PAY_GAUGE",
+        "amount": 2
+      },
+      {
+        "type": "PUT_TOP_DECK_TO_SOUL",
+        "amount": 1
+      }
+    ],
+    "use_restrictions": [],
+    "rules": [
+      {
+        "type": "ALLOW_ALL_FLAGS"
+      },
+      {
+        "type": "BUDDY_RULE",
+        "condition": {
+          "type": "IS_BUDDY",
+          "card": "THIS_CARD"
+        },
+        "rule": {
+          "type": "ALLOW_CARD_ATTRIBUTE",
+          "attribute": "DRAGOD",
+          "world": "ALL"
+        }
+      }
+    ],
+    "abilities": [
+      {
+        "id": "DEITY_GARGANTUA_DRAGON_RE_B-A01",
+        "kind": "ACT",
+        "keywords": [
+          "COUNTER"
+        ],
+        "skill_restrictions": [],
+        "trigger": {
+          "type": "COUNTER_TIMING"
+        },
+        "activation_condition": {
+          "type": "AND",
+          "conditions": [
+            {
+              "type": "TURN",
+              "turn": "YOUR_TURN"
+            },
+            {
+              "type": "CARD_IN_ZONE",
+              "card": "THIS_CARD",
+              "zones": [
+                "SOUL"
+              ]
+            },
+            {
+              "type": "SOUL_HOST_MATCH",
+              "filter": {
+                "type": "ATTRIBUTE",
+                "value": "DRAGOD"
+              }
+            }
+          ]
+        },
+        "cost": [
+          {
+            "type": "PAY_CALL_COST",
+            "card": "THIS_CARD"
+          }
+        ],
+        "effects": [
+          {
+            "type": "CALL",
+            "from": "SOUL",
+            "to": "FIELD",
+            "targets": [
+              {
+                "type": "THIS_CARD"
+              }
+            ],
+            "pay_call_cost": true
+          }
+        ],
+        "effect_text": {
+          "en": {
+            "plain": "[Counter] 【Act】 During your turn, call this card from a soul of a 《Dragod》 by paying its [Call Cost].",
+            "segments": [
+              {
+                "text": "[Counter]",
+                "style": "KEYWORD"
+              },
+              {
+                "text": " "
+              },
+              {
+                "text": "【Act】",
+                "style": "KEYWORD"
+              },
+              {
+                "text": " During your turn, call this card from a soul of a 《Dragod》 by paying its [Call Cost]."
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "DEITY_GARGANTUA_DRAGON_RE_B-A02",
+        "kind": "ACT",
+        "keywords": [
+          "COUNTER"
+        ],
+        "skill_restrictions": [
+          {
+            "type": "NAMED_ABILITY_LIMIT",
+            "ability_name": "D-[G•EVO]",
+            "count": 1,
+            "period": "TURN",
+            "source": {
+              "kind": "CARD",
+              "card_id": "DEITY_GARGANTUA_DRAGON_RE_B",
+              "ability_id": "DEITY_GARGANTUA_DRAGON_RE_B-A02"
+            }
+          }
+        ],
+        "trigger": {
+          "type": "COUNTER_TIMING"
+        },
+        "activation_condition": {
+          "type": "PHASE",
+          "phase": "ATTACK"
+        },
+        "effects": [
+          {
+            "type": "CALL",
+            "from": [
+              "HAND",
+              "DROP"
+            ],
+            "to": "FIELD",
+            "targets": [
+              {
+                "type": "SELECT",
+                "card_type": "MONSTER",
+                "attributes": [
+                  "DRAGOD",
+                  "DEITY_DRAGON_TRIBE"
+                ],
+                "maximum": 1
+              }
+            ],
+            "placement": {
+              "type": "ON_TOP_OF",
+              "card": "THIS_CARD"
+            },
+            "pay_call_cost": false
+          }
+        ],
+        "effect_text": {
+          "en": {
+            "plain": "[Counter] 【Act】 D-[G•EVO] During each player's attack phase, call up to one monster with both 《Dragod》 and 《Deity Dragon Tribe》 from your hand or drop zone on top of this card without paying its [Call Cost]. You may only use \"D-[G•EVO]\" once per turn. (D-[G•EVO] is also treated as [G•EVO])",
+            "segments": [
+              {
+                "text": "[Counter]",
+                "style": "KEYWORD"
+              },
+              {
+                "text": " "
+              },
+              {
+                "text": "【Act】",
+                "style": "KEYWORD"
+              },
+              {
+                "text": " "
+              },
+              {
+                "text": "D-[G•EVO]",
+                "style": "KEYWORD"
+              },
+              {
+                "text": " During each player's attack phase, call up to one monster with both 《Dragod》 and 《Deity Dragon Tribe》 from your hand or drop zone on top of this card without paying its [Call Cost]. You may only use \"D-[G•EVO]\" once per turn. (D-[G•EVO] is also treated as [G•EVO])"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "DEITY_GARGANTUA_DRAGON_RE_B-A03",
+        "kind": "CONT",
+        "keywords": [
+          "MOVE"
+        ],
+        "skill_restrictions": [],
+        "effects": [],
+        "effect_text": {
+          "en": {
+            "plain": "[Move]",
+            "segments": [
+              {
+                "text": "[Move]",
+                "style": "KEYWORD"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "DEITY_GARGANTUA_DRAGON_RE_B-A04",
+        "kind": "CONT",
+        "keywords": [
+          "DOUBLE_ATTACK"
+        ],
+        "skill_restrictions": [],
+        "effects": [],
+        "effect_text": {
+          "en": {
+            "plain": "[Double Attack]",
+            "segments": [
+              {
+                "text": "[Double Attack]",
+                "style": "KEYWORD"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "DEITY_GARGANTUA_DRAGON_RE_B-A05",
+        "kind": "CONT",
+        "keywords": [
+          "SOULGUARD"
+        ],
+        "skill_restrictions": [],
+        "effects": [],
+        "effect_text": {
+          "en": {
+            "plain": "[Soulguard]",
+            "segments": [
+              {
+                "text": "[Soulguard]",
+                "style": "KEYWORD"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "DEITY_GARGANTUA_DRAGON_RE_B-A06",
+        "kind": "CONT",
+        "keywords": [
+          "COUNTERATTACK"
+        ],
+        "skill_restrictions": [],
+        "effects": [],
+        "effect_text": {
+          "en": {
+            "plain": "[Counterattack]",
+            "segments": [
+              {
+                "text": "[Counterattack]",
+                "style": "KEYWORD"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "card_id": "GREEN_DRAGON_SHIELD_RE_S",
+    "card_number": "10th/0005",
+    "name": {
+      "en": "Green Dragon Shield \"Re:S\"",
+      "th": "ดราก้อนชิลด์, โล่แห่งมังกรเขียว \"Re:S\""
+    },
+    "image": null,
+    "type": "SPELL",
+    "worlds": [
+      "DRAGON_WORLD"
+    ],
+    "attributes": [
+      "GREEN_DRAGON",
+      "DEFENSE"
+    ],
+    "call_cost": [],
+    "use_restrictions": [],
+    "rules": [
+      {
+        "type": "CANNOT_BE_NULLIFIED"
+      }
+    ],
+    "abilities": [
+      {
+        "id": "GREEN_DRAGON_SHIELD_RE_S-A01",
+        "kind": "ACT",
+        "keywords": [
+          "COUNTER"
+        ],
+        "skill_restrictions": [
+          {
+            "type": "ACTIVATION_LIMIT",
+            "count": 1,
+            "period": "TURN",
+            "source": {
+              "kind": "CARD",
+              "card_id": "GREEN_DRAGON_SHIELD_RE_S",
+              "ability_id": "GREEN_DRAGON_SHIELD_RE_S-A01"
+            }
+          }
+        ],
+        "trigger": {
+          "type": "COUNTER_TIMING"
+        },
+        "cost": [],
+        "effects": [
+          {
+            "type": "CHOICE",
+            "choose": 1,
+            "options": [
+              {
+                "id": "PREVENT_DAMAGE",
+                "effects": [
+                  {
+                    "type": "MODIFY_NEXT_DAMAGE",
+                    "source": "ATTACK",
+                    "amount": 0,
+                    "occurrences": 1,
+                    "duration": {
+                      "type": "UNTIL_END_OF_TURN"
+                    }
+                  },
+                  {
+                    "type": "MODIFY_NEXT_DAMAGE",
+                    "source": "OPPONENT_CARD_EFFECT",
+                    "amount": 0,
+                    "occurrences": 1,
+                    "duration": {
+                      "type": "UNTIL_END_OF_TURN"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "DRAW_GAUGE_LIFE",
+                "effects": [
+                  {
+                    "type": "DRAW",
+                    "amount": 1
+                  },
+                  {
+                    "type": "PUT_TOP_DECK_TO_GAUGE",
+                    "amount": 1
+                  },
+                  {
+                    "type": "GAIN_LIFE",
+                    "amount": {
+                      "type": "COUNT_CARDS",
+                      "player": "SELF",
+                      "zone": "FIELD"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "effect_text": {
+          "en": {
+            "plain": "This card cannot be nullified.\n[Cn/Turn] Choose and use one of the following two.\n• [Counter] For this turn, the next damage you take by an attack becomes 0, and the next damage you take by your opponent's card effects becomes 0.\n• Draw a card. Then, put the top card of your deck into your gauge and you gain 1 life for each card on your field.",
+            "segments": [
+              {
+                "text": "This card cannot be nullified.\n"
+              },
+              {
+                "text": "[Cn/Turn]",
+                "style": "RESTRICTION"
+              },
+              {
+                "text": " Choose and use one of the following two.\n• "
+              },
+              {
+                "text": "[Counter]",
+                "style": "KEYWORD"
+              },
+              {
+                "text": " For this turn, the next damage you take by an attack becomes 0, and the next damage you take by your opponent's card effects becomes 0.\n• Draw a card. Then, put the top card of your deck into your gauge and you gain 1 life for each card on your field."
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "card_id": "JACKKNIFE_GOLD_RITTER_RE_I",
+    "card_number": "10th/0006",
+    "name": {
+      "en": "Jackknife \"Gold Ritter Re:I\"",
+      "th": "แจ็คไนฟ์ \"โกลด์ริตเตอร์\" \"Re:I\""
+    },
+    "image": null,
+    "type": "ITEM",
+    "worlds": [
+      "DRAGON_WORLD"
+    ],
+    "attributes": [
+      "ARMORDRAGON",
+      "DRAGON_KNIGHT",
+      "WEAPON"
+    ],
+    "stats": {
+      "power": 15000,
+      "critical": 4,
+      "defense": 15000
+    },
+    "call_cost": [],
+    "equip_cost": [
+      {
+        "type": "CONDITION",
+        "condition": {
+          "type": "STAT_COMPARE",
+          "target": "SELF_LIFE",
+          "operator": "LESS_THAN_OR_EQUAL",
+          "value": 5
+        }
+      },
+      {
+        "type": "MOVE_CARD",
+        "from": "FIELD",
+        "to": "DROP",
+        "target": {
+          "type": "SELECT",
+          "card_type": "MONSTER",
+          "minimum_souls": 2,
+          "count": 1
+        }
+      },
+      {
+        "type": "PAY_GAUGE",
+        "amount": 2
+      }
+    ],
+    "use_restrictions": [],
+    "rules": [
+      {
+        "type": "CARD_NAME_ALIAS",
+        "alias": "Jackknife \"Gold Ritter\""
+      }
+    ],
+    "abilities": [
+      {
+        "id": "JACKKNIFE_GOLD_RITTER_RE_I-A01",
+        "kind": "CONT",
+        "keywords": [],
+        "skill_restrictions": [],
+        "effects": [
+          {
+            "type": "PROTECTION",
+            "target": "THIS_CARD",
+            "action": "DESTROY",
+            "source": "ALL",
+            "duration": {
+              "type": "WHILE_SOURCE_ACTIVE"
+            }
+          },
+          {
+            "type": "PROTECTION",
+            "target": "THIS_CARD",
+            "action": "RETURN_TO_HAND",
+            "source": "ALL",
+            "duration": {
+              "type": "WHILE_SOURCE_ACTIVE"
+            }
+          },
+          {
+            "type": "DAMAGE_PROTECTION",
+            "target": "SELF",
+            "action": "PREVENT",
+            "source": "OPPONENT_CARD_EFFECT",
+            "duration": {
+              "type": "WHILE_SOURCE_ACTIVE"
+            }
+          }
+        ],
+        "effect_text": {
+          "en": {
+            "plain": "This card cannot be destroyed, nor returned to your hand, and you cannot take damage by your opponent's card effects.",
+            "segments": [
+              {
+                "text": "This card cannot be destroyed, nor returned to your hand, and you cannot take damage by your opponent's card effects."
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "JACKKNIFE_GOLD_RITTER_RE_I-A02",
+        "kind": "CONT",
+        "keywords": [],
+        "skill_restrictions": [],
+        "activation_condition": {
+          "type": "CARD_EXISTS",
+          "zone": "FIELD",
+          "card_type": "MONSTER",
+          "name_contains": "Jackknife"
+        },
+        "effects": [
+          {
+            "type": "PROTECTION",
+            "target": {
+              "type": "FILTER",
+              "zone": "FIELD",
+              "name_contains": "Jackknife"
+            },
+            "action": "DESTROY",
+            "source": "OPPONENT_CARD_EFFECT",
+            "duration": {
+              "type": "WHILE_SOURCE_ACTIVE"
+            }
+          },
+          {
+            "type": "PROTECTION",
+            "target": {
+              "type": "FILTER",
+              "zone": "FIELD",
+              "name_contains": "Jackknife"
+            },
+            "action": "LEAVE_FIELD",
+            "source": "OPPONENT_CARD_EFFECT",
+            "duration": {
+              "type": "WHILE_SOURCE_ACTIVE"
+            }
+          }
+        ],
+        "effect_text": {
+          "en": {
+            "plain": "If a monster with \"Jackknife\" in its card name is on your field, all cards with \"Jackknife\" in their card names on your field cannot be destroyed or leave the field by your opponent's card effects.",
+            "segments": [
+              {
+                "text": "If a monster with \"Jackknife\" in its card name is on your field, all cards with \"Jackknife\" in their card names on your field cannot be destroyed or leave the field by your opponent's card effects."
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "JACKKNIFE_GOLD_RITTER_RE_I-A03",
+        "kind": "CONT",
+        "keywords": [],
+        "skill_restrictions": [],
+        "effects": [
+          {
+            "type": "DAMAGE_RULE",
+            "source": "LINK_ATTACK",
+            "replacement_value": 2,
+            "duration": {
+              "type": "WHILE_SOURCE_ACTIVE"
+            }
+          }
+        ],
+        "effect_text": {
+          "en": {
+            "plain": "Damage dealt to you from link attacks become 2 instead.",
+            "segments": [
+              {
+                "text": "Damage dealt to you from link attacks become 2 instead."
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "JACKKNIFE_GOLD_RITTER_RE_I-A04",
+        "kind": "CONT",
+        "keywords": [
+          "PENETRATE"
+        ],
+        "skill_restrictions": [],
+        "effects": [],
+        "effect_text": {
+          "en": {
+            "plain": "[Penetrate]",
+            "segments": [
+              {
+                "text": "[Penetrate]",
+                "style": "KEYWORD"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "JACKKNIFE_GOLD_RITTER_RE_I-A05",
+        "kind": "CONT",
+        "keywords": [
+          "DOUBLE_ATTACK"
+        ],
+        "skill_restrictions": [],
+        "effects": [],
+        "effect_text": {
+          "en": {
+            "plain": "[Double Attack]",
+            "segments": [
+              {
+                "text": "[Double Attack]",
+                "style": "KEYWORD"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "card_id": "DRAGODS_SHINE_RE_S",
+    "card_number": "10th/0007",
+    "name": {
+      "en": "Dragod's Shine \"Re:S\"",
+      "th": "ดราก็อต • ชายน์ \"Re:S\""
+    },
+    "image": null,
+    "type": "SPELL",
+    "worlds": [
+      "DRAGON_WORLD"
+    ],
+    "attributes": [
+      "DEITY_DRAGON_TRIBE",
+      "GET"
+    ],
+    "call_cost": [],
+    "cast_cost": [
+      {
+        "type": "PAY_LIFE",
+        "amount": 1
+      }
+    ],
+    "use_restrictions": [
+      {
+        "type": "CARD_USE_LIMIT",
+        "action": "CAST",
+        "count": 1,
+        "period": "TURN",
+        "source": {
+          "kind": "CARD",
+          "card_id": "DRAGODS_SHINE_RE_S"
+        }
+      }
+    ],
+    "rules": [],
+    "abilities": [
+      {
+        "id": "DRAGODS_SHINE_RE_S-A01",
+        "kind": "ACT",
+        "keywords": [],
+        "skill_restrictions": [],
+        "cost": [],
+        "effects": [
+          {
+            "type": "CHOICE",
+            "choose": 1,
+            "options": [
+              {
+                "id": "SEARCH_ITEM",
+                "effects": [
+                  {
+                    "type": "MOVE_CARD",
+                    "from": "DECK",
+                    "to": "HAND",
+                    "target": {
+                      "type": "SELECT",
+                      "card_type": "ITEM",
+                      "maximum": 1
+                    }
+                  },
+                  {
+                    "type": "SHUFFLE_DECK"
+                  }
+                ]
+              },
+              {
+                "id": "SALVAGE_MONSTERS",
+                "effects": [
+                  {
+                    "type": "MOVE_CARD",
+                    "from": "DROP",
+                    "to": "HAND",
+                    "target": {
+                      "type": "SELECT",
+                      "card_type": "MONSTER",
+                      "filter": {
+                        "type": "OR",
+                        "filters": [
+                          {
+                            "type": "WORLD",
+                            "value": "DRAGON_WORLD"
+                          },
+                          {
+                            "type": "ATTRIBUTE",
+                            "value": "DRAGOD"
+                          }
+                        ]
+                      },
+                      "distinct_names": true,
+                      "maximum": 2
+                    }
+                  },
+                  {
+                    "type": "IF",
+                    "condition": {
+                      "type": "TARGET_SELECTED_MATCH",
+                      "filter": {
+                        "type": "ATTRIBUTE",
+                        "value": "DEITY_DRAGON_TRIBE"
+                      },
+                      "minimum": 1
+                    },
+                    "then": [
+                      {
+                        "type": "PUT_TOP_DECK_TO_GAUGE",
+                        "amount": 2
+                      }
+                    ],
+                    "else": []
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "effect_text": {
+          "en": {
+            "plain": "[Cast Cost] [Pay 1 life]\nChoose and use one of the following two. You may only cast \"Dragod's Shine \"Re:S\"\" once per turn.\n• Put up to one item from your deck into your hand, and shuffle your deck.\n• Put up to two <Dragon World> or 《Dragod》 monsters with different card names from your drop zone into your hand. If you put one or more 《Deity Dragon Tribe》 into your hand, put the top two cards of your deck into your gauge.",
+            "segments": [
+              {
+                "text": "[Cast Cost]",
+                "style": "COST"
+              },
+              {
+                "text": " "
+              },
+              {
+                "text": "[Pay 1 life]",
+                "style": "COST"
+              },
+              {
+                "text": "\nChoose and use one of the following two. You may only cast \"Dragod's Shine \"Re:S\"\" once per turn.\n• Put up to one item from your deck into your hand, and shuffle your deck.\n• Put up to two <Dragon World> or 《Dragod》 monsters with different card names from your drop zone into your hand. If you put one or more 《Deity Dragon Tribe》 into your hand, put the top two cards of your deck into your gauge."
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "card_id": "BATTLE_AURA_CIRCLE_RE_S",
+    "card_number": "10th/0008",
+    "name": {
+      "en": "Battle Aura Circle \"Re:S\"",
+      "th": "ผนึกสี่ทิศ \"Re:S\""
+    },
+    "image": null,
+    "type": "SPELL",
+    "worlds": [
+      "DANGER_WORLD"
+    ],
+    "attributes": [
+      "BATTLE_AURA"
+    ],
+    "call_cost": [],
+    "use_restrictions": [
+      {
+        "type": "CARD_USE_LIMIT",
+        "action": "CAST",
+        "count": 1,
+        "period": "TURN",
+        "source": {
+          "kind": "CARD",
+          "card_id": "BATTLE_AURA_CIRCLE_RE_S"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "CANNOT_BE_NULLIFIED"
+      }
+    ],
+    "abilities": [
+      {
+        "id": "BATTLE_AURA_CIRCLE_RE_S-A01",
+        "kind": "ACT",
+        "keywords": [],
+        "skill_restrictions": [],
+        "cost": [],
+        "effects": [
+          {
+            "type": "CHOICE",
+            "choose": 1,
+            "options": [
+              {
+                "id": "PREVENT_DAMAGE",
+                "effects": [
+                  {
+                    "type": "MODIFY_NEXT_DAMAGE",
+                    "source": "ATTACK",
+                    "amount": 0,
+                    "occurrences": 1,
+                    "duration": {
+                      "type": "UNTIL_END_OF_TURN"
+                    }
+                  },
+                  {
+                    "type": "MODIFY_NEXT_DAMAGE",
+                    "source": "OPPONENT_CARD_EFFECT",
+                    "amount": 0,
+                    "occurrences": 1,
+                    "duration": {
+                      "type": "UNTIL_END_OF_TURN"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "BUFF_ITEMS",
+                "effects": [
+                  {
+                    "type": "DRAW",
+                    "amount": 1
+                  },
+                  {
+                    "type": "GAIN_LIFE",
+                    "amount": 3
+                  },
+                  {
+                    "type": "PROTECTION",
+                    "target": {
+                      "type": "FILTER",
+                      "zone": "FIELD",
+                      "card_type": "ITEM"
+                    },
+                    "action": "DESTROY",
+                    "source": "OPPONENT_CARD_EFFECT",
+                    "duration": {
+                      "type": "UNTIL_END_OF_TURN"
+                    }
+                  },
+                  {
+                    "type": "PROTECTION",
+                    "target": {
+                      "type": "FILTER",
+                      "zone": "FIELD",
+                      "card_type": "ITEM"
+                    },
+                    "action": "LEAVE_FIELD",
+                    "source": "OPPONENT_CARD_EFFECT",
+                    "duration": {
+                      "type": "UNTIL_END_OF_TURN"
+                    }
+                  },
+                  {
+                    "type": "MODIFY_STAT",
+                    "target": {
+                      "type": "FILTER",
+                      "zone": "FIELD",
+                      "card_type": "ITEM"
+                    },
+                    "stat": "POWER",
+                    "amount": 30000,
+                    "duration": {
+                      "type": "UNTIL_END_OF_TURN"
+                    }
+                  },
+                  {
+                    "type": "MODIFY_STAT",
+                    "target": {
+                      "type": "FILTER",
+                      "zone": "FIELD",
+                      "card_type": "ITEM"
+                    },
+                    "stat": "CRITICAL",
+                    "amount": 2,
+                    "duration": {
+                      "type": "UNTIL_END_OF_TURN"
+                    }
+                  },
+                  {
+                    "type": "ATTACK_RULE",
+                    "target": {
+                      "type": "FILTER",
+                      "zone": "FIELD",
+                      "card_type": "ITEM"
+                    },
+                    "condition": {
+                      "type": "ATTACKING_ALONE"
+                    },
+                    "rules": [
+                      "CANNOT_BE_NEGATED"
+                    ],
+                    "duration": {
+                      "type": "UNTIL_END_OF_TURN"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "effect_text": {
+          "en": {
+            "plain": "This card cannot be nullified.\nChoose and use one of the following two. You may only cast \"Battle Aura Circle \"Re:S\"\" once per turn.\n• [Counter] For this turn, the next damage you take by an attack becomes 0, and the next damage you take by your opponent's card effects becomes 0.\n• Draw a card, you gain 3 life, and for this turn, items on your field cannot be destroyed or leave the field by your opponent's card effects, they get power+30000 and critical+2, and if they are attacking alone, their attacks cannot be nullified.",
+            "segments": [
+              {
+                "text": "This card cannot be nullified.\nChoose and use one of the following two. You may only cast \"Battle Aura Circle \"Re:S\"\" once per turn.\n• "
+              },
+              {
+                "text": "[Counter]",
+                "style": "KEYWORD"
+              },
+              {
+                "text": " For this turn, the next damage you take by an attack becomes 0, and the next damage you take by your opponent's card effects becomes 0.\n• Draw a card, you gain 3 life, and for this turn, items on your field cannot be destroyed or leave the field by your opponent's card effects, they get power+30000 and critical+2, and if they are attacking alone, their attacks cannot be nullified."
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "card_id": "SURVIVAL_CHANCE_RE_S",
+    "card_number": "10th/0009",
+    "name": {
+      "en": "Survival Chance \"Re:S\"",
+      "th": "ฝ่าวิกฤติ \"Re:S\""
+    },
+    "image": null,
+    "type": "SPELL",
+    "worlds": [
+      "DANGER_WORLD"
+    ],
+    "attributes": [
+      "BATTLE_AURA"
+    ],
+    "call_cost": [],
+    "use_restrictions": [],
+    "rules": [],
+    "abilities": [
+      {
+        "id": "SURVIVAL_CHANCE_RE_S-A01",
+        "kind": "ACT",
+        "keywords": [
+          "COUNTER"
+        ],
+        "skill_restrictions": [
+          {
+            "type": "ACTIVATION_LIMIT",
+            "count": 1,
+            "period": "TURN",
+            "source": {
+              "kind": "CARD",
+              "card_id": "SURVIVAL_CHANCE_RE_S",
+              "ability_id": "SURVIVAL_CHANCE_RE_S-A01"
+            }
+          }
+        ],
+        "trigger": {
+          "type": "COUNTER_TIMING"
+        },
+        "cost": [
+          {
+            "type": "PAY_VARIABLE_LIFE",
+            "minimum": 1,
+            "maximum_rule": "LESS_THAN_CURRENT_LIFE"
+          }
+        ],
+        "effects": [
+          {
+            "type": "REPEAT",
+            "count": {
+              "type": "INTEGER_DIVISION",
+              "dividend": "PAID_LIFE",
+              "divisor": 3
+            },
+            "effects": [
+              {
+                "type": "PUT_TOP_DECK_TO_GAUGE",
+                "amount": 1
+              },
+              {
+                "type": "DRAW",
+                "amount": 1
+              },
+              {
+                "type": "DAMAGE_PROTECTION",
+                "target": "SELF",
+                "reduction": 1,
+                "duration": {
+                  "type": "UNTIL_END_OF_NEXT_TURN",
+                  "anchor_player": "SELF"
+                }
+              }
+            ]
+          }
+        ],
+        "effect_text": {
+          "en": {
+            "plain": "[Cn/Turn] [Cost] [Pay 1 or more life], for every 3 life you paid, put the top card of your deck into your gauge, draw a card, and for this turn and the next turn, damage you take is reduced by 1.(You cannot pay equal to or more than the amount of your life!)",
+            "segments": [
+              {
+                "text": "[Cn/Turn]",
+                "style": "RESTRICTION"
+              },
+              {
+                "text": " "
+              },
+              {
+                "text": "[Cost]",
+                "style": "COST"
+              },
+              {
+                "text": " "
+              },
+              {
+                "text": "[Pay 1 or more life]",
+                "style": "COST"
+              },
+              {
+                "text": ", for every 3 life you paid, put the top card of your deck into your gauge, draw a card, and for this turn and the next turn, damage you take is reduced by 1.(You cannot pay equal to or more than the amount of your life!)"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "card_id": "MEMBERS_ONLY_CLUB_DEADIEITY_RE_S",
+    "card_number": "10th/0010",
+    "name": {
+      "en": "Members Only Club, Deadeity \"Re:S\"",
+      "th": "คลับเฉพาะสมาชิก, เซนNOจิน \"Re:S\""
+    },
+    "image": null,
+    "type": "SPELL",
+    "worlds": [
+      "DANGER_WORLD"
+    ],
+    "attributes": [
+      "GODPUNK"
+    ],
+    "call_cost": [],
+    "use_restrictions": [
+      {
+        "type": "SET_LIMIT",
+        "count": 1,
+        "source": {
+          "kind": "CARD",
+          "card_id": "MEMBERS_ONLY_CLUB_DEADIEITY_RE_S"
+        }
+      }
+    ],
+    "rules": [],
+    "abilities": [
+      {
+        "id": "MEMBERS_ONLY_CLUB_DEADIEITY_RE_S-A01",
+        "kind": "CONT",
+        "keywords": [
+          "SET"
+        ],
+        "skill_restrictions": [],
+        "effects": [],
+        "effect_text": {
+          "en": {
+            "plain": "[Set]",
+            "segments": [
+              {
+                "text": "[Set]",
+                "style": "KEYWORD"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "MEMBERS_ONLY_CLUB_DEADIEITY_RE_S-A02",
+        "kind": "CONT",
+        "keywords": [],
+        "skill_restrictions": [],
+        "effects": [
+          {
+            "type": "PROTECTION",
+            "target": {
+              "type": "FILTER",
+              "zone": "FIELD",
+              "card_type": "SPELL",
+              "attributes": [
+                "GODPUNK"
+              ]
+            },
+            "action": "DESTROY",
+            "source": "OPPONENT_CARD_EFFECT",
+            "duration": {
+              "type": "WHILE_SOURCE_ACTIVE"
+            }
+          },
+          {
+            "type": "PROTECTION",
+            "target": {
+              "type": "FILTER",
+              "zone": "FIELD",
+              "card_type": "SPELL",
+              "attributes": [
+                "GODPUNK"
+              ]
+            },
+            "action": "RETURN_TO_HAND",
+            "source": "OPPONENT_CARD_EFFECT",
+            "duration": {
+              "type": "WHILE_SOURCE_ACTIVE"
+            }
+          }
+        ],
+        "effect_text": {
+          "en": {
+            "plain": "All《Godpunk》spells on your field cannot be destroyed or returned to hand by your opponent's card effects.",
+            "segments": [
+              {
+                "text": "All《Godpunk》spells on your field cannot be destroyed or returned to hand by your opponent's card effects."
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "MEMBERS_ONLY_CLUB_DEADIEITY_RE_S-A03",
+        "kind": "AUTO",
+        "keywords": [],
+        "skill_restrictions": [],
+        "trigger": {
+          "type": "PHASE_START",
+          "phase": "ATTACK"
+        },
+        "effects": [
+          {
+            "type": "CHOICE",
+            "choose": 1,
+            "options": [
+              {
+                "id": "DESTROY_AND_CALL",
+                "effects": [
+                  {
+                    "type": "DESTROY",
+                    "target": {
+                      "type": "SELECT",
+                      "target_player": "OPPONENT",
+                      "zone": "FIELD",
+                      "count": 1
+                    }
+                  },
+                  {
+                    "type": "CALL",
+                    "from": "DROP",
+                    "to": "FIELD",
+                    "targets": [
+                      {
+                        "type": "SELECT",
+                        "card_type": "MONSTER",
+                        "count": 1
+                      }
+                    ],
+                    "pay_call_cost": true
+                  }
+                ]
+              },
+              {
+                "id": "DAMAGE_AND_HEAL",
+                "effects": [
+                  {
+                    "type": "DAMAGE",
+                    "target": "OPPONENT",
+                    "amount": 2
+                  },
+                  {
+                    "type": "GAIN_LIFE",
+                    "amount": 2
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "effect_text": {
+          "en": {
+            "plain": "At the start of each player's attack phase, choose and use one of the following two.\n• Destroy a card on your opponent's field, and call a monster from your drop zone by paying its [Call Cost].\n• Deal 2 damage to your opponent, and you gain 2 life!\nYou may only [Set] one \"Members Only Club, Deadeity \"Re:S\"\" on your field.",
+            "segments": [
+              {
+                "text": "At the start of each player's attack phase, choose and use one of the following two.\n• Destroy a card on your opponent's field, and call a monster from your drop zone by paying its [Call Cost].\n• Deal 2 damage to your opponent, and you gain 2 life!\nYou may only "
+              },
+              {
+                "text": "[Set]",
+                "style": "KEYWORD"
+              },
+              {
+                "text": " one \"Members Only Club, Deadeity \"Re:S\"\" on your field."
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+]

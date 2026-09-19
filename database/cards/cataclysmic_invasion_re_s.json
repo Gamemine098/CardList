@@ -1,0 +1,318 @@
+{
+  "card_id": "CATACLYSMIC_INVASION_RE_S",
+  "name": {
+    "en": "Cataclysmic Invasion \"Re:S\"",
+    "th": "การมาเยือนของภัยพิบัติ \"Re:S\""
+  },
+  "image": "database/images/cataclysmic_invasion_re_s.webp",
+  "type": "SPELL",
+  "worlds": [],
+  "attributes": [
+    "HUNDRED_DEMONS"
+  ],
+  "call_cost": [],
+  "use_restrictions": [],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "CATACLYSMIC_INVASION_RE_S-A01",
+      "kind": "ACT",
+      "keywords": [],
+      "skill_restrictions": [
+        {
+          "type": "CARD_USE_LIMIT",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "CATACLYSMIC_INVASION_RE_S",
+            "ability_id": "CATACLYSMIC_INVASION_RE_S-A01"
+          }
+        }
+      ],
+      "cost": [
+        {
+          "type": "PAY_GAUGE",
+          "amount": 1
+        }
+      ],
+      "effects": [
+        {
+          "type": "CHOICE",
+          "choose": 1,
+          "options": [
+            {
+              "id": "SEARCH_TWO_MONSTERS",
+              "effects": [
+                {
+                  "type": "MOVE_CARD",
+                  "from": "DECK",
+                  "to": "HAND",
+                  "target": {
+                    "type": "SELECT",
+                    "zone": "DECK",
+                    "owner": "SELF",
+                    "card_type": "MONSTER",
+                    "filter": {
+                      "attribute": "HUNDRED_DEMONS",
+                      "stat_compare": {
+                        "stat": "SIZE",
+                        "operator": "LESS_THAN_OR_EQUAL",
+                        "value": 2
+                      },
+                      "distinct": "CARD_NAME"
+                    },
+                    "maximum": 2
+                  },
+                  "then": {
+                    "type": "IF",
+                    "condition": {
+                      "type": "PREVIOUS_RESULT_COUNT_EQUALS",
+                      "value": 2
+                    },
+                    "then": [
+                      {
+                        "type": "MOVE_CARD",
+                        "from": "HAND",
+                        "to": "DROP",
+                        "target": {
+                          "type": "SELECT",
+                          "zone": "HAND",
+                          "owner": "SELF",
+                          "count": 1
+                        }
+                      }
+                    ],
+                    "else": []
+                  },
+                  "shuffle": true
+                }
+              ]
+            },
+            {
+              "id": "COUNTER_RECOVER_MONSTER",
+              "keywords": [
+                "COUNTER"
+              ],
+              "effects": [
+                {
+                  "type": "MOVE_CARD",
+                  "from": "DROP",
+                  "to": "REMOVE",
+                  "target": {
+                    "type": "SELECT",
+                    "zone": "DROP",
+                    "owner": "SELF",
+                    "card_type": "MONSTER",
+                    "filter": {
+                      "attribute": "HUNDRED_DEMONS"
+                    },
+                    "count": 1
+                  }
+                },
+                {
+                  "type": "MOVE_CARD",
+                  "from_zones": [
+                    "DROP",
+                    "REMOVE"
+                  ],
+                  "to": "HAND",
+                  "target": {
+                    "type": "SELECT",
+                    "card_type": "MONSTER",
+                    "owner": "SELF",
+                    "maximum": 1
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Cast Cost] [Pay 1 gauge]\n[Cn/Turn] Choose one of the following.\n• Put up to two size 2 or less 《Hundred Demons》 monsters with different names from your deck into your hand. If you put two, drop a hand card. Then, shuffle the deck.\n• [Counter] Remove a 《Hundred Demons》 monster from your drop, and put up to one monster from your drop or remove zone into your hand.",
+          "segments": [
+            {
+              "text": "[Cast Cost] [Pay 1 gauge]",
+              "style": "COST"
+            },
+            {
+              "text": "\n"
+            },
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " Choose one of the following.\n• Put up to two size 2 or less "
+            },
+            {
+              "text": "《Hundred Demons》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": " monsters with different names from your "
+            },
+            {
+              "text": "deck",
+              "style": "ZONE"
+            },
+            {
+              "text": " into your "
+            },
+            {
+              "text": "hand",
+              "style": "ZONE"
+            },
+            {
+              "text": ". If you put two, drop a "
+            },
+            {
+              "text": "hand",
+              "style": "ZONE"
+            },
+            {
+              "text": " card. Then, shuffle the deck.\n• "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " Remove a "
+            },
+            {
+              "text": "《Hundred Demons》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": " monster from your "
+            },
+            {
+              "text": "drop",
+              "style": "ZONE"
+            },
+            {
+              "text": ", and put up to one "
+            },
+            {
+              "text": "monster",
+              "style": "CARD_REFERENCE"
+            },
+            {
+              "text": " from your "
+            },
+            {
+              "text": "drop",
+              "style": "ZONE"
+            },
+            {
+              "text": " or "
+            },
+            {
+              "text": "remove zone",
+              "style": "ZONE"
+            },
+            {
+              "text": " into your "
+            },
+            {
+              "text": "hand",
+              "style": "ZONE"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Cast Cost] จ่าย 1 เกจ\n[Cn/Turn] เลือกใช้ความสามารถต่อไปนี้ 1 อย่าง\n• นำมอนสเตอร์《ร้อยอสูร》ที่มีไซส์ 2 หรือต่ำกว่าที่ชื่อต่างกันจากกองการ์ดเราไม่เกิน 2 ใบ, ขึ้นมือเรา หากนำขึ้นมือ 2 ใบ, เราทิ้งการ์ดบนมือ 1 ใบ จากนั้นสับกองการ์ดเรา\n• [Counter] รีมูฟมอนสเตอร์《ร้อยอสูร》จากดรอบเรา 1 ใบ, นำมอนสเตอร์จากดรอบหรือรีมูฟโซนเราไม่เกิน 1 ใบกลับขึ้นมือ",
+          "segments": [
+            {
+              "text": "[Cast Cost] จ่าย 1 เกจ",
+              "style": "COST"
+            },
+            {
+              "text": "\n"
+            },
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " เลือกใช้ความสามารถต่อไปนี้ 1 อย่าง\n• นำมอนสเตอร์"
+            },
+            {
+              "text": "《ร้อยอสูร》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": "ที่มีไซส์ 2 หรือต่ำกว่าที่ชื่อต่างกันจาก"
+            },
+            {
+              "text": "กองการ์ด",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราไม่เกิน 2 ใบ, ขึ้น"
+            },
+            {
+              "text": "มือ",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรา หากนำขึ้นมือ 2 ใบ, เราทิ้งการ์ดบน"
+            },
+            {
+              "text": "มือ",
+              "style": "ZONE"
+            },
+            {
+              "text": " 1 ใบ จากนั้นสับกองการ์ดเรา\n• "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " รีมูฟมอนสเตอร์"
+            },
+            {
+              "text": "《ร้อยอสูร》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": "จาก"
+            },
+            {
+              "text": "ดรอบ",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรา 1 ใบ, นำมอนสเตอร์จาก"
+            },
+            {
+              "text": "ดรอบ",
+              "style": "ZONE"
+            },
+            {
+              "text": "หรือ"
+            },
+            {
+              "text": "รีมูฟโซน",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราไม่เกิน 1 ใบกลับขึ้น"
+            },
+            {
+              "text": "มือ",
+              "style": "ZONE"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

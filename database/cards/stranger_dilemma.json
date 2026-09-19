@@ -1,0 +1,136 @@
+{
+  "card_id": "STRANGER_DILEMMA",
+  "name": {
+    "en": "Stranger Dilemma",
+    "th": "สเตรนเจอร์・ดิเลมมา"
+  },
+  "image": "database/images/stranger_dilemma.webp",
+  "type": "MONSTER",
+  "worlds": [
+    "HERO_WORLD"
+  ],
+  "attributes": [
+    "HUNDRED_DEMONS",
+    "DARKHERO"
+  ],
+  "stats": {
+    "size": 1,
+    "power": 3000,
+    "critical": 1,
+    "defense": 2000
+  },
+  "call_cost": [],
+  "use_restrictions": [],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "STRANGER_DILEMMA-A01",
+      "kind": "AUTO",
+      "keywords": [
+        "THUNDER_MINE"
+      ],
+      "skill_restrictions": [
+        {
+          "type": "ACTIVATION_LIMIT",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "STRANGER_DILEMMA",
+            "ability_id": "STRANGER_DILEMMA-A01"
+          }
+        }
+      ],
+      "trigger": {
+        "type": "EVENT",
+        "event": "CAST",
+        "actor": "OPPONENT",
+        "target": {
+          "card_type": "SPELL"
+        }
+      },
+      "effects": [
+        {
+          "type": "DAMAGE",
+          "target": "OPPONENT",
+          "amount": 1
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[1/Turn] \"Thunder Mine\" When your opponent casts a spell, deal 1 damage to your opponent!",
+          "segments": [
+            {
+              "text": "[1/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "\"Thunder Mine\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " When your "
+            },
+            {
+              "text": "opponent",
+              "style": "PLAYER"
+            },
+            {
+              "text": " casts a "
+            },
+            {
+              "text": "spell",
+              "style": "CARD_REFERENCE"
+            },
+            {
+              "text": ", deal "
+            },
+            {
+              "text": "1 damage",
+              "style": "DAMAGE"
+            },
+            {
+              "text": " to your opponent!"
+            }
+          ]
+        },
+        "th": {
+          "plain": "[1/Turn] \"ธันเดอร์ ไมน์\" เมื่อคู่แข่งร่ายเวทมนตร์, สร้างความเสียหายใส่คู่แข่ง 1 ไลฟ์!",
+          "segments": [
+            {
+              "text": "[1/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "\"ธันเดอร์ ไมน์\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " เมื่อ"
+            },
+            {
+              "text": "คู่แข่ง",
+              "style": "PLAYER"
+            },
+            {
+              "text": "ร่ายเวทมนตร์, สร้างความเสียหายใส่คู่แข่ง "
+            },
+            {
+              "text": "1 ไลฟ์",
+              "style": "DAMAGE"
+            },
+            {
+              "text": "!"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,274 @@
+{
+  "card_id": "YAMIGEDO_SD",
+  "name": {
+    "en": "Yamigedo \"SD\"",
+    "th": "ยามิเกโด \"SD\""
+  },
+  "image": "database/images/yamigedo_sd.webp",
+  "type": "MONSTER",
+  "worlds": [],
+  "attributes": [
+    "HUNDRED_DEMONS"
+  ],
+  "stats": {
+    "size": 0,
+    "power": 1000,
+    "critical": 1,
+    "defense": 1000
+  },
+  "call_cost": [],
+  "use_restrictions": [],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "YAMIGEDO_SD-A01",
+      "kind": "ACT",
+      "keywords": [
+        "COUNTER"
+      ],
+      "skill_restrictions": [],
+      "activation_condition": {
+        "type": "TURN_PLAYER",
+        "player": "SELF"
+      },
+      "cost": [
+        {
+          "type": "TARGET_SELECTION",
+          "target_id": "CHOSEN_MONSTER",
+          "selector": {
+            "type": "SELECT",
+            "zone": "FIELD",
+            "owner": "SELF",
+            "card_type": "MONSTER",
+            "filter": {
+              "attribute": "HUNDRED_DEMONS",
+              "stat_compare": {
+                "stat": "SIZE",
+                "operator": "EQUAL",
+                "value": 3
+              }
+            },
+            "count": 1
+          }
+        },
+        {
+          "type": "MOVE_CARD",
+          "from": "FIELD",
+          "to": {
+            "type": "SOUL",
+            "of": {
+              "type": "TARGET_REFERENCE",
+              "target_id": "CHOSEN_MONSTER"
+            }
+          },
+          "target": {
+            "type": "THIS_CARD"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "STAND",
+          "target": {
+            "type": "TARGET_REFERENCE",
+            "target_id": "CHOSEN_MONSTER"
+          }
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Counter] 【Act】 During your turn, choose a size 3 《Hundred Demons》 monster on your field, [Cost] [Put this card from the field into the chosen card's soul], [Stand] the chosen card.",
+          "segments": [
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " 【Act】 During "
+            },
+            {
+              "text": "your turn",
+              "style": "TURN"
+            },
+            {
+              "text": ", choose a size 3 "
+            },
+            {
+              "text": "《Hundred Demons》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": " monster on your "
+            },
+            {
+              "text": "field",
+              "style": "ZONE"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "[Cost] [Put this card from the field into the chosen card's soul]",
+              "style": "COST"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "[Stand]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " the chosen card."
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Counter] 【Act】 ในเทิร์นเรา, เลือกมอนสเตอร์《ร้อยอสูร》ไซส์ 3 บนสนามเรา 1 ใบ, [Cost] [นำการ์ดใบนี้บนสนามเราเข้าสู่โซลของการ์ดที่เลือก] [Stand] การ์ดที่เลือกนั้น",
+          "segments": [
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " 【Act】 ใน"
+            },
+            {
+              "text": "เทิร์นเรา",
+              "style": "TURN"
+            },
+            {
+              "text": ", เลือกมอนสเตอร์"
+            },
+            {
+              "text": "《ร้อยอสูร》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": "ไซส์ 3 บน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรา 1 ใบ, "
+            },
+            {
+              "text": "[Cost] [นำการ์ดใบนี้บนสนามเราเข้าสู่โซลของการ์ดที่เลือก]",
+              "style": "COST"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Stand]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " การ์ดที่เลือกนั้น"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "YAMIGEDO_SD-A02",
+      "kind": "AUTO",
+      "keywords": [
+        "SOUL",
+        "THUNDER_MINE"
+      ],
+      "skill_restrictions": [],
+      "activation_condition": {
+        "type": "CARD_IN_ZONE",
+        "card": "THIS_CARD",
+        "zones": [
+          "SOUL"
+        ],
+        "host_card_type": "MONSTER"
+      },
+      "trigger": {
+        "type": "EVENT",
+        "event": "DRAW",
+        "actor": "OPPONENT",
+        "cause": "CARD_EFFECT"
+      },
+      "effects": [
+        {
+          "type": "DAMAGE",
+          "target": "OPPONENT",
+          "amount": 1
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "【Soul:Monster】: \"Thunder Mine\" When your opponent draws cards by card effects, deal 1 damage to your opponent!",
+          "segments": [
+            {
+              "text": "【Soul:Monster】",
+              "style": "ZONE"
+            },
+            {
+              "text": ": "
+            },
+            {
+              "text": "\"Thunder Mine\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " When your "
+            },
+            {
+              "text": "opponent",
+              "style": "PLAYER"
+            },
+            {
+              "text": " draws cards by card effects, deal "
+            },
+            {
+              "text": "1 damage",
+              "style": "DAMAGE"
+            },
+            {
+              "text": " to your opponent!"
+            }
+          ]
+        },
+        "th": {
+          "plain": "【โซล:มอนสเตอร์】: \"ธันเดอร์ ไมน์\" เมื่อคู่แข่งจั่วการ์ดด้วยความสามารถการ์ด, สร้างความเสียหายใส่คู่แข่ง 1 ไลฟ์!",
+          "segments": [
+            {
+              "text": "【โซล:มอนสเตอร์】",
+              "style": "ZONE"
+            },
+            {
+              "text": ": "
+            },
+            {
+              "text": "\"ธันเดอร์ ไมน์\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " เมื่อ"
+            },
+            {
+              "text": "คู่แข่ง",
+              "style": "PLAYER"
+            },
+            {
+              "text": "จั่วการ์ดด้วยความสามารถการ์ด, สร้างความเสียหายใส่คู่แข่ง "
+            },
+            {
+              "text": "1 ไลฟ์",
+              "style": "DAMAGE"
+            },
+            {
+              "text": "!"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

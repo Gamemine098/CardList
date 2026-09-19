@@ -1,0 +1,196 @@
+{
+  "card_id": "EVIL_DEITY_SORCERY_HYAKUGANHO_RE_S",
+  "name": {
+    "en": "Evil Deity Sorcery, Hyakuganho \"Re:S\"",
+    "th": "มนตราเทพปีศาจ, ปืนใหญ่ร้อยเนตร \"Re:S\""
+  },
+  "image": "database/images/evil_deity_sorcery_hyakuganho_re_s.webp",
+  "type": "SPELL",
+  "worlds": [],
+  "attributes": [
+    "HUNDRED_DEMONS"
+  ],
+  "call_cost": [],
+  "use_restrictions": [],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "EVIL_DEITY_SORCERY_HYAKUGANHO_RE_S-A01",
+      "kind": "ACT",
+      "keywords": [
+        "COUNTER"
+      ],
+      "skill_restrictions": [
+        {
+          "type": "CARD_USE_LIMIT",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "EVIL_DEITY_SORCERY_HYAKUGANHO_RE_S",
+            "ability_id": "EVIL_DEITY_SORCERY_HYAKUGANHO_RE_S-A01"
+          }
+        }
+      ],
+      "activation_condition": {
+        "type": "PLAYER_CONTROLS_CARD",
+        "owner": "SELF",
+        "zone": "FIELD",
+        "filter": {
+          "card_type": "MONSTER",
+          "name_contains": "Yamigedo"
+        }
+      },
+      "trigger": {
+        "type": "COUNTER_TIMING"
+      },
+      "cost": [
+        {
+          "type": "PAY_GAUGE",
+          "amount": 2
+        },
+        {
+          "type": "MOVE_CARD",
+          "from": "DROP",
+          "to": "DECK",
+          "position": "BOTTOM",
+          "target": {
+            "type": "SELECT",
+            "zone": "DROP",
+            "owner": "SELF",
+            "filter": {
+              "attribute": "HUNDRED_DEMONS"
+            },
+            "maximum": 3
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "MOVE_CARD",
+          "from": "FIELD",
+          "to": "DROP",
+          "target": {
+            "type": "SELECT",
+            "zone": "FIELD",
+            "owner": "OPPONENT",
+            "count": 1
+          }
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "You may only cast this card if you have a monster with \"Yamigedo\" in its name on your field.\n[Cast Cost] [Pay 2 gauge & Put up to three 《Hundred Demons》 from your drop on the bottom of your deck]\n[Cn/Turn] [Counter] Drop a card on your opponent's field.",
+          "segments": [
+            {
+              "text": "You may only cast this card if you have a "
+            },
+            {
+              "text": "monster",
+              "style": "CARD_REFERENCE"
+            },
+            {
+              "text": " with \"Yamigedo\" in its name on your "
+            },
+            {
+              "text": "field",
+              "style": "ZONE"
+            },
+            {
+              "text": ".\n"
+            },
+            {
+              "text": "[Cast Cost] [Pay 2 gauge & Put up to three 《Hundred Demons》 from your drop on the bottom of your deck]",
+              "style": "COST"
+            },
+            {
+              "text": "\n"
+            },
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " Drop a card on your "
+            },
+            {
+              "text": "opponent",
+              "style": "PLAYER"
+            },
+            {
+              "text": "'s "
+            },
+            {
+              "text": "field",
+              "style": "ZONE"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        "th": {
+          "plain": "ร่ายการ์ดนี้ได้หากบนสนามเรามีมอนสเตอร์ที่มี \"ยามิเกโด\" ในชื่อการ์ด\n[Cast Cost] จ่าย 2 เกจและนำ《ร้อยอสูร》จากดรอบเราไม่เกิน 3 ใบกลับใต้กองการ์ดเรา\n[Cn/Turn] [Counter] นำการ์ดบนสนามคู่แข่ง 1 ใบ ลงดรอบ!",
+          "segments": [
+            {
+              "text": "ร่ายการ์ดนี้ได้หากบน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรามีมอนสเตอร์ที่มี \"ยามิเกโด\" ในชื่อการ์ด\n"
+            },
+            {
+              "text": "[Cast Cost] จ่าย 2 เกจและนำ《ร้อยอสูร》จากดรอบเราไม่เกิน 3 ใบกลับใต้กองการ์ดเรา",
+              "style": "COST"
+            },
+            {
+              "text": "\n"
+            },
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " นำการ์ดบน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "คู่แข่ง",
+              "style": "PLAYER"
+            },
+            {
+              "text": " 1 ใบ ลง"
+            },
+            {
+              "text": "ดรอบ",
+              "style": "ZONE"
+            },
+            {
+              "text": "!"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

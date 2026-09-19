@@ -1,0 +1,166 @@
+{
+  "card_id": "SHRINE_OF_THE_CORRUPTED_FUCHIGAMI",
+  "name": {
+    "en": "Shrine of the Corrupted Fuchigami",
+    "th": "แท่นบูชาแห่งตระกูลฟูจิกามิอันแปดเปื้อน"
+  },
+  "image": "database/images/shrine_of_the_corrupted_fuchigami.webp",
+  "type": "SPELL",
+  "worlds": [],
+  "attributes": [
+    "HUNDRED_DEMONS",
+    "DRAW"
+  ],
+  "call_cost": [],
+  "use_restrictions": [],
+  "rules": [
+    {
+      "type": "SET_LIMIT",
+      "count": 1,
+      "source": {
+        "kind": "CARD",
+        "card_id": "SHRINE_OF_THE_CORRUPTED_FUCHIGAMI"
+      }
+    }
+  ],
+  "abilities": [
+    {
+      "id": "SHRINE_OF_THE_CORRUPTED_FUCHIGAMI-A01",
+      "kind": "AUTO",
+      "keywords": [
+        "SET"
+      ],
+      "skill_restrictions": [
+        {
+          "type": "ACTIVATION_LIMIT",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "SHRINE_OF_THE_CORRUPTED_FUCHIGAMI",
+            "ability_id": "SHRINE_OF_THE_CORRUPTED_FUCHIGAMI-A01"
+          }
+        }
+      ],
+      "trigger": {
+        "type": "EVENT",
+        "event": "ENTER_FIELD",
+        "target": {
+          "owner": "SELF",
+          "card_type": "MONSTER",
+          "keyword": "THUNDER_MINE"
+        },
+        "turn_player": "SELF"
+      },
+      "effects": [
+        {
+          "type": "DRAW",
+          "amount": 1
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Set] [1/Set]\n[1/Turn] During your turn, when your monster with \"Thunder Mine\" enters the field, draw a card.",
+          "segments": [
+            {
+              "text": "[Set]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[1/Set]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": "\n"
+            },
+            {
+              "text": "[1/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " During "
+            },
+            {
+              "text": "your turn",
+              "style": "TURN"
+            },
+            {
+              "text": ", when your "
+            },
+            {
+              "text": "monster",
+              "style": "CARD_REFERENCE"
+            },
+            {
+              "text": " with "
+            },
+            {
+              "text": "\"Thunder Mine\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " enters the "
+            },
+            {
+              "text": "field",
+              "style": "ZONE"
+            },
+            {
+              "text": ", draw a card."
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Set] [1/Set]\n[1/Turn] ในเทิร์นเรา เมื่อมอนสเตอร์ที่มี \"ธันเดอร์ไมน์\" เข้าสู่สนามเรา, เราจั่วการ์ด 1 ใบ",
+          "segments": [
+            {
+              "text": "[Set]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[1/Set]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": "\n"
+            },
+            {
+              "text": "[1/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " ใน"
+            },
+            {
+              "text": "เทิร์นเรา",
+              "style": "TURN"
+            },
+            {
+              "text": " เมื่อมอนสเตอร์ที่มี "
+            },
+            {
+              "text": "\"ธันเดอร์ไมน์\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " เข้าสู่"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรา, เราจั่วการ์ด 1 ใบ"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

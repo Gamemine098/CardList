@@ -1,0 +1,321 @@
+{
+  "card_id": "EVIL_DEITY_OF_CATACLYSM_HYAKUGAN_YAMIGEDO_EARTH_HALF_RE_B",
+  "name": {
+    "en": "Evil Deity of Cataclysm, Hyakugan Yamigedo \"Earth Half\" \"Re:B\"",
+    "th": "จอมเทพปีศาจแห่งภัยพิบัติ ยามิเกโดร้อยหน้า \"ครึ่งแผ่นดิน\" \"Re:B\""
+  },
+  "image": "database/images/evil_deity_of_cataclysm_hyakugan_yamigedo_earth_half_re_b.webp",
+  "type": "MONSTER",
+  "worlds": [],
+  "attributes": [
+    "HUNDRED_DEMONS",
+    "DEITY"
+  ],
+  "stats": {
+    "power": 1000000
+  },
+  "call_cost": [
+    {
+      "type": "PAY_GAUGE",
+      "amount": 3
+    }
+  ],
+  "use_restrictions": [],
+  "rules": [
+    {
+      "type": "GREAT_EVIL_DEITY",
+      "pair_card_id": "EVIL_DEITY_OF_CATACLYSM_HYAKUGAN_YAMIGEDO_SKY_HALF_RE_B"
+    }
+  ],
+  "abilities": [
+    {
+      "id": "EVIL_DEITY_OF_CATACLYSM_HYAKUGAN_YAMIGEDO_EARTH_HALF_RE_B-A01",
+      "kind": "ACT",
+      "keywords": [
+        "COUNTER"
+      ],
+      "skill_restrictions": [
+        {
+          "type": "NAMED_ABILITY_LIMIT",
+          "ability_name": "Sacrifice for the Evil Deity",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "EVIL_DEITY_OF_CATACLYSM_HYAKUGAN_YAMIGEDO_EARTH_HALF_RE_B",
+            "ability_id": "EVIL_DEITY_OF_CATACLYSM_HYAKUGAN_YAMIGEDO_EARTH_HALF_RE_B-A01"
+          }
+        }
+      ],
+      "trigger": {
+        "type": "COUNTER_TIMING"
+      },
+      "cost": [
+        {
+          "type": "CHOICE",
+          "choose": 1,
+          "options": [
+            {
+              "id": "TO_REMOVE",
+              "effects": [
+                {
+                  "type": "MOVE_CARD",
+                  "from": "DROP",
+                  "to": "REMOVE",
+                  "target": {
+                    "type": "SELECT",
+                    "zone": "DROP",
+                    "owner": "SELF",
+                    "card_type": "MONSTER",
+                    "filter": {
+                      "keyword": "THUNDER_MINE"
+                    },
+                    "count": 1
+                  }
+                }
+              ]
+            },
+            {
+              "id": "TO_DECK_BOTTOM",
+              "effects": [
+                {
+                  "type": "MOVE_CARD",
+                  "from": "DROP",
+                  "to": "DECK",
+                  "position": "BOTTOM",
+                  "target": {
+                    "type": "SELECT",
+                    "zone": "DROP",
+                    "owner": "SELF",
+                    "card_type": "MONSTER",
+                    "filter": {
+                      "keyword": "THUNDER_MINE"
+                    },
+                    "count": 1
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "type": "HEAL",
+          "amount": 1
+        },
+        {
+          "type": "DRAW",
+          "amount": 1
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Counter] 【Act】 [An/Turn] \"Sacrifice for the Evil Deity\" [Cost] [Remove a monster with \"Thunder Mine\" from your drop or return it to the bottom of your deck], heal 1 life and draw a card.",
+          "segments": [
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " 【Act】 "
+            },
+            {
+              "text": "[An/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " \"Sacrifice for the Evil Deity\" "
+            },
+            {
+              "text": "[Cost] [Remove a monster with \"Thunder Mine\" from your drop or return it to the bottom of your deck]",
+              "style": "COST"
+            },
+            {
+              "text": ", heal 1 life and draw a card."
+            }
+          ]
+        },
+        "th": {
+          "plain": "[An/Turn] [Counter] 【Act】 \"เครื่องสังเวยเทพปีศาจ\" [Cost] [นำมอนสเตอร์ที่มีความสามารถ \"ธันเดอร์ ไมน์\" จากดรอบเรา 1 ใบรีมูฟการ์ดนั้นหรือนำกลับใต้กองการ์ดเรา] เราฮีล 1 หน่วย และ จั่วการ์ด 1 ใบ",
+          "segments": [
+            {
+              "text": "[An/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " 【Act】 \"เครื่องสังเวยเทพปีศาจ\" "
+            },
+            {
+              "text": "[Cost] [นำมอนสเตอร์ที่มีความสามารถ \"ธันเดอร์ ไมน์\" จากดรอบเรา 1 ใบรีมูฟการ์ดนั้นหรือนำกลับใต้กองการ์ดเรา]",
+              "style": "COST"
+            },
+            {
+              "text": " เราฮีล 1 หน่วย และ จั่วการ์ด 1 ใบ"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "EVIL_DEITY_OF_CATACLYSM_HYAKUGAN_YAMIGEDO_EARTH_HALF_RE_B-A02",
+      "kind": "AUTO",
+      "keywords": [],
+      "skill_restrictions": [],
+      "trigger": {
+        "type": "BEFORE_LEAVE_FIELD",
+        "target": "THIS_CARD",
+        "cause": "OPPONENT_CARD"
+      },
+      "cost": [
+        {
+          "type": "MOVE_CARD",
+          "from": "DECK",
+          "position": "TOP",
+          "to": "DROP",
+          "count": 5
+        }
+      ],
+      "effects": [
+        {
+          "type": "PREVENT_LEAVE_FIELD",
+          "target": "THIS_CARD"
+        },
+        {
+          "type": "IF",
+          "condition": {
+            "type": "COST_MILLED_CARDS_HAVE",
+            "card_type": "SPELL",
+            "keywords": [
+              "SET"
+            ]
+          },
+          "then": [
+            {
+              "type": "CAST",
+              "targets": {
+                "type": "COST_MILLED_CARDS",
+                "card_type": "SPELL",
+                "keywords": [
+                  "SET"
+                ]
+              },
+              "optional": true,
+              "pay_cast_cost": true
+            }
+          ],
+          "else": []
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "\"Immortal Hyakugan\" If this card would be destroyed or leave the field by your opponent's cards, [Cost] [Mill five cards], this card remains on the field. If cards milled for this ability's cost are spells with [Set], you may cast them by paying their [Cast Cost].",
+          "segments": [
+            {
+              "text": "\"Immortal Hyakugan\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " If this card would be destroyed or leave the field by your opponent's cards, "
+            },
+            {
+              "text": "[Cost] [Mill five cards]",
+              "style": "COST"
+            },
+            {
+              "text": ", this card remains on the field. If cards milled for this ability's cost are spells with "
+            },
+            {
+              "text": "[Set]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": ", you may cast them by paying their "
+            },
+            {
+              "text": "[Cast Cost]",
+              "style": "COST"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        "th": {
+          "plain": "\"วิชานอกรีตร้อยเนตรอมตะ\" หากการ์ดนี้กำลังจะถูกทำลายหรือนำออกจากสนามโดยการ์ดคู่แข่ง, [Cost] [เราโม่ 5 ใบ] การ์ดนี้จะยังคงอยู่บนสนาม, หากการ์ดที่โม่ด้วยคอสต์ของความสามารถนี้มีเวทมนตร์ [Set] อยู่เราสามารถร่ายการ์ดเหล่านั้นได้โดยจ่าย [Cast Cost]",
+          "segments": [
+            {
+              "text": "\"วิชานอกรีตร้อยเนตรอมตะ\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " หากการ์ดนี้กำลังจะถูกทำลายหรือนำออกจากสนามโดยการ์ดคู่แข่ง, "
+            },
+            {
+              "text": "[Cost] [เราโม่ 5 ใบ]",
+              "style": "COST"
+            },
+            {
+              "text": " การ์ดนี้จะยังคงอยู่บนสนาม, หากการ์ดที่โม่ด้วยคอสต์ของความสามารถนี้มีเวทมนตร์ "
+            },
+            {
+              "text": "[Set]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " อยู่เราสามารถร่ายการ์ดเหล่านั้นได้โดยจ่าย "
+            },
+            {
+              "text": "[Cast Cost]",
+              "style": "COST"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "EVIL_DEITY_OF_CATACLYSM_HYAKUGAN_YAMIGEDO_EARTH_HALF_RE_B-A03",
+      "kind": "CONT",
+      "keywords": [
+        "TRIPLE_ATTACK"
+      ],
+      "skill_restrictions": [],
+      "effects": [
+        {
+          "type": "ATTACK_RULE",
+          "target": "THIS_CARD",
+          "rules": [
+            "TRIPLE_ATTACK"
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Triple Attack]",
+          "segments": [
+            {
+              "text": "[Triple Attack]",
+              "style": "KEYWORD"
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Triple Attack]",
+          "segments": [
+            {
+              "text": "[Triple Attack]",
+              "style": "KEYWORD"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

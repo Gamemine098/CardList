@@ -1,0 +1,248 @@
+{
+  "card_id": "EVIL_SORCERY_IVORY_FIEND_CURSE",
+  "name": {
+    "en": "Evil Sorcery, Ivory Fiend Curse",
+    "th": "มนตราปีศาจ, คำสาปอสูรสีนวล"
+  },
+  "image": "database/images/evil_sorcery_ivory_fiend_curse.webp",
+  "type": "SPELL",
+  "worlds": [
+    "ANCIENT_WORLD",
+    "LEGEND_WORLD"
+  ],
+  "attributes": [
+    "HUNDRED_DEMONS",
+    "DEFENSE"
+  ],
+  "call_cost": [],
+  "use_restrictions": [],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "EVIL_SORCERY_IVORY_FIEND_CURSE-A01",
+      "kind": "ACT",
+      "keywords": [
+        "COUNTER"
+      ],
+      "skill_restrictions": [
+        {
+          "type": "CARD_USE_LIMIT",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "EVIL_SORCERY_IVORY_FIEND_CURSE",
+            "ability_id": "EVIL_SORCERY_IVORY_FIEND_CURSE-A01"
+          }
+        }
+      ],
+      "trigger": {
+        "type": "COUNTER_TIMING"
+      },
+      "cost": [
+        {
+          "type": "MOVE_CARD",
+          "from": "DROP",
+          "to": "DECK",
+          "position": "BOTTOM",
+          "target": {
+            "type": "SELECT",
+            "zone": "DROP",
+            "owner": "SELF",
+            "count": 3
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "CHOICE",
+          "choose": 1,
+          "options": [
+            {
+              "id": "PREVENT_EFFECT_DAMAGE",
+              "condition": {
+                "type": "OR",
+                "conditions": [
+                  {
+                    "type": "PLAYER_CONTROLS_CARD",
+                    "owner": "SELF",
+                    "zone": "FIELD",
+                    "filter": {
+                      "card_type": "MONSTER",
+                      "name_contains": "Yamigedo"
+                    }
+                  },
+                  {
+                    "type": "PLAYER_CONTROLS_CARD",
+                    "owner": "SELF",
+                    "zone": "FIELD",
+                    "filter": {
+                      "keyword": "DUO"
+                    }
+                  }
+                ]
+              },
+              "effects": [
+                {
+                  "type": "DAMAGE_PROTECTION",
+                  "target": "SELF",
+                  "source": "OPPONENT_CARD_EFFECT",
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "UNAVOIDABLE_THUNDER_MINE",
+              "effects": [
+                {
+                  "type": "DAMAGE_RULE",
+                  "source": {
+                    "owner": "SELF",
+                    "keyword": "THUNDER_MINE"
+                  },
+                  "rules": [
+                    "CANNOT_BE_REDUCED",
+                    "CANNOT_BE_AVOIDED"
+                  ],
+                  "occurrences": {
+                    "type": "COUNT_BUDDYGIFT",
+                    "state": "FACE_UP"
+                  },
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Cn/Turn] [Counter] Choose one of the following.\n• If you have a monster with \"Yamigedo\" in its name or a [Duo] on your field, for this turn, you cannot take damage from your opponent's card effects.\n• For this turn, the next time your opponent would take damage from your cards' \"Thunder Mine\", for each of your face up BuddyGift, that damage cannot be reduced nor avoided.\n(For example, if you have one face up BuddyGift, your opponent will take one unavoidable damage from \"Thunder Mine\"!)",
+          "segments": [
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " Choose one of the following.\n• If you have a monster with \"Yamigedo\" in its name or a "
+            },
+            {
+              "text": "[Duo]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " on your "
+            },
+            {
+              "text": "field",
+              "style": "ZONE"
+            },
+            {
+              "text": ", for "
+            },
+            {
+              "text": "this turn",
+              "style": "TURN"
+            },
+            {
+              "text": ", you cannot take damage from your opponent's card effects.\n• For "
+            },
+            {
+              "text": "this turn",
+              "style": "TURN"
+            },
+            {
+              "text": ", the next time your "
+            },
+            {
+              "text": "opponent",
+              "style": "PLAYER"
+            },
+            {
+              "text": " would take damage from your cards' "
+            },
+            {
+              "text": "\"Thunder Mine\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": ", for each of your face up BuddyGift, that damage cannot be reduced nor avoided.\n(For example, if you have one face up BuddyGift, your opponent will take one unavoidable damage from \"Thunder Mine\"!)"
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Cn/Turn] [Counter] เลือกใช้ 1 อย่างต่อไปนี้\n• ในเทิร์นนี้, หากบนสนามเรามีมอนสเตอร์ \"ยามิเกโด\" ในชื่อการ์ดหรือ [Duo] อยู่, เราจะไม่ได้รับความเสียหายจากความสามารถการ์ดคู่แข่ง\n• ในเทิร์นนี้, ครั้งต่อไปที่คู่แข่งจะได้รับความเสียหายจากความสามารถ \"ธันเดอร์ ไมน์\" ของการ์ดเรา ต่อจำนวนบัดดี้กิฟต์ที่หงายหน้าอยู่ของเราทุกๆ 1 ใบ คู่แข่งจะไม่สามารถลดลงได้หรือไม่ได้รับความเสียหายของการ์ดคู่แข่ง!\n(เช่นบัดดี้กิฟต์หงายอยู่ 1 ใบ คู่แข่งจะได้รับความเสียหายจาก “รันเดอร์ไมน์” แน่ๆ 1 ครั้งโดยไม่มีอะไรมาขวางกั้น!)",
+          "segments": [
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " เลือกใช้ 1 อย่างต่อไปนี้\n• ใน"
+            },
+            {
+              "text": "เทิร์นนี้",
+              "style": "TURN"
+            },
+            {
+              "text": ", หากบน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรามีมอนสเตอร์ \"ยามิเกโด\" ในชื่อการ์ดหรือ "
+            },
+            {
+              "text": "[Duo]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " อยู่, เราจะไม่ได้รับความเสียหายจากความสามารถการ์ดคู่แข่ง\n• ใน"
+            },
+            {
+              "text": "เทิร์นนี้",
+              "style": "TURN"
+            },
+            {
+              "text": ", ครั้งต่อไปที่"
+            },
+            {
+              "text": "คู่แข่ง",
+              "style": "PLAYER"
+            },
+            {
+              "text": "จะได้รับความเสียหายจากความสามารถ "
+            },
+            {
+              "text": "\"ธันเดอร์ ไมน์\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " ของการ์ดเรา ต่อจำนวนบัดดี้กิฟต์ที่หงายหน้าอยู่ของเราทุกๆ 1 ใบ คู่แข่งจะไม่สามารถลดลงได้หรือไม่ได้รับความเสียหายของการ์ดคู่แข่ง!\n(เช่นบัดดี้กิฟต์หงายอยู่ 1 ใบ คู่แข่งจะได้รับความเสียหายจาก “รันเดอร์ไมน์” แน่ๆ 1 ครั้งโดยไม่มีอะไรมาขวางกั้น!)"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

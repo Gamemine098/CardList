@@ -1,0 +1,365 @@
+{
+  "card_id": "JAIL_LIBERATOR_BEFRIEN",
+  "name": {
+    "en": "Jail Liberator, Befrien",
+    "th": "ผู้ปลดปล่อยพันธนาการ, เบเฟรน"
+  },
+  "image": "database/images/jail_liberator_befrien.webp",
+  "type": "MONSTER",
+  "worlds": [
+    "DARKNESS_DRAGON_WORLD"
+  ],
+  "attributes": [
+    "HUNDRED_DEMONS",
+    "BLACK_DRAGON",
+    "DESTRUCTION"
+  ],
+  "stats": {
+    "size": 1,
+    "power": 3000,
+    "critical": 1,
+    "defense": 1000
+  },
+  "call_cost": [],
+  "use_restrictions": [],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "JAIL_LIBERATOR_BEFRIEN-A01",
+      "kind": "CONT",
+      "keywords": [],
+      "skill_restrictions": [],
+      "activation_condition": {
+        "type": "PLAYER_CONTROLS_CARD",
+        "owner": "SELF",
+        "zone": "FIELD",
+        "filter": {
+          "card_type": "MONSTER",
+          "attribute": "HUNDRED_DEMONS",
+          "stat_compare": {
+            "stat": "SIZE",
+            "operator": "EQUAL",
+            "value": 3
+          }
+        }
+      },
+      "effects": [
+        {
+          "type": "MODIFY_STAT",
+          "target": "THIS_CARD",
+          "stat": "SIZE",
+          "amount": -1,
+          "duration": {
+            "type": "WHILE_SOURCE_ACTIVE"
+          }
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "If an originally size 3 《Hundred Demons》 is on your field, this card on the field gets size reduced by 1.",
+          "segments": [
+            {
+              "text": "If an originally size 3 "
+            },
+            {
+              "text": "《Hundred Demons》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": " is on your "
+            },
+            {
+              "text": "field",
+              "style": "ZONE"
+            },
+            {
+              "text": ", this card on the field gets "
+            },
+            {
+              "text": "size reduced by 1",
+              "style": "STAT_MODIFIER"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        "th": {
+          "plain": "หากบนสนามเรามีมอนสเตอร์《ร้อยอสูร》ไซส์ 3 อยู่, ไซส์การ์ดนี้บนสนามเราลดลง 1",
+          "segments": [
+            {
+              "text": "หากบน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรามีมอนสเตอร์"
+            },
+            {
+              "text": "《ร้อยอสูร》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": "ไซส์ 3 อยู่, ไซส์การ์ดนี้บนสนามเรา"
+            },
+            {
+              "text": "ลดลง 1",
+              "style": "STAT_MODIFIER"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "JAIL_LIBERATOR_BEFRIEN-A02",
+      "kind": "CONT",
+      "keywords": [
+        "SOUL"
+      ],
+      "skill_restrictions": [],
+      "activation_condition": {
+        "type": "OR",
+        "conditions": [
+          {
+            "type": "CARD_IN_ZONE",
+            "card": "THIS_CARD",
+            "owner": "SELF",
+            "zones": [
+              "FIELD"
+            ]
+          },
+          {
+            "type": "AND",
+            "conditions": [
+              {
+                "type": "CARD_IN_ZONE",
+                "card": "THIS_CARD",
+                "owner": "SELF",
+                "zones": [
+                  "SOUL"
+                ]
+              },
+              {
+                "type": "SOUL_HOST_HAS_ATTRIBUTE",
+                "attribute": "HUNDRED_DEMONS"
+              }
+            ]
+          }
+        ]
+      },
+      "effects": [
+        {
+          "type": "MODIFY_STAT",
+          "target": {
+            "type": "CARDS_ON_FIELD",
+            "owner": "SELF",
+            "exclude": "THIS_CARD",
+            "filter": {
+              "attribute": "HUNDRED_DEMONS"
+            }
+          },
+          "stat": "POWER",
+          "amount": 5000,
+          "duration": {
+            "type": "WHILE_SOURCE_ACTIVE"
+          }
+        },
+        {
+          "type": "ATTACK_RULE",
+          "target": {
+            "type": "CARDS_ON_FIELD",
+            "owner": "SELF",
+            "exclude": "THIS_CARD",
+            "filter": {
+              "attribute": "HUNDRED_DEMONS"
+            }
+          },
+          "rules": [
+            "PENETRATE"
+          ],
+          "duration": {
+            "type": "WHILE_SOURCE_ACTIVE"
+          }
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "【Soul:《Hundred Demons》/Field】: All other 《Hundred Demons》 on your field get power+5000 and [Penetrate].",
+          "segments": [
+            {
+              "text": "【Soul:《Hundred Demons》/Field】",
+              "style": "ZONE"
+            },
+            {
+              "text": ": All other "
+            },
+            {
+              "text": "《Hundred Demons》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": " on your "
+            },
+            {
+              "text": "field",
+              "style": "ZONE"
+            },
+            {
+              "text": " get "
+            },
+            {
+              "text": "power+5000",
+              "style": "STAT_MODIFIER"
+            },
+            {
+              "text": " and "
+            },
+            {
+              "text": "[Penetrate]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        "th": {
+          "plain": "【สนาม/โซล:《ร้อยอสูร》】: 《ร้อยอสูร》ใบอื่นบนสนามเราทุกใบได้รับพาวเวอร์ +5000 และ Penetrate",
+          "segments": [
+            {
+              "text": "【สนาม/โซล:《ร้อยอสูร》】",
+              "style": "ZONE"
+            },
+            {
+              "text": ": "
+            },
+            {
+              "text": "《ร้อยอสูร》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": "ใบอื่นบน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราทุกใบได้รับ"
+            },
+            {
+              "text": "พาวเวอร์ +5000",
+              "style": "STAT_MODIFIER"
+            },
+            {
+              "text": " และ "
+            },
+            {
+              "text": "Penetrate",
+              "style": "KEYWORD"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "JAIL_LIBERATOR_BEFRIEN-A03",
+      "kind": "AUTO",
+      "keywords": [
+        "THUNDER_MINE"
+      ],
+      "skill_restrictions": [],
+      "trigger": {
+        "type": "EVENT",
+        "event": "ENTER_FIELD",
+        "target": {
+          "card_type": "MONSTER",
+          "owner": "OPPONENT",
+          "zone": "FIELD"
+        },
+        "cause": "CARD_EFFECT"
+      },
+      "effects": [
+        {
+          "type": "DAMAGE",
+          "target": "OPPONENT",
+          "amount": 1
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "\"Thunder Mine\" When a monster enters your opponent's field by card effects, deal 1 damage to your opponent!",
+          "segments": [
+            {
+              "text": "\"Thunder Mine\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " When a "
+            },
+            {
+              "text": "monster",
+              "style": "CARD_REFERENCE"
+            },
+            {
+              "text": " enters your "
+            },
+            {
+              "text": "opponent",
+              "style": "PLAYER"
+            },
+            {
+              "text": "'s "
+            },
+            {
+              "text": "field",
+              "style": "ZONE"
+            },
+            {
+              "text": " by card effects, deal "
+            },
+            {
+              "text": "1 damage",
+              "style": "DAMAGE"
+            },
+            {
+              "text": " to your opponent!"
+            }
+          ]
+        },
+        "th": {
+          "plain": "\"ธันเดอร์ ไมน์\" เมื่อมอนสเตอร์เข้าสู่สนามคู่แข่งด้วยความสามารถการ์ด, สร้างความเสียหายใส่คู่แข่ง 1 ไลฟ์!",
+          "segments": [
+            {
+              "text": "\"ธันเดอร์ ไมน์\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " เมื่อมอนสเตอร์เข้าสู่"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "คู่แข่ง",
+              "style": "PLAYER"
+            },
+            {
+              "text": "ด้วยความสามารถการ์ด, สร้างความเสียหายใส่คู่แข่ง "
+            },
+            {
+              "text": "1 ไลฟ์",
+              "style": "DAMAGE"
+            },
+            {
+              "text": "!"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

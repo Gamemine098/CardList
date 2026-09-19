@@ -1,0 +1,258 @@
+{
+  "card_id": "CATACLYSMIC_SEED_HYAKUGAN_YAMIGEDO_LARVA",
+  "name": {
+    "en": "Cataclysmic Seed, Hyakugan Yamigedo Larva",
+    "th": "เมล็ดแห่งหายนะ, ยามิเกโดร้อยหน้า・ลาร์วา"
+  },
+  "image": "database/images/cataclysmic_seed_hyakugan_yamigedo_larva.webp",
+  "type": "MONSTER",
+  "worlds": [],
+  "attributes": [
+    "HUNDRED_DEMONS"
+  ],
+  "stats": {
+    "size": 0,
+    "power": 3000,
+    "critical": 1,
+    "defense": 1000
+  },
+  "call_cost": [],
+  "use_restrictions": [],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "CATACLYSMIC_SEED_HYAKUGAN_YAMIGEDO_LARVA-A01",
+      "kind": "AUTO",
+      "keywords": [],
+      "skill_restrictions": [],
+      "trigger": {
+        "type": "EVENT",
+        "event": "ZONE_CHANGE",
+        "target": "THIS_CARD",
+        "from": "DECK",
+        "to": "DROP",
+        "cause": "CARD_EFFECT"
+      },
+      "optional": true,
+      "effects": [
+        {
+          "type": "CALL",
+          "from": "DROP",
+          "to": "FIELD",
+          "targets": [
+            {
+              "type": "THIS_CARD"
+            }
+          ],
+          "pay_call_cost": true
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "When this card is put from your deck into your drop zone by card effects, you may call this card from your drop zone.",
+          "segments": [
+            {
+              "text": "When this card is put from your "
+            },
+            {
+              "text": "deck",
+              "style": "ZONE"
+            },
+            {
+              "text": " into your "
+            },
+            {
+              "text": "drop zone",
+              "style": "ZONE"
+            },
+            {
+              "text": " by card effects, you may call this card from your "
+            },
+            {
+              "text": "drop zone",
+              "style": "ZONE"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        "th": {
+          "plain": "เมื่อการ์ดนี้ถูกนำลงดรอบจากกองการ์ดโดยความสามารถการ์ด, เราสามารถคอลการ์ดนี้จากดรอบได้",
+          "segments": [
+            {
+              "text": "เมื่อการ์ดนี้ถูกนำลง"
+            },
+            {
+              "text": "ดรอบ",
+              "style": "ZONE"
+            },
+            {
+              "text": "จาก"
+            },
+            {
+              "text": "กองการ์ด",
+              "style": "ZONE"
+            },
+            {
+              "text": "โดยความสามารถการ์ด, เราสามารถคอลการ์ดนี้จาก"
+            },
+            {
+              "text": "ดรอบ",
+              "style": "ZONE"
+            },
+            {
+              "text": "ได้"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "CATACLYSMIC_SEED_HYAKUGAN_YAMIGEDO_LARVA-A02",
+      "kind": "AUTO",
+      "keywords": [],
+      "skill_restrictions": [
+        {
+          "type": "NAMED_ABILITY_LIMIT",
+          "ability_name": "Cataclysmic Reincarnation",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "CATACLYSMIC_SEED_HYAKUGAN_YAMIGEDO_LARVA",
+            "ability_id": "CATACLYSMIC_SEED_HYAKUGAN_YAMIGEDO_LARVA-A02"
+          }
+        }
+      ],
+      "trigger": {
+        "type": "EVENT",
+        "event": "ENTER_FIELD",
+        "target": "THIS_CARD"
+      },
+      "condition": {
+        "type": "PLAYER_CONTROLS_CARD",
+        "owner": "SELF",
+        "zone": "FIELD",
+        "filter": {
+          "card_type": "MONSTER",
+          "name_contains": "Yamigedo",
+          "stat_compare": {
+            "stat": "SIZE",
+            "operator": "EQUAL",
+            "value": 3
+          }
+        }
+      },
+      "effects": [
+        {
+          "type": "MOVE_CARD",
+          "from": "DROP",
+          "to": "HAND",
+          "target": {
+            "type": "SELECT",
+            "zone": "DROP",
+            "owner": "SELF",
+            "filter": {
+              "attribute": "HUNDRED_DEMONS"
+            },
+            "maximum": 1
+          }
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[An/Turn] \"Cataclysmic Reincarnation\" When this card enters the field, if a size 3 monster with \"Yamigedo\" in its card name is on your field, put up to one 《Hundred Demons》 from your drop zone into your hand.",
+          "segments": [
+            {
+              "text": "[An/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " \"Cataclysmic Reincarnation\" When this card enters the "
+            },
+            {
+              "text": "field",
+              "style": "ZONE"
+            },
+            {
+              "text": ", if a size 3 monster with \"Yamigedo\" in its card name is on your "
+            },
+            {
+              "text": "field",
+              "style": "ZONE"
+            },
+            {
+              "text": ", put up to one "
+            },
+            {
+              "text": "《Hundred Demons》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": " from your "
+            },
+            {
+              "text": "drop zone",
+              "style": "ZONE"
+            },
+            {
+              "text": " into your "
+            },
+            {
+              "text": "hand",
+              "style": "ZONE"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        "th": {
+          "plain": "[An/Turn] \"การเกิดใหม่ของหายนะ\" เมื่อการ์ดนี้เข้าสู่สนาม หากบนสนามเรามีมอนสเตอร์ไซส์ 3 ที่มี \"ยามิเกโด\" ในชื่อการ์ด, นำ《ร้อยอสูร》จากดรอบเราไม่เกิน 1 ใบกลับขึ้นมือ",
+          "segments": [
+            {
+              "text": "[An/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " \"การเกิดใหม่ของหายนะ\" เมื่อการ์ดนี้เข้าสู่"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": " หากบน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรามีมอนสเตอร์ไซส์ 3 ที่มี \"ยามิเกโด\" ในชื่อการ์ด, นำ"
+            },
+            {
+              "text": "《ร้อยอสูร》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": "จาก"
+            },
+            {
+              "text": "ดรอบ",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราไม่เกิน 1 ใบกลับขึ้น"
+            },
+            {
+              "text": "มือ",
+              "style": "ZONE"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

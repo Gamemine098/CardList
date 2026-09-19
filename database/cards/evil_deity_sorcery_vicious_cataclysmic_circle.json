@@ -1,0 +1,260 @@
+{
+  "card_id": "EVIL_DEITY_SORCERY_VICIOUS_CATACLYSMIC_CIRCLE",
+  "name": {
+    "en": "Evil Deity Sorcery, Vicious Cataclysmic Circle",
+    "th": "มนตราเทพอสูร, ค่ายกลภัยพิบัติวิญญาณร้าย"
+  },
+  "image": "database/images/evil_deity_sorcery_vicious_cataclysmic_circle.webp",
+  "type": "SPELL",
+  "worlds": [],
+  "attributes": [
+    "HUNDRED_DEMONS",
+    "GET",
+    "SUMMON"
+  ],
+  "call_cost": [],
+  "use_restrictions": [],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "EVIL_DEITY_SORCERY_VICIOUS_CATACLYSMIC_CIRCLE-A01",
+      "kind": "ACT",
+      "keywords": [],
+      "skill_restrictions": [
+        {
+          "type": "CARD_USE_LIMIT",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "EVIL_DEITY_SORCERY_VICIOUS_CATACLYSMIC_CIRCLE",
+            "ability_id": "EVIL_DEITY_SORCERY_VICIOUS_CATACLYSMIC_CIRCLE-A01"
+          }
+        }
+      ],
+      "cost": [
+        {
+          "type": "PAY_LIFE",
+          "amount": 1
+        }
+      ],
+      "effects": [
+        {
+          "type": "CHOICE",
+          "choose": 1,
+          "options": [
+            {
+              "id": "SEARCH_YAMIGEDO",
+              "effects": [
+                {
+                  "type": "MOVE_CARD",
+                  "from": "DECK",
+                  "to": "HAND",
+                  "target": {
+                    "type": "SELECT",
+                    "zone": "DECK",
+                    "owner": "SELF",
+                    "card_type": "MONSTER",
+                    "filter": {
+                      "name_contains": "Yamigedo",
+                      "distinct": "CARD_NAME"
+                    },
+                    "maximum": 2
+                  },
+                  "then": {
+                    "type": "IF",
+                    "condition": {
+                      "type": "PREVIOUS_RESULT_COUNT_EQUALS",
+                      "value": 2
+                    },
+                    "then": [
+                      {
+                        "type": "MOVE_CARD",
+                        "from": "HAND",
+                        "to": "DROP",
+                        "target": {
+                          "type": "SELECT",
+                          "zone": "HAND",
+                          "owner": "SELF",
+                          "count": 1
+                        }
+                      }
+                    ],
+                    "else": []
+                  },
+                  "shuffle": true
+                }
+              ]
+            },
+            {
+              "id": "COUNTER_CALL_HUNDRED_DEMONS",
+              "keywords": [
+                "COUNTER"
+              ],
+              "effects": [
+                {
+                  "type": "CALL",
+                  "from": "DROP",
+                  "to": "FIELD",
+                  "target": {
+                    "type": "SELECT",
+                    "zone": "DROP",
+                    "owner": "SELF",
+                    "card_type": "MONSTER",
+                    "filter": {
+                      "attribute": "HUNDRED_DEMONS"
+                    },
+                    "count": 1
+                  },
+                  "pay_call_cost": true
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Cast Cost] [Pay 1 life]\n[Cn/Turn] Choose and use one of the following two.\n• Put up to two monsters with different card names with \"Yamigedo\" in their card names from your deck into your hand, and shuffle your deck. If you put two, drop a hand card.\n• [Counter] Call a 《Hundred Demons》 monster from your drop zone by paying its [Call Cost].",
+          "segments": [
+            {
+              "text": "[Cast Cost] [Pay 1 life]",
+              "style": "COST"
+            },
+            {
+              "text": "\n"
+            },
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " Choose and use one of the following two.\n• Put up to two monsters with different card names with \"Yamigedo\" in their card names from your "
+            },
+            {
+              "text": "deck",
+              "style": "ZONE"
+            },
+            {
+              "text": " into your "
+            },
+            {
+              "text": "hand",
+              "style": "ZONE"
+            },
+            {
+              "text": ", and shuffle your deck. If you put two, drop a "
+            },
+            {
+              "text": "hand",
+              "style": "ZONE"
+            },
+            {
+              "text": " card.\n• "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " Call a "
+            },
+            {
+              "text": "《Hundred Demons》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "monster",
+              "style": "CARD_REFERENCE"
+            },
+            {
+              "text": " from your "
+            },
+            {
+              "text": "drop zone",
+              "style": "ZONE"
+            },
+            {
+              "text": " by paying its "
+            },
+            {
+              "text": "[Call Cost]",
+              "style": "COST"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Cast Cost] จ่าย 1 ไลฟ์\n[Cn/Turn] เลือกใช้ความสามารถ 1 อย่างจากด้านล่างนี้\n• นำมอนสเตอร์ที่มี \"ยามิเกโด\" ในชื่อการ์ดที่ต่างกันจากกองการ์ดรวมกันไม่เกิน 2 ใบขึ้นมือ, สับกองการ์ด หากนำขึ้นมือ 2 ใบ, ทิ้งการ์ดบนมือเรา 1 ใบ\n• [Counter] คอลมอนสเตอร์《ร้อยอสูร》จากดรอบเรา 1 ใบโดยจ่าย [Call Cost]",
+          "segments": [
+            {
+              "text": "[Cast Cost] จ่าย 1 ไลฟ์",
+              "style": "COST"
+            },
+            {
+              "text": "\n"
+            },
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " เลือกใช้ความสามารถ 1 อย่างจากด้านล่างนี้\n• นำมอนสเตอร์ที่มี \"ยามิเกโด\" ในชื่อการ์ดที่ต่างกันจาก"
+            },
+            {
+              "text": "กองการ์ด",
+              "style": "ZONE"
+            },
+            {
+              "text": "รวมกันไม่เกิน 2 ใบขึ้น"
+            },
+            {
+              "text": "มือ",
+              "style": "ZONE"
+            },
+            {
+              "text": ", สับกองการ์ด หากนำขึ้นมือ 2 ใบ, ทิ้งการ์ดบน"
+            },
+            {
+              "text": "มือ",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรา 1 ใบ\n• "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " คอลมอนสเตอร์"
+            },
+            {
+              "text": "《ร้อยอสูร》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": "จาก"
+            },
+            {
+              "text": "ดรอบ",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรา 1 ใบโดยจ่าย "
+            },
+            {
+              "text": "[Call Cost]",
+              "style": "COST"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

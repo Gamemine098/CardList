@@ -1,0 +1,21 @@
+{
+  "set_id": "S-SP03",
+  "cards": [
+    {
+      "card_number": "S-SP03/0001",
+      "card_id": "DRUM_BUNKER_DRAGON_RE_B"
+    },
+    {
+      "card_number": "S-SP03/0004",
+      "card_id": "DEMON_LORD_DRAGON_BATZZ_RE_B"
+    },
+    {
+      "card_number": "S-SP03/0015",
+      "card_id": "GREAT_FIEND_YAMIGEDO_RE_B"
+    },
+    {
+      "card_number": "S-SP03/0054",
+      "card_id": "EVOLUTION_FUTURE"
+    }
+  ]
+}

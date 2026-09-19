@@ -1,0 +1,198 @@
+{
+  "card_id": "DEMONIC_WAY_OF_HUNDRED_DEMONS_AKISHOKI_RE_S",
+  "name": {
+    "en": "Demonic Way of Hundred Demons, Akishoki \"Re:S\"",
+    "th": "วิถีมารร้อยอสูร, เฮียกกิโชคิ \"Re:S\""
+  },
+  "image": "database/images/demonic_way_of_hundred_demons_akishoki_re_s.webp",
+  "type": "SPELL",
+  "worlds": [
+    "KATANA_WORLD"
+  ],
+  "attributes": [
+    "DEMON_WAY",
+    "DRAW",
+    "HUNDRED_DEMONS"
+  ],
+  "call_cost": [],
+  "use_restrictions": [],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "DEMONIC_WAY_OF_HUNDRED_DEMONS_AKISHOKI_RE_S-A01",
+      "kind": "ACT",
+      "keywords": [],
+      "skill_restrictions": [
+        {
+          "type": "CARD_USE_LIMIT",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "DEMONIC_WAY_OF_HUNDRED_DEMONS_AKISHOKI_RE_S",
+            "ability_id": "DEMONIC_WAY_OF_HUNDRED_DEMONS_AKISHOKI_RE_S-A01"
+          }
+        }
+      ],
+      "activation_condition": {
+        "type": "PLAYER_CONTROLS_CARD",
+        "owner": "SELF",
+        "zone": "FIELD",
+        "filter": {
+          "attributes_any": [
+            "HUNDRED_DEMONS",
+            "SKULL_WARRIOR"
+          ]
+        }
+      },
+      "cost": [
+        {
+          "type": "PAY_GAUGE",
+          "amount": 1
+        }
+      ],
+      "effects": [
+        {
+          "type": "DRAW",
+          "amount": 2
+        },
+        {
+          "type": "IF",
+          "condition": {
+            "type": "COUNT_CARDS_COMPARE",
+            "owner": "SELF",
+            "zones": [
+              "DROP",
+              "REMOVE"
+            ],
+            "operator": "GREATER_THAN_OR_EQUAL",
+            "value": 10
+          },
+          "then": [
+            {
+              "type": "DRAW",
+              "amount": 1
+            }
+          ],
+          "else": []
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "You may only cast this card if you have a 《Hundred Demons》 or 《Skull Warrior》 on your field.\n[Cast Cost] [Pay 1 gauge]\n[Cn/Turn] Draw 2 cards! Then, if you have a total of 10 or more cards in your drop and remove zone, draw a card.",
+          "segments": [
+            {
+              "text": "You may only cast this card if you have a "
+            },
+            {
+              "text": "《Hundred Demons》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": " or "
+            },
+            {
+              "text": "《Skull Warrior》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": " on your "
+            },
+            {
+              "text": "field",
+              "style": "ZONE"
+            },
+            {
+              "text": ".\n"
+            },
+            {
+              "text": "[Cast Cost] [Pay 1 gauge]",
+              "style": "COST"
+            },
+            {
+              "text": "\n"
+            },
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " Draw 2 cards! Then, if you have a total of 10 or more cards in your "
+            },
+            {
+              "text": "drop",
+              "style": "ZONE"
+            },
+            {
+              "text": " and "
+            },
+            {
+              "text": "remove zone",
+              "style": "ZONE"
+            },
+            {
+              "text": ", draw a card."
+            }
+          ]
+        },
+        "th": {
+          "plain": "ร่ายการ์ดนี้ได้หากเรามี《ร้อยอสูร》หรือ《นักรบกะโหลก》บนสนาม\n[Cast Cost] จ่าย 1 เกจ\n[Cn/Turn] เราจั่วการ์ด 2 ใบ! จากนั้น หากดรอบเราและรีมูฟโซนมีการ์ดรวมกัน 10 ใบหรือมากกว่า, เราจั่วการ์ด 1 ใบ",
+          "segments": [
+            {
+              "text": "ร่ายการ์ดนี้ได้หากเรามี"
+            },
+            {
+              "text": "《ร้อยอสูร》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": "หรือ"
+            },
+            {
+              "text": "《นักรบกะโหลก》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": "บน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "\n"
+            },
+            {
+              "text": "[Cast Cost] จ่าย 1 เกจ",
+              "style": "COST"
+            },
+            {
+              "text": "\n"
+            },
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " เราจั่วการ์ด 2 ใบ! จากนั้น หาก"
+            },
+            {
+              "text": "ดรอบ",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราและ"
+            },
+            {
+              "text": "รีมูฟโซน",
+              "style": "ZONE"
+            },
+            {
+              "text": "มีการ์ดรวมกัน 10 ใบหรือมากกว่า, เราจั่วการ์ด 1 ใบ"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

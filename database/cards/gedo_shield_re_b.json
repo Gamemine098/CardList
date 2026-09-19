@@ -1,0 +1,187 @@
+{
+  "card_id": "GEDO_SHIELD_RE_B",
+  "name": {
+    "en": "Gedo Shield \"Re:B\"",
+    "th": "เกโดชิลด์, โล่แห่งปีศาจร้าย \"Re:B\""
+  },
+  "image": "database/images/gedo_shield_re_b.webp",
+  "type": "SPELL",
+  "worlds": [
+    "DRAGON_WORLD"
+  ],
+  "attributes": [
+    "HUNDRED_DEMONS",
+    "DEFENSE"
+  ],
+  "call_cost": [],
+  "use_restrictions": [],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "GEDO_SHIELD_RE_B-A01",
+      "kind": "ACT",
+      "keywords": [
+        "COUNTER"
+      ],
+      "skill_restrictions": [],
+      "activation_condition": {
+        "type": "AND",
+        "conditions": [
+          {
+            "type": "TURN_PLAYER",
+            "player": "OPPONENT"
+          },
+          {
+            "type": "DURING_ATTACK"
+          }
+        ]
+      },
+      "trigger": {
+        "type": "COUNTER_TIMING"
+      },
+      "cost": [],
+      "effects": [
+        {
+          "type": "NEGATE_ATTACK"
+        },
+        {
+          "type": "IF",
+          "condition": {
+            "type": "PLAYER_CONTROLS_CARD",
+            "owner": "SELF",
+            "zone": "FIELD",
+            "filter": {
+              "attribute": "HUNDRED_DEMONS"
+            },
+            "minimum": 2
+          },
+          "then": [
+            {
+              "type": "DAMAGE",
+              "target": "OPPONENT",
+              "amount": 1
+            }
+          ],
+          "else": []
+        },
+        {
+          "type": "IF",
+          "condition": {
+            "type": "ATTACK_COUNT_THIS_TURN",
+            "player": "OPPONENT",
+            "operator": "GREATER_THAN_OR_EQUAL",
+            "value": 3
+          },
+          "then": [
+            {
+              "type": "END_PHASE"
+            }
+          ],
+          "else": []
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "You may only cast this card during an attack on your opponent's turn.\n[Counter] Nullify the attack, and if there are two or more 《Hundred Demons》 on your field, deal 1 damage to your opponent. Then, if your opponent's cards attacked three times or more during this turn, end the phase!!",
+          "segments": [
+            {
+              "text": "You may only cast this card during an attack on your "
+            },
+            {
+              "text": "opponent's turn",
+              "style": "TURN"
+            },
+            {
+              "text": ".\n"
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " Nullify the attack, and if there are two or more "
+            },
+            {
+              "text": "《Hundred Demons》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": " on your "
+            },
+            {
+              "text": "field",
+              "style": "ZONE"
+            },
+            {
+              "text": ", deal "
+            },
+            {
+              "text": "1 damage",
+              "style": "DAMAGE"
+            },
+            {
+              "text": " to your opponent. Then, if your opponent's cards attacked three times or more during "
+            },
+            {
+              "text": "this turn",
+              "style": "TURN"
+            },
+            {
+              "text": ", end the phase!!"
+            }
+          ]
+        },
+        "th": {
+          "plain": "ร่ายได้ในระหว่างการโจมตีเทิร์นคู่แข่ง\n[Counter] ยกเลิกการโจมตี, หากบนสนามเรามี《ร้อยอสูร》2 ใบหรือมากกว่าสร้างความเสียหายใส่คู่แข่ง 1 ไลฟ์, จากนั้นหากคู่แข่งสั่งโจมตี 3 ครั้งหรือมากกว่าไปแล้วในเทิร์นนี้, จบเฟสนี้!!",
+          "segments": [
+            {
+              "text": "ร่ายได้ในระหว่างการโจมตี"
+            },
+            {
+              "text": "เทิร์นคู่แข่ง",
+              "style": "TURN"
+            },
+            {
+              "text": "\n"
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " ยกเลิกการโจมตี, หากบน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรามี"
+            },
+            {
+              "text": "《ร้อยอสูร》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": "2 ใบหรือมากกว่าสร้างความเสียหายใส่คู่แข่ง "
+            },
+            {
+              "text": "1 ไลฟ์",
+              "style": "DAMAGE"
+            },
+            {
+              "text": ", จากนั้นหากคู่แข่งสั่งโจมตี 3 ครั้งหรือมากกว่าไปแล้วใน"
+            },
+            {
+              "text": "เทิร์นนี้",
+              "style": "TURN"
+            },
+            {
+              "text": ", จบเฟสนี้!!"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

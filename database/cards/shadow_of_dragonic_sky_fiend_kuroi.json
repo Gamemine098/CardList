@@ -1,0 +1,499 @@
+{
+  "card_id": "SHADOW_OF_DRAGONIC_SKY_FIEND_KUROI",
+  "name": {
+    "en": "Shadow of Dragonic Sky Fiend, Kuroi",
+    "th": "เงามังกรอสูรผืนฟ้า・คุโรอิ"
+  },
+  "image": "database/images/shadow_of_dragonic_sky_fiend_kuroi.webp",
+  "type": "MONSTER",
+  "worlds": [
+    "ANCIENT_WORLD",
+    "LEGEND_WORLD"
+  ],
+  "attributes": [
+    "HUNDRED_DEMONS",
+    "WYDAR_SARKAL",
+    "WILD_DRAGON"
+  ],
+  "stats": {
+    "size": 0,
+    "power": 1000,
+    "critical": 2,
+    "defense": 2000
+  },
+  "call_cost": [
+    {
+      "type": "PAY_LIFE",
+      "amount": 1
+    }
+  ],
+  "use_restrictions": [
+    {
+      "type": "CARD_USE_LIMIT",
+      "action": "CALL",
+      "count": 1,
+      "period": "TURN",
+      "source": {
+        "kind": "CARD",
+        "card_id": "SHADOW_OF_DRAGONIC_SKY_FIEND_KUROI"
+      }
+    }
+  ],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "SHADOW_OF_DRAGONIC_SKY_FIEND_KUROI-A01",
+      "kind": "ACT",
+      "keywords": [
+        "COUNTER",
+        "DUO"
+      ],
+      "skill_restrictions": [
+        {
+          "type": "NAMED_ABILITY_LIMIT",
+          "ability_name": "Wicked Fiend Shadow",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "SHADOW_OF_DRAGONIC_SKY_FIEND_KUROI",
+            "ability_id": "SHADOW_OF_DRAGONIC_SKY_FIEND_KUROI-A01"
+          }
+        }
+      ],
+      "trigger": {
+        "type": "COUNTER_TIMING"
+      },
+      "cost": [
+        {
+          "type": "MOVE_CARD",
+          "from": "FIELD",
+          "to": "DROP",
+          "targets": [
+            {
+              "type": "THIS_CARD",
+              "count": 1
+            },
+            {
+              "type": "DUO",
+              "card_id": "SHADOW_OF_DRAGONIC_EARTH_FIEND_SHIROI",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "type": "DRAW",
+          "amount": 1
+        },
+        {
+          "type": "CALL",
+          "from": "DROP",
+          "to": "FIELD",
+          "target": {
+            "type": "SELECT",
+            "zone": "DROP",
+            "owner": "SELF",
+            "card_type": "MONSTER",
+            "filter": {
+              "type": "STAT_COMPARE",
+              "stat": "SIZE",
+              "operator": "LESS_THAN_OR_EQUAL",
+              "value": 1
+            },
+            "count": 1
+          },
+          "pay_call_cost": false
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Counter] 【Act】 [An/Turn] \"Wicked Fiend Shadow\" [Cost] [Drop one each of this card and its [Duo]], draw a card and call a size 1 or less monster from your drop without paying its [Call Cost].",
+          "segments": [
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " 【Act】 "
+            },
+            {
+              "text": "[An/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " \"Wicked Fiend Shadow\" "
+            },
+            {
+              "text": "[Cost] [Drop one each of this card and its [Duo]]",
+              "style": "COST"
+            },
+            {
+              "text": ", draw a card and call a size 1 or less monster from your "
+            },
+            {
+              "text": "drop",
+              "style": "ZONE"
+            },
+            {
+              "text": " without paying its "
+            },
+            {
+              "text": "[Call Cost]",
+              "style": "COST"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        "th": {
+          "plain": "[An/Turn] [Counter] 【Act】 \"เงาอสูรทมิฬ\" [Cost] [นำการ์ดนี้และ [Duo] ของการ์ดนี้บนสนามเราอย่างละ 1 ใบลงดรอบ] เราจั่วการ์ด 1 ใบ, คอลมอนสเตอร์ไซส์ 1 หรือต่ำกว่าจากดรอบเรา 1 ใบโดยไม่ต้องจ่าย [Call Cost]",
+          "segments": [
+            {
+              "text": "[An/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " 【Act】 \"เงาอสูรทมิฬ\" "
+            },
+            {
+              "text": "[Cost] [นำการ์ดนี้และ [Duo] ของการ์ดนี้บนสนามเราอย่างละ 1 ใบลงดรอบ]",
+              "style": "COST"
+            },
+            {
+              "text": " เราจั่วการ์ด 1 ใบ, คอลมอนสเตอร์ไซส์ 1 หรือต่ำกว่าจาก"
+            },
+            {
+              "text": "ดรอบ",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรา 1 ใบโดยไม่ต้องจ่าย "
+            },
+            {
+              "text": "[Call Cost]",
+              "style": "COST"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "SHADOW_OF_DRAGONIC_SKY_FIEND_KUROI-A02",
+      "kind": "CONT",
+      "keywords": [
+        "DUO"
+      ],
+      "skill_restrictions": [],
+      "activation_condition": {
+        "type": "AND",
+        "conditions": [
+          {
+            "type": "CARD_EXISTS",
+            "card_id": "SHADOW_OF_DRAGONIC_EARTH_FIEND_SHIROI",
+            "owner": "SELF",
+            "zones": [
+              "FIELD",
+              "DROP",
+              "SOUL_FACE_UP"
+            ]
+          },
+          {
+            "type": "TURN_PLAYER",
+            "player": "SELF"
+          }
+        ]
+      },
+      "effects": [
+        {
+          "type": "PROTECTION",
+          "target": {
+            "type": "CARDS_ON_FIELD",
+            "owner": "SELF",
+            "condition": {
+              "type": "SHARES_ATTRIBUTE",
+              "with": "THIS_CARD"
+            }
+          },
+          "action": "REST",
+          "source": "OPPONENT_CARD_EFFECT",
+          "duration": {
+            "type": "WHILE_SOURCE_ACTIVE"
+          }
+        },
+        {
+          "type": "MODIFY_STAT",
+          "target": {
+            "type": "CARDS_ON_FIELD",
+            "owner": "SELF",
+            "condition": {
+              "type": "SHARES_ATTRIBUTE",
+              "with": "THIS_CARD"
+            }
+          },
+          "stat": "POWER",
+          "amount": {
+            "type": "MULTIPLY",
+            "base": 1000,
+            "factor": {
+              "type": "COUNT_CARDS",
+              "owner": "SELF",
+              "zone": "DROP"
+            }
+          },
+          "duration": {
+            "type": "WHILE_SOURCE_ACTIVE"
+          }
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Duo] \"Shadow of Dragonic Earth Fiend, Shiroi\" (The following ability is active as long as you have a card with the name specified in the [Duo] ability on your field, in your drop zone, or in your face-up soul) During your turn, all cards on your field with one or more same attributes as this card cannot be [Rest] by your opponent's card effects, and for each card in your drop, get power+1000!",
+          "segments": [
+            {
+              "text": "[Duo]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "\"Shadow of Dragonic Earth Fiend, Shiroi\"",
+              "style": "CARD_REFERENCE"
+            },
+            {
+              "text": " (The following ability is active as long as you have a card with the name specified in the [Duo] ability on your field, in your drop zone, or in your face-up soul) During "
+            },
+            {
+              "text": "your turn",
+              "style": "TURN"
+            },
+            {
+              "text": ", all cards on your field with one or more same attributes as this card cannot be "
+            },
+            {
+              "text": "[Rest]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " by your opponent's card effects, and for each card in your "
+            },
+            {
+              "text": "drop",
+              "style": "ZONE"
+            },
+            {
+              "text": ", get "
+            },
+            {
+              "text": "power+1000",
+              "style": "STAT_MODIFIER"
+            },
+            {
+              "text": "!"
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Duo] : [เงามังกรอสูรผืนดิน・ชิโรอิ] (ความสามารถต่อไปนี้จะทำงานเมื่อมีชื่อการ์ดที่ระบุไว้ในความสามารถ [Duo] อยู่ในสนาม, ดรอบ, โซลของเรา) ในเทิร์นเรา, การ์ดที่มีคุณลักษณะเดียวกับการ์ดนี้ทุกใบบนสนามเราไม่ถูก [Rest] โดยความสามารถการ์ดคู่แข่งและได้รับพาวเวอร์ +1000! ต่อจำนวนการ์ดในดรอบเราทุกๆ 1 ใบ",
+          "segments": [
+            {
+              "text": "[Duo]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " : ["
+            },
+            {
+              "text": "เงามังกรอสูรผืนดิน・ชิโรอิ",
+              "style": "CARD_REFERENCE"
+            },
+            {
+              "text": "] (ความสามารถต่อไปนี้จะทำงานเมื่อมีชื่อการ์ดที่ระบุไว้ในความสามารถ "
+            },
+            {
+              "text": "[Duo]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " อยู่ในสนาม, ดรอบ, โซลของเรา) ใน"
+            },
+            {
+              "text": "เทิร์นเรา",
+              "style": "TURN"
+            },
+            {
+              "text": ", การ์ดที่มีคุณลักษณะเดียวกับการ์ดนี้ทุกใบบนสนามเราไม่ถูก "
+            },
+            {
+              "text": "[Rest]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " โดยความสามารถการ์ดคู่แข่งและได้รับ"
+            },
+            {
+              "text": "พาวเวอร์ +1000",
+              "style": "STAT_MODIFIER"
+            },
+            {
+              "text": "! ต่อจำนวนการ์ดใน"
+            },
+            {
+              "text": "ดรอบ",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราทุกๆ 1 ใบ"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "SHADOW_OF_DRAGONIC_SKY_FIEND_KUROI-A03",
+      "kind": "AUTO",
+      "keywords": [
+        "THUNDER_MINE"
+      ],
+      "skill_restrictions": [
+        {
+          "type": "ACTIVATION_LIMIT",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "SHADOW_OF_DRAGONIC_SKY_FIEND_KUROI",
+            "ability_id": "SHADOW_OF_DRAGONIC_SKY_FIEND_KUROI-A03"
+          }
+        }
+      ],
+      "trigger": {
+        "type": "EVENT",
+        "event": "HEAL",
+        "actor": "OPPONENT"
+      },
+      "effects": [
+        {
+          "type": "DAMAGE",
+          "target": "OPPONENT",
+          "amount": 1
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[1/Turn] \"Thunder Mine\" When your opponent heals, deal 1 damage to your opponent!",
+          "segments": [
+            {
+              "text": "[1/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "\"Thunder Mine\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " When your "
+            },
+            {
+              "text": "opponent",
+              "style": "PLAYER"
+            },
+            {
+              "text": " heals, deal "
+            },
+            {
+              "text": "1 damage",
+              "style": "DAMAGE"
+            },
+            {
+              "text": " to your opponent!"
+            }
+          ]
+        },
+        "th": {
+          "plain": "[1/Turn] \"ธันเดอร์ไมน์\" เมื่อคู่แข่งฮีล, สร้างความเสียหายใส่คู่แข่ง 1 ไลฟ์!",
+          "segments": [
+            {
+              "text": "[1/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "\"ธันเดอร์ไมน์\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " เมื่อ"
+            },
+            {
+              "text": "คู่แข่ง",
+              "style": "PLAYER"
+            },
+            {
+              "text": "ฮีล, สร้างความเสียหายใส่คู่แข่ง "
+            },
+            {
+              "text": "1 ไลฟ์",
+              "style": "DAMAGE"
+            },
+            {
+              "text": "!"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "SHADOW_OF_DRAGONIC_SKY_FIEND_KUROI-A04",
+      "kind": "CONT",
+      "keywords": [
+        "PENETRATE"
+      ],
+      "skill_restrictions": [],
+      "effects": [
+        {
+          "type": "ATTACK_RULE",
+          "target": "THIS_CARD",
+          "rules": [
+            "PENETRATE"
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Penetrate]",
+          "segments": [
+            {
+              "text": "[Penetrate]",
+              "style": "KEYWORD"
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Penetrate]",
+          "segments": [
+            {
+              "text": "[Penetrate]",
+              "style": "KEYWORD"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

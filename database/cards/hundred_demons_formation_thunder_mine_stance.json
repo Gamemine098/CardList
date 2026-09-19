@@ -1,0 +1,225 @@
+{
+  "card_id": "HUNDRED_DEMONS_FORMATION_THUNDER_MINE_STANCE",
+  "name": {
+    "en": "Hundred Demons Formation, Thunder Mine Stance",
+    "th": "กระบวนทัพร้อยอสูร, ธันเดอร์ ไมน์"
+  },
+  "image": "database/images/hundred_demons_formation_thunder_mine_stance.webp",
+  "type": "SPELL",
+  "worlds": [
+    "DRAGON_WORLD"
+  ],
+  "attributes": [
+    "HUNDRED_DEMONS",
+    "SUMMON"
+  ],
+  "call_cost": [],
+  "use_restrictions": [],
+  "rules": [
+    {
+      "type": "SET_LIMIT",
+      "count": 1,
+      "source": {
+        "kind": "CARD",
+        "card_id": "HUNDRED_DEMONS_FORMATION_THUNDER_MINE_STANCE"
+      }
+    }
+  ],
+  "abilities": [
+    {
+      "id": "HUNDRED_DEMONS_FORMATION_THUNDER_MINE_STANCE-A01",
+      "kind": "ACT",
+      "keywords": [
+        "COUNTER",
+        "SET"
+      ],
+      "skill_restrictions": [
+        {
+          "type": "ACTIVATION_LIMIT",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "HUNDRED_DEMONS_FORMATION_THUNDER_MINE_STANCE",
+            "ability_id": "HUNDRED_DEMONS_FORMATION_THUNDER_MINE_STANCE-A01"
+          }
+        }
+      ],
+      "activation_condition": {
+        "type": "AND",
+        "conditions": [
+          {
+            "type": "TURN_PLAYER",
+            "player": "OPPONENT"
+          },
+          {
+            "type": "PHASE_IS",
+            "phase": "MAIN"
+          }
+        ]
+      },
+      "trigger": {
+        "type": "COUNTER_TIMING"
+      },
+      "cost": [],
+      "effects": [
+        {
+          "type": "CALL",
+          "from": "DROP",
+          "to": "FIELD",
+          "target": {
+            "type": "SELECT",
+            "zone": "DROP",
+            "owner": "SELF",
+            "card_type": "MONSTER",
+            "filter": {
+              "keyword": "THUNDER_MINE",
+              "stat_compare": {
+                "stat": "SIZE",
+                "operator": "LESS_THAN_OR_EQUAL",
+                "value": 2
+              }
+            },
+            "count": 1
+          },
+          "pay_call_cost": true
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Set] [1/Set]\n[1/Turn] [Counter] 【Act】 During the main phase of your opponent's turn, call a size 2 or less monster with \"Thunder Mine\" from your drop zone by paying its [Call Cost].",
+          "segments": [
+            {
+              "text": "[Set]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[1/Set]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": "\n"
+            },
+            {
+              "text": "[1/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " 【Act】 During the "
+            },
+            {
+              "text": "main phase",
+              "style": "PHASE"
+            },
+            {
+              "text": " of your "
+            },
+            {
+              "text": "opponent's turn",
+              "style": "TURN"
+            },
+            {
+              "text": ", call a size 2 or less "
+            },
+            {
+              "text": "monster",
+              "style": "CARD_REFERENCE"
+            },
+            {
+              "text": " with "
+            },
+            {
+              "text": "\"Thunder Mine\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " from your "
+            },
+            {
+              "text": "drop zone",
+              "style": "ZONE"
+            },
+            {
+              "text": " by paying its "
+            },
+            {
+              "text": "[Call Cost]",
+              "style": "COST"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Set] [1/Set]\n[1/Turn] [Counter] 【Act】 ในเมนเฟสคู่แข่ง, คอลมอนสเตอร์ที่มี \"ธันเดอร์ ไมน์\" ที่มีไซส์ 2 หรือต่ำกว่า 1 ใบ จากดรอบเรา โดยจ่าย [Call Cost]",
+          "segments": [
+            {
+              "text": "[Set]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[1/Set]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": "\n"
+            },
+            {
+              "text": "[1/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " 【Act】 ใน"
+            },
+            {
+              "text": "เมนเฟสคู่แข่ง",
+              "style": "PHASE"
+            },
+            {
+              "text": ", คอลมอนสเตอร์ที่มี "
+            },
+            {
+              "text": "\"ธันเดอร์ ไมน์\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " ที่มีไซส์ 2 หรือต่ำกว่า 1 ใบ จาก"
+            },
+            {
+              "text": "ดรอบ",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรา โดยจ่าย "
+            },
+            {
+              "text": "[Call Cost]",
+              "style": "COST"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

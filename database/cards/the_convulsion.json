@@ -1,0 +1,272 @@
+{
+  "card_id": "THE_CONVULSION",
+  "name": {
+    "en": "The Convulsion",
+    "th": "มหาภัยพิบัติ"
+  },
+  "image": "database/images/the_convulsion.webp",
+  "type": "SPELL",
+  "worlds": [],
+  "attributes": [
+    "HUNDRED_DEMONS"
+  ],
+  "call_cost": [],
+  "use_restrictions": [],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "THE_CONVULSION-A01",
+      "kind": "ACT",
+      "keywords": [
+        "COUNTER"
+      ],
+      "skill_restrictions": [
+        {
+          "type": "CARD_USE_LIMIT",
+          "count": 1,
+          "period": "GAME",
+          "source": {
+            "kind": "CARD",
+            "card_id": "THE_CONVULSION",
+            "ability_id": "THE_CONVULSION-A01"
+          }
+        }
+      ],
+      "activation_condition": {
+        "type": "AND",
+        "conditions": [
+          {
+            "type": "PLAYER_CONTROLS_CARD",
+            "owner": "SELF",
+            "zone": "FIELD",
+            "filter": {
+              "card_type": "MONSTER",
+              "name_contains": "Yamigedo",
+              "stat_compare": {
+                "stat": "SIZE",
+                "operator": "EQUAL",
+                "value": 3
+              }
+            }
+          },
+          {
+            "type": "COUNT_CARDS_COMPARE",
+            "owner": "SELF",
+            "zones": [
+              "DROP"
+            ],
+            "filter": {
+              "attribute": "HUNDRED_DEMONS"
+            },
+            "operator": "GREATER_THAN_OR_EQUAL",
+            "value": 20
+          }
+        ]
+      },
+      "trigger": {
+        "type": "COUNTER_TIMING"
+      },
+      "cost": [],
+      "effects": [
+        {
+          "type": "MOVE_CARD",
+          "from_zones": [
+            "HAND",
+            "GAUGE",
+            "DROP"
+          ],
+          "to": "DECK",
+          "target": {
+            "type": "ALL_CARDS"
+          },
+          "shuffle": true
+        },
+        {
+          "type": "DRAW",
+          "amount": 6
+        },
+        {
+          "type": "CHARGE_GAUGE",
+          "amount": 2
+        },
+        {
+          "type": "SET_LIFE",
+          "target": "SELF",
+          "value": 10
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "You may only cast this card if a size 3 monster with \"Yamigedo\" in its card name is on your field, and twenty or more 《Hundred Demons》 are in your drop zone.\n[1/Game] [Counter] Return all cards from your hand, gauge and drop zone to your deck, and shuffle it. Then, draw six cards, put the top two cards of your deck into your gauge, and your life becomes 10!!",
+          "segments": [
+            {
+              "text": "You may only cast this card if a size 3 "
+            },
+            {
+              "text": "monster",
+              "style": "CARD_REFERENCE"
+            },
+            {
+              "text": " with \"Yamigedo\" in its card name is on your "
+            },
+            {
+              "text": "field",
+              "style": "ZONE"
+            },
+            {
+              "text": ", and twenty or more "
+            },
+            {
+              "text": "《Hundred Demons》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": " are in your "
+            },
+            {
+              "text": "drop zone",
+              "style": "ZONE"
+            },
+            {
+              "text": ".\n"
+            },
+            {
+              "text": "[1/Game]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " Return all cards from your "
+            },
+            {
+              "text": "hand",
+              "style": "ZONE"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "gauge",
+              "style": "ZONE"
+            },
+            {
+              "text": " and "
+            },
+            {
+              "text": "drop zone",
+              "style": "ZONE"
+            },
+            {
+              "text": " to your "
+            },
+            {
+              "text": "deck",
+              "style": "ZONE"
+            },
+            {
+              "text": ", and shuffle it. Then, draw six cards, put the top two cards of your "
+            },
+            {
+              "text": "deck",
+              "style": "ZONE"
+            },
+            {
+              "text": " into your "
+            },
+            {
+              "text": "gauge",
+              "style": "ZONE"
+            },
+            {
+              "text": ", and your life becomes 10!!"
+            }
+          ]
+        },
+        "th": {
+          "plain": "เราสามารถร่ายการ์ดนี้ได้หากบนสนามเรามีมอนสเตอร์ไซส์ 3 ที่มี \"ยามิเกโด\" ในชื่อการ์ดและดรอบเรามี《ร้อยอสูร》 20 ใบหรือมากกว่า\n[1/Game] [Counter] นำการ์ดจากบนมือ, เกจและดรอบเราทั้งหมดกลับเข้ากองการ์ดเราและสับกองการ์ดเรา จากนั้น, เราจั่วการ์ด 6 ใบ, เราชาร์จ 2 เกจ และไลฟ์ของเราจะกลายเป็น 10 หน่วย!!",
+          "segments": [
+            {
+              "text": "เราสามารถร่ายการ์ดนี้ได้หากบน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรามีมอนสเตอร์ไซส์ 3 ที่มี \"ยามิเกโด\" ในชื่อการ์ดและ"
+            },
+            {
+              "text": "ดรอบ",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรามี"
+            },
+            {
+              "text": "《ร้อยอสูร》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": " 20 ใบหรือมากกว่า\n"
+            },
+            {
+              "text": "[1/Game]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " นำการ์ดจากบน"
+            },
+            {
+              "text": "มือ",
+              "style": "ZONE"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "เกจ",
+              "style": "ZONE"
+            },
+            {
+              "text": "และ"
+            },
+            {
+              "text": "ดรอบ",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราทั้งหมดกลับเข้า"
+            },
+            {
+              "text": "กองการ์ด",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราและสับกองการ์ดเรา จากนั้น, เราจั่วการ์ด 6 ใบ, เราชาร์จ 2 "
+            },
+            {
+              "text": "เกจ",
+              "style": "ZONE"
+            },
+            {
+              "text": " และไลฟ์ของเราจะกลายเป็น 10 หน่วย!!"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

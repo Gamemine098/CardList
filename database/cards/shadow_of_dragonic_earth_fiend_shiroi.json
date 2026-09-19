@@ -1,0 +1,450 @@
+{
+  "card_id": "SHADOW_OF_DRAGONIC_EARTH_FIEND_SHIROI",
+  "name": {
+    "en": "Shadow of Dragonic Earth Fiend, Shiroi",
+    "th": "เงามังกรอสูรผืนดิน・ชิโรอิ"
+  },
+  "image": "database/images/shadow_of_dragonic_earth_fiend_shiroi.webp",
+  "type": "MONSTER",
+  "worlds": [
+    "ANCIENT_WORLD",
+    "LEGEND_WORLD"
+  ],
+  "attributes": [
+    "HUNDRED_DEMONS",
+    "WYDAR_SARKAL",
+    "WILD_DRAGON"
+  ],
+  "stats": {
+    "size": 0,
+    "power": 2000,
+    "critical": 1,
+    "defense": 1000
+  },
+  "call_cost": [
+    {
+      "type": "PAY_GAUGE",
+      "amount": 1
+    }
+  ],
+  "use_restrictions": [
+    {
+      "type": "CARD_USE_LIMIT",
+      "action": "CALL",
+      "count": 1,
+      "period": "TURN",
+      "source": {
+        "kind": "CARD",
+        "card_id": "SHADOW_OF_DRAGONIC_EARTH_FIEND_SHIROI"
+      }
+    }
+  ],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "SHADOW_OF_DRAGONIC_EARTH_FIEND_SHIROI-A01",
+      "kind": "AUTO",
+      "keywords": [
+        "DROP",
+        "DUO"
+      ],
+      "skill_restrictions": [
+        {
+          "type": "NAMED_ABILITY_LIMIT",
+          "ability_name": "Ivory Fiend Shadow",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "SHADOW_OF_DRAGONIC_EARTH_FIEND_SHIROI",
+            "ability_id": "SHADOW_OF_DRAGONIC_EARTH_FIEND_SHIROI-A01"
+          }
+        }
+      ],
+      "trigger": {
+        "type": "PHASE_START",
+        "phase": "ATTACK"
+      },
+      "activation_condition": {
+        "type": "CARD_IN_ZONE",
+        "card": "THIS_CARD",
+        "owner": "SELF",
+        "zones": [
+          "DROP"
+        ]
+      },
+      "optional": true,
+      "cost": [],
+      "effects": [
+        {
+          "type": "CALL",
+          "from": "DROP",
+          "to": "FIELD",
+          "targets": [
+            {
+              "type": "THIS_CARD",
+              "maximum": 1
+            },
+            {
+              "type": "DUO",
+              "card_id": "SHADOW_OF_DRAGONIC_SKY_FIEND_KUROI",
+              "maximum": 1
+            }
+          ],
+          "pay_call_cost": false
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Drop]: [An/Turn] \"Ivory Fiend Shadow\" At the start of the attack phase, you may call up to one each of this card and its [Duo] from your drop without paying their [Call Cost].",
+          "segments": [
+            {
+              "text": "[Drop]",
+              "style": "ZONE"
+            },
+            {
+              "text": ": "
+            },
+            {
+              "text": "[An/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " \"Ivory Fiend Shadow\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " At the start of the "
+            },
+            {
+              "text": "attack phase",
+              "style": "PHASE"
+            },
+            {
+              "text": ", you may call up to one each of this card and its "
+            },
+            {
+              "text": "[Duo]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " from your "
+            },
+            {
+              "text": "drop",
+              "style": "ZONE"
+            },
+            {
+              "text": " without paying their "
+            },
+            {
+              "text": "[Call Cost]",
+              "style": "COST"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        "th": {
+          "plain": "【ดรอบ】: [An/Turn] \"เงาอสูรสีนวล\" เมื่อเริ่มต้นแอทแทคเฟสของผู้เล่นทุกคน, สามารถคอลการ์ดนี้และ [Duo] ของการ์ดนี้อย่างละไม่เกิน 1 ใบจากดรอบเรา โดยไม่จ่าย [Call Cost]",
+          "segments": [
+            {
+              "text": "【ดรอบ】",
+              "style": "ZONE"
+            },
+            {
+              "text": ": "
+            },
+            {
+              "text": "[An/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " \"เงาอสูรสีนวล\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " เมื่อเริ่มต้น"
+            },
+            {
+              "text": "แอทแทคเฟส",
+              "style": "PHASE"
+            },
+            {
+              "text": "ของผู้เล่นทุกคน, สามารถคอลการ์ดนี้และ "
+            },
+            {
+              "text": "[Duo]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " ของการ์ดนี้อย่างละไม่เกิน 1 ใบจาก"
+            },
+            {
+              "text": "ดรอบ",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรา โดยไม่จ่าย "
+            },
+            {
+              "text": "[Call Cost]",
+              "style": "COST"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "SHADOW_OF_DRAGONIC_EARTH_FIEND_SHIROI-A02",
+      "kind": "CONT",
+      "keywords": [
+        "DUO"
+      ],
+      "skill_restrictions": [],
+      "activation_condition": {
+        "type": "AND",
+        "conditions": [
+          {
+            "type": "CARD_EXISTS",
+            "card_id": "SHADOW_OF_DRAGONIC_SKY_FIEND_KUROI",
+            "owner": "SELF",
+            "zones": [
+              "FIELD",
+              "DROP",
+              "SOUL_FACE_UP"
+            ]
+          },
+          {
+            "type": "PHASE_IS",
+            "phase": "ATTACK"
+          }
+        ]
+      },
+      "effects": [
+        {
+          "type": "PROTECTION",
+          "target": {
+            "type": "CARDS_ON_FIELD",
+            "owner": "SELF",
+            "condition": {
+              "type": "SHARES_ATTRIBUTE",
+              "with": "THIS_CARD"
+            }
+          },
+          "action": "DESTROY",
+          "source": "OPPONENT_CARD_EFFECT",
+          "duration": {
+            "type": "WHILE_SOURCE_ACTIVE"
+          }
+        },
+        {
+          "type": "PROTECTION",
+          "target": {
+            "type": "CARDS_ON_FIELD",
+            "owner": "SELF",
+            "condition": {
+              "type": "SHARES_ATTRIBUTE",
+              "with": "THIS_CARD"
+            }
+          },
+          "action": "RETURN_TO_HAND",
+          "source": "OPPONENT_CARD_EFFECT",
+          "duration": {
+            "type": "WHILE_SOURCE_ACTIVE"
+          }
+        },
+        {
+          "type": "PROTECTION",
+          "target": {
+            "type": "CARDS_ON_FIELD",
+            "owner": "SELF",
+            "condition": {
+              "type": "SHARES_ATTRIBUTE",
+              "with": "THIS_CARD"
+            }
+          },
+          "action": "LEAVE_FIELD",
+          "source": "OPPONENT_CARD_EFFECT",
+          "duration": {
+            "type": "WHILE_SOURCE_ACTIVE"
+          }
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Duo] \"Shadow of Dragonic Sky Fiend, Kuroi\" (The following ability is active as long as you have a card with the name specified in the [Duo] ability on your field, in your drop zone, or in your face-up soul) During the attack phase, all cards on your field with one or more same attributes as this card cannot be destroyed, returned to hand, or leave the field, by your opponent's card effects!!",
+          "segments": [
+            {
+              "text": "[Duo]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "\"Shadow of Dragonic Sky Fiend, Kuroi\"",
+              "style": "CARD_REFERENCE"
+            },
+            {
+              "text": " (The following ability is active as long as you have a card with the name specified in the [Duo] ability on your field, in your drop zone, or in your face-up soul) During the "
+            },
+            {
+              "text": "attack phase",
+              "style": "PHASE"
+            },
+            {
+              "text": ", all cards on your field with one or more same attributes as this card cannot be destroyed, returned to hand, or leave the field, by your opponent's card effects!!"
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Duo] : [เงามังกรอสูรผืนฟ้า・คุโรอิ] (ความสามารถต่อไปนี้จะทำงานเมื่อมีชื่อการ์ดที่ระบุไว้ในความสามารถ [Duo] อยู่ในสนาม, ดรอบ, โซลของเรา) ในระหว่างแอทแทคเฟส การ์ดที่มีคุณลักษณะเดียวกับการ์ดนี้บนสนามเราทุกใบ ไม่สามารถถูกทำลาย, ไม่ถูกนำกลับขึ้นมือ และไม่ถูกนำออกจากสนามโดยความสามารถการ์ดคู่แข่ง!!",
+          "segments": [
+            {
+              "text": "[Duo]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " : ["
+            },
+            {
+              "text": "เงามังกรอสูรผืนฟ้า・คุโรอิ",
+              "style": "CARD_REFERENCE"
+            },
+            {
+              "text": "] (ความสามารถต่อไปนี้จะทำงานเมื่อมีชื่อการ์ดที่ระบุไว้ในความสามารถ "
+            },
+            {
+              "text": "[Duo]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " อยู่ในสนาม, ดรอบ, โซลของเรา) ในระหว่าง"
+            },
+            {
+              "text": "แอทแทคเฟส",
+              "style": "PHASE"
+            },
+            {
+              "text": " การ์ดที่มีคุณลักษณะเดียวกับการ์ดนี้บนสนามเราทุกใบ ไม่สามารถถูกทำลาย, ไม่ถูกนำกลับขึ้นมือ และไม่ถูกนำออกจากสนามโดยความสามารถการ์ดคู่แข่ง!!"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "SHADOW_OF_DRAGONIC_EARTH_FIEND_SHIROI-A03",
+      "kind": "AUTO",
+      "keywords": [
+        "THUNDER_MINE"
+      ],
+      "skill_restrictions": [],
+      "trigger": {
+        "type": "EVENT",
+        "event": "DRAW",
+        "actor": "OPPONENT",
+        "cause": "CARD_EFFECT"
+      },
+      "effects": [
+        {
+          "type": "DAMAGE",
+          "target": "OPPONENT",
+          "amount": 1
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "\"Thunder Mine\" When your opponent draws cards by card effects, deal 1 damage to your opponent!",
+          "segments": [
+            {
+              "text": "\"Thunder Mine\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " When your "
+            },
+            {
+              "text": "opponent",
+              "style": "PLAYER"
+            },
+            {
+              "text": " draws cards by card effects, deal "
+            },
+            {
+              "text": "1 damage",
+              "style": "DAMAGE"
+            },
+            {
+              "text": " to your opponent!"
+            }
+          ]
+        },
+        "th": {
+          "plain": "\"ธันเดอร์ไมน์\" เมื่อคู่แข่งจั่วการ์ดจากความสามารถการ์ด, สร้างความเสียหายใส่คู่แข่ง 1 ไลฟ์!",
+          "segments": [
+            {
+              "text": "\"ธันเดอร์ไมน์\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " เมื่อ"
+            },
+            {
+              "text": "คู่แข่ง",
+              "style": "PLAYER"
+            },
+            {
+              "text": "จั่วการ์ดจากความสามารถการ์ด, สร้างความเสียหายใส่คู่แข่ง "
+            },
+            {
+              "text": "1 ไลฟ์",
+              "style": "DAMAGE"
+            },
+            {
+              "text": "!"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "SHADOW_OF_DRAGONIC_EARTH_FIEND_SHIROI-A04",
+      "kind": "CONT",
+      "keywords": [
+        "DOUBLE_ATTACK"
+      ],
+      "skill_restrictions": [],
+      "effects": [
+        {
+          "type": "ATTACK_RULE",
+          "target": "THIS_CARD",
+          "rules": [
+            "DOUBLE_ATTACK"
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Double Attack]",
+          "segments": [
+            {
+              "text": "[Double Attack]",
+              "style": "KEYWORD"
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Double Attack]",
+          "segments": [
+            {
+              "text": "[Double Attack]",
+              "style": "KEYWORD"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

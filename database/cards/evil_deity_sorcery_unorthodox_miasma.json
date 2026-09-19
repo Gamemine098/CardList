@@ -1,0 +1,240 @@
+{
+  "card_id": "EVIL_DEITY_SORCERY_UNORTHODOX_MIASMA",
+  "name": {
+    "en": "Evil Deity Sorcery, Unorthodox Miasma",
+    "th": "มนตราเทพปีศาจ, เมฆหมอกนอกรีต"
+  },
+  "image": "database/images/evil_deity_sorcery_unorthodox_miasma.webp",
+  "type": "SPELL",
+  "worlds": [],
+  "attributes": [
+    "HUNDRED_DEMONS"
+  ],
+  "call_cost": [],
+  "use_restrictions": [],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "EVIL_DEITY_SORCERY_UNORTHODOX_MIASMA-A01",
+      "kind": "ACT",
+      "keywords": [],
+      "skill_restrictions": [],
+      "cost": [
+        {
+          "type": "MOVE_CARD",
+          "from": "DROP",
+          "to": "DECK",
+          "position": "BOTTOM",
+          "target": {
+            "type": "SELECT",
+            "zone": "DROP",
+            "owner": "SELF",
+            "card_type": "MONSTER",
+            "filter": {
+              "attribute": "HUNDRED_DEMONS"
+            },
+            "count": 3
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "CHOICE",
+          "choose": 1,
+          "options": [
+            {
+              "id": "NULLIFY_OPPONENT_MONSTERS",
+              "condition": {
+                "type": "PLAYER_CONTROLS_CARD",
+                "owner": "SELF",
+                "zone": "FIELD",
+                "filter": {
+                  "card_type": "MONSTER",
+                  "name_contains": "Yamigedo"
+                }
+              },
+              "effects": [
+                {
+                  "type": "NULLIFY_ABILITIES",
+                  "target": {
+                    "type": "CARDS_ON_FIELD",
+                    "owner": "OPPONENT",
+                    "card_type": "MONSTER"
+                  },
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "COUNTER_PROTECT_HUNDRED_DEMONS",
+              "keywords": [
+                "COUNTER"
+              ],
+              "effects": [
+                {
+                  "type": "PROTECTION",
+                  "target": {
+                    "type": "CARDS_ON_FIELD",
+                    "owner": "SELF",
+                    "filter": {
+                      "attribute": "HUNDRED_DEMONS"
+                    }
+                  },
+                  "action": "DESTROY",
+                  "source": "OPPONENT_CARD_EFFECT",
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Cast Cost] [Put three 《Hundred Demons》 monsters from your drop zone on the bottom of your deck in any order]\nChoose and use one of the following two.\n• If you have a monster with \"Yamigedo\" in its card name on your field, for this turn, nullify the abilities of all monsters on your opponent's field.\n• [Counter] For this turn, all 《Hundred Demons》 on your field cannot be destroyed by your opponent's card effects.",
+          "segments": [
+            {
+              "text": "[Cast Cost] [Put three 《Hundred Demons》 monsters from your drop zone on the bottom of your deck in any order]",
+              "style": "COST"
+            },
+            {
+              "text": "\nChoose and use one of the following two.\n• If you have a "
+            },
+            {
+              "text": "monster",
+              "style": "CARD_REFERENCE"
+            },
+            {
+              "text": " with \"Yamigedo\" in its card name on your "
+            },
+            {
+              "text": "field",
+              "style": "ZONE"
+            },
+            {
+              "text": ", for "
+            },
+            {
+              "text": "this turn",
+              "style": "TURN"
+            },
+            {
+              "text": ", nullify the abilities of all monsters on your "
+            },
+            {
+              "text": "opponent",
+              "style": "PLAYER"
+            },
+            {
+              "text": "'s "
+            },
+            {
+              "text": "field",
+              "style": "ZONE"
+            },
+            {
+              "text": ".\n• "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " For "
+            },
+            {
+              "text": "this turn",
+              "style": "TURN"
+            },
+            {
+              "text": ", all "
+            },
+            {
+              "text": "《Hundred Demons》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": " on your "
+            },
+            {
+              "text": "field",
+              "style": "ZONE"
+            },
+            {
+              "text": " cannot be destroyed by your opponent's card effects."
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Cast Cost] นำมอนสเตอร์《ร้อยอสูร》3 ใบจากดรอบเราเรียงไว้ใต้กองการ์ดเรา\nเลือกความสามารถ 1 อย่างจากด้านล่างนี้\n• หากบนสนามเรามีมอนสเตอร์ที่มี \"ยามิเกโด\" ในชื่อการ์ด, ในเทิร์นนี้, ยกเลิกความสามารถของมอนสเตอร์บนสนามคู่แข่งทั้งหมด\n• [Counter] ในเทิร์นนี้, การ์ด《ร้อยอสูร》บนสนามเราไม่สามารถถูกทำลายจากความสามารถของการ์ดคู่แข่ง",
+          "segments": [
+            {
+              "text": "[Cast Cost] นำมอนสเตอร์《ร้อยอสูร》3 ใบจากดรอบเราเรียงไว้ใต้กองการ์ดเรา",
+              "style": "COST"
+            },
+            {
+              "text": "\nเลือกความสามารถ 1 อย่างจากด้านล่างนี้\n• หากบน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรามีมอนสเตอร์ที่มี \"ยามิเกโด\" ในชื่อการ์ด, ใน"
+            },
+            {
+              "text": "เทิร์นนี้",
+              "style": "TURN"
+            },
+            {
+              "text": ", ยกเลิกความสามารถของมอนสเตอร์บน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "คู่แข่ง",
+              "style": "PLAYER"
+            },
+            {
+              "text": "ทั้งหมด\n• "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " ใน"
+            },
+            {
+              "text": "เทิร์นนี้",
+              "style": "TURN"
+            },
+            {
+              "text": ", การ์ด"
+            },
+            {
+              "text": "《ร้อยอสูร》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": "บน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราไม่สามารถถูกทำลายจากความสามารถของการ์ดคู่แข่ง"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

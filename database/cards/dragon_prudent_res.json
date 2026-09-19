@@ -1,0 +1,292 @@
+{
+  "card_id": "DRAGON_PRUDENT_RES",
+  "name": {
+    "en": "Dragon Prudent \"Re:S\"",
+    "th": "ความรอบคอบของมังกร \"Re:S\""
+  },
+  "image": "database/images/dragon_prudent_res.webp",
+  "type": "SPELL",
+  "worlds": [
+    "ANCIENT_WORLD"
+  ],
+  "attributes": [
+    "HUNDRED_DEMONS",
+    "DRAGON",
+    "DEFENSE"
+  ],
+  "call_cost": [],
+  "use_restrictions": [],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "DRAGON_PRUDENT_RES-A01",
+      "kind": "ACT",
+      "keywords": [
+        "COUNTER"
+      ],
+      "skill_restrictions": [
+        {
+          "type": "ACTIVATION_LIMIT",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "DRAGON_PRUDENT_RES",
+            "ability_id": "DRAGON_PRUDENT_RES-A01"
+          }
+        }
+      ],
+      "trigger": {
+        "type": "COUNTER_TIMING"
+      },
+      "cost": [],
+      "effects": [
+        {
+          "type": "CHOICE",
+          "choose": 1,
+          "options": [
+            {
+              "id": "NULLIFY_NEXT_DAMAGE",
+              "effects": [
+                {
+                  "type": "MODIFY_NEXT_DAMAGE",
+                  "source": "ATTACK",
+                  "amount": 0,
+                  "occurrences": 1,
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                },
+                {
+                  "type": "MODIFY_NEXT_DAMAGE",
+                  "source": "OPPONENT_CARD_EFFECT",
+                  "amount": 0,
+                  "occurrences": 1,
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "DRAW_AND_BUFF_SIZE_3_PLUS",
+              "effects": [
+                {
+                  "type": "DRAW",
+                  "amount": 1
+                },
+                {
+                  "type": "MODIFY_STAT",
+                  "target": {
+                    "type": "CARDS_ON_FIELD",
+                    "owner": "SELF",
+                    "card_type": "MONSTER",
+                    "filter": {
+                      "stat_compare": {
+                        "stat": "SIZE",
+                        "operator": "GREATER_THAN_OR_EQUAL",
+                        "value": 3
+                      }
+                    }
+                  },
+                  "stat": "POWER",
+                  "amount": 20000,
+                  "duration": {
+                    "type": "UNTIL_END_OF_NEXT_TURN",
+                    "anchor_player": "SELF"
+                  }
+                },
+                {
+                  "type": "MODIFY_STAT",
+                  "target": {
+                    "type": "CARDS_ON_FIELD",
+                    "owner": "SELF",
+                    "card_type": "MONSTER",
+                    "filter": {
+                      "stat_compare": {
+                        "stat": "SIZE",
+                        "operator": "GREATER_THAN_OR_EQUAL",
+                        "value": 3
+                      }
+                    }
+                  },
+                  "stat": "DEFENSE",
+                  "amount": 10000,
+                  "duration": {
+                    "type": "UNTIL_END_OF_NEXT_TURN",
+                    "anchor_player": "SELF"
+                  }
+                },
+                {
+                  "type": "MODIFY_STAT",
+                  "target": {
+                    "type": "CARDS_ON_FIELD",
+                    "owner": "SELF",
+                    "card_type": "MONSTER",
+                    "filter": {
+                      "stat_compare": {
+                        "stat": "SIZE",
+                        "operator": "GREATER_THAN_OR_EQUAL",
+                        "value": 3
+                      }
+                    }
+                  },
+                  "stat": "CRITICAL",
+                  "amount": 2,
+                  "duration": {
+                    "type": "UNTIL_END_OF_NEXT_TURN",
+                    "anchor_player": "SELF"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "This card cannot be nullified.\n[Cn/Turn] Choose and use one of the following two.\n• [Counter] For this turn, the next damage you take by an attack becomes 0, and the next damage you take by your opponent's card effects becomes 0.\n• Draw a card, and for this turn and the next turn, all size 3 or greater monsters on your field get power+20000, defense+10000, and critical+2!",
+          "segments": [
+            {
+              "text": "This card cannot be nullified.\n"
+            },
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " Choose and use one of the following two.\n• "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " For "
+            },
+            {
+              "text": "this turn",
+              "style": "TURN"
+            },
+            {
+              "text": ", the next damage you take by an attack becomes 0, and the next damage you take by your opponent's card effects becomes 0.\n• Draw a card, and for "
+            },
+            {
+              "text": "this turn",
+              "style": "TURN"
+            },
+            {
+              "text": " and the "
+            },
+            {
+              "text": "next turn",
+              "style": "TURN"
+            },
+            {
+              "text": ", all size 3 or greater monsters on your "
+            },
+            {
+              "text": "field",
+              "style": "ZONE"
+            },
+            {
+              "text": " get "
+            },
+            {
+              "text": "power+20000",
+              "style": "STAT_MODIFIER"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "defense+10000",
+              "style": "STAT_MODIFIER"
+            },
+            {
+              "text": ", and "
+            },
+            {
+              "text": "critical+2",
+              "style": "STAT_MODIFIER"
+            },
+            {
+              "text": "!"
+            }
+          ]
+        },
+        "th": {
+          "plain": "การ์ดใบนี้ไม่สามารถถูกยกเลิกได้\n[Cn/Turn] เลือกใช้ 1 อย่างต่อไปนี้\n• [Counter] ในเทิร์นนี้, ดาเมจครั้งถัดไปที่เราจะได้รับจากการโจมตีกลายเป็น 0, และดาเมจครั้งถัดไปที่เราจะได้รับจากความสามารถการ์ดคู่แข่งกลายเป็น 0\n• จั่วการ์ด 1 ใบ, และในเทิร์นนี้และเทิร์นหน้า, มอนสเตอร์ไซส์ 3 หรือมากกว่าบนสนามเราทุกใบได้รับพาวเวอร์ +20000, ดีเฟนส์ +10000, และคริติคอล +2!",
+          "segments": [
+            {
+              "text": "การ์ดใบนี้ไม่สามารถถูกยกเลิกได้\n"
+            },
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " เลือกใช้ 1 อย่างต่อไปนี้\n• "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " ใน"
+            },
+            {
+              "text": "เทิร์นนี้",
+              "style": "TURN"
+            },
+            {
+              "text": ", ดาเมจครั้งถัดไปที่เราจะได้รับจากการโจมตีกลายเป็น 0, และดาเมจครั้งถัดไปที่เราจะได้รับจากความสามารถการ์ดคู่แข่งกลายเป็น 0\n• จั่วการ์ด 1 ใบ, และใน"
+            },
+            {
+              "text": "เทิร์นนี้",
+              "style": "TURN"
+            },
+            {
+              "text": "และ"
+            },
+            {
+              "text": "เทิร์นหน้า",
+              "style": "TURN"
+            },
+            {
+              "text": ", มอนสเตอร์ไซส์ 3 หรือมากกว่าบน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราทุกใบได้รับ"
+            },
+            {
+              "text": "พาวเวอร์ +20000",
+              "style": "STAT_MODIFIER"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "ดีเฟนส์ +10000",
+              "style": "STAT_MODIFIER"
+            },
+            {
+              "text": ", และ"
+            },
+            {
+              "text": "คริติคอล +2",
+              "style": "STAT_MODIFIER"
+            },
+            {
+              "text": "!"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,230 @@
+{
+  "card_id": "HYAKURAI_VORTEX",
+  "name": {
+    "en": "Hyakurai Vortex",
+    "th": "วังวนร้อยอัสนี"
+  },
+  "image": "database/images/hyakurai_vortex.webp",
+  "type": "SPELL",
+  "worlds": [],
+  "attributes": [
+    "HUNDRED_DEMONS"
+  ],
+  "call_cost": [],
+  "use_restrictions": [],
+  "rules": [
+    {
+      "type": "SET_LIMIT",
+      "count": 1,
+      "source": {
+        "kind": "CARD",
+        "card_id": "HYAKURAI_VORTEX"
+      }
+    }
+  ],
+  "abilities": [
+    {
+      "id": "HYAKURAI_VORTEX-A01",
+      "kind": "CONT",
+      "keywords": [
+        "SET"
+      ],
+      "skill_restrictions": [],
+      "effects": [
+        {
+          "type": "PROTECTION",
+          "target": {
+            "type": "ABILITIES",
+            "of": {
+              "type": "CARDS_ON_FIELD",
+              "owner": "SELF",
+              "filter": {
+                "attribute": "HUNDRED_DEMONS"
+              }
+            }
+          },
+          "action": "NULLIFY",
+          "source": "OPPONENT_CARD_EFFECT",
+          "duration": {
+            "type": "WHILE_SOURCE_ACTIVE"
+          }
+        },
+        {
+          "type": "PROTECTION",
+          "target": {
+            "type": "SOUL",
+            "of": {
+              "type": "CARDS_ON_FIELD",
+              "owner": "SELF",
+              "filter": {
+                "attribute": "HUNDRED_DEMONS"
+              }
+            }
+          },
+          "action": "REMOVE_SOUL",
+          "source": "OPPONENT_CARD_EFFECT",
+          "duration": {
+            "type": "WHILE_SOURCE_ACTIVE"
+          }
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "The abilities of all 《Hundred Demons》 on your field cannot be nullified and their souls cannot dropped by your opponent's card effects.",
+          "segments": [
+            {
+              "text": "The abilities of all "
+            },
+            {
+              "text": "《Hundred Demons》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": " on your "
+            },
+            {
+              "text": "field",
+              "style": "ZONE"
+            },
+            {
+              "text": " cannot be nullified and their "
+            },
+            {
+              "text": "souls",
+              "style": "ZONE"
+            },
+            {
+              "text": " cannot dropped by your opponent's card effects."
+            }
+          ]
+        },
+        "th": {
+          "plain": "《ร้อยอสูร》บนสนามเราทุกใบไม่สามารถถูกยกเลิกความสามารถ และไม่ถูกถอดโซลโดยความสามารถของการ์ดคู่แข่ง",
+          "segments": [
+            {
+              "text": "《ร้อยอสูร》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": "บน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราทุกใบไม่สามารถถูกยกเลิกความสามารถ และไม่ถูกถอด"
+            },
+            {
+              "text": "โซล",
+              "style": "ZONE"
+            },
+            {
+              "text": "โดยความสามารถของการ์ดคู่แข่ง"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "HYAKURAI_VORTEX-A02",
+      "kind": "AUTO",
+      "keywords": [
+        "SET"
+      ],
+      "skill_restrictions": [
+        {
+          "type": "ACTIVATION_LIMIT",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "HYAKURAI_VORTEX",
+            "ability_id": "HYAKURAI_VORTEX-A02"
+          }
+        }
+      ],
+      "trigger": {
+        "type": "EVENT",
+        "event": "DAMAGE_DEALT",
+        "target": "OPPONENT",
+        "cause": "SELF_CARD_EFFECT"
+      },
+      "effects": [
+        {
+          "type": "CHARGE_GAUGE",
+          "amount": 1
+        },
+        {
+          "type": "HEAL",
+          "amount": 1
+        },
+        {
+          "type": "DRAW",
+          "amount": 1
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[1/Turn] When your opponent is dealt damage by your card effects, put the top card of your deck into your gauge, you gain 1 life, and draw a card.",
+          "segments": [
+            {
+              "text": "[1/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " When your "
+            },
+            {
+              "text": "opponent",
+              "style": "PLAYER"
+            },
+            {
+              "text": " is dealt damage by your card effects, put the top card of your "
+            },
+            {
+              "text": "deck",
+              "style": "ZONE"
+            },
+            {
+              "text": " into your "
+            },
+            {
+              "text": "gauge",
+              "style": "ZONE"
+            },
+            {
+              "text": ", you gain 1 life, and draw a card."
+            }
+          ]
+        },
+        "th": {
+          "plain": "[1/Turn] เมื่อคู่แข่งได้รับความเสียหายจากความสามารถของการ์ดเรา, เราชาร์จ 1 เกจ, เราฮีล 1 หน่วยและจั่วการ์ด 1 ใบ",
+          "segments": [
+            {
+              "text": "[1/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " เมื่อ"
+            },
+            {
+              "text": "คู่แข่ง",
+              "style": "PLAYER"
+            },
+            {
+              "text": "ได้รับความเสียหายจากความสามารถของการ์ดเรา, เราชาร์จ 1 "
+            },
+            {
+              "text": "เกจ",
+              "style": "ZONE"
+            },
+            {
+              "text": ", เราฮีล 1 หน่วยและจั่วการ์ด 1 ใบ"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -46,7 +46,7 @@ Specification reference: `Buddyfight_2D_Unity_Card_JSON_Agent_Spec.md` (Section:
 {
   "status": "UNSUPPORTED_MECHANIC",
   "card_reference": "FD11/004",
-  "ability_reference": "CARD_FD11_004-A01: [Cost] [Remove a monster with \"Thunder Mine\" from your drop or return it to the bottom of your deck]",
+  "ability_reference": "EVIL_DEITY_OF_CATACLYSM_HYAKUGAN_YAMIGEDO_EARTH_HALF_RE_B-A01: [Cost] [Remove a monster with \"Thunder Mine\" from your drop or return it to the bottom of your deck]",
   "missing_capability": "COST",
   "what_is_known": "Cost payment requires player choice between two valid destinations (MOVE_CARD to REMOVE vs MOVE_CARD to DECK_BOTTOM) for 1 Thunder Mine monster from Drop.",
   "information_needed": [
@@ -64,7 +64,7 @@ Specification reference: `Buddyfight_2D_Unity_Card_JSON_Agent_Spec.md` (Section:
 {
   "status": "UNSUPPORTED_MECHANIC",
   "card_reference": "FD11/004",
-  "ability_reference": "CARD_FD11_004-A02: \"Immortal Hyakugan\" If this card would be destroyed or leave the field by your opponent's cards, [Cost] [Mill five cards], this card remains on the field. If cards milled for this ability's cost are spells with [Set], you may cast them by paying their [Cast Cost].",
+  "ability_reference": "EVIL_DEITY_OF_CATACLYSM_HYAKUGAN_YAMIGEDO_EARTH_HALF_RE_B-A02: \"Immortal Hyakugan\" If this card would be destroyed or leave the field by your opponent's cards, [Cost] [Mill five cards], this card remains on the field. If cards milled for this ability's cost are spells with [Set], you may cast them by paying their [Cast Cost].",
   "missing_capability": "REPLACEMENT_RULE",
   "what_is_known": "Intercepts DESTROY or LEAVE_FIELD caused by opponent cards. Pays cost of milling 5 cards from deck top. Replaces leave-field event with remain on field. Inspects cards milled specifically for this cost; if any are Set spells, opens optional cast timing paying cast cost.",
   "information_needed": [
@@ -117,7 +117,7 @@ Specification reference: `Buddyfight_2D_Unity_Card_JSON_Agent_Spec.md` (Section:
 {
   "status": "UNSUPPORTED_MECHANIC",
   "card_reference": "FD11/007",
-  "ability_reference": "CARD_FD11_007-A01: call up to one monster with \"Yamigedo\" in its card name from your hand or drop zone on top of this card without paying its [Call Cost].",
+  "ability_reference": "LIGHT_SPECTER_YAMIGEDO_MIKAZUCHI-A01: call up to one monster with \"Yamigedo\" in its card name from your hand or drop zone on top of this card without paying its [Call Cost].",
   "missing_capability": "CALL_POSITION",
   "what_is_known": "Calls a monster to the same position/slot directly over THIS_CARD. Underlying card and its souls become soul of the called monster under standard Buddyfight rules.",
   "information_needed": [
@@ -135,7 +135,7 @@ Specification reference: `Buddyfight_2D_Unity_Card_JSON_Agent_Spec.md` (Section:
 {
   "status": "UNSUPPORTED_MECHANIC",
   "card_reference": "FD11/008, FD11/013",
-  "ability_reference": "CARD_FD11_008-A02, CARD_FD11_013-A01",
+  "ability_reference": "INV_STERN_SPIRIT_KOKUJO_YAMIGEDO-A02, YAMIGEDO_SD-A01",
   "missing_capability": "COST_TARGETING",
   "what_is_known": "Target selection occurs within or precedes the [Cost] clause, and the selected entity is referenced both in the cost movement (e.g. put THIS_CARD into chosen card's soul) and the following effect (e.g. stand chosen card).",
   "information_needed": [
@@ -169,7 +169,7 @@ Specification reference: `Buddyfight_2D_Unity_Card_JSON_Agent_Spec.md` (Section:
 {
   "status": "UNSUPPORTED_MECHANIC",
   "card_reference": "FD11/011",
-  "ability_reference": "CARD_FD11_011-A01: Then, you may remove this card or put it into the soul of the monster called by this ability.",
+  "ability_reference": "HASTED_EVOLUTION_YAMIGEDO_RE_B-A01: Then, you may remove this card or put it into the soul of the monster called by this ability.",
   "missing_capability": "EFFECT_TYPE",
   "what_is_known": "After dropping THIS_CARD to pay cost and calling a monster (or two Great Evil Deity cards), effect offers a choice to remove THIS_CARD from drop or insert it into the newly called monster's soul.",
   "information_needed": [
@@ -187,7 +187,7 @@ Specification reference: `Buddyfight_2D_Unity_Card_JSON_Agent_Spec.md` (Section:
 {
   "status": "UNSUPPORTED_MECHANIC",
   "card_reference": "FD11/016",
-  "ability_reference": "CARD_FD11_016-A01: For this turn, the next time your opponent would take damage from your cards' \"Thunder Mine\", for each of your face up BuddyGift, that damage cannot be reduced nor avoided.",
+  "ability_reference": "EVIL_SORCERY_IVORY_FIEND_CURSE-A01: For this turn, the next time your opponent would take damage from your cards' \"Thunder Mine\", for each of your face up BuddyGift, that damage cannot be reduced nor avoided.",
   "missing_capability": "DAMAGE_RULE",
   "what_is_known": "Modifies the next N occurrences of Thunder Mine damage dealt to opponent so it cannot be reduced or avoided, where N equals the number of controller's face-up BuddyGift cards.",
   "information_needed": [
@@ -205,7 +205,7 @@ Specification reference: `Buddyfight_2D_Unity_Card_JSON_Agent_Spec.md` (Section:
 {
   "status": "UNSUPPORTED_MECHANIC",
   "card_reference": "FD11/018",
-  "ability_reference": "CARD_FD11_018-A01: if you have a total of 10 or more cards in your drop and remove zone, draw a card.",
+  "ability_reference": "DEMONIC_WAY_OF_HUNDRED_DEMONS_AKISHOKI_RE_S-A01: if you have a total of 10 or more cards in your drop and remove zone, draw a card.",
   "missing_capability": "CONDITION",
   "what_is_known": "Evaluates the combined total number of cards across multiple distinct zones (DROP and REMOVE) belonging to controller, comparing against a threshold (>= 10).",
   "information_needed": [
@@ -222,7 +222,7 @@ Specification reference: `Buddyfight_2D_Unity_Card_JSON_Agent_Spec.md` (Section:
 {
   "status": "UNSUPPORTED_MECHANIC",
   "card_reference": "FD11/019, FD11/022",
-  "ability_reference": "CARD_FD11_019-A01, CARD_FD11_022-A01: Put up to two... into hand. If you put two, drop a hand card.",
+  "ability_reference": "CATACLYSMIC_INVASION_RE_S-A01, EVIL_DEITY_SORCERY_VICIOUS_CATACLYSMIC_CIRCLE-A01: Put up to two... into hand. If you put two, drop a hand card.",
   "missing_capability": "CONDITION",
   "what_is_known": "Inspects the quantity of cards actually added to hand during the immediately preceding search step; executes a required discard only if exactly 2 cards were taken.",
   "information_needed": [
@@ -239,7 +239,7 @@ Specification reference: `Buddyfight_2D_Unity_Card_JSON_Agent_Spec.md` (Section:
 {
   "status": "UNSUPPORTED_MECHANIC",
   "card_reference": "FD11/020",
-  "ability_reference": "CARD_FD11_020-A01: Then, if your opponent's cards attacked three times or more during this turn, end the phase!!",
+  "ability_reference": "GEDO_SHIELD_RE_B-A01: Then, if your opponent's cards attacked three times or more during this turn, end the phase!!",
   "missing_capability": "EFFECT_TYPE",
   "what_is_known": "Checks the cumulative number of attack declarations by opponent cards in the current turn (>= 3). If satisfied, forcibly terminates the active attack phase (END_PHASE).",
   "information_needed": [
@@ -257,7 +257,7 @@ Specification reference: `Buddyfight_2D_Unity_Card_JSON_Agent_Spec.md` (Section:
 {
   "status": "UNSUPPORTED_MECHANIC",
   "card_reference": "FD11/023",
-  "ability_reference": "CARD_FD11_023-A01: Choose a monster on your field. You gain life equal to the chosen monster's size, and for this turn, the next time that card would be destroyed, nullify its destruction.",
+  "ability_reference": "HUNDRED_DEMONS_SORCERY_THUNDERBOLT_EXPLODING_CIRCLE-A01: Choose a monster on your field. You gain life equal to the chosen monster's size, and for this turn, the next time that card would be destroyed, nullify its destruction.",
   "missing_capability": "EFFECT_TYPE",
   "what_is_known": "Heals player by a variable amount derived from an active field card's size (stat: SIZE). Registers a 1-occurrence destruction prevention shield on that chosen card for the duration of the turn.",
   "information_needed": [
@@ -275,7 +275,7 @@ Specification reference: `Buddyfight_2D_Unity_Card_JSON_Agent_Spec.md` (Section:
 {
   "status": "UNSUPPORTED_MECHANIC",
   "card_reference": "FD11/028",
-  "ability_reference": "CARD_FD11_028-A02: nullify the attack, and deal 1 damage to you or your opponent.",
+  "ability_reference": "EVOLUTION_FUTURE-A02: nullify the attack, and deal 1 damage to you or your opponent.",
   "missing_capability": "TARGET_SELECTOR",
   "what_is_known": "Damage effect allows the controller to choose whether to deal 1 damage to SELF or OPPONENT.",
   "information_needed": [
@@ -292,7 +292,7 @@ Specification reference: `Buddyfight_2D_Unity_Card_JSON_Agent_Spec.md` (Section:
 {
   "status": "UNSUPPORTED_MECHANIC",
   "card_reference": "FD11/029",
-  "ability_reference": "CARD_FD11_029-A01: Return all cards from your hand, gauge and drop zone to your deck, and shuffle it. Then, draw six cards, put the top two cards of your deck into your gauge, and your life becomes 10!!",
+  "ability_reference": "THE_CONVULSION-A01: Return all cards from your hand, gauge and drop zone to your deck, and shuffle it. Then, draw six cards, put the top two cards of your deck into your gauge, and your life becomes 10!!",
   "missing_capability": "EFFECT_TYPE",
   "what_is_known": "Mass-moves all cards across HAND, GAUGE, and DROP back to DECK. Sets player's life to fixed absolute value 10 (not delta heal/damage).",
   "information_needed": [
@@ -310,7 +310,7 @@ Specification reference: `Buddyfight_2D_Unity_Card_JSON_Agent_Spec.md` (Section:
 {
   "status": "UNSUPPORTED_MECHANIC",
   "card_reference": "FD11/030",
-  "ability_reference": "CARD_FD11_030-A02: This card can attack even if there is a monster on your center.",
+  "ability_reference": "GIANT_CLAW_OF_EVIL_DEITY_GOKURAI-A02: This card can attack even if there is a monster on your center.",
   "missing_capability": "ATTACK_RULE",
   "what_is_known": "Continuous weapon rule enabling weapon card to declare attacks even when the center field slot is occupied by an allied monster.",
   "information_needed": [
@@ -327,7 +327,7 @@ Specification reference: `Buddyfight_2D_Unity_Card_JSON_Agent_Spec.md` (Section:
 {
   "status": "UNSUPPORTED_MECHANIC",
   "card_reference": "FD11/030",
-  "ability_reference": "CARD_FD11_030-A03: You cannot take damage if a size 3 monster with \"Hyakugan\" in its card name is on your center.",
+  "ability_reference": "GIANT_CLAW_OF_EVIL_DEITY_GOKURAI-A03: You cannot take damage if a size 3 monster with \"Hyakugan\" in its card name is on your center.",
   "missing_capability": "DAMAGE_PROTECTION",
   "what_is_known": "Continuous effect: while controller has an active size 3 monster with 'Hyakugan' in center position, controller takes 0 damage from all sources.",
   "information_needed": [

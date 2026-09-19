@@ -1,0 +1,154 @@
+{
+  "card_id": "MIKAZUCHI_FOLLOWER_GLASYA_LABOLAS",
+  "name": {
+    "en": "Mikazuchi Follower, Glasya Labolas",
+    "th": "ผู้ติดตามของมิคาซึจิ, กลาชาลาโบลัส"
+  },
+  "image": "database/images/mikazuchi_follower_glasya_labolas.webp",
+  "type": "MONSTER",
+  "worlds": [
+    "MAGIC_WORLD"
+  ],
+  "attributes": [
+    "HUNDRED_DEMONS",
+    "SEVENTY_TWO_PILLARS"
+  ],
+  "stats": {
+    "size": 0,
+    "power": 2000,
+    "critical": 1,
+    "defense": 1000
+  },
+  "call_cost": [],
+  "use_restrictions": [],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "MIKAZUCHI_FOLLOWER_GLASYA_LABOLAS-A01",
+      "kind": "AUTO",
+      "keywords": [
+        "THUNDER_MINE"
+      ],
+      "skill_restrictions": [
+        {
+          "type": "ACTIVATION_LIMIT",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "MIKAZUCHI_FOLLOWER_GLASYA_LABOLAS",
+            "ability_id": "MIKAZUCHI_FOLLOWER_GLASYA_LABOLAS-A01"
+          }
+        }
+      ],
+      "trigger": {
+        "type": "EVENT",
+        "event": "DAMAGE_DEALT",
+        "target": "OPPONENT",
+        "cause": "SELF_CARD_EFFECT"
+      },
+      "condition": {
+        "type": "PLAYER_CONTROLS_CARD",
+        "owner": "SELF",
+        "zone": "FIELD",
+        "filter": {
+          "card_type": "MONSTER",
+          "name_contains": "Yamigedo"
+        }
+      },
+      "effects": [
+        {
+          "type": "DAMAGE",
+          "target": "OPPONENT",
+          "amount": 1
+        },
+        {
+          "type": "DRAW",
+          "amount": 1
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[1/Turn] \"Thunder Mine\" When your cards effects deal damage to your opponent, if you have a monster with \"Yamigedo\" in its card name on your field, deal 1 damage to your opponent, and draw a card.",
+          "segments": [
+            {
+              "text": "[1/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "\"Thunder Mine\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " When your cards effects deal damage to your "
+            },
+            {
+              "text": "opponent",
+              "style": "PLAYER"
+            },
+            {
+              "text": ", if you have a monster with \"Yamigedo\" in its card name on your "
+            },
+            {
+              "text": "field",
+              "style": "ZONE"
+            },
+            {
+              "text": ", deal "
+            },
+            {
+              "text": "1 damage",
+              "style": "DAMAGE"
+            },
+            {
+              "text": " to your opponent, and draw a card."
+            }
+          ]
+        },
+        "th": {
+          "plain": "[1/Turn] \"ธันเดอร์ ไมน์\" เมื่อคู่แข่งได้รับความเสียหายจากความสามารถการ์ดเรา, หากบนสนามเรามีมอนสเตอร์ที่มี \"ยามิเกโด\" ในชื่อการ์ด, สร้างความเสียหายใส่คู่แข่ง 1 ไลฟ์, และเราจั่วการ์ด 1 ใบ",
+          "segments": [
+            {
+              "text": "[1/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "\"ธันเดอร์ ไมน์\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " เมื่อ"
+            },
+            {
+              "text": "คู่แข่ง",
+              "style": "PLAYER"
+            },
+            {
+              "text": "ได้รับความเสียหายจากความสามารถการ์ดเรา, หากบน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรามีมอนสเตอร์ที่มี \"ยามิเกโด\" ในชื่อการ์ด, สร้างความเสียหายใส่คู่แข่ง "
+            },
+            {
+              "text": "1 ไลฟ์",
+              "style": "DAMAGE"
+            },
+            {
+              "text": ", และเราจั่วการ์ด 1 ใบ"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

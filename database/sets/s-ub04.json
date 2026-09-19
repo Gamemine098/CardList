@@ -1,0 +1,33 @@
+{
+  "set_id": "S-UB04",
+  "cards": [
+    {
+      "card_number": "S-UB04/0006",
+      "card_id": "LIGHT_SPECTER_YAMIGEDO_MIKAZUCHI"
+    },
+    {
+      "card_number": "S-UB04/0018",
+      "card_id": "CATACLYSMIC_SEED_HYAKUGAN_YAMIGEDO_LARVA"
+    },
+    {
+      "card_number": "S-UB04/0035",
+      "card_id": "HUNDRED_DEMONS_SORCERY_THUNDERBOLT_EXPLODING_CIRCLE"
+    },
+    {
+      "card_number": "S-UB04/0036",
+      "card_id": "EVIL_DEITY_SORCERY_VICIOUS_CATACLYSMIC_CIRCLE"
+    },
+    {
+      "card_number": "S-UB04/0058",
+      "card_id": "HYAKURAI_VORTEX"
+    },
+    {
+      "card_number": "S-UB04/0059",
+      "card_id": "THE_CONVULSION"
+    },
+    {
+      "card_number": "S-UB04/0060",
+      "card_id": "GIANT_CLAW_OF_EVIL_DEITY_GOKURAI"
+    }
+  ]
+}

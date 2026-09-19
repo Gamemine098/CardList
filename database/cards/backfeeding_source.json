@@ -1,0 +1,219 @@
+{
+  "card_id": "BACKFEEDING_SOURCE",
+  "name": {
+    "en": "Backfeeding Source",
+    "th": "แหล่งพลังของสายฟ้ากลับข้าง"
+  },
+  "image": "database/images/backfeeding_source.webp",
+  "type": "SPELL",
+  "worlds": [],
+  "attributes": [
+    "HUNDRED_DEMONS"
+  ],
+  "call_cost": [],
+  "use_restrictions": [],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "BACKFEEDING_SOURCE-A01",
+      "kind": "ACT",
+      "keywords": [
+        "COUNTER"
+      ],
+      "skill_restrictions": [
+        {
+          "type": "CARD_USE_LIMIT",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "BACKFEEDING_SOURCE",
+            "ability_id": "BACKFEEDING_SOURCE-A01"
+          }
+        }
+      ],
+      "trigger": {
+        "type": "COUNTER_TIMING"
+      },
+      "cost": [
+        {
+          "type": "MOVE_CARD",
+          "from": "DROP",
+          "to": "DECK",
+          "position": "BOTTOM",
+          "target": {
+            "type": "SELECT",
+            "zone": "DROP",
+            "owner": "SELF",
+            "filter": {
+              "attribute": "HUNDRED_DEMONS"
+            },
+            "count": 1
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "CHARGE_GAUGE",
+          "amount": 1
+        },
+        {
+          "type": "DRAW",
+          "amount": 1
+        },
+        {
+          "type": "IF",
+          "condition": {
+            "type": "PLAYER_CONTROLS_CARD",
+            "owner": "SELF",
+            "zone": "FIELD",
+            "filter": {
+              "card_type": "MONSTER",
+              "name_contains": "Yamigedo"
+            }
+          },
+          "then": [
+            {
+              "type": "DAMAGE_RULE",
+              "source": {
+                "owner": "SELF",
+                "cause": "CARD_EFFECT"
+              },
+              "rules": [
+                "CANNOT_BE_REDUCED"
+              ],
+              "duration": {
+                "type": "UNTIL_END_OF_TURN"
+              }
+            }
+          ],
+          "else": []
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Cast Cost] [Put a 《Hundred Demons》 from your drop zone on the bottom of your deck]\n[Cn/Turn] [Counter] Put the top card of your deck into your gauge, and draw a card. Then, for this turn, if you have a monster with \"Yamigedo\" in its card name on your field, damage dealt to your opponent by your card effects cannot be reduced!",
+          "segments": [
+            {
+              "text": "[Cast Cost] [Put a 《Hundred Demons》 from your drop zone on the bottom of your deck]",
+              "style": "COST"
+            },
+            {
+              "text": "\n"
+            },
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " Put the top card of your "
+            },
+            {
+              "text": "deck",
+              "style": "ZONE"
+            },
+            {
+              "text": " into your "
+            },
+            {
+              "text": "gauge",
+              "style": "ZONE"
+            },
+            {
+              "text": ", and draw a card. Then, for "
+            },
+            {
+              "text": "this turn",
+              "style": "TURN"
+            },
+            {
+              "text": ", if you have a "
+            },
+            {
+              "text": "monster",
+              "style": "CARD_REFERENCE"
+            },
+            {
+              "text": " with \"Yamigedo\" in its card name on your "
+            },
+            {
+              "text": "field",
+              "style": "ZONE"
+            },
+            {
+              "text": ", damage dealt to your "
+            },
+            {
+              "text": "opponent",
+              "style": "PLAYER"
+            },
+            {
+              "text": " by your card effects cannot be reduced!"
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Cast Cost] นำ《ร้อยอสูร》จากดรอบเรา 1 ใบเรียงไว้ใต้กองการ์ดเรา\n[Cn/Turn] [Counter] เราชาร์จ 1 เกจ, และเราจั่วการ์ด 1 ใบจากนั้น, ในเทิร์นนี้ หากบนสนามเรามีมอนสเตอร์ที่มี \"ยามิเกโด\" ในชื่อการ์ด, ความเสียหายที่คู่แข่งได้รับจากความสามารถของการ์ดเราไม่สามารถลดลงได้!",
+          "segments": [
+            {
+              "text": "[Cast Cost] นำ《ร้อยอสูร》จากดรอบเรา 1 ใบเรียงไว้ใต้กองการ์ดเรา",
+              "style": "COST"
+            },
+            {
+              "text": "\n"
+            },
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " เราชาร์จ 1 "
+            },
+            {
+              "text": "เกจ",
+              "style": "ZONE"
+            },
+            {
+              "text": ", และเราจั่วการ์ด 1 ใบจากนั้น, ใน"
+            },
+            {
+              "text": "เทิร์นนี้",
+              "style": "TURN"
+            },
+            {
+              "text": " หากบน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรามีมอนสเตอร์ที่มี \"ยามิเกโด\" ในชื่อการ์ด, ความเสียหายที่"
+            },
+            {
+              "text": "คู่แข่ง",
+              "style": "PLAYER"
+            },
+            {
+              "text": "ได้รับจากความสามารถของการ์ดเราไม่สามารถลดลงได้!"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

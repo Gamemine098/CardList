@@ -1,0 +1,244 @@
+{
+  "card_id": "HUNDRED_DEMONS_SORCERY_THUNDERBOLT_EXPLODING_CIRCLE",
+  "name": {
+    "en": "Hundred Demons Sorcery, Thunderbolt Exploding Circle",
+    "th": "มนตราร้อยอสูร, ค่ายกลระเบิดหมื่นอัสนีจุติ"
+  },
+  "image": "database/images/hundred_demons_sorcery_thunderbolt_exploding_circle.webp",
+  "type": "SPELL",
+  "worlds": [],
+  "attributes": [
+    "HUNDRED_DEMONS",
+    "DEFENSE"
+  ],
+  "call_cost": [],
+  "use_restrictions": [],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "HUNDRED_DEMONS_SORCERY_THUNDERBOLT_EXPLODING_CIRCLE-A01",
+      "kind": "ACT",
+      "keywords": [
+        "COUNTER"
+      ],
+      "skill_restrictions": [],
+      "activation_condition": {
+        "type": "PLAYER_CONTROLS_CARD",
+        "owner": "SELF",
+        "zone": "FIELD",
+        "filter": {
+          "card_type": "MONSTER",
+          "name_contains": "Yamigedo",
+          "stat_compare": {
+            "stat": "SIZE",
+            "operator": "EQUAL",
+            "value": 3
+          }
+        }
+      },
+      "trigger": {
+        "type": "COUNTER_TIMING"
+      },
+      "cost": [],
+      "effects": [
+        {
+          "type": "DRAW",
+          "amount": 1
+        },
+        {
+          "type": "CHOICE",
+          "choose": 1,
+          "options": [
+            {
+              "id": "STAND_HUNDRED_DEMONS",
+              "effects": [
+                {
+                  "type": "STAND",
+                  "target": {
+                    "type": "SELECT",
+                    "zone": "FIELD",
+                    "owner": "SELF",
+                    "filter": {
+                      "attribute": "HUNDRED_DEMONS"
+                    },
+                    "count": 1
+                  }
+                }
+              ]
+            },
+            {
+              "id": "HEAL_AND_SHIELD",
+              "effects": [
+                {
+                  "type": "TARGET_SELECTION",
+                  "target_id": "SHIELD_TARGET",
+                  "selector": {
+                    "type": "SELECT",
+                    "zone": "FIELD",
+                    "owner": "SELF",
+                    "card_type": "MONSTER",
+                    "count": 1
+                  }
+                },
+                {
+                  "type": "HEAL",
+                  "amount": {
+                    "type": "CARD_STAT",
+                    "target": {
+                      "type": "TARGET_REFERENCE",
+                      "target_id": "SHIELD_TARGET"
+                    },
+                    "stat": "SIZE"
+                  }
+                },
+                {
+                  "type": "PROTECTION",
+                  "target": {
+                    "type": "TARGET_REFERENCE",
+                    "target_id": "SHIELD_TARGET"
+                  },
+                  "action": "DESTROY",
+                  "source": "ALL",
+                  "occurrences": 1,
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "You may only cast this card if a size 3 monster with \"Yamigedo\" in its card name is on your field.\n[Counter] Draw a card, and choose and use one of the following two.\n• [Stand] a 《Hundred Demons》 on your field.\n• Choose a monster on your field. You gain life equal to the chosen monster's size, and for this turn, the next time that card would be destroyed, nullify its destruction.",
+          "segments": [
+            {
+              "text": "You may only cast this card if a size 3 "
+            },
+            {
+              "text": "monster",
+              "style": "CARD_REFERENCE"
+            },
+            {
+              "text": " with \"Yamigedo\" in its card name is on your "
+            },
+            {
+              "text": "field",
+              "style": "ZONE"
+            },
+            {
+              "text": ".\n"
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " Draw a card, and choose and use one of the following two.\n• "
+            },
+            {
+              "text": "[Stand]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " a "
+            },
+            {
+              "text": "《Hundred Demons》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": " on your "
+            },
+            {
+              "text": "field",
+              "style": "ZONE"
+            },
+            {
+              "text": ".\n• Choose a "
+            },
+            {
+              "text": "monster",
+              "style": "CARD_REFERENCE"
+            },
+            {
+              "text": " on your "
+            },
+            {
+              "text": "field",
+              "style": "ZONE"
+            },
+            {
+              "text": ". You gain life equal to the chosen monster's size, and for "
+            },
+            {
+              "text": "this turn",
+              "style": "TURN"
+            },
+            {
+              "text": ", the next time that card would be destroyed, nullify its destruction."
+            }
+          ]
+        },
+        "th": {
+          "plain": "เราสามารถร่ายการ์ดนี้ได้เมื่อบนสนามเรามีมอนสเตอร์ไซส์ 3 ที่มี \"ยามิเกโด\" ในชื่อการ์ด\n[Counter] เราจั่วการ์ด 1 ใบ เลือกใช้ความสามารถ 1 อย่างจากด้านล่างนี้\n• [Stand] 《ร้อยอสูร》บนสนามเรา 1 ใบ\n• เลือกมอนสเตอร์บนสนามเรา 1 ใบ เราฮีลตามไซส์ของการ์ดที่เลือกนั้นและในเทิร์นนี้, ครั้งถัดไป 1 ครั้งที่การ์ดนั้นจะถูกทำลาย, ยกเลิกการทำลายนั้น",
+          "segments": [
+            {
+              "text": "เราสามารถร่ายการ์ดนี้ได้เมื่อบน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรามีมอนสเตอร์ไซส์ 3 ที่มี \"ยามิเกโด\" ในชื่อการ์ด\n"
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " เราจั่วการ์ด 1 ใบ เลือกใช้ความสามารถ 1 อย่างจากด้านล่างนี้\n• "
+            },
+            {
+              "text": "[Stand]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "《ร้อยอสูร》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": "บน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรา 1 ใบ\n• เลือกมอนสเตอร์บน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรา 1 ใบ เราฮีลตามไซส์ของการ์ดที่เลือกนั้นและใน"
+            },
+            {
+              "text": "เทิร์นนี้",
+              "style": "TURN"
+            },
+            {
+              "text": ", ครั้งถัดไป 1 ครั้งที่การ์ดนั้นจะถูกทำลาย, ยกเลิกการทำลายนั้น"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

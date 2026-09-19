@@ -1,0 +1,21 @@
+{
+  "set_id": "X-SS01",
+  "cards": [
+    {
+      "card_number": "X-SS01/0031",
+      "card_id": "INV_STERN_SPIRIT_KOKUJO_YAMIGEDO"
+    },
+    {
+      "card_number": "X-SS01/0035",
+      "card_id": "EVIL_DEITY_SORCERY_UNORTHODOX_MIASMA"
+    },
+    {
+      "card_number": "X-SS01/0056",
+      "card_id": "SHRINE_OF_THE_CORRUPTED_FUCHIGAMI"
+    },
+    {
+      "card_number": "X-SS01/0057",
+      "card_id": "PARADE_OF_HUNDRED_DEMONS"
+    }
+  ]
+}

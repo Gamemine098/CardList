@@ -1,0 +1,393 @@
+{
+  "card_id": "GREAT_FIEND_YAMIGEDO_RE_B",
+  "name": {
+    "en": "Great Fiend, Yamigedo \"Re:B\"",
+    "th": "วิญญาณร้าย, ยามิเกโด \"Re:B\""
+  },
+  "image": "database/images/great_fiend_yamigedo_re_b.webp",
+  "type": "MONSTER",
+  "worlds": [],
+  "attributes": [
+    "HUNDRED_DEMONS"
+  ],
+  "stats": {
+    "size": 3,
+    "power": 8000,
+    "critical": 2,
+    "defense": 8000
+  },
+  "call_cost": [
+    {
+      "type": "MOVE_CARD",
+      "from": "FIELD",
+      "to": {
+        "type": "SOUL",
+        "of": "THIS_CARD"
+      },
+      "target": {
+        "type": "SELECT",
+        "zone": "FIELD",
+        "owner": "SELF",
+        "card_type": "MONSTER",
+        "filter": {
+          "attribute": "HUNDRED_DEMONS"
+        },
+        "minimum": 1
+      }
+    },
+    {
+      "type": "PAY_GAUGE",
+      "amount": 3
+    }
+  ],
+  "use_restrictions": [],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "GREAT_FIEND_YAMIGEDO_RE_B-A01",
+      "kind": "CONT",
+      "keywords": [],
+      "skill_restrictions": [],
+      "effects": [
+        {
+          "type": "GRANT_ABILITY",
+          "target": "THIS_CARD",
+          "ability_source": {
+            "zone": "SOUL",
+            "of": "THIS_CARD",
+            "filter": {
+              "keyword": "THUNDER_MINE"
+            }
+          },
+          "duration": {
+            "type": "WHILE_SOURCE_ACTIVE"
+          }
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "This card gets all \"Thunder Mine\" of cards in its soul.",
+          "segments": [
+            {
+              "text": "This card gets all "
+            },
+            {
+              "text": "\"Thunder Mine\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " of cards in its "
+            },
+            {
+              "text": "soul",
+              "style": "ZONE"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        "th": {
+          "plain": "การ์ดนี้ได้รับ \"ธันเดอร์ไมน์\" ของการ์ดทุกใบที่อยู่ในโซลของการ์ดนี้",
+          "segments": [
+            {
+              "text": "การ์ดนี้ได้รับ "
+            },
+            {
+              "text": "\"ธันเดอร์ไมน์\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " ของการ์ดทุกใบที่อยู่ใน"
+            },
+            {
+              "text": "โซล",
+              "style": "ZONE"
+            },
+            {
+              "text": "ของการ์ดนี้"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "GREAT_FIEND_YAMIGEDO_RE_B-A02",
+      "kind": "AUTO",
+      "keywords": [],
+      "skill_restrictions": [],
+      "trigger": {
+        "type": "PHASE_START",
+        "phase": "START",
+        "player": "ANY"
+      },
+      "effects": [
+        {
+          "type": "PUT_SOUL",
+          "target": "THIS_CARD",
+          "from_zones": [
+            "HAND",
+            "DECK"
+          ],
+          "filter": {
+            "attribute": "HUNDRED_DEMONS",
+            "distinct": "CARD_NAME"
+          },
+          "maximum": 2,
+          "shuffle": true
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "At the start of each player's turn, put up to two 《Hundred Demons》 in total with different card names from your hand or deck into this card's soul. If you looked in your deck, shuffle it.",
+          "segments": [
+            {
+              "text": "At the start of each player's "
+            },
+            {
+              "text": "turn",
+              "style": "TURN"
+            },
+            {
+              "text": ", put up to two "
+            },
+            {
+              "text": "《Hundred Demons》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": " in total with different card names from your "
+            },
+            {
+              "text": "hand",
+              "style": "ZONE"
+            },
+            {
+              "text": " or "
+            },
+            {
+              "text": "deck",
+              "style": "ZONE"
+            },
+            {
+              "text": " into this card's "
+            },
+            {
+              "text": "soul",
+              "style": "ZONE"
+            },
+            {
+              "text": ". If you looked in your deck, shuffle it."
+            }
+          ]
+        },
+        "th": {
+          "plain": "เมื่อเริ่มต้นเทิร์นของผู้เล่นทุกคน, นำ《ร้อยอสูร》จากบนมือหรือกองการ์ดเรารวมกันไม่เกิน 2 ใบ เข้าสู่โซลของการ์ดนี้ หากค้นหาจากกองการ์ด, สับกองการ์ดเรา",
+          "segments": [
+            {
+              "text": "เมื่อเริ่มต้น"
+            },
+            {
+              "text": "เทิร์น",
+              "style": "TURN"
+            },
+            {
+              "text": "ของผู้เล่นทุกคน, นำ"
+            },
+            {
+              "text": "《ร้อยอสูร》",
+              "style": "ATTRIBUTE"
+            },
+            {
+              "text": "จากบน"
+            },
+            {
+              "text": "มือ",
+              "style": "ZONE"
+            },
+            {
+              "text": "หรือ"
+            },
+            {
+              "text": "กองการ์ด",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรารวมกันไม่เกิน 2 ใบ เข้าสู่"
+            },
+            {
+              "text": "โซล",
+              "style": "ZONE"
+            },
+            {
+              "text": "ของการ์ดนี้ หากค้นหาจากกองการ์ด, สับกองการ์ดเรา"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "GREAT_FIEND_YAMIGEDO_RE_B-A03",
+      "kind": "AUTO",
+      "keywords": [
+        "THUNDER_MINE"
+      ],
+      "skill_restrictions": [],
+      "trigger": {
+        "type": "EVENT",
+        "event": "ATTACK_NULLIFIED",
+        "target": {
+          "owner": "SELF",
+          "zone": "FIELD"
+        },
+        "actor": "OPPONENT"
+      },
+      "effects": [
+        {
+          "type": "DAMAGE",
+          "target": "OPPONENT",
+          "amount": 2
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "\"Thunder Mine\" When the attack of a card on your field is nullified by your opponent, deal 2 damage to your opponent!",
+          "segments": [
+            {
+              "text": "\"Thunder Mine\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " When the attack of a card on your "
+            },
+            {
+              "text": "field",
+              "style": "ZONE"
+            },
+            {
+              "text": " is nullified by your "
+            },
+            {
+              "text": "opponent",
+              "style": "PLAYER"
+            },
+            {
+              "text": ", deal "
+            },
+            {
+              "text": "2 damage",
+              "style": "DAMAGE"
+            },
+            {
+              "text": " to your opponent!"
+            }
+          ]
+        },
+        "th": {
+          "plain": "\"ธันเดอร์ไมน์\" เมื่อการโจมตีของการ์ดบนสนามเราถูกยกเลิกโดยคู่แข่ง, สร้างความเสียหายใส่คู่แข่ง 2 ไลฟ์!",
+          "segments": [
+            {
+              "text": "\"ธันเดอร์ไมน์\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " เมื่อการโจมตีของการ์ดบน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราถูกยกเลิกโดย"
+            },
+            {
+              "text": "คู่แข่ง",
+              "style": "PLAYER"
+            },
+            {
+              "text": ", สร้างความเสียหายใส่คู่แข่ง "
+            },
+            {
+              "text": "2 ไลฟ์",
+              "style": "DAMAGE"
+            },
+            {
+              "text": "!"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "GREAT_FIEND_YAMIGEDO_RE_B-A04",
+      "kind": "CONT",
+      "keywords": [
+        "TRIPLE_ATTACK"
+      ],
+      "skill_restrictions": [],
+      "effects": [
+        {
+          "type": "ATTACK_RULE",
+          "target": "THIS_CARD",
+          "rules": [
+            "TRIPLE_ATTACK"
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Triple Attack]",
+          "segments": [
+            {
+              "text": "[Triple Attack]",
+              "style": "KEYWORD"
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Triple Attack]",
+          "segments": [
+            {
+              "text": "[Triple Attack]",
+              "style": "KEYWORD"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "GREAT_FIEND_YAMIGEDO_RE_B-A05",
+      "kind": "CONT",
+      "keywords": [
+        "SOULGUARD"
+      ],
+      "skill_restrictions": [],
+      "effects": [
+        {
+          "type": "SOULGUARD",
+          "target": "THIS_CARD"
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Soulguard]",
+          "segments": [
+            {
+              "text": "[Soulguard]",
+              "style": "KEYWORD"
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Soulguard]",
+          "segments": [
+            {
+              "text": "[Soulguard]",
+              "style": "KEYWORD"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

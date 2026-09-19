@@ -1,0 +1,123 @@
+{
+  "card_id": "EVIL_DEITY_OF_CATACLYSM_HYAKUGAN_YAMIGEDO_SKY_HALF_RE_B",
+  "name": {
+    "en": "Evil Deity of Cataclysm, Hyakugan Yamigedo \"Sky Half\" \"Re:B\"",
+    "th": "จอมเทพปีศาจแห่งภัยพิบัติ ยามิเกโดร้อยหน้า \"ครึ่งแผ่นฟ้า\" \"Re:B\""
+  },
+  "image": "database/images/evil_deity_of_cataclysm_hyakugan_yamigedo_sky_half_re_b.webp",
+  "type": "MONSTER",
+  "worlds": [],
+  "attributes": [
+    "HUNDRED_DEMONS",
+    "DEITY"
+  ],
+  "stats": {
+    "size": 3,
+    "critical": 3,
+    "defense": 6000
+  },
+  "call_cost": [],
+  "use_restrictions": [],
+  "rules": [
+    {
+      "type": "GREAT_EVIL_DEITY",
+      "pair_card_id": "EVIL_DEITY_OF_CATACLYSM_HYAKUGAN_YAMIGEDO_EARTH_HALF_RE_B"
+    }
+  ],
+  "abilities": [
+    {
+      "id": "EVIL_DEITY_OF_CATACLYSM_HYAKUGAN_YAMIGEDO_SKY_HALF_RE_B-A01",
+      "kind": "CONT",
+      "keywords": [],
+      "skill_restrictions": [],
+      "effects": [
+        {
+          "type": "PROTECTION",
+          "target": {
+            "type": "ABILITIES",
+            "of": "THIS_CARD"
+          },
+          "action": "NULLIFY",
+          "source": "OPPONENT_CARD_EFFECT",
+          "duration": {
+            "type": "WHILE_SOURCE_ACTIVE"
+          }
+        },
+        {
+          "type": "GRANT_ABILITY",
+          "target": "THIS_CARD",
+          "source_zone": "REMOVE",
+          "owner": "SELF",
+          "filter": {
+            "card_type": "MONSTER",
+            "keyword": "THUNDER_MINE",
+            "distinct": "CARD_NAME"
+          },
+          "duration": {
+            "type": "WHILE_SOURCE_ACTIVE"
+          }
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "Its abilities cannot be nullified by your opponent's card effects, and it gets the \"Thunder Mine\" of all monsters in your remove zone with different card names.",
+          "segments": [
+            {
+              "text": "Its abilities cannot be nullified by your "
+            },
+            {
+              "text": "opponent",
+              "style": "PLAYER"
+            },
+            {
+              "text": "'s card effects, and it gets the "
+            },
+            {
+              "text": "\"Thunder Mine\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " of all monsters in your "
+            },
+            {
+              "text": "remove zone",
+              "style": "ZONE"
+            },
+            {
+              "text": " with different card names."
+            }
+          ]
+        },
+        "th": {
+          "plain": "ความสามารถการ์ดนี้บนสนามไม่ถูกยกเลิกโดยความสามารถการ์ดคู่แข่ง และการ์ดนี้ได้รับ \"ธันเดอร์ไมน์\" ของมอนสเตอร์ที่มีชื่อต่างกันทุกใบในรีมูฟโซนเรา",
+          "segments": [
+            {
+              "text": "ความสามารถการ์ดนี้บนสนามไม่ถูกยกเลิกโดยความสามารถการ์ด"
+            },
+            {
+              "text": "คู่แข่ง",
+              "style": "PLAYER"
+            },
+            {
+              "text": " และการ์ดนี้ได้รับ "
+            },
+            {
+              "text": "\"ธันเดอร์ไมน์\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " ของมอนสเตอร์ที่มีชื่อต่างกันทุกใบใน"
+            },
+            {
+              "text": "รีมูฟโซน",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรา"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

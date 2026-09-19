@@ -1,0 +1,282 @@
+{
+  "card_id": "GIANT_CLAW_OF_EVIL_DEITY_GOKURAI",
+  "name": {
+    "en": "Giant Claw of Evil Deity, Gokurai",
+    "th": "เล็บยักษ์ของเทพปีศาจ, โกคุไร"
+  },
+  "image": "database/images/giant_claw_of_evil_deity_gokurai.webp",
+  "type": "ITEM",
+  "worlds": [],
+  "attributes": [
+    "HUNDRED_DEMONS",
+    "WEAPON"
+  ],
+  "stats": {
+    "power": 7000,
+    "critical": 2
+  },
+  "call_cost": [],
+  "use_restrictions": [],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "GIANT_CLAW_OF_EVIL_DEITY_GOKURAI-A01",
+      "kind": "CONT",
+      "keywords": [],
+      "skill_restrictions": [],
+      "effects": [
+        {
+          "type": "PROTECTION",
+          "target": "THIS_CARD",
+          "action": "DESTROY",
+          "source": "OPPONENT_CARD_EFFECT",
+          "duration": {
+            "type": "WHILE_SOURCE_ACTIVE"
+          }
+        },
+        {
+          "type": "PROTECTION",
+          "target": "THIS_CARD",
+          "action": "LEAVE_FIELD",
+          "source": "OPPONENT_CARD_EFFECT",
+          "duration": {
+            "type": "WHILE_SOURCE_ACTIVE"
+          }
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "This card on the field cannot be destroyed or leave the field by your opponent's card effects.",
+          "segments": [
+            {
+              "text": "This card on the "
+            },
+            {
+              "text": "field",
+              "style": "ZONE"
+            },
+            {
+              "text": " cannot be destroyed or leave the field by your opponent's card effects."
+            }
+          ]
+        },
+        "th": {
+          "plain": "การ์ดนี้บนสนามไม่สามารถถูกทำลายหรือนำออกจากสนามโดยความสามารถการ์ดคู่แข่ง",
+          "segments": [
+            {
+              "text": "การ์ดนี้บน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "ไม่สามารถถูกทำลายหรือนำออกจากสนามโดยความสามารถการ์ดคู่แข่ง"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "GIANT_CLAW_OF_EVIL_DEITY_GOKURAI-A02",
+      "kind": "CONT",
+      "keywords": [],
+      "skill_restrictions": [],
+      "effects": [
+        {
+          "type": "ATTACK_RULE",
+          "target": "THIS_CARD_ATTACK",
+          "rules": [
+            "CAN_ATTACK_WITH_MONSTER_IN_CENTER"
+          ],
+          "duration": {
+            "type": "WHILE_SOURCE_ACTIVE"
+          }
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "This card can attack even if there is a monster on your center.",
+          "segments": [
+            {
+              "text": "This card can attack even if there is a "
+            },
+            {
+              "text": "monster",
+              "style": "CARD_REFERENCE"
+            },
+            {
+              "text": " on your "
+            },
+            {
+              "text": "center",
+              "style": "ZONE"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        "th": {
+          "plain": "การ์ดนี้สามารถโจมตีได้แม้ว่าจะมีมอนสเตอร์อยู่ในช่องกลางของเรา",
+          "segments": [
+            {
+              "text": "การ์ดนี้สามารถโจมตีได้แม้ว่าจะมีมอนสเตอร์อยู่ใน"
+            },
+            {
+              "text": "ช่องกลาง",
+              "style": "ZONE"
+            },
+            {
+              "text": "ของเรา"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "GIANT_CLAW_OF_EVIL_DEITY_GOKURAI-A03",
+      "kind": "CONT",
+      "keywords": [],
+      "skill_restrictions": [],
+      "activation_condition": {
+        "type": "CARD_EXISTS",
+        "owner": "SELF",
+        "zone": "FIELD",
+        "position": "CENTER",
+        "filter": {
+          "card_type": "MONSTER",
+          "name_contains": "Hyakugan",
+          "stat_compare": {
+            "stat": "SIZE",
+            "operator": "EQUAL",
+            "value": 3
+          }
+        }
+      },
+      "effects": [
+        {
+          "type": "DAMAGE_PROTECTION",
+          "target": "SELF",
+          "source": "ALL",
+          "duration": {
+            "type": "WHILE_SOURCE_ACTIVE"
+          }
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "You cannot take damage if a size 3 monster with \"Hyakugan\" in its card name is on your center.",
+          "segments": [
+            {
+              "text": "You cannot take damage if a size 3 "
+            },
+            {
+              "text": "monster",
+              "style": "CARD_REFERENCE"
+            },
+            {
+              "text": " with \"Hyakugan\" in its card name is on your "
+            },
+            {
+              "text": "center",
+              "style": "ZONE"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        "th": {
+          "plain": "เราจะไม่ได้รับความเสียหายหากมีมอนสเตอร์ไซส์ 3 ที่มี \"ฮะคุกัน\" ในชื่อการ์ดอยู่ในช่องกลางของเรา",
+          "segments": [
+            {
+              "text": "เราจะไม่ได้รับความเสียหายหากมีมอนสเตอร์ไซส์ 3 ที่มี \"ฮะคุกัน\" ในชื่อการ์ดอยู่ใน"
+            },
+            {
+              "text": "ช่องกลาง",
+              "style": "ZONE"
+            },
+            {
+              "text": "ของเรา"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "GIANT_CLAW_OF_EVIL_DEITY_GOKURAI-A04",
+      "kind": "CONT",
+      "keywords": [
+        "PENETRATE"
+      ],
+      "skill_restrictions": [],
+      "effects": [
+        {
+          "type": "ATTACK_RULE",
+          "target": "THIS_CARD",
+          "rules": [
+            "PENETRATE"
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Penetrate]",
+          "segments": [
+            {
+              "text": "[Penetrate]",
+              "style": "KEYWORD"
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Penetrate]",
+          "segments": [
+            {
+              "text": "[Penetrate]",
+              "style": "KEYWORD"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "GIANT_CLAW_OF_EVIL_DEITY_GOKURAI-A05",
+      "kind": "CONT",
+      "keywords": [
+        "DOUBLE_ATTACK"
+      ],
+      "skill_restrictions": [],
+      "effects": [
+        {
+          "type": "ATTACK_RULE",
+          "target": "THIS_CARD",
+          "rules": [
+            "DOUBLE_ATTACK"
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Double Attack]",
+          "segments": [
+            {
+              "text": "[Double Attack]",
+              "style": "KEYWORD"
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Double Attack]",
+          "segments": [
+            {
+              "text": "[Double Attack]",
+              "style": "KEYWORD"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
