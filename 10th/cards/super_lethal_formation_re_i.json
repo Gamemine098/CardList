@@ -1,0 +1,185 @@
+{
+  "card_id": "SUPER_LETHAL_FORMATION_RE_I",
+  "name": {
+    "en": "Super Lethal Formation \"Re:I\"",
+    "th": "สุดยอด, ค่ายกลสังหาร \"Re:I\""
+  },
+  "image": null,
+  "type": "IMPACT",
+  "worlds": [
+    "KATANA_WORLD"
+  ],
+  "attributes": [
+    "NINJA_ARTS"
+  ],
+  "call_cost": [],
+  "use_restrictions": [
+    {
+      "type": "SET_LIMIT",
+      "count": 1,
+      "source": {
+        "kind": "CARD",
+        "card_id": "SUPER_LETHAL_FORMATION_RE_I"
+      }
+    }
+  ],
+  "rules": [
+    {
+      "type": "CARD_NAME_ALIAS",
+      "alias": "Secret Sword, Lethal Formation"
+    }
+  ],
+  "abilities": [
+    {
+      "id": "SUPER_LETHAL_FORMATION_RE_I-A01",
+      "kind": "CONT",
+      "keywords": [
+        "SET"
+      ],
+      "skill_restrictions": [],
+      "effects": [],
+      "effect_text": {
+        "en": {
+          "plain": "[Set]",
+          "segments": [
+            {
+              "text": "[Set]",
+              "style": "KEYWORD"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "SUPER_LETHAL_FORMATION_RE_I-A02",
+      "kind": "AUTO",
+      "keywords": [],
+      "skill_restrictions": [],
+      "trigger": {
+        "type": "PHASE_START",
+        "phase": "MAIN",
+        "player": "OPPONENT"
+      },
+      "effects": [
+        {
+          "type": "MOVE_CARD",
+          "from": [
+            "HAND",
+            "DECK",
+            "DROP"
+          ],
+          "to": "SOUL_FACE_DOWN",
+          "destination_card": "THIS_CARD",
+          "target": {
+            "type": "SELECT",
+            "maximum": 1
+          }
+        },
+        {
+          "type": "IF",
+          "condition": {
+            "type": "SELECTED_FROM_ZONE",
+            "zone": "DECK"
+          },
+          "then": [
+            {
+              "type": "SHUFFLE_DECK"
+            }
+          ],
+          "else": []
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "This card is treated as \"Secret Sword, Lethal Formation\".\nAt the start of your opponent's main phase, choose up to one card from your hand, deck or drop zone, and put it face down in this card's soul. If you looked into your deck, shuffle it.",
+          "segments": [
+            {
+              "text": "This card is treated as \"Secret Sword, Lethal Formation\".\nAt the start of your opponent's main phase, choose up to one card from your hand, deck or drop zone, and put it face down in this card's soul. If you looked into your deck, shuffle it."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "SUPER_LETHAL_FORMATION_RE_I-A03",
+      "kind": "ACT",
+      "keywords": [],
+      "skill_restrictions": [],
+      "cost": [],
+      "effects": [
+        {
+          "type": "CAST",
+          "from": "SOUL",
+          "source_card": "THIS_CARD",
+          "target": {
+            "type": "SELECT",
+            "filter": {
+              "type": "OR",
+              "filters": [
+                {
+                  "type": "AND",
+                  "filters": [
+                    {
+                      "type": "WORLD",
+                      "value": "KATANA_WORLD"
+                    },
+                    {
+                      "type": "CARD_TYPE",
+                      "value": "SPELL"
+                    }
+                  ]
+                },
+                {
+                  "type": "ATTRIBUTE",
+                  "value": "SECRET_SWORD"
+                }
+              ]
+            }
+          },
+          "pay_cast_cost": false
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "You may look at this card's soul, and cast a <Katana World> spell or 《Secret Sword》 from the soul without paying its [Cast Cost].\nYou may only [Set] one \"Super Lethal Formation \"Re:I\"\" on your field.\n[Soulguard]",
+          "segments": [
+            {
+              "text": "You may look at this card's soul, and cast a <Katana World> spell or 《Secret Sword》 from the soul without paying its [Cast Cost].\nYou may only "
+            },
+            {
+              "text": "[Set]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " one \"Super Lethal Formation \"Re:I\"\" on your field.\n"
+            },
+            {
+              "text": "[Soulguard]",
+              "style": "KEYWORD"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "SUPER_LETHAL_FORMATION_RE_I-A04",
+      "kind": "CONT",
+      "keywords": [
+        "SOULGUARD"
+      ],
+      "skill_restrictions": [],
+      "effects": [],
+      "effect_text": {
+        "en": {
+          "plain": "[Soulguard]",
+          "segments": [
+            {
+              "text": "[Soulguard]",
+              "style": "KEYWORD"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

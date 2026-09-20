@@ -1,4 +1,4 @@
-# Unsupported Mechanic Report — 10th (0001–0010)
+# Unsupported Mechanic Report — 10th (0001–0022)
 
 Specification reference: `Buddyfight_2D_Unity_Card_JSON_Agent_Spec.md` (Section: Unsupported Mechanic Policy).
 
@@ -174,6 +174,162 @@ Specification reference: `Buddyfight_2D_Unity_Card_JSON_Agent_Spec.md` (Section:
   "information_needed": [
     "Approved cost primitive for variable life payment with life threshold constraint (PAY_VARIABLE_LIFE).",
     "Approved REPEAT count evaluation using arithmetic division on paid cost."
+  ]
+}
+```
+
+---
+
+## 11. Multi-Type Bounded Retrieval from Looked Cards
+
+```json
+{
+  "status": "UNSUPPORTED_MECHANIC",
+  "card_reference": "10th/0012",
+  "ability_reference": "10th/0012-A01: Look at the top five cards of your deck, put up to two monsters, up to one spell and up to one item from among them into your hand, and shuffle your deck.",
+  "missing_capability": "TARGET_SELECTOR",
+  "what_is_known": "A single retrieval action from looked cards applies simultaneous upper bounds partitioned by card type (up to 2 monsters, up to 1 spell, up to 1 item).",
+  "information_needed": [
+    "Approved schema for partitioned multi-type bounded selection from LOOKED_CARDS.",
+    "Order of resolution for placing remaining looked cards into bottom of deck vs shuffle."
+  ]
+}
+```
+
+---
+
+## 12. Soul Return to Opponent's Deck with Shuffle
+
+```json
+{
+  "status": "UNSUPPORTED_MECHANIC",
+  "card_reference": "10th/0013",
+  "ability_reference": "10th/0013-A01: Return up to 3 souls from a card on your opponent's field to your opponent's deck, and shuffle your opponent's deck.",
+  "missing_capability": "EFFECT_TYPE",
+  "what_is_known": "Target souls are removed directly from an opponent's card and returned to the opponent's deck followed by deck shuffle.",
+  "information_needed": [
+    "Approved syntax for MOVE_CARD from SOUL directly to DECK with target of_target specification."
+  ]
+}
+```
+
+---
+
+## 13. Multi-Zone Face-Down Soul Injection & Cast from Soul
+
+```json
+{
+  "status": "UNSUPPORTED_MECHANIC",
+  "card_reference": "10th/0015",
+  "ability_reference": "10th/0015-A02, A03: choose up to one card from your hand, deck or drop zone, and put it face down in this card's soul ... cast a <Katana World> spell or 《Secret Sword》 from the soul without paying its [Cast Cost]",
+  "missing_capability": "EFFECT_TYPE",
+  "what_is_known": "Cards can be searched/selected across multiple zones (HAND, DECK, DROP) and inserted face-down into soul. Later, eligible spells/Secret Swords can be cast directly out of the soul without paying cast cost.",
+  "information_needed": [
+    "Approved CAST effect node referencing SOUL as origin zone.",
+    "Engine handling for face-down cards in soul retaining identity for controller inspection and cast eligibility."
+  ]
+}
+```
+
+---
+
+## 14. "Possession" Placement & End-of-Turn De-possession
+
+```json
+{
+  "status": "UNSUPPORTED_MECHANIC",
+  "card_reference": "10th/0016",
+  "ability_reference": "10th/0016-A01, A02: \"Possession\" You may put a size 3《Electrodeity》from your hand on top of this card. The card put on top is treated as an item until it leaves the field ... At the end of each player's turn, equip this card from an item's soul, and return the previously equipped card to hand.",
+  "missing_capability": "EFFECT_TYPE",
+  "what_is_known": "A monster is placed on top of an equipped item, temporarily converting the monster into an item. At turn end, the host item re-equips from soul and returns the top card to hand.",
+  "information_needed": [
+    "Approved schema for card type mutation (monster treated as item while placed on item).",
+    "Engine mechanics for re-equipping from soul and returning prior equipped card to hand."
+  ]
+}
+```
+
+---
+
+## 15. Previous Turn Cast Tracking Condition
+
+```json
+{
+  "status": "UNSUPPORTED_MECHANIC",
+  "card_reference": "10th/0018",
+  "ability_reference": "10th/0018-A01: if you cast \"Divine Dragon Creation\" this turn, draw a card",
+  "missing_capability": "CONDITION",
+  "what_is_known": "Evaluates whether the player has already successfully cast a card with specific name (\"Divine Dragon Creation\") earlier in the current turn.",
+  "information_needed": [
+    "Approved condition primitive for turn cast history inspection (e.g. PLAYER_CAST_CARD_THIS_TURN)."
+  ]
+}
+```
+
+---
+
+## 16. Final Phase Attack Permission Rule
+
+```json
+{
+  "status": "UNSUPPORTED_MECHANIC",
+  "card_reference": "10th/0019",
+  "ability_reference": "10th/0019-A01: all cards on your field can attack during the final phase",
+  "missing_capability": "ATTACK_RULE",
+  "what_is_known": "Overrides game rule preventing non-Impact attacks during the Final Phase, granting all friendly cards the ability to declare attacks during that phase.",
+  "information_needed": [
+    "Approved ATTACK_RULE flag for phase attack permission (e.g. CAN_ATTACK_DURING_FINAL_PHASE)."
+  ]
+}
+```
+
+---
+
+## 17. Cost-Card Stat Evaluation
+
+```json
+{
+  "status": "UNSUPPORTED_MECHANIC",
+  "card_reference": "10th/0021",
+  "ability_reference": "10th/0021-A01: if the card you dropped for this card's [Cast Cost] is size 2 or greater ... if the card you dropped for this card's [Cast Cost] is size 1 or lower ...",
+  "missing_capability": "CONDITION",
+  "what_is_known": "Branching resolution inspects stats (Size) of the specific card instance consumed during cost payment for this ability.",
+  "information_needed": [
+    "Approved condition schema for referencing properties of cards consumed during cost payment (e.g. DROPPED_COST_CARD_COMPARE)."
+  ]
+}
+```
+
+---
+
+## 18. Destruction Intercept & Replacement to Soul
+
+```json
+{
+  "status": "UNSUPPORTED_MECHANIC",
+  "card_reference": "10th/0022",
+  "ability_reference": "10th/0022-A01: If a《Folktale》monster on your field would be destroyed, you may pay 1 life. If you do, put it into this card's soul.",
+  "missing_capability": "REPLACEMENT_RULE",
+  "what_is_known": "Interrupts destruction of another friendly monster; paying 1 life replaces destruction with moving the card into this item's soul.",
+  "information_needed": [
+    "Approved trigger/replacement structure for WOULD_BE_DESTROYED redirecting destruction destination to SOUL."
+  ]
+}
+```
+
+---
+
+## 19. Multi-Call from Soul to Separate Areas
+
+```json
+{
+  "status": "UNSUPPORTED_MECHANIC",
+  "card_reference": "10th/0022",
+  "ability_reference": "10th/0022-A03: \"Marchen Panic\" Call up to three monsters from this card's soul on separate areas by paying their [Call Cost].",
+  "missing_capability": "EFFECT_TYPE",
+  "what_is_known": "Calls up to 3 monsters simultaneously from soul, requiring placement onto distinct field areas (LEFT, CENTER, RIGHT).",
+  "information_needed": [
+    "Approved placement constraint syntax in CALL effect node (e.g. placement: SEPARATE_AREAS)."
   ]
 }
 ```

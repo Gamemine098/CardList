@@ -27,3 +27,12 @@
   - `S-UB03`: 1 card (`S-UB03/0018`)
   - `S-SP04`: 1 card (`S-SP04/0001`)
   - `BFO-RP02`: 1 card (`BFO-RP02/001`)
+
+---
+
+## 2026-09-21
+- **Total New Cards Added**: 11 cards (`10th/0011`–`0016`, `10th/0018`–`0022`)
+- **Total Set Card Mappings Added**: 12 mappings across 2 sets
+- **Sets Processed**:
+  - `10TH`: 11 card definitions (`10th/cards/`), 11 set mappings (`10th/10TH.json` and `database/sets/10th.json`)
+  - `FD09`: 1 set mapping (`FD09/S005` -> `BONUS_QUEST_RE_S` in `database/sets/fd09.json`)

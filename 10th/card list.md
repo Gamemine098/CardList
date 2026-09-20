@@ -129,17 +129,128 @@ At the start of each player's attack phase, choose and use one of the following 
 • Deal 2 damage to your opponent, and you gain 2 life!
 You may only [Set] one "Members Only Club, Deadeity "Re:S"" on your field.
 10th/0011
+English Solomon's Shield "Re:S"
+Thai	โล่แห่งโซโลมอน "Re:S"
+Type	Spell
+World	Magic World
+Attribute	Magic Power / Defense
+Ability / Effect
+This card cannot be nullified.
+[Cn/Turn] [Counter] Choose and use one of the following two.
+• For this turn, the next damage you take by an attack becomes 0, and the next damage you take by your opponent's card effects becomes 0.
+• Draw a card, and return up to one card from the field to its owner's hand.
 10th/0012
+English Great Spell, Devil's Rock'n Roll "Re:S"
+Thai	มหาเวท, เดวิลร็อคแอนด์โรล "Re:S"
+Type	Spell
+World	Magic World
+Attribute	72 Pillars / Summon
+Ability / Effect
+[Cast Cost] [Drop a hand card]
+[Cn/Turn] Look at the top five cards of your deck, put up to two monsters, up to one spell and up to one item from among them into your hand, and shuffle your deck.
 10th/0013
+English	Terruca-le! "Re:S"
+Thai	เทรูคา-เร! "Re:S"
+Type	Spell
+World	Magic World
+Attribute	Defense
+Ability / Effect
+[Cast Cost] [Pay 1 gauge & Pay 1 life]
+[Counter] Choose and use one of the following three.
+• [Stand] up to one monster and up to one item on your field.
+• Choose a card on your opponent's field, and [Rest] it. For this turn, the chosen card cannot [Stand]!
+• Return up to 3 souls from a card on your opponent's field to your opponent's deck, and shuffle your opponent's deck.
 10th/0014
+English	Art of Body Replacement "Re:S"
+Thai	วิชาแทนกาย "Re:S"
+Type	Spell
+World	Katana World
+Attribute	Ninja Arts / Wind
+Ability / Effect
+This card cannot be nullified.
+[Cn/Turn] [Counter] Choose and use one of the following two.
+• For this turn, the next damage you take by an attack becomes 0, and the next damage you take by your opponent's card effects becomes 0.
+• Draw a card, and call up to one <Katana World> monster from your drop zone by paying its [Call Cost].
 10th/0015
+English	Super Lethal Formation "Re:I"
+Thai สุดยอด, ค่ายกลสังหาร "Re:I"
+Type	Impact
+World	Katana World
+Attribute	Ninja Arts
+Ability / Effect
+[Set]
+This card is treated as "Secret Sword, Lethal Formation".
+At the start of your opponent's main phase, choose up to one card from your hand, deck or drop zone, and put it face down in this card's soul. If you looked into your deck, shuffle it.
+You may look at this card's soul, and cast a <Katana World> spell or 《Secret Sword》 from the soul without paying its [Cast Cost].
+You may only [Set] one "Super Lethal Formation "Re:I"" on your field.
+[Soulguard]
 10th/0016
-10th/0017
+English	Kagura-bell of Worship "Re:I"
+Thai กระดิ่งคางุระแห่งการบูชา "Re:I"
+Type	Item
+Power	3000
+Critical	1
+World	Katana World
+Attribute	Electrodeity / Weapon
+Ability / Effect
+[Counter]【Act】"Possession" You may put a size 3《Electrodeity》from your hand on top of this card. The card put on top is treated as an item until it leaves the field. You may only use "Possession" once per turn.
+At the end of each player's turn, equip this card from an item's soul, and return the previously equipped card to hand.
+This card on the field and items with this card in their souls cannot be returned to hand by your opponent's card effects, and they cannot be destroyed.
+If this card is in the soul of an item, it cannot be dropped by cards.
 10th/0018
+English	Divine Dragon Creation "Re:S"
+Thai มังกรสวรรค์สร้างโลก "Re:S"
+Type	Spell
+World	Ancient World
+Attribute	Dragon
+Ability / Effect
+[Cast Cost] [Drop a hand card]
+Draw three cards. Then, if you cast "Divine Dragon Creation" this turn, draw a card. You may only cast "Divine Dragon Creation "Re:S"" once per turn.
 10th/0019
+English	Linkdragon Order's Oath "Re:S"
+Thai คำสาบานของภาคีมังกรสายสัมพันธ์ "Re:S"
+Type	Spell
+World	Ancient World
+Attribute	Linkdragon Order / Enhance
+Ability / Effect
+[Cast Cost] [Pay 1 gauge & Drop the top three cards of your deck]
+Choose and use one of the following two. You may only cast "Linkdragon Order's Oath "Re:S"" once per turn.
+• [Counter] [Stand] all cards on your field. Then, for this turn, all cards on your field can attack during the final phase.
+• Put this card and up to one card from your drop zone into the soul of a monster on your field. If you put into a《Linkdragon Order》's soul, draw two cards.
+If this card is in a monster's soul, that card gets [Soulguard].
 10th/0020
+English	Divine Protection of Shalsana "Re:S"
+Thai	การปกป้องของชาลซาน่า "Re:S"
+Type	Spell
+World	Dungeon World
+Attribute	Defense
+Ability / Effect
+This card cannot be nullified.
+[Cn/Turn] [Counter] Choose and use one of the following two.
+• For this turn, the next damage you take by an attack becomes 0, and the next damage you take by your opponent's card effects becomes 0.
+• Draw a card, and for this turn, all cards on your field cannot be destroyed by your opponent's card effects, and they get power+10000, and critical+1!
 10th/0021
+Bonus Quest "Re:S"
+Thai	โบนัสเควสต์ "Re:S"
+Type	Spell
+World	Dungeon World
+Attribute	Thunder Empire / Draw / Charge / Recovery
+Ability / Effect
+[Cast Cost] [Drop a monster from your hand]
+[Cn/Turn] You charge 2 gauge, heal 2 life, and draw 2 cards. Then, if the card you dropped for this card's [Cast Cost] is size 2 or greater, draw 1 card, and if the card you dropped for this card's [Cast Cost] is size 1 or lower, charge 1 gauge, and you heal 1 life.
 10th/0022
+English	Illusions Folktale, Echt Biblio "Re:I"
+Thai	นิทานมายา, เอกต์ บิบลิโอ้ "Re:I"
+Type	Item
+Power	3000
+Critical	1
+World	Dungeon World
+Attribute	Folktale / Weapon
+Ability / Effect
+If a《Folktale》monster on your field would be destroyed, you may pay 1 life. If you do, put it into this card's soul.
+[Counter]【Act】Put up to a total of three size 1 or greater《Folktale》monsters from your field or drop zone into this card's soul. You may only use this ability once per turn.
+[Counter]【Act】"Marchen Panic" Call up to three monsters from this card's soul on separate areas by paying their [Call Cost]. You may only use this ability once per turn.
+[Soulguard]
 10th/0023
 10th/0024
 10th/0025

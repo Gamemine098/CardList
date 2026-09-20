@@ -13,3 +13,6 @@ S-SP03/0004
 Deity Gargantua Dragon "Re:B"
 S-SP04/0001
 10th/0004
+Bonus Quest "Re:S"
+FD09/S005
+10th/0021

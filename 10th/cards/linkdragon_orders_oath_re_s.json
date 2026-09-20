@@ -1,0 +1,220 @@
+{
+  "card_id": "LINKDRAGON_ORDERS_OATH_RE_S",
+  "name": {
+    "en": "Linkdragon Order's Oath \"Re:S\"",
+    "th": "คำสาบานของภาคีมังกรสายสัมพันธ์ \"Re:S\""
+  },
+  "image": null,
+  "type": "SPELL",
+  "worlds": [
+    "ANCIENT_WORLD"
+  ],
+  "attributes": [
+    "LINKDRAGON_ORDER",
+    "ENHANCE"
+  ],
+  "call_cost": [],
+  "cast_cost": [
+    {
+      "type": "PAY_GAUGE",
+      "amount": 1
+    },
+    {
+      "type": "MOVE_CARD",
+      "from": "DECK",
+      "to": "DROP",
+      "target": {
+        "type": "TOP_DECK",
+        "count": 3
+      }
+    }
+  ],
+  "use_restrictions": [
+    {
+      "type": "CARD_USE_LIMIT",
+      "action": "CAST",
+      "count": 1,
+      "period": "TURN",
+      "source": {
+        "kind": "CARD",
+        "card_id": "LINKDRAGON_ORDERS_OATH_RE_S"
+      }
+    }
+  ],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "LINKDRAGON_ORDERS_OATH_RE_S-A01",
+      "kind": "ACT",
+      "keywords": [],
+      "skill_restrictions": [],
+      "cost": [],
+      "effects": [
+        {
+          "type": "CHOICE",
+          "choose": 1,
+          "options": [
+            {
+              "id": "STAND_AND_FINAL_PHASE_ATTACK",
+              "effects": [
+                {
+                  "type": "STAND",
+                  "target": {
+                    "type": "ALL",
+                    "zone": "FIELD",
+                    "player": "SELF"
+                  }
+                },
+                {
+                  "type": "ATTACK_RULE",
+                  "target": {
+                    "type": "ALL",
+                    "zone": "FIELD",
+                    "player": "SELF"
+                  },
+                  "rules": [
+                    "CAN_ATTACK_DURING_FINAL_PHASE"
+                  ],
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "INJECT_SOUL_AND_DRAW",
+              "effects": [
+                {
+                  "type": "MOVE_CARD",
+                  "from": "CURRENT_CARD",
+                  "to": "SOUL",
+                  "destination_card": {
+                    "type": "SELECT",
+                    "zone": "FIELD",
+                    "card_type": "MONSTER",
+                    "player": "SELF",
+                    "count": 1
+                  }
+                },
+                {
+                  "type": "MOVE_CARD",
+                  "from": "DROP",
+                  "to": "SOUL",
+                  "destination_card": "CHOSEN_CARD",
+                  "target": {
+                    "type": "SELECT",
+                    "zone": "DROP",
+                    "maximum": 1
+                  }
+                },
+                {
+                  "type": "IF",
+                  "condition": {
+                    "type": "TARGET_MATCH",
+                    "card": "CHOSEN_CARD",
+                    "filter": {
+                      "type": "ATTRIBUTE",
+                      "value": "LINKDRAGON_ORDER"
+                    }
+                  },
+                  "then": [
+                    {
+                      "type": "DRAW",
+                      "amount": 2
+                    }
+                  ],
+                  "else": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Cast Cost] [Pay 1 gauge & Drop the top three cards of your deck]\nChoose and use one of the following two. You may only cast \"Linkdragon Order's Oath \"Re:S\"\" once per turn.\n• [Counter] [Stand] all cards on your field. Then, for this turn, all cards on your field can attack during the final phase.\n• Put this card and up to one card from your drop zone into the soul of a monster on your field. If you put into a《Linkdragon Order》's soul, draw two cards.\nIf this card is in a monster's soul, that card gets [Soulguard].",
+          "segments": [
+            {
+              "text": "[Cast Cost]",
+              "style": "COST"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Pay 1 gauge & Drop the top three cards of your deck]",
+              "style": "COST"
+            },
+            {
+              "text": "\nChoose and use one of the following two. You may only cast \"Linkdragon Order's Oath \"Re:S\"\" once per turn.\n• "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Stand]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " all cards on your field. Then, for this turn, all cards on your field can attack during the final phase.\n• Put this card and up to one card from your drop zone into the soul of a monster on your field. If you put into a《Linkdragon Order》's soul, draw two cards.\nIf this card is in a monster's soul, that card gets "
+            },
+            {
+              "text": "[Soulguard]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": "."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "LINKDRAGON_ORDERS_OATH_RE_S-A02",
+      "kind": "CONT",
+      "keywords": [],
+      "skill_restrictions": [],
+      "activation_condition": {
+        "type": "CARD_IN_ZONE",
+        "card": "THIS_CARD",
+        "zones": [
+          "SOUL"
+        ]
+      },
+      "effects": [
+        {
+          "type": "GRANT_KEYWORD",
+          "target": {
+            "type": "HOST_CARD",
+            "of": "THIS_CARD"
+          },
+          "keyword": "SOULGUARD",
+          "duration": {
+            "type": "WHILE_SOURCE_ACTIVE"
+          }
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "If this card is in a monster's soul, that card gets [Soulguard].",
+          "segments": [
+            {
+              "text": "If this card is in a monster's soul, that card gets "
+            },
+            {
+              "text": "[Soulguard]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": "."
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
