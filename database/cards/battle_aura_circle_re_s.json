@@ -1,0 +1,229 @@
+{
+  "card_id": "BATTLE_AURA_CIRCLE_RE_S",
+  "name": {
+    "en": "Battle Aura Circle \"Re:S\"",
+    "th": "ผนึกสี่ทิศ \"Re:S\""
+  },
+  "image": null,
+  "type": "SPELL",
+  "worlds": [
+    "DANGER_WORLD"
+  ],
+  "attributes": [
+    "BATTLE_AURA"
+  ],
+  "call_cost": [],
+  "use_restrictions": [
+    {
+      "type": "CARD_USE_LIMIT",
+      "action": "CAST",
+      "count": 1,
+      "period": "TURN",
+      "source": {
+        "kind": "CARD",
+        "card_id": "BATTLE_AURA_CIRCLE_RE_S"
+      }
+    }
+  ],
+  "rules": [
+    {
+      "type": "CANNOT_BE_NULLIFIED"
+    }
+  ],
+  "abilities": [
+    {
+      "id": "BATTLE_AURA_CIRCLE_RE_S-A01",
+      "kind": "ACT",
+      "keywords": [],
+      "skill_restrictions": [],
+      "cost": [],
+      "effects": [
+        {
+          "type": "CHOICE",
+          "choose": 1,
+          "options": [
+            {
+              "id": "PREVENT_DAMAGE",
+              "effects": [
+                {
+                  "type": "MODIFY_NEXT_DAMAGE",
+                  "source": "ATTACK",
+                  "amount": 0,
+                  "occurrences": 1,
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                },
+                {
+                  "type": "MODIFY_NEXT_DAMAGE",
+                  "source": "OPPONENT_CARD_EFFECT",
+                  "amount": 0,
+                  "occurrences": 1,
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "BUFF_ITEMS",
+              "effects": [
+                {
+                  "type": "DRAW",
+                  "amount": 1
+                },
+                {
+                  "type": "GAIN_LIFE",
+                  "amount": 3
+                },
+                {
+                  "type": "PROTECTION",
+                  "target": {
+                    "type": "FILTER",
+                    "zone": "FIELD",
+                    "card_type": "ITEM"
+                  },
+                  "action": "DESTROY",
+                  "source": "OPPONENT_CARD_EFFECT",
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                },
+                {
+                  "type": "PROTECTION",
+                  "target": {
+                    "type": "FILTER",
+                    "zone": "FIELD",
+                    "card_type": "ITEM"
+                  },
+                  "action": "LEAVE_FIELD",
+                  "source": "OPPONENT_CARD_EFFECT",
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                },
+                {
+                  "type": "MODIFY_STAT",
+                  "target": {
+                    "type": "FILTER",
+                    "zone": "FIELD",
+                    "card_type": "ITEM"
+                  },
+                  "stat": "POWER",
+                  "amount": 30000,
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                },
+                {
+                  "type": "MODIFY_STAT",
+                  "target": {
+                    "type": "FILTER",
+                    "zone": "FIELD",
+                    "card_type": "ITEM"
+                  },
+                  "stat": "CRITICAL",
+                  "amount": 2,
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                },
+                {
+                  "type": "ATTACK_RULE",
+                  "target": {
+                    "type": "FILTER",
+                    "zone": "FIELD",
+                    "card_type": "ITEM"
+                  },
+                  "condition": {
+                    "type": "ATTACKING_ALONE"
+                  },
+                  "rules": [
+                    "CANNOT_BE_NEGATED"
+                  ],
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "This card cannot be nullified.\nChoose and use one of the following two. You may only cast \"Battle Aura Circle \"Re:S\"\" once per turn.\n• [Counter] For this turn, the next damage you take by an attack becomes 0, and the next damage you take by your opponent's card effects becomes 0.\n• Draw a card, you gain 3 life, and for this turn, items on your field cannot be destroyed or leave the field by your opponent's card effects, they get power+30000 and critical+2, and if they are attacking alone, their attacks cannot be nullified.",
+          "segments": [
+            {
+              "text": "This card cannot be nullified.\nChoose and use one of the following two. You may only cast \"Battle Aura Circle \"Re:S\"\" once per turn.\n• "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " For this turn, the next damage you take by an attack becomes 0, and the next damage you take by your opponent's card effects becomes 0.\n• Draw a card, you gain 3 life, and for this turn, items on your field cannot be destroyed or leave the field by your opponent's card effects, they get power+30000 and critical+2, and if they are attacking alone, their attacks cannot be nullified."
+            }
+          ]
+        },
+        "th": {
+          "plain": "การ์ดใบนี้ไม่สามารถถูกยกเลิกได้\nเลือกใช้ 1 อย่างต่อไปนี้. ร่าย \"ผนึกสี่ทิศ \"Re:S\"\" ได้เพียง 1 ครั้งใน 1 เทิร์น\n• [Counter] ในเทิร์นนี้, ความเสียหายครั้งถัดไปที่เราจะได้รับจากการโจมตีกลายเป็น 0, และความเสียหายครั้งถัดไปที่เราจะได้รับจากความสามารถการ์ดคู่แข่งกลายเป็น 0\n• จั่วการ์ด 1 ใบ, เราได้รับพลังชีวิต 3 หน่วย, และในเทิร์นนี้, ไอเท็มบนสนามเราไม่สามารถถูกทำลายหรือออกจากสนามโดยความสามารถการ์ดคู่แข่ง, ได้รับพาวเวอร์ +30000 และคริติคอล +2, และถ้าโจมตีใบเดียว, การโจมตีนั้นไม่สามารถถูกยกเลิกได้",
+          "segments": [
+            {
+              "text": "การ์ดใบนี้ไม่สามารถถูกยกเลิกได้\nเลือกใช้ 1 อย่างต่อไปนี้. ร่าย \"ผนึกสี่ทิศ \"Re:S\"\" ได้เพียง 1 ครั้งใน 1 เทิร์น\n• "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " ใน"
+            },
+            {
+              "text": "เทิร์นนี้",
+              "style": "TURN"
+            },
+            {
+              "text": ", ความเสียหายครั้งถัดไปที่เราจะได้รับจากการโจมตีกลายเป็น 0, และความเสียหายครั้งถัดไปที่เราจะได้รับจากความสามารถการ์ดคู่แข่งกลายเป็น 0\n• จั่วการ์ด 1 ใบ, เราได้รับพลังชีวิต 3 หน่วย, และใน"
+            },
+            {
+              "text": "เทิร์นนี้",
+              "style": "TURN"
+            },
+            {
+              "text": ", ไอเท็มบน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราไม่สามารถถูกทำลายหรือออกจาก"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "โดยความสามารถการ์ดคู่แข่ง, ได้รับ"
+            },
+            {
+              "text": "พาวเวอร์ +30000",
+              "style": "STAT_MODIFIER"
+            },
+            {
+              "text": " และ"
+            },
+            {
+              "text": "คริติคอล +2",
+              "style": "STAT_MODIFIER"
+            },
+            {
+              "text": ", และถ้าโจมตีใบเดียว, การโจมตีนั้นไม่สามารถถูกยกเลิกได้"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

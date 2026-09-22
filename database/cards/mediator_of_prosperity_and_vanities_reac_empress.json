@@ -1,0 +1,59 @@
+{
+  "card_id": "MEDIATOR_OF_PROSPERITY_AND_VANITIES_REAC_EMPRESS",
+  "name": "Mediator of Prosperity & Vanities, ReAc: Empress",
+  "type": "MONSTER",
+  "size": 1,
+  "power": 3000,
+  "critical": 1,
+  "defense": 2000,
+  "world": "GENERIC",
+  "attributes": [
+    "TAROT"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "REAC_EMPRESS_ACT",
+      "effect_type": "ACTIVATED",
+      "zone": "HAND",
+      "is_counter": true,
+      "cost": {
+        "drop_this_card": true
+      },
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "10th/0037",
+        "ability_reference": "10th/0037-A01: for this turn, the next time your opponent would look at the entire deck, your opponent looks at the top four cards of the deck instead.",
+        "missing_capability": "REPLACEMENT_RULE",
+        "what_is_known": "Interrupts opponent's deck search action, replacing an entire deck search with inspecting only the top 4 cards of the deck for the next occurrence this turn.",
+        "information_needed": [
+          "Approved schema for search replacement rules (e.g. REPLACE_SEARCH_SCOPE with LOOK_TOP_N)."
+        ]
+      }
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Counter] 【Act】 You may drop this hand card. If you do, for this turn, the next time your opponent would look at the entire deck, your opponent looks at the top four cards of the deck instead.",
+      "segments": [
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] 【Act】 You may drop this hand card. If you do, for this turn, the next time your opponent would look at the entire deck, your opponent looks at the top four cards of the deck instead."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Counter] 【Act】 คุณสามารถทิ้งการ์ดใบนี้จากบนมือได้ หากทำ ในเทิร์นนี้ ครั้งต่อไปที่คู่แข่งจะได้ดูการ์ดทั้งกองการ์ด ให้คู่แข่งดูการ์ด 4 ใบจากใบบนสุดของกองการ์ดแทน",
+      "segments": [
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] 【Act】 คุณสามารถทิ้งการ์ดใบนี้จากบนมือได้ หากทำ ในเทิร์นนี้ ครั้งต่อไปที่คู่แข่งจะได้ดูการ์ดทั้งกองการ์ด ให้คู่แข่งดูการ์ด 4 ใบจากใบบนสุดของกองการ์ดแทน"
+        }
+      ]
+    }
+  },
+  "image": null
+}

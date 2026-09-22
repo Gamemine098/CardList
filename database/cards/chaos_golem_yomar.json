@@ -1,0 +1,122 @@
+{
+  "card_id": "CHAOS_GOLEM_YOMAR",
+  "name": "Chaos Golem, Yomar",
+  "type": "MONSTER",
+  "size": 3,
+  "power": 10000,
+  "critical": 3,
+  "defense": 5000,
+  "world": [
+    "DARKNESS_DRAGON_WORLD",
+    "DANGER_WORLD"
+  ],
+  "attributes": [
+    "AUTODEITY_ARMY",
+    "CHAOS",
+    "DUEL_GOLEM"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 1
+  },
+  "effects": [
+    {
+      "effect_id": "CHAOS_GOLEM_YOMAR_DUO",
+      "effect_type": "CONTINUOUS",
+      "keyword": "Duo",
+      "duo_partner": "Chaos Wizard, Aurora",
+      "buffs": {
+        "defense": 5000
+      },
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "FD10/002",
+        "ability_reference": "FD10/002: when your opponent's cards would attack, change the target of the attack to this card.",
+        "missing_capability": "ATTACK_REDIRECT",
+        "what_is_known": "Continuous passive attack redirection forcing all opponent attack declarations to target this monster while duo condition is met.",
+        "information_needed": [
+          "Approved schema for passive attack target redirection (e.g. REDIRECT_ATTACK_TARGET)."
+        ]
+      }
+    },
+    {
+      "effect_id": "CHAOS_GOLEM_YOMAR_DROP_TRIGGER",
+      "effect_type": "TRIGGERED",
+      "name": "Avaricious One of the Apocalypse",
+      "trigger": {
+        "event": "ZONE_CHANGE",
+        "from": "FIELD",
+        "to": "DROP"
+      },
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "effects": [
+        {
+          "effect_id": "CHAOS_GOLEM_YOMAR_DRAW",
+          "effect_type": "DRAW",
+          "amount": 1
+        },
+        {
+          "effect_id": "CHAOS_GOLEM_YOMAR_HEAL",
+          "effect_type": "GAIN_LIFE",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "effect_id": "CHAOS_GOLEM_YOMAR_KEYWORDS",
+      "effect_type": "KEYWORD",
+      "keywords": [
+        "Double Attack",
+        "Penetrate"
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Call Cost] [Pay 1 life]\n[Duo] \"Chaos Wizard, Aurora\" This card gets defense+5000, and when your opponent's cards would attack, change the target of the attack to this card.\n[An/Turn] \"Avaricious One of the Apocalypse\" When this card is put into the drop zone from the field, draw a card and heal 1 life!\n[Double Attack] [Penetrate]",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Call Cost] [Pay 1 life]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "[Duo] \"Chaos Wizard, Aurora\" This card gets defense+5000, and when your opponent's cards would attack, change the target of the attack to this card."
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "[An/Turn] \"Avaricious One of the Apocalypse\" When this card is put into the drop zone from the field, draw a card and heal 1 life!"
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Double Attack] [Penetrate]"
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Call Cost] [จ่าย 1 พลังชีวิต]\n[Duo] \"เคออสวิซาร์ด・ออโรร่า\" การ์ดนี้ได้รับพลังป้องกัน+5000, และเมื่อการ์ดของคู่แข่งจะโจมตี เปลี่ยนเป้าหมายของการโจมตีมาที่การ์ดนี้\n[An/Turn] \"ผู้ละโมบแห่งวันสิ้นโลก\" เมื่อการ์ดนี้ถูกส่งลงช่องดรอปจากสนาม, จั่วการ์ด 1 ใบและฟื้นฟูพลังชีวิต 1 หน่วย!\n[Double Attack] [Penetrate]",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Call Cost] [จ่าย 1 พลังชีวิต]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "[Duo] \"เคออสวิซาร์ด・ออโรร่า\" การ์ดนี้ได้รับพลังป้องกัน+5000, และเมื่อการ์ดของคู่แข่งจะโจมตี เปลี่ยนเป้าหมายของการโจมตีมาที่การ์ดนี้"
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "[An/Turn] \"ผู้ละโมบแห่งวันสิ้นโลก\" เมื่อการ์ดนี้ถูกส่งลงช่องดรอปจากสนาม, จั่วการ์ด 1 ใบและฟื้นฟูพลังชีวิต 1 หน่วย!"
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Double Attack] [Penetrate]"
+        }
+      ]
+    }
+  },
+  "image": null
+}

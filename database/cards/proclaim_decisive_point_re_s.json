@@ -1,0 +1,96 @@
+{
+  "card_id": "PROCLAIM_DECISIVE_POINT_RE_S",
+  "name": "Proclaim: Decisive Point \"Re:S\"",
+  "type": "SPELL",
+  "world": "STAR_DRAGON_WORLD",
+  "attributes": [
+    "ASTRODRAGON",
+    "ENHANCE"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "PROCLAIM_DECISIVE_POINT_RE_S_CHOICE",
+      "effect_type": "CHOICE",
+      "choice_count": 1,
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "choices": [
+        {
+          "description": "Choose up to four cards on your field, and for this turn, the chosen cards cannot be destroyed, returned to hand, or [Rest] by your opponent's card effects, and get power+10000 and critical+1. If you chose three or more cards, draw a card.",
+          "unsupported_mechanic": {
+            "status": "UNSUPPORTED_MECHANIC",
+            "card_reference": "10th/0034",
+            "ability_reference": "10th/0034: If you chose three or more cards, draw a card.",
+            "missing_capability": "CONDITION",
+            "what_is_known": "Conditional branch evaluating the number of targets successfully selected by the player in the preceding action (>= 3).",
+            "information_needed": [
+              "Approved condition primitive for checking selected target count (e.g. TARGET_COUNT_GTE)."
+            ]
+          }
+        },
+        {
+          "description": "Call up to one <Star Dragon World> monster from your drop zone to your left or right by paying its [Call Cost]. If you called an 《Astrodragon》, draw a card.",
+          "effects": [
+            {
+              "effect_id": "PROCLAIM_DECISIVE_POINT_RE_S_CALL",
+              "effect_type": "CALL",
+              "source": "DROP",
+              "destination": "FIELD",
+              "placement": "LEFT_OR_RIGHT",
+              "pay_cost": true,
+              "target": {
+                "target_type": "CARD",
+                "card_type": "MONSTER",
+                "world": "STAR_DRAGON_WORLD",
+                "count": 1
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Counter] Choose and use one of the following two. You may only cast \"Proclaim: Decisive Point \\\"Re:S\\\"\" once per turn.\n• Choose up to four cards on your field, and for this turn, the chosen cards cannot be destroyed, returned to hand, or [Rest] by your opponent's card effects, and get power+10000 and critical+1. If you chose three or more cards, draw a card.\n• Call up to one <Star Dragon World> monster from your drop zone to your left or right by paying its [Call Cost]. If you called an 《Astrodragon》, draw a card.",
+      "segments": [
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] Choose and use one of the following two. You may only cast \"Proclaim: Decisive Point \\\"Re:S\\\"\" once per turn."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "• Choose up to four cards on your field, and for this turn, the chosen cards cannot be destroyed, returned to hand, or [Rest] by your opponent's card effects, and get power+10000 and critical+1. If you chose three or more cards, draw a card."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "• Call up to one <Star Dragon World> monster from your drop zone to your left or right by paying its [Call Cost]. If you called an 《Astrodragon》, draw a card."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Counter] เลือกใช้ 1 อย่างจากความสามารถต่อไปนี้ คุณสามารถร่าย \"คำประกาศ : ทำนายขั้นเด็ดขาด \\\"Re:S\\\"\" ได้เพียง 1 ครั้งใน 1 เทิร์น\n• เลือกการ์ดบนสนามของคุณได้สูงสุด 4 ใบ และในเทิร์นนี้ การ์ดที่เลือกไม่สามารถถูกทำลาย นำกลับขึ้นมือ หรือ [Rest] โดยความสามารถการ์ดของคู่แข่งได้ และได้รับพลังโจมตี+10000 และคริติคอล+1 หากคุณเลือกการ์ด 3 ใบขึ้นไป จั่วการ์ด 1 ใบ\n• คอลมอนสเตอร์ <สตาร์ดราก้อนเวิลด์> ได้สูงสุด 1 ใบจากช่องดรอปของคุณไปยังช่องซ้ายหรือขวาของคุณโดยจ่าย [Call Cost] หากคุณคอล 《มังกรดาราศาสตร์》 จั่วการ์ด 1 ใบ",
+      "segments": [
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] เลือกใช้ 1 อย่างจากความสามารถต่อไปนี้ คุณสามารถร่าย \"คำประกาศ : ทำนายขั้นเด็ดขาด \\\"Re:S\\\"\" ได้เพียง 1 ครั้งใน 1 เทิร์น"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "• เลือกการ์ดบนสนามของคุณได้สูงสุด 4 ใบ และในเทิร์นนี้ การ์ดที่เลือกไม่สามารถถูกทำลาย นำกลับขึ้นมือ หรือ [Rest] โดยความสามารถการ์ดของคู่แข่งได้ และได้รับพลังโจมตี+10000 และคริติคอล+1 หากคุณเลือกการ์ด 3 ใบขึ้นไป จั่วการ์ด 1 ใบ"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "• คอลมอนสเตอร์ <สตาร์ดราก้อนเวิลด์> ได้สูงสุด 1 ใบจากช่องดรอปของคุณไปยังช่องซ้ายหรือขวาของคุณโดยจ่าย [Call Cost] หากคุณคอล 《มังกรดาราศาสตร์》 จั่วการ์ด 1 ใบ"
+        }
+      ]
+    }
+  },
+  "image": null
+}

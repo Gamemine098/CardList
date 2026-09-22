@@ -1,0 +1,65 @@
+{
+  "card_id": "CHAOS_DARRYL_BERCK_RE_B",
+  "name": "CHAOS Darryl Berck \"Re:B\"",
+  "type": "MONSTER",
+  "size": 3,
+  "power": 7000,
+  "critical": 2,
+  "defense": 3000,
+  "world": [
+    "DARKNESS_DRAGON_WORLD"
+  ],
+  "attributes": [
+    "CHAOS",
+    "BLACK_KNIGHT"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "CHAOS_DARRYL_BERCK_ENTER_FIELD",
+      "effect_type": "TRIGGERED",
+      "name": "Warrior Instinct",
+      "trigger": {
+        "event": "ENTER_FIELD"
+      },
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "FD10/003",
+        "ability_reference": "FD10/003: If you have two or more size 3 or greater monsters on your field, or your opponent's drop zone has 6 or more cards, you may put the remaining cards into your gauge instead.",
+        "missing_capability": "LOOK_AND_CHOOSE_BRANCH",
+        "what_is_known": "Inspects top 3 cards of deck, puts 1 into hand. Remaining cards normally go to drop, but can conditionally be redirected to gauge based on field size 3 count or opponent drop zone card count.",
+        "information_needed": [
+          "Approved schema for conditional remaining-card destination replacement in LOOK_AND_CHOOSE."
+        ]
+      }
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[An/Turn] \"Warrior Instinct\" When this card enters the field, look at the top three cards of your deck, put one from among them into your hand, and drop the rest. If you have two or more size 3 or greater monsters on your field, or your opponent's drop zone has 6 or more cards, you may put the remaining cards into your gauge instead.",
+      "segments": [
+        {
+          "tag": "TRIGGER",
+          "text": "[An/Turn] \"Warrior Instinct\" When this card enters the field, look at the top three cards of your deck, put one from among them into your hand, and drop the rest. If you have two or more size 3 or greater monsters on your field, or your opponent's drop zone has 6 or more cards, you may put the remaining cards into your gauge instead."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[An/Turn] \"สัญชาตญาณนักรบ\" เมื่อการ์ดนี้ลงสู่สนาม, ดูการ์ด 3 ใบจากใบบนสุดของกองการ์ดคุณ, นำ 1 ใบขึ้นมือ, และทิ้งการ์ดที่เหลือลงช่องดรอป หากคุณมีมอนสเตอร์ไซส์ 3 ขึ้นไป 2 ใบขึ้นไปบนสนามของคุณ หรือช่องดรอปของคู่แข่งมีการ์ด 6 ใบขึ้นไป คุณสามารถนำการ์ดที่เหลือเข้าสู่เกจแทนได้",
+      "segments": [
+        {
+          "tag": "TRIGGER",
+          "text": "[An/Turn] \"สัญชาตญาณนักรบ\" เมื่อการ์ดนี้ลงสู่สนาม, ดูการ์ด 3 ใบจากใบบนสุดของกองการ์ดคุณ, นำ 1 ใบขึ้นมือ, และทิ้งการ์ดที่เหลือลงช่องดรอป หากคุณมีมอนสเตอร์ไซส์ 3 ขึ้นไป 2 ใบขึ้นไปบนสนามของคุณ หรือช่องดรอปของคู่แข่งมีการ์ด 6 ใบขึ้นไป คุณสามารถนำการ์ดที่เหลือเข้าสู่เกจแทนได้"
+        }
+      ]
+    }
+  },
+  "image": null
+}

@@ -1,0 +1,165 @@
+{
+  "card_id": "SOLOMONS_SHIELD_RE_S",
+  "name": {
+    "en": "Solomon's Shield \"Re:S\"",
+    "th": "โล่แห่งโซโลมอน \"Re:S\""
+  },
+  "image": null,
+  "type": "SPELL",
+  "worlds": [
+    "MAGIC_WORLD"
+  ],
+  "attributes": [
+    "MAGIC_POWER",
+    "DEFENSE"
+  ],
+  "call_cost": [],
+  "use_restrictions": [],
+  "rules": [
+    {
+      "type": "CANNOT_BE_NULLIFIED"
+    }
+  ],
+  "abilities": [
+    {
+      "id": "SOLOMONS_SHIELD_RE_S-A01",
+      "kind": "ACT",
+      "keywords": [
+        "COUNTER"
+      ],
+      "skill_restrictions": [
+        {
+          "type": "ACTIVATION_LIMIT",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "SOLOMONS_SHIELD_RE_S",
+            "ability_id": "SOLOMONS_SHIELD_RE_S-A01"
+          }
+        }
+      ],
+      "trigger": {
+        "type": "COUNTER_TIMING"
+      },
+      "cost": [],
+      "effects": [
+        {
+          "type": "CHOICE",
+          "choose": 1,
+          "options": [
+            {
+              "id": "PREVENT_DAMAGE",
+              "effects": [
+                {
+                  "type": "MODIFY_NEXT_DAMAGE",
+                  "source": "ATTACK",
+                  "amount": 0,
+                  "occurrences": 1,
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                },
+                {
+                  "type": "MODIFY_NEXT_DAMAGE",
+                  "source": "OPPONENT_CARD_EFFECT",
+                  "amount": 0,
+                  "occurrences": 1,
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "DRAW_AND_BOUNCE",
+              "effects": [
+                {
+                  "type": "DRAW",
+                  "amount": 1
+                },
+                {
+                  "type": "MOVE_CARD",
+                  "from": "FIELD",
+                  "to": "HAND",
+                  "target": {
+                    "type": "SELECT",
+                    "zone": "FIELD",
+                    "maximum": 1
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "This card cannot be nullified.\n[Cn/Turn] [Counter] Choose and use one of the following two.\n• For this turn, the next damage you take by an attack becomes 0, and the next damage you take by your opponent's card effects becomes 0.\n• Draw a card, and return up to one card from the field to its owner's hand.",
+          "segments": [
+            {
+              "text": "This card cannot be nullified.\n"
+            },
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " Choose and use one of the following two.\n• For this turn, the next damage you take by an attack becomes 0, and the next damage you take by your opponent's card effects becomes 0.\n• Draw a card, and return up to one card from the field to its owner's hand."
+            }
+          ]
+        },
+        "th": {
+          "plain": "การ์ดใบนี้ไม่สามารถถูกยกเลิกได้\n[Cn/Turn] [Counter] เลือกใช้ 1 อย่างต่อไปนี้\n• ในเทิร์นนี้, ความเสียหายครั้งถัดไปที่เราจะได้รับจากการโจมตีกลายเป็น 0, และความเสียหายครั้งถัดไปที่เราจะได้รับจากความสามารถการ์ดคู่แข่งกลายเป็น 0\n• จั่วการ์ด 1 ใบ, และนำการ์ดไม่เกิน 1 ใบจากสนามกลับขึ้นมือเจ้าของ",
+          "segments": [
+            {
+              "text": "การ์ดใบนี้ไม่สามารถถูกยกเลิกได้\n"
+            },
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " เลือกใช้ 1 อย่างต่อไปนี้\n• ใน"
+            },
+            {
+              "text": "เทิร์นนี้",
+              "style": "TURN"
+            },
+            {
+              "text": ", ความเสียหายครั้งถัดไปที่เราจะได้รับจากการโจมตีกลายเป็น 0, และความเสียหายครั้งถัดไปที่เราจะได้รับจากความสามารถการ์ดคู่แข่งกลายเป็น 0\n• จั่วการ์ด 1 ใบ, และนำการ์ดไม่เกิน 1 ใบจาก"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "กลับขึ้น"
+            },
+            {
+              "text": "มือ",
+              "style": "ZONE"
+            },
+            {
+              "text": "เจ้าของ"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

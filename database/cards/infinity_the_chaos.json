@@ -1,0 +1,117 @@
+{
+  "card_id": "INFINITY_THE_CHAOS",
+  "name": "∞ Infinity the Chaos ∞",
+  "type": "FLAG",
+  "power": 10000,
+  "critical": 3,
+  "defense": 10000,
+  "world": null,
+  "attributes": [
+    "CHAOS"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "INFINITY_THE_CHAOS_SETUP",
+      "effect_type": "RULE",
+      "rule": "PRE_GAME_SETUP",
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "FD10/026",
+        "ability_reference": "FD10/026: Before the game, put one \"∞ Infinity the Chaos ∞\" face down under \"the Chaos\".",
+        "missing_capability": "PRE_GAME_RULE",
+        "what_is_known": "Pre-game deck construction rule placing this flag face-down under the primary active flag before game starts.",
+        "information_needed": [
+          "Approved schema for PRE_GAME flag placement."
+        ]
+      }
+    },
+    {
+      "effect_id": "INFINITY_THE_CHAOS_CARD_PERMISSION",
+      "effect_type": "RULE",
+      "rule": "ALLOW_CHAOS_CARDS"
+    },
+    {
+      "effect_id": "INFINITY_THE_CHAOS_SIZE_INFINITY",
+      "effect_type": "RULE",
+      "rule": "TOTAL_SIZE_INFINITY"
+    },
+    {
+      "effect_id": "INFINITY_THE_CHAOS_PROTECTION",
+      "effect_type": "PROTECTION",
+      "target": {
+        "target_type": "CARD",
+        "card_type": "MONSTER",
+        "zone": "FIELD",
+        "controller": "YOU",
+        "size_gte": 30
+      },
+      "protection": {
+        "cannot_be_destroyed": true,
+        "cannot_nullify_abilities": true
+      }
+    },
+    {
+      "effect_id": "INFINITY_THE_CHAOS_FLAG_AS_FIELD_CARD",
+      "effect_type": "RULE",
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "FD10/026",
+        "ability_reference": "FD10/026: This card is treated as a card on your field. It cannot be destroyed, leave the flag area, and its abilities cannot be nullified, and it can attack even if you have monsters on your center!",
+        "missing_capability": "FLAG_FIELD_ATTACK_ENTITY",
+        "what_is_known": "Flag behaves as a permanent field entity with battle stats (10000/3/10000), attacks directly ignoring center monster presence, cannot be destroyed or nullified, and cannot leave flag area.",
+        "information_needed": [
+          "Approved engine representation for flags acting as active attack combatants with field rules."
+        ]
+      }
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "Before the game, put one \"∞ Infinity the Chaos ∞\" face down under \"the Chaos\".\nYou may use 《Chaos》 cards, and put monsters up to a total size of ∞.\nAll size 30 or greater monsters on your field cannot be destroyed, and their abilities cannot be nullified, by effects.\nThis card is treated as a card on your field. It cannot be destroyed, leave the flag area, and its abilities cannot be nullified, and it can attack even if you have monsters on your center!",
+      "segments": [
+        {
+          "tag": "RULE",
+          "text": "Before the game, put one \"∞ Infinity the Chaos ∞\" face down under \"the Chaos\"."
+        },
+        {
+          "tag": "RULE",
+          "text": "You may use 《Chaos》 cards, and put monsters up to a total size of ∞."
+        },
+        {
+          "tag": "RULE",
+          "text": "All size 30 or greater monsters on your field cannot be destroyed, and their abilities cannot be nullified, by effects."
+        },
+        {
+          "tag": "RULE",
+          "text": "This card is treated as a card on your field. It cannot be destroyed, leave the flag area, and its abilities cannot be nullified, and it can attack even if you have monsters on your center!"
+        }
+      ]
+    },
+    "th": {
+      "plain": "ก่อนเริ่มเกม, นำ \"∞ Infinity the Chaos ∞\" 1 ใบ วางคว่ำหน้าไว้ใต้ \"the Chaos\"\nคุณสามารถใช้การ์ด 《เคออส》 ได้, และสามารถวางมอนสเตอร์ได้สูงสุดขนาดไซส์รวมไม่เกิน ∞\nมอนสเตอร์ไซส์ 30 ขึ้นไปทั้งหมดบนสนามของคุณไม่สามารถถูกทำลาย และความสามารถไม่สามารถถูกยกเลิกได้ โดยความสามารถของการ์ด\nการ์ดนี้ถือว่าเป็นการ์ดบนสนามของคุณ มันไม่สามารถถูกทำลาย, ไม่ออกจากแฟลกโซน, และความสามารถไม่สามารถถูกยกเลิกได้, และสามารถโจมตีได้แม้ว่าคุณจะมีมอนสเตอร์อยู่ในช่องกลาง!",
+      "segments": [
+        {
+          "tag": "RULE",
+          "text": "ก่อนเริ่มเกม, นำ \"∞ Infinity the Chaos ∞\" 1 ใบ วางคว่ำหน้าไว้ใต้ \"the Chaos\""
+        },
+        {
+          "tag": "RULE",
+          "text": "คุณสามารถใช้การ์ด 《เคออส》 ได้, และสามารถวางมอนสเตอร์ได้สูงสุดขนาดไซส์รวมไม่เกิน ∞"
+        },
+        {
+          "tag": "RULE",
+          "text": "มอนสเตอร์ไซส์ 30 ขึ้นไปทั้งหมดบนสนามของคุณไม่สามารถถูกทำลาย และความสามารถไม่สามารถถูกยกเลิกได้ โดยความสามารถของการ์ด"
+        },
+        {
+          "tag": "RULE",
+          "text": "การ์ดนี้ถือว่าเป็นการ์ดบนสนามของคุณ มันไม่สามารถถูกทำลาย, ไม่ออกจากแฟลกโซน, และความสามารถไม่สามารถถูกยกเลิกได้, และสามารถโจมตีได้แม้ว่าคุณจะมีมอนสเตอร์อยู่ในช่องกลาง!"
+        }
+      ]
+    }
+  },
+  "image": null
+}

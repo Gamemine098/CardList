@@ -1,0 +1,63 @@
+{
+  "card_id": "POPULATION_REDUCTION",
+  "name": "Population Reduction",
+  "type": "SPELL",
+  "world": [
+    "LEGEND_WORLD"
+  ],
+  "attributes": [
+    "DRAW",
+    "CHAOS"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 1,
+    "drop_monster": {
+      "zone": "FIELD",
+      "controller": "YOU",
+      "size_gte": 3,
+      "count": 1
+    }
+  },
+  "effects": [
+    {
+      "effect_id": "POPULATION_REDUCTION_DRAW",
+      "effect_type": "DRAW",
+      "is_counter": true,
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "amount": 2
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Cast Cost] [Drop a size 3 or greater monster from your field & Pay 1 life]\n[Cn/Turn] [Counter] Draw two cards.",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [Drop a size 3 or greater monster from your field & Pay 1 life]"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Cn/Turn] [Counter] Draw two cards."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Cast Cost] [ส่งมอนสเตอร์ไซส์ 3 ขึ้นไปจากบนสนามของคุณลงช่องดรอป & จ่าย 1 พลังชีวิต]\n[Cn/Turn] [Counter] จั่วการ์ด 2 ใบ",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [ส่งมอนสเตอร์ไซส์ 3 ขึ้นไปจากบนสนามของคุณลงช่องดรอป & จ่าย 1 พลังชีวิต]"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Cn/Turn] [Counter] จั่วการ์ด 2 ใบ"
+        }
+      ]
+    }
+  },
+  "image": null
+}

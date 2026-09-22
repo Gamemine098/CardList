@@ -1,0 +1,25 @@
+{
+  "set_id": "X-BT02",
+  "cards": [
+    {
+      "card_number": "X-BT02/0012",
+      "card_id": "CHAOS_OSIRIS"
+    },
+    {
+      "card_number": "X-BT02/0013",
+      "card_id": "A_RULERS_PRIVILEGE"
+    },
+    {
+      "card_number": "X-BT02/0017",
+      "card_id": "ELECTRIFICATION"
+    },
+    {
+      "card_number": "X-BT02/0118",
+      "card_id": "LAUNCH_THE_AUTODEITY"
+    },
+    {
+      "card_number": "X-BT02/0120",
+      "card_id": "THE_CHAOS"
+    }
+  ]
+}

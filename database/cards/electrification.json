@@ -1,0 +1,89 @@
+{
+  "card_id": "ELECTRIFICATION",
+  "name": "Electrification",
+  "type": "SPELL",
+  "world": [
+    "DARKNESS_DRAGON_WORLD"
+  ],
+  "attributes": [
+    "CHARGE",
+    "DRAW",
+    "RECOVERY",
+    "CHAOS"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "ELECTRIFICATION_MAIN",
+      "effect_type": "MULTI_EFFECT",
+      "condition": {
+        "type": "AND",
+        "conditions": [
+          {
+            "type": "COUNT_PER_TURN",
+            "count": 1
+          },
+          {
+            "type": "FIELD_COUNT_GTE",
+            "target": {
+              "target_type": "CARD",
+              "card_type": "MONSTER",
+              "zone": "FIELD",
+              "controller": "YOU"
+            },
+            "count": 4
+          }
+        ]
+      },
+      "effects": [
+        {
+          "effect_id": "ELECTRIFICATION_CHARGE",
+          "effect_type": "CHARGE_GAUGE",
+          "amount": 1
+        },
+        {
+          "effect_id": "ELECTRIFICATION_HEAL",
+          "effect_type": "GAIN_LIFE",
+          "amount": 1
+        },
+        {
+          "effect_id": "ELECTRIFICATION_DRAW",
+          "effect_type": "DRAW",
+          "amount": 2
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "You may only cast this card if you have four or more monsters on your field.\n[Cn/Turn] Charge a gauge, heal 1 life, and draw two cards.",
+      "segments": [
+        {
+          "tag": "RULE",
+          "text": "You may only cast this card if you have four or more monsters on your field."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "[Cn/Turn] Charge a gauge, heal 1 life, and draw two cards."
+        }
+      ]
+    },
+    "th": {
+      "plain": "คุณสามารถร่ายการ์ดนี้ได้เมื่อมีมอนสเตอร์ 4 ใบขึ้นไปบนสนามของคุณเท่านั้น\n[Cn/Turn] นำการ์ด 1 ใบเข้าสู่เกจ, ฟื้นฟูพลังชีวิต 1 หน่วย, และจั่วการ์ด 2 ใบ",
+      "segments": [
+        {
+          "tag": "RULE",
+          "text": "คุณสามารถร่ายการ์ดนี้ได้เมื่อมีมอนสเตอร์ 4 ใบขึ้นไปบนสนามของคุณเท่านั้น"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "[Cn/Turn] นำการ์ด 1 ใบเข้าสู่เกจ, ฟื้นฟูพลังชีวิต 1 หน่วย, และจั่วการ์ด 2 ใบ"
+        }
+      ]
+    }
+  },
+  "image": null
+}

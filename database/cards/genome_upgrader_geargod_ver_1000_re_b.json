@@ -1,0 +1,123 @@
+{
+  "card_id": "GENOME_UPGRADER_GEARGOD_VER_1000_RE_B",
+  "name": "Genome Upgrader, Geargod ver.1000 \"Re:B\"",
+  "type": "MONSTER",
+  "size": 90,
+  "power": 70000,
+  "critical": 3,
+  "defense": 7000,
+  "world": null,
+  "attributes": [
+    "CHAOS"
+  ],
+  "cost": {
+    "gauge": 2,
+    "life": 0,
+    "soulcharge": 1
+  },
+  "effects": [
+    {
+      "effect_id": "GENOME_CREATION_ACT",
+      "effect_type": "ACTIVATED",
+      "name": "Genome Creation",
+      "is_counter": true,
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "effects": [
+        {
+          "effect_id": "GENOME_CREATION_CALL",
+          "effect_type": "CALL",
+          "source": "DROP",
+          "destination": "FIELD",
+          "pay_cost": false,
+          "target": {
+            "target_type": "CARD",
+            "card_type": "MONSTER",
+            "attributes_all": [
+              "CHAOS"
+            ],
+            "count": 1
+          }
+        }
+      ]
+    },
+    {
+      "effect_id": "GEARGOD_OVERDRIVE",
+      "effect_type": "KEYWORD_ABILITY",
+      "keyword": "OverDrive",
+      "cost": {
+        "life": 1
+      },
+      "condition": {
+        "type": "PHASE_IS",
+        "phase": "MAIN_PHASE"
+      },
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "FD10/004",
+        "ability_reference": "FD10/004: [OverDrive] [Pay 1 life during your main phase] Equip up to one 《Chaos》 item from your deck without paying its [Equip Cost], call up to two 《Chaos》 monsters from your deck without paying their [Call Cost], and shuffle your deck. This ability ignores the effects of \"Loyalty\".",
+        "missing_capability": "KEYWORD_OVERDRIVE",
+        "what_is_known": "OverDrive ability activates during main phase for 1 life, searches and equips a Chaos item free, calls 2 Chaos monsters from deck free, and explicitly ignores 'Loyalty'.",
+        "information_needed": [
+          "Approved engine specification for [OverDrive] and [CHAOS Territory]."
+        ]
+      }
+    },
+    {
+      "effect_id": "GEARGOD_KEYWORDS",
+      "effect_type": "KEYWORD",
+      "keywords": [
+        "CHAOS Territory",
+        "Double Attack",
+        "Soulguard"
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Call Cost] [Pay 2 gauge & Soulcharge a card]\n[Counter] 【Act】 [An/Turn] \"Genome Creation\" Call up to one 《Chaos》 monster from your drop zone without paying its [Call Cost].\n[OverDrive] [Pay 1 life during your main phase] Equip up to one 《Chaos》 item from your deck without paying its [Equip Cost], call up to two 《Chaos》 monsters from your deck without paying their [Call Cost], and shuffle your deck. This ability ignores the effects of \"Loyalty\".\n[CHAOS Territory] [Double Attack] [Soulguard]",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Call Cost] [Pay 2 gauge & Soulcharge a card]"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] 【Act】 [An/Turn] \"Genome Creation\" Call up to one 《Chaos》 monster from your drop zone without paying its [Call Cost]."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "[OverDrive] [Pay 1 life during your main phase] Equip up to one 《Chaos》 item from your deck without paying its [Equip Cost], call up to two 《Chaos》 monsters from your deck without paying their [Call Cost], and shuffle your deck. This ability ignores the effects of \"Loyalty\"."
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[CHAOS Territory] [Double Attack] [Soulguard]"
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Call Cost] [จ่าย 2 เกจ & นำการ์ด 1 ใบเข้าสู่โซล]\n[Counter] 【Act】 [An/Turn] \"การสร้างจีโนม\" คอลมอนสเตอร์ 《เคออส》 ได้สูงสุด 1 ใบจากช่องดรอปของคุณโดยไม่ต้องจ่าย [Call Cost]\n[OverDrive] [จ่าย 1 พลังชีวิต ในช่วงเมนเฟสของคุณ] สวมใส่ไอเท็ม 《เคออส》 ได้สูงสุด 1 ใบจากในกองการ์ดของคุณโดยไม่ต้องจ่าย [Equip Cost], คอลมอนสเตอร์ 《เคออส》 ได้สูงสุด 2 ใบจากในกองการ์ดของคุณโดยไม่ต้องจ่าย [Call Cost], และสับกองการ์ดของคุณ ความสามารถนี้เพิกเฉยต่อผลของ \"ความภักดี\"\n[CHAOS Territory] [Double Attack] [Soulguard]",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Call Cost] [จ่าย 2 เกจ & นำการ์ด 1 ใบเข้าสู่โซล]"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] 【Act】 [An/Turn] \"การสร้างจีโนม\" คอลมอนสเตอร์ 《เคออส》 ได้สูงสุด 1 ใบจากช่องดรอปของคุณโดยไม่ต้องจ่าย [Call Cost]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "[OverDrive] [จ่าย 1 พลังชีวิต ในช่วงเมนเฟสของคุณ] สวมใส่ไอเท็ม 《เคออส》 ได้สูงสุด 1 ใบจากในกองการ์ดของคุณโดยไม่ต้องจ่าย [Equip Cost], คอลมอนสเตอร์ 《เคออส》 ได้สูงสุด 2 ใบจากในกองการ์ดของคุณโดยไม่ต้องจ่าย [Call Cost], และสับกองการ์ดของคุณ ความสามารถนี้เพิกเฉยต่อผลของ \"ความภักดี\""
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[CHAOS Territory] [Double Attack] [Soulguard]"
+        }
+      ]
+    }
+  },
+  "image": null
+}

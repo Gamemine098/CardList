@@ -1,0 +1,133 @@
+{
+  "card_id": "OPERATIVE_MECH_CHAOS_SPHERE",
+  "name": "Operative Mech, CHAOS Sphere",
+  "type": "MONSTER",
+  "size": 3,
+  "power": 6000,
+  "critical": 2,
+  "defense": 2000,
+  "world": [
+    "DRAGON_WORLD"
+  ],
+  "attributes": [
+    "AUTODEITY_ARMY",
+    "DRAGON",
+    "CHAOS"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "CHAOS_SPHERE_ENTER_FIELD_EFFECT",
+      "effect_type": "TRIGGERED",
+      "trigger": {
+        "event": "ENTER_FIELD_BY_EFFECT"
+      },
+      "condition": {
+        "type": "FIELD_COUNT_GTE",
+        "target": {
+          "target_type": "CARD",
+          "zone": "FIELD",
+          "controller": "YOU",
+          "attributes_all": [
+            "AUTODEITY_ARMY"
+          ],
+          "exclude_this": true
+        },
+        "count": 1
+      },
+      "effects": [
+        {
+          "effect_id": "CHAOS_SPHERE_GRANT_DOUBLE_ATTACK",
+          "effect_type": "GRANT_KEYWORD",
+          "target": "THIS_CARD",
+          "duration": "THIS_TURN",
+          "keywords": [
+            "Double Attack"
+          ]
+        }
+      ]
+    },
+    {
+      "effect_id": "CHAOS_SPHERE_ATTACK_TRIGGER",
+      "effect_type": "TRIGGERED",
+      "trigger": {
+        "event": "ATTACK"
+      },
+      "condition": {
+        "type": "FIELD_COUNT_GTE",
+        "target": {
+          "target_type": "CARD",
+          "card_type": "MONSTER",
+          "zone": "FIELD",
+          "controller": "YOU",
+          "attributes_all": [
+            "CHAOS"
+          ]
+        },
+        "count": 2
+      },
+      "effects": [
+        {
+          "effect_id": "CHAOS_SPHERE_CHARGE",
+          "effect_type": "CHARGE_GAUGE",
+          "amount": 1
+        },
+        {
+          "effect_id": "CHAOS_SPHERE_HEAL",
+          "effect_type": "GAIN_LIFE",
+          "amount": 2
+        },
+        {
+          "effect_id": "CHAOS_SPHERE_DRAW_CONDITIONAL",
+          "effect_type": "DRAW",
+          "condition": {
+            "type": "FIELD_COUNT_GTE",
+            "target": {
+              "target_type": "CARD",
+              "card_type": "MONSTER",
+              "zone": "FIELD",
+              "controller": "YOU",
+              "attributes_all": [
+                "CHAOS"
+              ]
+            },
+            "count": 3
+          },
+          "amount": 1
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "When this card enters the field by card effects, if another 《Autodeity Army》 is on your field, for this turn, this card gets [Double Attack].\nWhen this card attacks, if two or more 《Chaos》 monsters are on your field, charge a gauge, and heal 2 life. Then, if three or more, draw a card.",
+      "segments": [
+        {
+          "tag": "TRIGGER",
+          "text": "When this card enters the field by card effects, if another 《Autodeity Army》 is on your field, for this turn, this card gets [Double Attack]."
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "When this card attacks, if two or more 《Chaos》 monsters are on your field, charge a gauge, and heal 2 life. Then, if three or more, draw a card."
+        }
+      ]
+    },
+    "th": {
+      "plain": "เมื่อการ์ดนี้ลงสู่สนามโดยความสามารถของการ์ด, หากมี 《กองทัพเทพจักรกล》 ใบอื่นอยู่บนสนามของคุณ, ในเทิร์นนี้ การ์ดนี้จะได้รับ [Double Attack]\nเมื่อการ์ดนี้โจมตี, หากมีมอนสเตอร์ 《เคออส》 2 ใบขึ้นไปบนสนามของคุณ, นำการ์ด 1 ใบเข้าสู่เกจ, และฟื้นฟูพลังชีวิต 2 หน่วย จากนั้น หากมี 3 ใบขึ้นไป จั่วการ์ด 1 ใบ",
+      "segments": [
+        {
+          "tag": "TRIGGER",
+          "text": "เมื่อการ์ดนี้ลงสู่สนามโดยความสามารถของการ์ด, หากมี 《กองทัพเทพจักรกล》 ใบอื่นอยู่บนสนามของคุณ, ในเทิร์นนี้ การ์ดนี้จะได้รับ [Double Attack]"
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "เมื่อการ์ดนี้โจมตี, หากมีมอนสเตอร์ 《เคออส》 2 ใบขึ้นไปบนสนามของคุณ, นำการ์ด 1 ใบเข้าสู่เกจ, และฟื้นฟูพลังชีวิต 2 หน่วย จากนั้น หากมี 3 ใบขึ้นไป จั่วการ์ด 1 ใบ"
+        }
+      ]
+    }
+  },
+  "image": null
+}

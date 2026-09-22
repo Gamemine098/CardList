@@ -1,0 +1,91 @@
+{
+  "card_id": "REPLENISH_MECH_CHAOS_PENTAR",
+  "name": "Replenish Mech, CHAOS Pentar",
+  "type": "MONSTER",
+  "size": 3,
+  "power": 5000,
+  "critical": 2,
+  "defense": 3000,
+  "world": [
+    "DRAGON_WORLD"
+  ],
+  "attributes": [
+    "AUTODEITY_ARMY",
+    "DRAGON",
+    "CHAOS"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "CHAOS_PENTAR_ENTER_FIELD",
+      "effect_type": "TRIGGERED",
+      "name": "Replenish Mech's Mission",
+      "trigger": {
+        "event": "ENTER_FIELD"
+      },
+      "condition": {
+        "type": "AND",
+        "conditions": [
+          {
+            "type": "COUNT_PER_TURN",
+            "count": 1
+          },
+          {
+            "type": "FIELD_COUNT_GTE",
+            "target": {
+              "target_type": "CARD",
+              "zone": "FIELD",
+              "controller": "YOU",
+              "attributes_all": [
+                "AUTODEITY_ARMY"
+              ],
+              "exclude_this": true
+            },
+            "count": 1
+          }
+        ]
+      },
+      "effects": [
+        {
+          "effect_id": "CHAOS_PENTAR_CHARGE",
+          "effect_type": "CHARGE_GAUGE",
+          "amount": 1
+        },
+        {
+          "effect_id": "CHAOS_PENTAR_HEAL",
+          "effect_type": "GAIN_LIFE",
+          "amount": 1
+        },
+        {
+          "effect_id": "CHAOS_PENTAR_DRAW",
+          "effect_type": "DRAW",
+          "amount": 1
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[An/Turn] \"Replenish Mech's Mission\" When this card enters the field, if another 《Autodeity Army》 is on your field, charge a gauge, heal 1 life, and draw a card.",
+      "segments": [
+        {
+          "tag": "TRIGGER",
+          "text": "[An/Turn] \"Replenish Mech's Mission\" When this card enters the field, if another 《Autodeity Army》 is on your field, charge a gauge, heal 1 life, and draw a card."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[An/Turn] \"ภารกิจของจักรกลฟื้นพลัง\" เมื่อการ์ดนี้ลงสู่สนาม, หากมี 《กองทัพเทพจักรกล》 ใบอื่นอยู่บนสนามของคุณ, นำการ์ด 1 ใบเข้าสู่เกจ, ฟื้นฟูพลังชีวิต 1 หน่วย, และจั่วการ์ด 1 ใบ",
+      "segments": [
+        {
+          "tag": "TRIGGER",
+          "text": "[An/Turn] \"ภารกิจของจักรกลฟื้นพลัง\" เมื่อการ์ดนี้ลงสู่สนาม, หากมี 《กองทัพเทพจักรกล》 ใบอื่นอยู่บนสนามของคุณ, นำการ์ด 1 ใบเข้าสู่เกจ, ฟื้นฟูพลังชีวิต 1 หน่วย, และจั่วการ์ด 1 ใบ"
+        }
+      ]
+    }
+  },
+  "image": null
+}

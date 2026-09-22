@@ -1,0 +1,77 @@
+{
+  "card_id": "THE_CHAOS_UPGRADE",
+  "name": "The Chaos Upgrade",
+  "type": "SPELL",
+  "world": null,
+  "attributes": [
+    "CHAOS"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "THE_CHAOS_UPGRADE_MAIN",
+      "effect_type": "MULTI_EFFECT",
+      "condition": {
+        "type": "AND",
+        "conditions": [
+          {
+            "type": "INITIAL_FLAG_IS",
+            "flag": "the Chaos"
+          },
+          {
+            "type": "COUNT_PER_TURN",
+            "count": 1
+          },
+          {
+            "type": "ZONE_COUNT_GTE",
+            "zone": "DROP",
+            "controller": "YOU",
+            "count": 10
+          }
+        ]
+      },
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "FD10/016",
+        "ability_reference": "FD10/016: put up to one face down card from under your flag on top of your flag, put up to one card with \"Geargod\" in its card name from your deck into your hand, and shuffle your deck.",
+        "missing_capability": "FLAG_OVERLAY",
+        "what_is_known": "Manipulates cards under the flag zone: takes a face-down card from under the flag and places it on top of the flag (overlaying/evolving the active flag).",
+        "information_needed": [
+          "Approved schema for FLAG zone card movement (e.g. MOVE_CARD from UNDER_FLAG to ON_TOP_OF_FLAG)."
+        ]
+      }
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "You may only cast this card if your initial flag is \"the Chaos\".\n[Cn/Turn] If you have ten or more cards in your drop zone, put up to one face down card from under your flag on top of your flag, put up to one card with \"Geargod\" in its card name from your deck into your hand, and shuffle your deck.",
+      "segments": [
+        {
+          "tag": "RULE",
+          "text": "You may only cast this card if your initial flag is \"the Chaos\"."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "[Cn/Turn] If you have ten or more cards in your drop zone, put up to one face down card from under your flag on top of your flag, put up to one card with \"Geargod\" in its card name from your deck into your hand, and shuffle your deck."
+        }
+      ]
+    },
+    "th": {
+      "plain": "คุณสามารถร่ายการ์ดนี้ได้เมื่อแฟลกเริ่มต้นของคุณคือ \"เดอะ เคออส\" เท่านั้น\n[Cn/Turn] หากคุณมีการ์ดในช่องดรอป 10 ใบขึ้นไป, นำการ์ดคว่ำหน้าได้สูงสุด 1 ใบจากใต้แฟลกของคุณวางทับบนแฟลกของคุณ, นำการ์ดที่มี \"เกียร์ก็อด\" ในชื่อการ์ดได้สูงสุด 1 ใบจากในกองการ์ดของคุณขึ้นมือ, และสับกองการ์ดของคุณ",
+      "segments": [
+        {
+          "tag": "RULE",
+          "text": "คุณสามารถร่ายการ์ดนี้ได้เมื่อแฟลกเริ่มต้นของคุณคือ \"เดอะ เคออส\" เท่านั้น"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "[Cn/Turn] หากคุณมีการ์ดในช่องดรอป 10 ใบขึ้นไป, นำการ์ดคว่ำหน้าได้สูงสุด 1 ใบจากใต้แฟลกของคุณวางทับบนแฟลกของคุณ, นำการ์ดที่มี \"เกียร์ก็อด\" ในชื่อการ์ดได้สูงสุด 1 ใบจากในกองการ์ดของคุณขึ้นมือ, และสับกองการ์ดของคุณ"
+        }
+      ]
+    }
+  },
+  "image": null
+}

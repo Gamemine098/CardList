@@ -1,0 +1,262 @@
+{
+  "card_id": "ANGELIC_RADIANCE_RE_S",
+  "name": {
+    "en": "Angelic Radiance \"Re:S\"",
+    "th": "ประกายแสงแห่งทูตสวรรค์ \"Re:S\""
+  },
+  "image": null,
+  "type": "SPELL",
+  "worlds": [
+    "LEGEND_WORLD"
+  ],
+  "attributes": [
+    "EMPYREAL_CORPS",
+    "GUARDIANS",
+    "GET"
+  ],
+  "call_cost": [],
+  "cast_cost": [
+    {
+      "type": "DAMAGE",
+      "target": "SELF",
+      "amount": 1
+    }
+  ],
+  "use_restrictions": [
+    {
+      "type": "CARD_USE_LIMIT",
+      "action": "CAST",
+      "count": 1,
+      "period": "TURN",
+      "source": {
+        "kind": "CARD",
+        "card_id": "ANGELIC_RADIANCE_RE_S"
+      }
+    }
+  ],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "ANGELIC_RADIANCE_RE_S-A01",
+      "kind": "ACT",
+      "keywords": [
+        "COUNTER"
+      ],
+      "skill_restrictions": [],
+      "trigger": {
+        "type": "COUNTER_TIMING"
+      },
+      "cost": [],
+      "effects": [
+        {
+          "type": "CHOICE",
+          "choose": 1,
+          "options": [
+            {
+              "id": "SEARCH_ITEM_AND_EQUIP",
+              "effects": [
+                {
+                  "type": "MOVE_CARD",
+                  "from": "DECK",
+                  "to": "HAND",
+                  "target": {
+                    "type": "SELECT",
+                    "card_type": "ITEM",
+                    "maximum": 1
+                  }
+                },
+                {
+                  "type": "SHUFFLE_DECK"
+                },
+                {
+                  "type": "IF",
+                  "condition": {
+                    "type": "TARGET_SELECTED_MATCH",
+                    "filter": {
+                      "type": "ATTRIBUTE",
+                      "value": "EMPYREAL_CORPS"
+                    }
+                  },
+                  "then": [
+                    {
+                      "type": "EQUIP",
+                      "from": "HAND",
+                      "target": {
+                        "type": "SELECT",
+                        "card_type": "ITEM",
+                        "maximum": 1
+                      },
+                      "pay_equip_cost": true,
+                      "optional": true
+                    }
+                  ],
+                  "else": []
+                }
+              ]
+            },
+            {
+              "id": "SALVAGE_MONSTER",
+              "effects": [
+                {
+                  "type": "MOVE_CARD",
+                  "from": "DROP",
+                  "to": "HAND",
+                  "target": {
+                    "type": "SELECT",
+                    "card_type": "MONSTER",
+                    "filter": {
+                      "type": "OR",
+                      "filters": [
+                        {
+                          "type": "WORLD",
+                          "value": "LEGEND_WORLD"
+                        },
+                        {
+                          "type": "ATTRIBUTE",
+                          "value": "GUARDIANS"
+                        }
+                      ]
+                    },
+                    "maximum": 1
+                  }
+                }
+              ]
+            },
+            {
+              "id": "DAMAGE_CONDITIONAL_BUFF",
+              "effects": [
+                {
+                  "type": "IF",
+                  "condition": {
+                    "type": "DAMAGE_TAKEN_OTHER_THAN_ATTACK_THIS_TURN",
+                    "operator": "GREATER_THAN_OR_EQUAL",
+                    "value": 4
+                  },
+                  "then": [
+                    {
+                      "type": "GAIN_LIFE",
+                      "amount": 4
+                    },
+                    {
+                      "type": "DRAW",
+                      "amount": 2
+                    },
+                    {
+                      "type": "DAMAGE",
+                      "target": "OPPONENT",
+                      "amount": 2
+                    }
+                  ],
+                  "else": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Cast Cost] [You take 1 damage]\n[Counter] Choose and use one of the following three. You may only cast \"Angelic Radiance \"Re:S\"\" once per turn.\n• Put up to one item from your deck into your hand, and shuffle your deck. If you put an《Empyreal Corps》into your hand, you may equip an item from your hand by paying its [Equip Cost].\n• Put up to one <Legend World> or《Guardians》monster from your drop zone into your hand.\n• If you took 4 or more damage other than by attacks during this turn, you gain 4 life, draw two cards and deal 2 damage to your opponent!",
+          "segments": [
+            {
+              "text": "[Cast Cost]",
+              "style": "COST"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[You take 1 damage]",
+              "style": "COST"
+            },
+            {
+              "text": "\n"
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " Choose and use one of the following three. You may only cast \"Angelic Radiance \"Re:S\"\" once per turn.\n• Put up to one item from your deck into your hand, and shuffle your deck. If you put an《Empyreal Corps》into your hand, you may equip an item from your hand by paying its [Equip Cost].\n• Put up to one <Legend World> or《Guardians》monster from your drop zone into your hand.\n• If you took 4 or more damage other than by attacks during this turn, you gain 4 life, draw two cards and deal 2 damage to your opponent!"
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Cast Cost] [เราได้รับความเสียหาย 1 หน่วย]\n[Counter] เลือกใช้ 1 อย่างต่อไปนี้. ร่าย \"ประกายแสงแห่งทูตสวรรค์ \"Re:S\"\" ได้เพียง 1 ครั้งใน 1 เทิร์น\n• นำไอเท็มไม่เกิน 1 ใบจากกองการ์ดเราขึ้นมือ, และสับกองการ์ดเรา. ถ้านำ 《กองพลสวรรค์》 ขึ้นมือ, สามารถสวมใส่ไอเท็มจากบนมือเราโดยจ่าย [Equip Cost]\n• นำมอนสเตอร์ <เลเจนด์เวิลด์> หรือ 《การ์เดียนส์》 ไม่เกิน 1 ใบจากช่องดรอบเราขึ้นมือ\n• ถ้าเราได้รับความเสียหายที่ไม่ใช่จากการโจมตีตั้งแต่ 4 หน่วยขึ้นไปในเทิร์นนี้, เราได้รับพลังชีวิต 4 หน่วย, จั่วการ์ด 2 ใบ และสร้างความเสียหาย 2 หน่วยแก่คู่แข่ง!",
+          "segments": [
+            {
+              "text": "[Cast Cost]",
+              "style": "COST"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[เราได้รับความเสียหาย 1 หน่วย]",
+              "style": "COST"
+            },
+            {
+              "text": "\n"
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " เลือกใช้ 1 อย่างต่อไปนี้. ร่าย \"ประกายแสงแห่งทูตสวรรค์ \"Re:S\"\" ได้เพียง 1 ครั้งใน 1 เทิร์น\n• นำไอเท็มไม่เกิน 1 ใบจาก"
+            },
+            {
+              "text": "กองการ์ด",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราขึ้น"
+            },
+            {
+              "text": "มือ",
+              "style": "ZONE"
+            },
+            {
+              "text": ", และสับกองการ์ดเรา. ถ้านำ 《กองพลสวรรค์》 ขึ้นมือ, สามารถสวมใส่ไอเท็มจาก"
+            },
+            {
+              "text": "บนมือ",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราโดยจ่าย "
+            },
+            {
+              "text": "[Equip Cost]",
+              "style": "COST"
+            },
+            {
+              "text": "\n• นำมอนสเตอร์ <เลเจนด์เวิลด์> หรือ 《การ์เดียนส์》 ไม่เกิน 1 ใบจาก"
+            },
+            {
+              "text": "ช่องดรอบ",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราขึ้น"
+            },
+            {
+              "text": "มือ",
+              "style": "ZONE"
+            },
+            {
+              "text": "\n• ถ้าเราได้รับความเสียหายที่ไม่ใช่จากการโจมตีตั้งแต่ 4 หน่วยขึ้นไปใน"
+            },
+            {
+              "text": "เทิร์นนี้",
+              "style": "TURN"
+            },
+            {
+              "text": ", เราได้รับพลังชีวิต 4 หน่วย, จั่วการ์ด 2 ใบ และสร้างความเสียหาย 2 หน่วยแก่คู่แข่ง!"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

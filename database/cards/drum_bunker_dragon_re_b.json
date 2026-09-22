@@ -1,0 +1,327 @@
+{
+  "card_id": "DRUM_BUNKER_DRAGON_RE_B",
+  "name": {
+    "en": "Drum Bunker Dragon \"Re:B\"",
+    "th": "ดรัมบังเกอร์・ดราก้อน “Re:B”"
+  },
+  "image": null,
+  "type": "MONSTER",
+  "worlds": [
+    "DRAGON_WORLD"
+  ],
+  "attributes": [
+    "ARMORDRAGON",
+    "RED_DRAGON"
+  ],
+  "stats": {
+    "size": 2,
+    "power": 5000,
+    "critical": 3,
+    "defense": 5000
+  },
+  "call_cost": [
+    {
+      "type": "PAY_GAUGE",
+      "amount": 1
+    },
+    {
+      "type": "PUT_TOP_DECK_TO_SOUL",
+      "amount": 1
+    }
+  ],
+  "use_restrictions": [],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "DRUM_BUNKER_DRAGON_RE_B-A01",
+      "kind": "AUTO",
+      "keywords": [],
+      "skill_restrictions": [],
+      "trigger": {
+        "type": "DAMAGE_RECEIVED",
+        "target": "SELF"
+      },
+      "activation_condition": {
+        "type": "AND",
+        "conditions": [
+          {
+            "type": "CARD_IN_ZONE",
+            "card": "THIS_CARD",
+            "zones": [
+              "SOUL"
+            ]
+          },
+          {
+            "type": "SOUL_HOST_MATCH",
+            "card": "THIS_CARD",
+            "filter": {
+              "type": "NAME_CONTAINS",
+              "value": "Drum"
+            }
+          }
+        ]
+      },
+      "optional": true,
+      "cost": [],
+      "effects": [
+        {
+          "type": "IF",
+          "condition": {
+            "type": "USER_CHOICE",
+            "prompt": "Pay 1 gauge to put chosen monster into drop zone?"
+          },
+          "then": [
+            {
+              "type": "PAY_GAUGE",
+              "amount": 1
+            },
+            {
+              "type": "MOVE_CARD",
+              "from": "FIELD",
+              "to": "DROP",
+              "target": {
+                "type": "SELECT",
+                "target_player": "OPPONENT",
+                "zone": "FIELD",
+                "card_type": "MONSTER",
+                "maximum": 1
+              }
+            }
+          ],
+          "else": []
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "When you take damage, if this card is in the soul of a monster with \"Drum\" in its card name, choose up to one monster on your opponent's field, and you may pay 1 gauge. If you do, put the chosen card into the drop zone.",
+          "segments": [
+            {
+              "text": "When you take damage, if this card is in the soul of a monster with \"Drum\" in its card name, choose up to one monster on your opponent's field, and you may pay 1 gauge. If you do, put the chosen card into the drop zone."
+            }
+          ]
+        },
+        "th": {
+          "plain": "เมื่อเราได้รับความเสียหาย, ถ้าการ์ดนี้อยู่ในโซลของมอนสเตอร์ที่มีคำว่า \"ดรัม\" ในชื่อการ์ด, เลือกมอนสเตอร์บนสนามคู่แข่งไม่เกิน 1 ใบ, และสามารถจ่าย 1 เกจ. ถ้าจ่าย, นำการ์ดที่เลือกนั้นลงช่องดรอบ",
+          "segments": [
+            {
+              "text": "เมื่อเราได้รับความเสียหาย, ถ้าการ์ดนี้อยู่ใน"
+            },
+            {
+              "text": "โซล",
+              "style": "ZONE"
+            },
+            {
+              "text": "ของมอนสเตอร์ที่มีคำว่า \"ดรัม\" ในชื่อการ์ด, เลือกมอนสเตอร์บน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "คู่แข่งไม่เกิน 1 ใบ, และสามารถจ่าย 1 เกจ. ถ้าจ่าย, นำการ์ดที่เลือกนั้นลง"
+            },
+            {
+              "text": "ช่องดรอบ",
+              "style": "ZONE"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "DRUM_BUNKER_DRAGON_RE_B-A02",
+      "kind": "ACT",
+      "keywords": [
+        "COUNTER"
+      ],
+      "skill_restrictions": [
+        {
+          "type": "NAMED_ABILITY_LIMIT",
+          "ability_name": "Drill Ram Bunker of Bonds",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "DRUM_BUNKER_DRAGON_RE_B",
+            "ability_id": "DRUM_BUNKER_DRAGON_RE_B-A02"
+          }
+        }
+      ],
+      "trigger": {
+        "type": "COUNTER_TIMING"
+      },
+      "activation_condition": {
+        "type": "TURN",
+        "turn": "YOUR_TURN"
+      },
+      "optional": false,
+      "cost": [],
+      "effects": [
+        {
+          "type": "SEQUENCE",
+          "effects": [
+            {
+              "type": "CALL",
+              "from": "DECK",
+              "to": "FIELD",
+              "targets": [
+                {
+                  "type": "SELECT",
+                  "card_type": "MONSTER",
+                  "name_contains": "Drum",
+                  "maximum": 1
+                }
+              ],
+              "placement": {
+                "type": "ON_TOP_OF",
+                "card": "THIS_CARD"
+              },
+              "pay_call_cost": false
+            },
+            {
+              "type": "SHUFFLE_DECK"
+            },
+            {
+              "type": "DAMAGE",
+              "target": "SELF",
+              "amount": 1
+            }
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Counter] 【Act】 \"Drill Ram Bunker of Bonds\" During your turn, call up to one monster with \"Drum\" in its card name from your deck on top of this card without paying its [Call Cost], and shuffle your deck. Then, you take 1 damage! You may only use \"Drill Ram Bunker of Bonds\" once per turn.",
+          "segments": [
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "【Act】",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "\"Drill Ram Bunker of Bonds\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " During your turn, call up to one monster with \"Drum\" in its card name from your deck on top of this card without paying its [Call Cost], and shuffle your deck. Then, you take 1 damage! You may only use \"Drill Ram Bunker of Bonds\" once per turn."
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Counter] 【Act】 \"สว่านเหล็กสายสัมพันธ์ ดรัมบังเกอร์\" ในเทิร์นของเรา, คอลมอนสเตอร์ที่มีคำว่า \"ดรัม\" ในชื่อการ์ดไม่เกิน 1 ใบจากกองการ์ดเราวางทับบนการ์ดนี้โดยไม่ต้องจ่าย [Call Cost], และสับกองการ์ดเรา. จากนั้น, เราได้รับความเสียหาย 1 หน่วย! ใช้ \"สว่านเหล็กสายสัมพันธ์ ดรัมบังเกอร์\" ได้เพียง 1 ครั้งใน 1 เทิร์น",
+          "segments": [
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "【Act】",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "\"สว่านเหล็กสายสัมพันธ์ ดรัมบังเกอร์\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " ใน"
+            },
+            {
+              "text": "เทิร์นของเรา",
+              "style": "TURN"
+            },
+            {
+              "text": ", คอลมอนสเตอร์ที่มีคำว่า \"ดรัม\" ในชื่อการ์ดไม่เกิน 1 ใบจาก"
+            },
+            {
+              "text": "กองการ์ด",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราวางทับบนการ์ดนี้โดยไม่ต้องจ่าย "
+            },
+            {
+              "text": "[Call Cost]",
+              "style": "COST"
+            },
+            {
+              "text": ", และสับกองการ์ดเรา. จากนั้น, เราได้รับความเสียหาย 1 หน่วย! ใช้ \"สว่านเหล็กสายสัมพันธ์ ดรัมบังเกอร์\" ได้เพียง 1 ครั้งใน 1 เทิร์น"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "DRUM_BUNKER_DRAGON_RE_B-A03",
+      "kind": "CONT",
+      "keywords": [
+        "DOUBLE_ATTACK"
+      ],
+      "skill_restrictions": [],
+      "effects": [],
+      "effect_text": {
+        "en": {
+          "plain": "[Double Attack]",
+          "segments": [
+            {
+              "text": "[Double Attack]",
+              "style": "KEYWORD"
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Double Attack]",
+          "segments": [
+            {
+              "text": "[Double Attack]",
+              "style": "KEYWORD"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "DRUM_BUNKER_DRAGON_RE_B-A04",
+      "kind": "CONT",
+      "keywords": [
+        "SOULGUARD"
+      ],
+      "skill_restrictions": [],
+      "effects": [],
+      "effect_text": {
+        "en": {
+          "plain": "[Soulguard]",
+          "segments": [
+            {
+              "text": "[Soulguard]",
+              "style": "KEYWORD"
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Soulguard]",
+          "segments": [
+            {
+              "text": "[Soulguard]",
+              "style": "KEYWORD"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

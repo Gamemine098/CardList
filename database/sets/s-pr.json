@@ -2,8 +2,20 @@
   "set_id": "S-PR",
   "cards": [
     {
+      "card_number": "S-PR/020",
+      "card_id": "BUDDY_BLOCK"
+    },
+    {
       "card_number": "S-PR/165",
       "card_id": "JAIL_LIBERATOR_BEFRIEN"
+    },
+    {
+      "card_number": "S-PR/173",
+      "card_id": "MEDIATOR_OF_PROSPERITY_AND_VANITIES_REAC_EMPRESS"
+    },
+    {
+      "card_number": "S-PR/217",
+      "card_id": "CREVICE_OF_DREAM_AND_REALITY_REAC_MOON"
     },
     {
       "card_number": "S-PR/228",

@@ -1,0 +1,318 @@
+{
+  "card_id": "LINKDRAGON_ORDERS_OATH_RE_S",
+  "name": {
+    "en": "Linkdragon Order's Oath \"Re:S\"",
+    "th": "คำสาบานของภาคีมังกรสายสัมพันธ์ \"Re:S\""
+  },
+  "image": null,
+  "type": "SPELL",
+  "worlds": [
+    "ANCIENT_WORLD"
+  ],
+  "attributes": [
+    "LINKDRAGON_ORDER",
+    "ENHANCE"
+  ],
+  "call_cost": [],
+  "cast_cost": [
+    {
+      "type": "PAY_GAUGE",
+      "amount": 1
+    },
+    {
+      "type": "MOVE_CARD",
+      "from": "DECK",
+      "to": "DROP",
+      "target": {
+        "type": "TOP_DECK",
+        "count": 3
+      }
+    }
+  ],
+  "use_restrictions": [
+    {
+      "type": "CARD_USE_LIMIT",
+      "action": "CAST",
+      "count": 1,
+      "period": "TURN",
+      "source": {
+        "kind": "CARD",
+        "card_id": "LINKDRAGON_ORDERS_OATH_RE_S"
+      }
+    }
+  ],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "LINKDRAGON_ORDERS_OATH_RE_S-A01",
+      "kind": "ACT",
+      "keywords": [],
+      "skill_restrictions": [],
+      "cost": [],
+      "effects": [
+        {
+          "type": "CHOICE",
+          "choose": 1,
+          "options": [
+            {
+              "id": "STAND_AND_FINAL_PHASE_ATTACK",
+              "effects": [
+                {
+                  "type": "STAND",
+                  "target": {
+                    "type": "ALL",
+                    "zone": "FIELD",
+                    "player": "SELF"
+                  }
+                },
+                {
+                  "type": "ATTACK_RULE",
+                  "target": {
+                    "type": "ALL",
+                    "zone": "FIELD",
+                    "player": "SELF"
+                  },
+                  "rules": [
+                    "CAN_ATTACK_DURING_FINAL_PHASE"
+                  ],
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "INJECT_SOUL_AND_DRAW",
+              "effects": [
+                {
+                  "type": "MOVE_CARD",
+                  "from": "CURRENT_CARD",
+                  "to": "SOUL",
+                  "destination_card": {
+                    "type": "SELECT",
+                    "zone": "FIELD",
+                    "card_type": "MONSTER",
+                    "player": "SELF",
+                    "count": 1
+                  }
+                },
+                {
+                  "type": "MOVE_CARD",
+                  "from": "DROP",
+                  "to": "SOUL",
+                  "destination_card": "CHOSEN_CARD",
+                  "target": {
+                    "type": "SELECT",
+                    "zone": "DROP",
+                    "maximum": 1
+                  }
+                },
+                {
+                  "type": "IF",
+                  "condition": {
+                    "type": "TARGET_MATCH",
+                    "card": "CHOSEN_CARD",
+                    "filter": {
+                      "type": "ATTRIBUTE",
+                      "value": "LINKDRAGON_ORDER"
+                    }
+                  },
+                  "then": [
+                    {
+                      "type": "DRAW",
+                      "amount": 2
+                    }
+                  ],
+                  "else": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Cast Cost] [Pay 1 gauge & Drop the top three cards of your deck]\nChoose and use one of the following two. You may only cast \"Linkdragon Order's Oath \"Re:S\"\" once per turn.\n• [Counter] [Stand] all cards on your field. Then, for this turn, all cards on your field can attack during the final phase.\n• Put this card and up to one card from your drop zone into the soul of a monster on your field. If you put into a《Linkdragon Order》's soul, draw two cards.\nIf this card is in a monster's soul, that card gets [Soulguard].",
+          "segments": [
+            {
+              "text": "[Cast Cost]",
+              "style": "COST"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Pay 1 gauge & Drop the top three cards of your deck]",
+              "style": "COST"
+            },
+            {
+              "text": "\nChoose and use one of the following two. You may only cast \"Linkdragon Order's Oath \"Re:S\"\" once per turn.\n• "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Stand]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " all cards on your field. Then, for this turn, all cards on your field can attack during the final phase.\n• Put this card and up to one card from your drop zone into the soul of a monster on your field. If you put into a《Linkdragon Order》's soul, draw two cards.\nIf this card is in a monster's soul, that card gets "
+            },
+            {
+              "text": "[Soulguard]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Cast Cost] [จ่าย 1 เกจ & นำการ์ด 3 ใบบนสุดจากกองการ์ดเราลงช่องดรอบ]\nเลือกใช้ 1 อย่างต่อไปนี้. ร่าย \"คำสาบานของภาคีมังกรสายสัมพันธ์ \"Re:S\"\" ได้เพียง 1 ครั้งใน 1 เทิร์น\n• [Counter] [Stand] การ์ดทุกใบบนสนามเรา. จากนั้น, ในเทิร์นนี้, การ์ดทุกใบบนสนามเราสามารถโจมตีในไฟนอลเฟสได้\n• นำการ์ดนี้และนำการ์ดไม่เกิน 1 ใบจากช่องดรอบเราเข้าสู่โซลของมอนสเตอร์บนสนามเรา. ถ้านำเข้าสู่โซลของ 《ภาคีมังกรสายสัมพันธ์》, จั่วการ์ด 2 ใบ\nถ้าการ์ดนี้อยู่ในโซลของมอนสเตอร์, การ์ดนั้นได้รับ [Soulguard]",
+          "segments": [
+            {
+              "text": "[Cast Cost]",
+              "style": "COST"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[จ่าย 1 เกจ & นำการ์ด 3 ใบบนสุดจากกองการ์ดเราลงช่องดรอบ]",
+              "style": "COST"
+            },
+            {
+              "text": "\nเลือกใช้ 1 อย่างต่อไปนี้. ร่าย \"คำสาบานของภาคีมังกรสายสัมพันธ์ \"Re:S\"\" ได้เพียง 1 ครั้งใน 1 เทิร์น\n• "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Stand]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " การ์ดทุกใบบน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรา. จากนั้น, ใน"
+            },
+            {
+              "text": "เทิร์นนี้",
+              "style": "TURN"
+            },
+            {
+              "text": ", การ์ดทุกใบบนสนามเราสามารถโจมตีใน"
+            },
+            {
+              "text": "ไฟนอลเฟส",
+              "style": "PHASE"
+            },
+            {
+              "text": "ได้\n• นำการ์ดนี้และนำการ์ดไม่เกิน 1 ใบจาก"
+            },
+            {
+              "text": "ช่องดรอบ",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราเข้าสู่"
+            },
+            {
+              "text": "โซล",
+              "style": "ZONE"
+            },
+            {
+              "text": "ของมอนสเตอร์บน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรา. ถ้านำเข้าสู่โซลของ 《ภาคีมังกรสายสัมพันธ์》, จั่วการ์ด 2 ใบ\nถ้าการ์ดนี้อยู่ในโซลของมอนสเตอร์, การ์ดนั้นได้รับ "
+            },
+            {
+              "text": "[Soulguard]",
+              "style": "KEYWORD"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "LINKDRAGON_ORDERS_OATH_RE_S-A02",
+      "kind": "CONT",
+      "keywords": [],
+      "skill_restrictions": [],
+      "activation_condition": {
+        "type": "CARD_IN_ZONE",
+        "card": "THIS_CARD",
+        "zones": [
+          "SOUL"
+        ]
+      },
+      "effects": [
+        {
+          "type": "GRANT_KEYWORD",
+          "target": {
+            "type": "HOST_CARD",
+            "of": "THIS_CARD"
+          },
+          "keyword": "SOULGUARD",
+          "duration": {
+            "type": "WHILE_SOURCE_ACTIVE"
+          }
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "If this card is in a monster's soul, that card gets [Soulguard].",
+          "segments": [
+            {
+              "text": "If this card is in a monster's soul, that card gets "
+            },
+            {
+              "text": "[Soulguard]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        "th": {
+          "plain": "ถ้าการ์ดนี้อยู่ในโซลของมอนสเตอร์, การ์ดนั้นได้รับ [Soulguard]",
+          "segments": [
+            {
+              "text": "ถ้าการ์ดนี้อยู่ใน"
+            },
+            {
+              "text": "โซล",
+              "style": "ZONE"
+            },
+            {
+              "text": "ของมอนสเตอร์, การ์ดนั้นได้รับ "
+            },
+            {
+              "text": "[Soulguard]",
+              "style": "KEYWORD"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

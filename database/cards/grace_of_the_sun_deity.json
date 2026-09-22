@@ -1,0 +1,85 @@
+{
+  "card_id": "GRACE_OF_THE_SUN_DEITY",
+  "name": "Grace of the Sun Deity",
+  "type": "SPELL",
+  "world": "GENERIC",
+  "attributes": [
+    "ENHANCE"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "GRACE_OF_THE_SUN_DEITY_CHOICE",
+      "effect_type": "CHOICE",
+      "choice_count": 1,
+      "choices": [
+        {
+          "description": "For this turn, you cannot take damage by your opponent's card effects.",
+          "effects": [
+            {
+              "effect_id": "GRACE_OF_THE_SUN_DEITY_NO_EFFECT_DAMAGE",
+              "effect_type": "DAMAGE_PROTECTION",
+              "target": "PLAYER",
+              "source": "OPPONENT_CARD_EFFECT",
+              "duration": "THIS_TURN",
+              "amount_prevented": "ALL"
+            }
+          ]
+        },
+        {
+          "description": "Choose a card on your field, and for this turn, the chosen card cannot be destroyed or leave the field and its souls cannot be dropped or returned to deck by your opponent's card effects.",
+          "unsupported_mechanic": {
+            "status": "UNSUPPORTED_MECHANIC",
+            "card_reference": "10th/0039",
+            "ability_reference": "10th/0039: the chosen card cannot be destroyed or leave the field and its souls cannot be dropped or returned to deck by your opponent's card effects.",
+            "missing_capability": "PROTECTION_RULE",
+            "what_is_known": "Composite protection granting destruction immunity, leave-field immunity, and soul drop/deck return immunity to a selected field card against opponent card effects.",
+            "information_needed": [
+              "Approved composite PROTECTION_RULE schema encompassing cannot_leave_field and soul protection."
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Counter] Choose and use one of the following two.\n• For this turn, you cannot take damage by your opponent's card effects.\n• Choose a card on your field, and for this turn, the chosen card cannot be destroyed or leave the field and its souls cannot be dropped or returned to deck by your opponent's card effects.",
+      "segments": [
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] Choose and use one of the following two."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "• For this turn, you cannot take damage by your opponent's card effects."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "• Choose a card on your field, and for this turn, the chosen card cannot be destroyed or leave the field and its souls cannot be dropped or returned to deck by your opponent's card effects."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Counter] เลือกใช้ 1 อย่างจากความสามารถต่อไปนี้\n• ในเทิร์นนี้ คุณจะไม่ได้รับความเสียหายจากความสามารถการ์ดของคู่แข่ง\n• เลือกการ์ดบนสนามของคุณ 1 ใบ และในเทิร์นนี้ การ์ดที่เลือกไม่สามารถถูกทำลายหรือออกจากสนามได้ และโซลของการ์ดนั้นไม่สามารถถูกส่งลงช่องดรอปหรือนำกลับเข้ากองการ์ดได้โดยความสามารถการ์ดของคู่แข่ง",
+      "segments": [
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] เลือกใช้ 1 อย่างจากความสามารถต่อไปนี้"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "• ในเทิร์นนี้ คุณจะไม่ได้รับความเสียหายจากความสามารถการ์ดของคู่แข่ง"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "• เลือกการ์ดบนสนามของคุณ 1 ใบ และในเทิร์นนี้ การ์ดที่เลือกไม่สามารถถูกทำลายหรือออกจากสนามได้ และโซลของการ์ดนั้นไม่สามารถถูกส่งลงช่องดรอปหรือนำกลับเข้ากองการ์ดได้โดยความสามารถการ์ดของคู่แข่ง"
+        }
+      ]
+    }
+  },
+  "image": null
+}

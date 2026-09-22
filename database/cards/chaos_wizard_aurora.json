@@ -1,0 +1,142 @@
+{
+  "card_id": "CHAOS_WIZARD_AURORA",
+  "name": "Chaos Wizard, Aurora",
+  "type": "MONSTER",
+  "size": 3,
+  "power": 8000,
+  "critical": 2,
+  "defense": 5000,
+  "world": [
+    "DARKNESS_DRAGON_WORLD",
+    "DANGER_WORLD"
+  ],
+  "attributes": [
+    "AUTODEITY_ARMY",
+    "CHAOS"
+  ],
+  "cost": {
+    "gauge": 1,
+    "life": 0,
+    "soulcharge": 1
+  },
+  "effects": [
+    {
+      "effect_id": "CHAOS_WIZARD_AURORA_CALL_LIMIT",
+      "effect_type": "RULE",
+      "rule": "CALL_1_PER_TURN"
+    },
+    {
+      "effect_id": "CHAOS_WIZARD_AURORA_DUO",
+      "effect_type": "PROTECTION",
+      "keyword": "Duo",
+      "duo_partner": "Chaos Golem, Yomar",
+      "condition": {
+        "type": "PHASE_IS",
+        "phase": "ATTACK_PHASE"
+      },
+      "target": {
+        "target_type": "CARD",
+        "zone": "FIELD",
+        "controller": "YOU",
+        "attributes_all": [
+          "AUTODEITY_ARMY"
+        ]
+      },
+      "protection": {
+        "cannot_be_destroyed": true,
+        "cannot_leave_field": true,
+        "source": "OPPONENT_CARD_EFFECT"
+      }
+    },
+    {
+      "effect_id": "CHAOS_WIZARD_AURORA_ACT",
+      "effect_type": "ACTIVATED",
+      "name": "Ritual of Apocalypse",
+      "is_counter": true,
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "cost": {
+        "gauge": 1,
+        "destroy_monster": {
+          "target_type": "CARD",
+          "card_type": "MONSTER",
+          "zone": "FIELD",
+          "exclude_this": true
+        }
+      },
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "FD10/001",
+        "ability_reference": "FD10/001: If you destroyed a monster on your field, you may ignore the effects of \"Loyalty\" for this ability's call, and if you destroyed an opponent's monster, draw a card.",
+        "missing_capability": "RULE_OVERRIDE",
+        "what_is_known": "Branching resolution based on controller of destroyed monster. Calling from deck or drop ignores opponent's continuous restriction card 'Loyalty' specifically for this call.",
+        "information_needed": [
+          "Approved schema for bypassing named restriction cards (e.g. ignore_restriction: 'Loyalty')."
+        ]
+      }
+    },
+    {
+      "effect_id": "CHAOS_WIZARD_AURORA_KEYWORDS",
+      "effect_type": "KEYWORD",
+      "keywords": [
+        "Double Attack",
+        "Soulguard"
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Call/1Turn]\n[Call Cost] [Pay 1 gauge & Soulcharge a card]\n[Duo] \"Chaos Golem, Yomar\" During your attack phase, all 《Autodeity Army》 on your field cannot be destroyed, nor leave the field, by your opponent's card effects.\n[Counter] 【Act】 [An/Turn] \"Ritual of Apocalypse\" Pay 1 gauge and destroy another monster on the field. If you do, call up to one size 3 or greater monster that is not an impact monster from your deck or drop by paying its [Call Cost]. If you searched your deck, shuffle it. If you destroyed a monster on your field, you may ignore the effects of \"Loyalty\" for this ability's call, and if you destroyed an opponent's monster, draw a card.\n[Double Attack] [Soulguard]",
+      "segments": [
+        {
+          "tag": "RULE",
+          "text": "[Call/1Turn]"
+        },
+        {
+          "tag": "COST",
+          "text": "[Call Cost] [Pay 1 gauge & Soulcharge a card]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "[Duo] \"Chaos Golem, Yomar\" During your attack phase, all 《Autodeity Army》 on your field cannot be destroyed, nor leave the field, by your opponent's card effects."
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] 【Act】 [An/Turn] \"Ritual of Apocalypse\" Pay 1 gauge and destroy another monster on the field. If you do, call up to one size 3 or greater monster that is not an impact monster from your deck or drop by paying its [Call Cost]. If you searched your deck, shuffle it. If you destroyed a monster on your field, you may ignore the effects of \"Loyalty\" for this ability's call, and if you destroyed an opponent's monster, draw a card."
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Double Attack] [Soulguard]"
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Call/1Turn]\n[Call Cost] [จ่าย 1 เกจ & นำการ์ด 1 ใบเข้าสู่โซล]\n[Duo] \"เคออสโกเลม・โยมาร์\" ในช่วงแอทแทคเฟสของคุณ, 《กองทัพเทพจักรกล》 ทั้งหมดบนสนามของคุณไม่สามารถถูกทำลาย หรือออกจากสนามได้โดยความสามารถการ์ดของคู่แข่ง\n[Counter] 【Act】 [An/Turn] \"พิธีกรรมแห่งวันสิ้นโลก\" จ่าย 1 เกจ และทำลายมอนสเตอร์ใบอื่นบนสนาม หากทำ คอลมอนสเตอร์ไซส์ 3 ขึ้นไปที่ไม่ใช่อิมแพ็คมอนสเตอร์ได้สูงสุด 1 ใบจากในกองการ์ดหรือช่องดรอปของคุณโดยจ่าย [Call Cost] หากคุณค้นหากองการ์ด ให้สับกองการ์ด หากคุณทำลายมอนสเตอร์บนสนามของคุณ คุณสามารถเพิกเฉยต่อผลของ \"ความภักดี\" สำหรับการคอลของความสามารถนี้ได้ และหากคุณทำลายมอนสเตอร์ของคู่แข่ง จั่วการ์ด 1 ใบ\n[Double Attack] [Soulguard]",
+      "segments": [
+        {
+          "tag": "RULE",
+          "text": "[Call/1Turn]"
+        },
+        {
+          "tag": "COST",
+          "text": "[Call Cost] [จ่าย 1 เกจ & นำการ์ด 1 ใบเข้าสู่โซล]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "[Duo] \"เคออสโกเลม・โยมาร์\" ในช่วงแอทแทคเฟสของคุณ, 《กองทัพเทพจักรกล》 ทั้งหมดบนสนามของคุณไม่สามารถถูกทำลาย หรือออกจากสนามได้โดยความสามารถการ์ดของคู่แข่ง"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] 【Act】 [An/Turn] \"พิธีกรรมแห่งวันสิ้นโลก\" จ่าย 1 เกจ และทำลายมอนสเตอร์ใบอื่นบนสนาม หากทำ คอลมอนสเตอร์ไซส์ 3 ขึ้นไปที่ไม่ใช่อิมแพ็คมอนสเตอร์ได้สูงสุด 1 ใบจากในกองการ์ดหรือช่องดรอปของคุณโดยจ่าย [Call Cost] หากคุณค้นหากองการ์ด ให้สับกองการ์ด หากคุณทำลายมอนสเตอร์บนสนามของคุณ คุณสามารถเพิกเฉยต่อผลของ \"ความภักดี\" สำหรับการคอลของความสามารถนี้ได้ และหากคุณทำลายมอนสเตอร์ของคู่แข่ง จั่วการ์ด 1 ใบ"
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Double Attack] [Soulguard]"
+        }
+      ]
+    }
+  },
+  "image": null
+}

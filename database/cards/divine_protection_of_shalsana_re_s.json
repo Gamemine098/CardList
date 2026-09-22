@@ -1,0 +1,207 @@
+{
+  "card_id": "DIVINE_PROTECTION_OF_SHALSANA_RE_S",
+  "name": {
+    "en": "Divine Protection of Shalsana \"Re:S\"",
+    "th": "การปกป้องของชาลซาน่า \"Re:S\""
+  },
+  "image": null,
+  "type": "SPELL",
+  "worlds": [
+    "DUNGEON_WORLD"
+  ],
+  "attributes": [
+    "DEFENSE"
+  ],
+  "call_cost": [],
+  "use_restrictions": [],
+  "rules": [
+    {
+      "type": "CANNOT_BE_NULLIFIED"
+    }
+  ],
+  "abilities": [
+    {
+      "id": "DIVINE_PROTECTION_OF_SHALSANA_RE_S-A01",
+      "kind": "ACT",
+      "keywords": [
+        "COUNTER"
+      ],
+      "skill_restrictions": [
+        {
+          "type": "ACTIVATION_LIMIT",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "DIVINE_PROTECTION_OF_SHALSANA_RE_S",
+            "ability_id": "DIVINE_PROTECTION_OF_SHALSANA_RE_S-A01"
+          }
+        }
+      ],
+      "trigger": {
+        "type": "COUNTER_TIMING"
+      },
+      "cost": [],
+      "effects": [
+        {
+          "type": "CHOICE",
+          "choose": 1,
+          "options": [
+            {
+              "id": "PREVENT_DAMAGE",
+              "effects": [
+                {
+                  "type": "MODIFY_NEXT_DAMAGE",
+                  "source": "ATTACK",
+                  "amount": 0,
+                  "occurrences": 1,
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                },
+                {
+                  "type": "MODIFY_NEXT_DAMAGE",
+                  "source": "OPPONENT_CARD_EFFECT",
+                  "amount": 0,
+                  "occurrences": 1,
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "DRAW_AND_BUFF",
+              "effects": [
+                {
+                  "type": "DRAW",
+                  "amount": 1
+                },
+                {
+                  "type": "PROTECTION",
+                  "target": {
+                    "type": "ALL",
+                    "zone": "FIELD",
+                    "player": "SELF"
+                  },
+                  "action": "DESTROY",
+                  "source": "OPPONENT_CARD_EFFECT",
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                },
+                {
+                  "type": "MODIFY_STAT",
+                  "target": {
+                    "type": "ALL",
+                    "zone": "FIELD",
+                    "player": "SELF"
+                  },
+                  "stat": "POWER",
+                  "amount": 10000,
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                },
+                {
+                  "type": "MODIFY_STAT",
+                  "target": {
+                    "type": "ALL",
+                    "zone": "FIELD",
+                    "player": "SELF"
+                  },
+                  "stat": "CRITICAL",
+                  "amount": 1,
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "This card cannot be nullified.\n[Cn/Turn] [Counter] Choose and use one of the following two.\n• For this turn, the next damage you take by an attack becomes 0, and the next damage you take by your opponent's card effects becomes 0.\n• Draw a card, and for this turn, all cards on your field cannot be destroyed by your opponent's card effects, and they get power+10000, and critical+1!",
+          "segments": [
+            {
+              "text": "This card cannot be nullified.\n"
+            },
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " Choose and use one of the following two.\n• For this turn, the next damage you take by an attack becomes 0, and the next damage you take by your opponent's card effects becomes 0.\n• Draw a card, and for this turn, all cards on your field cannot be destroyed by your opponent's card effects, and they get power+10000, and critical+1!"
+            }
+          ]
+        },
+        "th": {
+          "plain": "การ์ดใบนี้ไม่สามารถถูกยกเลิกได้\n[Cn/Turn] [Counter] เลือกใช้ 1 อย่างต่อไปนี้\n• ในเทิร์นนี้, ความเสียหายครั้งถัดไปที่เราจะได้รับจากการโจมตีกลายเป็น 0, และความเสียหายครั้งถัดไปที่เราจะได้รับจากความสามารถการ์ดคู่แข่งกลายเป็น 0\n• จั่วการ์ด 1 ใบ, และในเทิร์นนี้, การ์ดทุกใบบนสนามเราไม่สามารถถูกทำลายโดยความสามารถการ์ดคู่แข่ง, และได้รับพาวเวอร์ +10000, และคริติคอล +1!",
+          "segments": [
+            {
+              "text": "การ์ดใบนี้ไม่สามารถถูกยกเลิกได้\n"
+            },
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " เลือกใช้ 1 อย่างต่อไปนี้\n• ใน"
+            },
+            {
+              "text": "เทิร์นนี้",
+              "style": "TURN"
+            },
+            {
+              "text": ", ความเสียหายครั้งถัดไปที่เราจะได้รับจากการโจมตีกลายเป็น 0, และความเสียหายครั้งถัดไปที่เราจะได้รับจากความสามารถการ์ดคู่แข่งกลายเป็น 0\n• จั่วการ์ด 1 ใบ, และใน"
+            },
+            {
+              "text": "เทิร์นนี้",
+              "style": "TURN"
+            },
+            {
+              "text": ", การ์ดทุกใบบน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราไม่สามารถถูกทำลายโดยความสามารถการ์ดคู่แข่ง, และได้รับ"
+            },
+            {
+              "text": "พาวเวอร์ +10000",
+              "style": "STAT_MODIFIER"
+            },
+            {
+              "text": ", และ"
+            },
+            {
+              "text": "คริติคอล +1",
+              "style": "STAT_MODIFIER"
+            },
+            {
+              "text": "!"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

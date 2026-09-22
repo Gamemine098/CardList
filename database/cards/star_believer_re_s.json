@@ -1,0 +1,82 @@
+{
+  "card_id": "STAR_BELIEVER_RE_S",
+  "name": "Star Believer \"Re:S\"",
+  "type": "SPELL",
+  "world": "STAR_DRAGON_WORLD",
+  "attributes": [
+    "STAR",
+    "DRAW"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 0,
+    "drop_soul": 1
+  },
+  "effects": [
+    {
+      "effect_id": "STAR_BELIEVER_RE_S_MAIN",
+      "effect_type": "MULTI_EFFECT",
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "effects": [
+        {
+          "effect_id": "STAR_BELIEVER_RE_S_GAIN_LIFE",
+          "effect_type": "GAIN_LIFE",
+          "amount": 2
+        },
+        {
+          "effect_id": "STAR_BELIEVER_RE_S_DRAW",
+          "effect_type": "DRAW",
+          "amount": 2
+        },
+        {
+          "effect_id": "STAR_BELIEVER_RE_S_STAT_BUFF",
+          "effect_type": "MODIFY_STAT",
+          "target": {
+            "target_type": "CARD",
+            "zone": "FIELD",
+            "controller": "YOU",
+            "attributes_any": [
+              "NEODRAGON",
+              "DRAGONARMS"
+            ]
+          },
+          "duration": "THIS_TURN",
+          "stat": "POWER",
+          "amount": 30000
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Cast Cost] [Drop a soul from a card on your field]\n[Cn/Turn] You gain 2 life, draw two cards, and for this turn, all 《Neodragon》 and 《Dragonarms》 on your field get power+30000!",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [Drop a soul from a card on your field]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "[Cn/Turn] You gain 2 life, draw two cards, and for this turn, all 《Neodragon》 and 《Dragonarms》 on your field get power+30000!"
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Cast Cost] [นำการ์ดในโซล 1 ใบของการ์ดบนสนามของคุณลงช่องดรอป]\n[Cn/Turn] คุณได้รับพลังชีวิต 2 หน่วย, จั่วการ์ด 2 ใบ, และในเทิร์นนี้, 《นีโอดราก้อน》 และ 《ดราก้อนอาร์มส์》 ทั้งหมดบนสนามของคุณได้รับพลังโจมตี+30000!",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [นำการ์ดในโซล 1 ใบของการ์ดบนสนามของคุณลงช่องดรอป]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "[Cn/Turn] คุณได้รับพลังชีวิต 2 หน่วย, จั่วการ์ด 2 ใบ, และในเทิร์นนี้, 《นีโอดราก้อน》 และ 《ดราก้อนอาร์มส์》 ทั้งหมดบนสนามของคุณได้รับพลังโจมตี+30000!"
+        }
+      ]
+    }
+  },
+  "image": null
+}

@@ -1,0 +1,91 @@
+{
+  "card_id": "CHAOS_MILLENNIUM",
+  "name": "Chaos Millennium",
+  "type": "SPELL",
+  "world": null,
+  "attributes": [
+    "CHAOS"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "CHAOS_MILLENNIUM_SALVAGE",
+      "effect_type": "SALVAGE_DROP",
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "target": {
+        "target_type": "CARD",
+        "card_type": "MONSTER",
+        "attributes_all": [
+          "CHAOS"
+        ],
+        "count": 1
+      },
+      "destination": "HAND",
+      "then": [
+        {
+          "effect_id": "CHAOS_MILLENNIUM_CHARGE",
+          "effect_type": "CHARGE_GAUGE",
+          "condition": {
+            "type": "FIELD_COUNT_GTE",
+            "target": {
+              "target_type": "CARD",
+              "card_type": "MONSTER",
+              "zone": "FIELD",
+              "controller": "YOU",
+              "attributes_all": [
+                "CHAOS"
+              ]
+            },
+            "count": 2
+          },
+          "amount": 2
+        },
+        {
+          "effect_id": "CHAOS_MILLENNIUM_HEAL",
+          "effect_type": "GAIN_LIFE",
+          "condition": {
+            "type": "FIELD_COUNT_GTE",
+            "target": {
+              "target_type": "CARD",
+              "card_type": "MONSTER",
+              "zone": "FIELD",
+              "controller": "YOU",
+              "attributes_all": [
+                "CHAOS"
+              ]
+            },
+            "count": 3
+          },
+          "amount": 2
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Cn/Turn] Put up to one 《Chaos》 monster from your drop zone into your hand. Then, if you have two or more 《Chaos》 monsters on your field, charge two gauge, and if you have three or more, heal 2 life!",
+      "segments": [
+        {
+          "tag": "EFFECT",
+          "text": "[Cn/Turn] Put up to one 《Chaos》 monster from your drop zone into your hand. Then, if you have two or more 《Chaos》 monsters on your field, charge two gauge, and if you have three or more, heal 2 life!"
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Cn/Turn] นำมอนสเตอร์ 《เคออส》 ได้สูงสุด 1 ใบจากในช่องดรอปของคุณขึ้นมือ จากนั้น หากคุณมีมอนสเตอร์ 《เคออส》 2 ใบขึ้นไปบนสนามของคุณ, นำการ์ด 2 ใบเข้าสู่เกจ, และหากมี 3 ใบขึ้นไป, ฟื้นฟูพลังชีวิต 2 หน่วย!",
+      "segments": [
+        {
+          "tag": "EFFECT",
+          "text": "[Cn/Turn] นำมอนสเตอร์ 《เคออส》 ได้สูงสุด 1 ใบจากในช่องดรอปของคุณขึ้นมือ จากนั้น หากคุณมีมอนสเตอร์ 《เคออส》 2 ใบขึ้นไปบนสนามของคุณ, นำการ์ด 2 ใบเข้าสู่เกจ, และหากมี 3 ใบขึ้นไป, ฟื้นฟูพลังชีวิต 2 หน่วย!"
+        }
+      ]
+    }
+  },
+  "image": null
+}

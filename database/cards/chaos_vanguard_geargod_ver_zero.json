@@ -1,0 +1,139 @@
+{
+  "card_id": "CHAOS_VANGUARD_GEARGOD_VER_ZERO",
+  "name": "CHAOS Vanguard, Geargod ver. ZERO",
+  "type": "MONSTER",
+  "size": 90,
+  "power": 70000,
+  "critical": 3,
+  "defense": 7000,
+  "world": null,
+  "attributes": [
+    "CHAOS"
+  ],
+  "cost": {
+    "gauge": 3,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "GEARGOD_ZERO_ATTACK_PHASE_CALL",
+      "effect_type": "TRIGGERED",
+      "trigger": {
+        "event": "PHASE_START",
+        "phase": "ATTACK_PHASE",
+        "turn_player": "EACH_PLAYER"
+      },
+      "effects": [
+        {
+          "effect_id": "GEARGOD_ZERO_CALL",
+          "effect_type": "CALL",
+          "source": [
+            "HAND",
+            "DROP"
+          ],
+          "destination": "FIELD",
+          "pay_cost": false,
+          "target": {
+            "target_type": "CARD",
+            "attributes_all": [
+              "CHAOS"
+            ],
+            "size_lte": 3,
+            "count": 1
+          }
+        }
+      ]
+    },
+    {
+      "effect_id": "CHAOS_DRAIN",
+      "effect_type": "REPLACEMENT_RULE",
+      "name": "CHAOS Drain",
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "FD10/005",
+        "ability_reference": "FD10/005: \"CHAOS Drain\" If this card would leave the field, you may destroy a size 3 or less monster on your field. If you do, this card remains on your field.",
+        "missing_capability": "REPLACEMENT_RULE",
+        "what_is_known": "Intercepts this card leaving the field, replacing it by destroying another size 3 or less monster on the field to remain on field.",
+        "information_needed": [
+          "Approved schema for WOULD_LEAVE_FIELD replacement rule with monster destruction cost."
+        ]
+      }
+    },
+    {
+      "effect_id": "OVERKILL_REBOOT",
+      "effect_type": "KEYWORD_ABILITY",
+      "keyword": "Overkill:REBØØT",
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "FD10/005",
+        "ability_reference": "FD10/005: [Overkill:REBØØT] [During an attack on your opponent's turn, drop a hand card] Nullify the attack. Then, if your opponent's cards attacked four times or more during this turn, end the turn!!",
+        "missing_capability": "KEYWORD_OVERKILL",
+        "what_is_known": "Special Overkill counter timing: drops a hand card during opponent's attack, nullifies attack, and conditionally forces turn end if attack count >= 4.",
+        "information_needed": [
+          "Approved schema for [Overkill:REBØØT] and END_TURN effect."
+        ]
+      }
+    },
+    {
+      "effect_id": "GEARGOD_ZERO_KEYWORDS",
+      "effect_type": "KEYWORD",
+      "keywords": [
+        "CHAOS Territory",
+        "Double Attack"
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Call Cost] [Pay 3 gauge]\nAt the start of each player's attack phase, call up to one size 3 or less 《Chaos》 from your hand or drop zone without paying its [Call Cost].\n\"CHAOS Drain\" If this card would leave the field, you may destroy a size 3 or less monster on your field. If you do, this card remains on your field.\n[Overkill:REBØØT] [During an attack on your opponent's turn, drop a hand card] Nullify the attack. Then, if your opponent's cards attacked four times or more during this turn, end the turn!!\n[CHAOS Territory] [Double Attack]",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Call Cost] [Pay 3 gauge]"
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "At the start of each player's attack phase, call up to one size 3 or less 《Chaos》 from your hand or drop zone without paying its [Call Cost]."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "\"CHAOS Drain\" If this card would leave the field, you may destroy a size 3 or less monster on your field. If you do, this card remains on your field."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "[Overkill:REBØØT] [During an attack on your opponent's turn, drop a hand card] Nullify the attack. Then, if your opponent's cards attacked four times or more during this turn, end the turn!!"
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[CHAOS Territory] [Double Attack]"
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Call Cost] [จ่าย 3 เกจ]\nเมื่อเริ่มต้นแอทแทคเฟสของผู้เล่นแต่ละคน, คอล 《เคออส》 ไซส์ 3 หรือต่ำกว่า ได้สูงสุด 1 ใบจากบนมือหรือช่องดรอปของคุณโดยไม่ต้องจ่าย [Call Cost]\n\"เคออสเดรน\" หากการ์ดนี้จะออกจากสนาม คุณสามารถทำลายมอนสเตอร์ไซส์ 3 หรือต่ำกว่า 1 ใบ บนสนามของคุณได้ หากทำ การ์ดนี้จะยังคงอยู่บนสนามของคุณ\n[Overkill:REBØØT] [ในระหว่างการโจมตีในเทิร์นของคู่แข่ง, ทิ้งการ์ด 1 ใบจากบนมือ] ยกเลิกการโจมตีนั้น จากนั้น หากการ์ดของคู่แข่งโจมตีแล้ว 4 ครั้งขึ้นไปในเทิร์นนี้, จบเทิร์นทันที!!\n[CHAOS Territory] [Double Attack]",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Call Cost] [จ่าย 3 เกจ]"
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "เมื่อเริ่มต้นแอทแทคเฟสของผู้เล่นแต่ละคน, คอล 《เคออส》 ไซส์ 3 หรือต่ำกว่า ได้สูงสุด 1 ใบจากบนมือหรือช่องดรอปของคุณโดยไม่ต้องจ่าย [Call Cost]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "\"เคออสเดรน\" หากการ์ดนี้จะออกจากสนาม คุณสามารถทำลายมอนสเตอร์ไซส์ 3 หรือต่ำกว่า 1 ใบ บนสนามของคุณได้ หากทำ การ์ดนี้จะยังคงอยู่บนสนามของคุณ"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "[Overkill:REBØØT] [ในระหว่างการโจมตีในเทิร์นของคู่แข่ง, ทิ้งการ์ด 1 ใบจากบนมือ] ยกเลิกการโจมตีนั้น จากนั้น หากการ์ดของคู่แข่งโจมตีแล้ว 4 ครั้งขึ้นไปในเทิร์นนี้, จบเทิร์นทันที!!"
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[CHAOS Territory] [Double Attack]"
+        }
+      ]
+    }
+  },
+  "image": null
+}

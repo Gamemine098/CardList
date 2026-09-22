@@ -1,0 +1,362 @@
+{
+  "card_id": "HYPER_ENERGY_RE_S",
+  "name": {
+    "en": "Hyper Energy \"Re:S\"",
+    "th": "ไฮเปอร์เอเนอร์จี้ \"Re:S\""
+  },
+  "image": null,
+  "type": "SPELL",
+  "worlds": [
+    "HERO_WORLD"
+  ],
+  "attributes": [
+    "SUPERHERO",
+    "BRAVE_MACHINE",
+    "CHARGE"
+  ],
+  "call_cost": [],
+  "use_restrictions": [],
+  "rules": [
+    {
+      "type": "CARD_NAME_ALIAS",
+      "alias": "Hyper Energy"
+    }
+  ],
+  "abilities": [
+    {
+      "id": "HYPER_ENERGY_RE_S-A01",
+      "kind": "ACT",
+      "keywords": [],
+      "skill_restrictions": [
+        {
+          "type": "ACTIVATION_LIMIT",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "HYPER_ENERGY_RE_S",
+            "ability_id": "HYPER_ENERGY_RE_S-A01"
+          }
+        }
+      ],
+      "cost": [],
+      "effects": [
+        {
+          "type": "SEQUENCE",
+          "effects": [
+            {
+              "type": "PUT_TOP_DECK_TO_GAUGE",
+              "amount": 4
+            },
+            {
+              "type": "TRANSFORMATION",
+              "from": [
+                "HAND",
+                "DROP"
+              ],
+              "target": {
+                "type": "SELECT",
+                "filter": {
+                  "type": "HAS_TRANSFORMATION_KEYWORD"
+                }
+              },
+              "optional": true,
+              "pay_cost": true
+            },
+            {
+              "type": "CHOICE",
+              "choose": 1,
+              "options": [
+                {
+                  "id": "TRANSFORM_DEBUFF_DEFENSE",
+                  "effects": [
+                    {
+                      "type": "IF",
+                      "condition": {
+                        "type": "PLAYER_IS_STATE",
+                        "state": "TRANSFORM"
+                      },
+                      "then": [
+                        {
+                          "type": "MODIFY_STAT",
+                          "target": {
+                            "type": "SELECT",
+                            "target_player": "OPPONENT",
+                            "zone": "FIELD",
+                            "count": 1
+                          },
+                          "stat": "DEFENSE",
+                          "value": 0,
+                          "duration": {
+                            "type": "UNTIL_END_OF_TURN"
+                          }
+                        }
+                      ],
+                      "else": []
+                    }
+                  ]
+                },
+                {
+                  "id": "RIDE_DRAW_AND_HEAL",
+                  "effects": [
+                    {
+                      "type": "IF",
+                      "condition": {
+                        "type": "PLAYER_IS_STATE",
+                        "state": "RIDE"
+                      },
+                      "then": [
+                        {
+                          "type": "DRAW",
+                          "amount": 1
+                        },
+                        {
+                          "type": "GAIN_LIFE",
+                          "amount": 2
+                        }
+                      ],
+                      "else": []
+                    }
+                  ]
+                },
+                {
+                  "id": "STATION_CALL_CREW_TROOPER",
+                  "effects": [
+                    {
+                      "type": "IF",
+                      "condition": {
+                        "type": "PLAYER_IS_STATE",
+                        "state": "STATION"
+                      },
+                      "then": [
+                        {
+                          "type": "GRANT_CALL_PERMISSION",
+                          "from": "SOUL_OF_ITEMS",
+                          "target": {
+                            "type": "ATTRIBUTE",
+                            "value": "CREW_TROOPER"
+                          },
+                          "timing": "ATTACK_PHASE",
+                          "pay_call_cost": true,
+                          "duration": {
+                            "type": "UNTIL_END_OF_NEXT_TURN",
+                            "anchor_player": "SELF"
+                          }
+                        }
+                      ],
+                      "else": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "This card is treated as \"Hyper Energy\".\n[Cn/Turn] Put four cards from the top of your deck into your gauge, choose up to one card in your hand or drop zone, and you may [Transform], [Impact Transform], [Ride], or [Station] into the chosen card by paying its cost. Then, choose and use one of the following three.\n• If you are [Transform] into a card, for this turn, change the defense of a card on your opponent's field to 0.\n• If you are [Ride] into a card, draw a card, and you gain 2 life!\n• If you are [Station] into a card, during the attack phase of this turn and the next turn, you may call a《Crew Trooper》from the soul of your items by paying its [Call Cost].",
+          "segments": [
+            {
+              "text": "This card is treated as \"Hyper Energy\".\n"
+            },
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " Put four cards from the top of your deck into your gauge, choose up to one card in your hand or drop zone, and you may "
+            },
+            {
+              "text": "[Transform]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "[Impact Transform]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "[Ride]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": ", or "
+            },
+            {
+              "text": "[Station]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " into the chosen card by paying its cost. Then, choose and use one of the following three.\n• If you are "
+            },
+            {
+              "text": "[Transform]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " into a card, for this turn, change the defense of a card on your opponent's field to 0.\n• If you are "
+            },
+            {
+              "text": "[Ride]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " into a card, draw a card, and you gain 2 life!\n• If you are "
+            },
+            {
+              "text": "[Station]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " into a card, during the attack phase of this turn and the next turn, you may call a《Crew Trooper》from the soul of your items by paying its [Call Cost]."
+            }
+          ]
+        },
+        "th": {
+          "plain": "การ์ดใบนี้ถือว่าเป็น \"ไฮเปอร์เอเนอร์จี้\"\n[Cn/Turn] นำการ์ด 4 ใบบนสุดจากกองการ์ดเราเข้าสู่เกจ, เลือกการ์ดไม่เกิน 1 ใบจากบนมือหรือช่องดรอบเรา, และสามารถ [Transform], [Impact Transform], [Ride], หรือ [Station] เป็นการ์ดที่เลือกนั้นโดยจ่ายคอสต์. จากนั้น, เลือกใช้ 1 อย่างต่อไปนี้\n• ถ้าเรา [Transform] อยู่, ในเทิร์นนี้, เปลี่ยนดีเฟนส์ของการ์ดบนสนามคู่แข่ง 1 ใบเป็น 0\n• ถ้าเรา [Ride] อยู่, จั่วการ์ด 1 ใบ, และเราได้รับพลังชีวิต 2 หน่วย!\n• ถ้าเรา [Station] อยู่, ในระหว่างแอทแทคเฟสของเทิร์นนี้และเทิร์นหน้า, เราสามารถคอล 《ลูกเรือยาน》 จากในโซลของไอเท็มเราโดยจ่าย [Call Cost]",
+          "segments": [
+            {
+              "text": "การ์ดใบนี้ถือว่าเป็น \"ไฮเปอร์เอเนอร์จี้\"\n"
+            },
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " นำการ์ด 4 ใบบนสุดจาก"
+            },
+            {
+              "text": "กองการ์ด",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราเข้าสู่"
+            },
+            {
+              "text": "เกจ",
+              "style": "ZONE"
+            },
+            {
+              "text": ", เลือกการ์ดไม่เกิน 1 ใบจาก"
+            },
+            {
+              "text": "บนมือ",
+              "style": "ZONE"
+            },
+            {
+              "text": "หรือ"
+            },
+            {
+              "text": "ช่องดรอบ",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรา, และสามารถ "
+            },
+            {
+              "text": "[Transform]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "[Impact Transform]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "[Ride]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": ", หรือ "
+            },
+            {
+              "text": "[Station]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " เป็นการ์ดที่เลือกนั้นโดยจ่ายคอสต์. จากนั้น, เลือกใช้ 1 อย่างต่อไปนี้\n• ถ้าเรา "
+            },
+            {
+              "text": "[Transform]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " อยู่, ใน"
+            },
+            {
+              "text": "เทิร์นนี้",
+              "style": "TURN"
+            },
+            {
+              "text": ", เปลี่ยนดีเฟนส์ของการ์ดบน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "คู่แข่ง 1 ใบเป็น 0\n• ถ้าเรา "
+            },
+            {
+              "text": "[Ride]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " อยู่, จั่วการ์ด 1 ใบ, และเราได้รับพลังชีวิต 2 หน่วย!\n• ถ้าเรา "
+            },
+            {
+              "text": "[Station]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " อยู่, ในระหว่าง"
+            },
+            {
+              "text": "แอทแทคเฟส",
+              "style": "PHASE"
+            },
+            {
+              "text": "ของ"
+            },
+            {
+              "text": "เทิร์นนี้",
+              "style": "TURN"
+            },
+            {
+              "text": "และ"
+            },
+            {
+              "text": "เทิร์นหน้า",
+              "style": "TURN"
+            },
+            {
+              "text": ", เราสามารถคอล 《ลูกเรือยาน》 จากใน"
+            },
+            {
+              "text": "โซล",
+              "style": "ZONE"
+            },
+            {
+              "text": "ของไอเท็มเราโดยจ่าย "
+            },
+            {
+              "text": "[Call Cost]",
+              "style": "COST"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

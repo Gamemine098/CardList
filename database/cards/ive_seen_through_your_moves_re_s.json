@@ -1,0 +1,168 @@
+{
+  "card_id": "IVE_SEEN_THROUGH_YOUR_MOVES_RE_S",
+  "name": {
+    "en": "I've Seen Through Your Moves! \"Re:S\"",
+    "th": "ฉันมองวิชาของแกออกหมดแล้ว! \"Re:S\""
+  },
+  "image": null,
+  "type": "SPELL",
+  "worlds": [
+    "HERO_WORLD"
+  ],
+  "attributes": [
+    "DEFENSE"
+  ],
+  "call_cost": [],
+  "use_restrictions": [],
+  "rules": [
+    {
+      "type": "CANNOT_BE_NULLIFIED"
+    }
+  ],
+  "abilities": [
+    {
+      "id": "IVE_SEEN_THROUGH_YOUR_MOVES_RE_S-A01",
+      "kind": "ACT",
+      "keywords": [
+        "COUNTER"
+      ],
+      "skill_restrictions": [
+        {
+          "type": "ACTIVATION_LIMIT",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "IVE_SEEN_THROUGH_YOUR_MOVES_RE_S",
+            "ability_id": "IVE_SEEN_THROUGH_YOUR_MOVES_RE_S-A01"
+          }
+        }
+      ],
+      "trigger": {
+        "type": "COUNTER_TIMING"
+      },
+      "cost": [],
+      "effects": [
+        {
+          "type": "CHOICE",
+          "choose": 1,
+          "options": [
+            {
+              "id": "PREVENT_DAMAGE",
+              "effects": [
+                {
+                  "type": "MODIFY_NEXT_DAMAGE",
+                  "source": "ATTACK",
+                  "amount": 0,
+                  "occurrences": 1,
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                },
+                {
+                  "type": "MODIFY_NEXT_DAMAGE",
+                  "source": "OPPONENT_CARD_EFFECT",
+                  "amount": 0,
+                  "occurrences": 1,
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "NULLIFY_MONSTER_ABILITIES",
+              "effects": [
+                {
+                  "type": "PROTECTION",
+                  "target": {
+                    "type": "ABILITIES",
+                    "of": {
+                      "type": "SELECT",
+                      "target_player": "OPPONENT",
+                      "zone": "FIELD",
+                      "card_type": "MONSTER",
+                      "count": 1
+                    }
+                  },
+                  "action": "NULLIFY",
+                  "source": "CARD_EFFECT",
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "This card cannot be nullified.\n[Cn/Turn] [Counter] Choose one of the following.\n• For this turn, the next damage you take by an attack becomes 0, and the next damage you take by your opponent's card effects becomes 0.\n• For this turn, nullify all abilities of a monster on your opponent's field.",
+          "segments": [
+            {
+              "text": "This card cannot be nullified.\n"
+            },
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " Choose one of the following.\n• For this turn, the next damage you take by an attack becomes 0, and the next damage you take by your opponent's card effects becomes 0.\n• For this turn, nullify all abilities of a monster on your opponent's field."
+            }
+          ]
+        },
+        "th": {
+          "plain": "การ์ดใบนี้ไม่สามารถถูกยกเลิกได้\n[Cn/Turn] [Counter] เลือกใช้ 1 อย่างต่อไปนี้\n• ในเทิร์นนี้, ความเสียหายครั้งถัดไปที่เราจะได้รับจากการโจมตีกลายเป็น 0, และความเสียหายครั้งถัดไปที่เราจะได้รับจากความสามารถการ์ดคู่แข่งกลายเป็น 0\n• ในเทิร์นนี้, ยกเลิกความสามารถทั้งหมดของมอนสเตอร์บนสนามคู่แข่ง 1 ใบ",
+          "segments": [
+            {
+              "text": "การ์ดใบนี้ไม่สามารถถูกยกเลิกได้\n"
+            },
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " เลือกใช้ 1 อย่างต่อไปนี้\n• ใน"
+            },
+            {
+              "text": "เทิร์นนี้",
+              "style": "TURN"
+            },
+            {
+              "text": ", ความเสียหายครั้งถัดไปที่เราจะได้รับจากการโจมตีกลายเป็น 0, และความเสียหายครั้งถัดไปที่เราจะได้รับจากความสามารถการ์ดคู่แข่งกลายเป็น 0\n• ใน"
+            },
+            {
+              "text": "เทิร์นนี้",
+              "style": "TURN"
+            },
+            {
+              "text": ", ยกเลิกความสามารถทั้งหมดของมอนสเตอร์บน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "คู่แข่ง 1 ใบ"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

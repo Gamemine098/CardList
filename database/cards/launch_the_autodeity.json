@@ -1,0 +1,52 @@
+{
+  "card_id": "LAUNCH_THE_AUTODEITY",
+  "name": "Launch the Autodeity",
+  "type": "SPELL",
+  "world": null,
+  "attributes": [
+    "CHAOS"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "LAUNCH_THE_AUTODEITY_SEARCH",
+      "effect_type": "SEARCH_DECK",
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "target": {
+        "target_type": "CARD",
+        "card_type": "MONSTER",
+        "size_gte": 30,
+        "count": 1
+      },
+      "destination": "HAND",
+      "shuffle_deck": true
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Cn/Turn] Put up to one size 30 or greater monster from your deck into your hand, and shuffle your deck.",
+      "segments": [
+        {
+          "tag": "EFFECT",
+          "text": "[Cn/Turn] Put up to one size 30 or greater monster from your deck into your hand, and shuffle your deck."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Cn/Turn] นำมอนสเตอร์ไซส์ 30 ขึ้นไปได้สูงสุด 1 ใบจากในกองการ์ดของคุณขึ้นมือ, และสับกองการ์ดของคุณ",
+      "segments": [
+        {
+          "tag": "EFFECT",
+          "text": "[Cn/Turn] นำมอนสเตอร์ไซส์ 30 ขึ้นไปได้สูงสุด 1 ใบจากในกองการ์ดของคุณขึ้นมือ, และสับกองการ์ดของคุณ"
+        }
+      ]
+    }
+  },
+  "image": null
+}

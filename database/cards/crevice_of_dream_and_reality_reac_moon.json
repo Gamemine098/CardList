@@ -1,0 +1,116 @@
+{
+  "card_id": "CREVICE_OF_DREAM_AND_REALITY_REAC_MOON",
+  "name": "Crevice of Dream & Reality, ReAc: Moon",
+  "type": "MONSTER",
+  "size": 1,
+  "power": 3000,
+  "critical": 1,
+  "defense": 2000,
+  "world": "GENERIC",
+  "attributes": [
+    "TAROT"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "REAC_MOON_ACT",
+      "effect_type": "ACTIVATED",
+      "zone": "HAND",
+      "is_counter": true,
+      "cost": {
+        "drop_this_card": true
+      },
+      "choices": [
+        {
+          "description": "Put a card from your opponent's drop zone on the bottom of their deck.",
+          "effects": [
+            {
+              "effect_id": "REAC_MOON_BOTTOM_DECK",
+              "effect_type": "MOVE_CARD",
+              "source": "OPPONENT_DROP",
+              "destination": "OPPONENT_DECK_BOTTOM",
+              "target": {
+                "target_type": "CARD",
+                "count": 1
+              }
+            }
+          ]
+        },
+        {
+          "description": "During the attack phase of this turn, if you would be dealt 5 or greater damage, that damage is reduced to 0.",
+          "unsupported_mechanic": {
+            "status": "UNSUPPORTED_MECHANIC",
+            "card_reference": "10th/0038",
+            "ability_reference": "10th/0038: During the attack phase of this turn, if you would be dealt 5 or greater damage, that damage is reduced to 0.",
+            "missing_capability": "REPLACEMENT_RULE",
+            "what_is_known": "Phase-limited continuous damage replacement: intercepts damage dealt to player during attack phase with an incoming damage threshold condition (damage >= 5), setting it to 0.",
+            "information_needed": [
+              "Approved DAMAGE_RULE structure for threshold-based damage negation."
+            ]
+          }
+        },
+        {
+          "description": "During this turn, the attack, defense and critical of all cards on your field cannot be reduced by your opponent's card effects.",
+          "unsupported_mechanic": {
+            "status": "UNSUPPORTED_MECHANIC",
+            "card_reference": "10th/0038",
+            "ability_reference": "10th/0038: During this turn, the attack, defense and critical of all cards on your field cannot be reduced by your opponent's card effects.",
+            "missing_capability": "PROTECTION_RULE",
+            "what_is_known": "Continuous stat protection preventing opponent card effects from reducing power, defense, and critical of friendly field cards.",
+            "information_needed": [
+              "Approved STAT_PROTECTION rule preventing stat reduction from opponent effects."
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Counter] 【Act】 You may drop this card from your hand. If you do, choose and use one of the following three.\n• Put a card from your opponent's drop zone on the bottom of their deck.\n• During the attack phase of this turn, if you would be dealt 5 or greater damage, that damage is reduced to 0.\n• During this turn, the attack, defense and critical of all cards on your field cannot be reduced by your opponent's card effects.",
+      "segments": [
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] 【Act】 You may drop this card from your hand. If you do, choose and use one of the following three."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "• Put a card from your opponent's drop zone on the bottom of their deck."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "• During the attack phase of this turn, if you would be dealt 5 or greater damage, that damage is reduced to 0."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "• During this turn, the attack, defense and critical of all cards on your field cannot be reduced by your opponent's card effects."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Counter] 【Act】 คุณสามารถทิ้งการ์ดใบนี้จากบนมือได้ หากทำ เลือกใช้ 1 อย่างจากความสามารถต่อไปนี้\n• นำการ์ด 1 ใบจากช่องดรอปของคู่แข่งไว้ใต้กองการ์ดของคู่แข่ง\n• ในช่วงแอทแทคเฟสของเทิร์นนี้ หากคุณจะได้รับความเสียหาย 5 หน่วยขึ้นไป ความเสียหายนั้นจะกลายเป็น 0\n• ในระหว่างเทิร์นนี้ พลังโจมตี พลังป้องกัน และคริติคอลของการ์ดทั้งหมดบนสนามของคุณไม่สามารถถูกลดลงได้โดยความสามารถการ์ดของคู่แข่ง",
+      "segments": [
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] 【Act】 คุณสามารถทิ้งการ์ดใบนี้จากบนมือได้ หากทำ เลือกใช้ 1 อย่างจากความสามารถต่อไปนี้"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "• นำการ์ด 1 ใบจากช่องดรอปของคู่แข่งไว้ใต้กองการ์ดของคู่แข่ง"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "• ในช่วงแอทแทคเฟสของเทิร์นนี้ หากคุณจะได้รับความเสียหาย 5 หน่วยขึ้นไป ความเสียหายนั้นจะกลายเป็น 0"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "• ในระหว่างเทิร์นนี้ พลังโจมตี พลังป้องกัน และคริติคอลของการ์ดทั้งหมดบนสนามของคุณไม่สามารถถูกลดลงได้โดยความสามารถการ์ดของคู่แข่ง"
+        }
+      ]
+    }
+  },
+  "image": null
+}

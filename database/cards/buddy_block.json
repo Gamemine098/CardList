@@ -1,0 +1,98 @@
+{
+  "card_id": "BUDDY_BLOCK",
+  "name": "Buddy Block!",
+  "type": "SPELL",
+  "world": "GENERIC",
+  "attributes": [
+    "DEFENSE",
+    "BUDDY"
+  ],
+  "cost": {
+    "gauge": 1,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "BUDDY_BLOCK_CHOICE",
+      "effect_type": "CHOICE",
+      "choice_count": 1,
+      "choices": [
+        {
+          "description": "For this turn, the next damage you take is reduced by 3.",
+          "effects": [
+            {
+              "effect_id": "BUDDY_BLOCK_REDUCE_DAMAGE",
+              "effect_type": "DAMAGE_PROTECTION",
+              "target": "PLAYER",
+              "instances": 1,
+              "duration": "THIS_TURN",
+              "reduce_by": 3
+            }
+          ]
+        },
+        {
+          "description": "If your opponent's cards attacked four times or more during this turn, for this turn, you will not take damage from attacks.",
+          "effects": [
+            {
+              "effect_id": "BUDDY_BLOCK_NO_ATTACK_DAMAGE",
+              "effect_type": "DAMAGE_PROTECTION",
+              "condition": {
+                "type": "OPPONENT_ATTACK_COUNT_GTE",
+                "count": 4
+              },
+              "target": "PLAYER",
+              "source": "ATTACK",
+              "duration": "THIS_TURN",
+              "amount_prevented": "ALL"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Cast Cost] [Pay 1 gauge]\n[Counter] Choose and use one of the following two.\n• For this turn, the next damage you take is reduced by 3.\n• If your opponent's cards attacked four times or more during this turn, for this turn, you will not take damage from attacks.",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [Pay 1 gauge]"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] Choose and use one of the following two."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "• For this turn, the next damage you take is reduced by 3."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "• If your opponent's cards attacked four times or more during this turn, for this turn, you will not take damage from attacks."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Cast Cost] [จ่าย 1 เกจ]\n[Counter] เลือกใช้ 1 อย่างจากความสามารถต่อไปนี้\n• ในเทิร์นนี้ ความเสียหายครั้งต่อไปที่คุณจะได้รับจะลดลง 3 หน่วย\n• หากการ์ดของคู่แข่งโจมตีแล้ว 4 ครั้งขึ้นไปในเทิร์นนี้ ในเทิร์นนี้ คุณจะไม่ได้รับความเสียหายจากการโจมตี",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [จ่าย 1 เกจ]"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] เลือกใช้ 1 อย่างจากความสามารถต่อไปนี้"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "• ในเทิร์นนี้ ความเสียหายครั้งต่อไปที่คุณจะได้รับจะลดลง 3 หน่วย"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "• หากการ์ดของคู่แข่งโจมตีแล้ว 4 ครั้งขึ้นไปในเทิร์นนี้ ในเทิร์นนี้ คุณจะไม่ได้รับความเสียหายจากการโจมตี"
+        }
+      ]
+    }
+  },
+  "image": null
+}

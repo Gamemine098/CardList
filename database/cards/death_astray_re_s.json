@@ -1,0 +1,274 @@
+{
+  "card_id": "DEATH_ASTRAY_RE_S",
+  "name": {
+    "en": "Death Astray \"Re:S\"",
+    "th": "เดธแอสเทรย์ \"Re:S\""
+  },
+  "image": null,
+  "type": "SPELL",
+  "worlds": [
+    "DARKNESS_DRAGON_WORLD"
+  ],
+  "attributes": [
+    "DEATH",
+    "DEEP",
+    "DRAW"
+  ],
+  "call_cost": [],
+  "cast_condition": {
+    "type": "INITIAL_FLAG_IS",
+    "flags": [
+      "DARKNESS_DRAGON_WORLD",
+      "DRAGON_EIN",
+      "DRAGON_ZWEI"
+    ]
+  },
+  "use_restrictions": [],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "DEATH_ASTRAY_RE_S-A01",
+      "kind": "ACT",
+      "keywords": [
+        "COUNTER"
+      ],
+      "skill_restrictions": [
+        {
+          "type": "ACTIVATION_LIMIT",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "DEATH_ASTRAY_RE_S",
+            "ability_id": "DEATH_ASTRAY_RE_S-A01"
+          }
+        }
+      ],
+      "trigger": {
+        "type": "COUNTER_TIMING"
+      },
+      "cost": [],
+      "effects": [
+        {
+          "type": "DRAW",
+          "amount": 1
+        },
+        {
+          "type": "CHOICE",
+          "choose": 1,
+          "options": [
+            {
+              "id": "SEARCH_AZI_DAHAKA_GAEN",
+              "effects": [
+                {
+                  "type": "MOVE_CARD",
+                  "from": "DECK",
+                  "to": "HAND",
+                  "target": {
+                    "type": "SELECT",
+                    "filter": {
+                      "type": "OR",
+                      "filters": [
+                        {
+                          "type": "NAME_CONTAINS",
+                          "value": "Azi Dahaka"
+                        },
+                        {
+                          "type": "NAME_CONTAINS",
+                          "value": "Gaen"
+                        }
+                      ]
+                    },
+                    "maximum": 1
+                  }
+                },
+                {
+                  "type": "SHUFFLE_DECK"
+                }
+              ]
+            },
+            {
+              "id": "MILL_AND_CHARGE",
+              "effects": [
+                {
+                  "type": "MOVE_CARD",
+                  "from": "DECK",
+                  "to": "DROP",
+                  "target": {
+                    "type": "TOP_DECK",
+                    "count": 5
+                  }
+                },
+                {
+                  "type": "PUT_TOP_DECK_TO_GAUGE",
+                  "amount": 2
+                }
+              ]
+            },
+            {
+              "id": "ATTACK_CENTER_BYPASS_IF_SOLO",
+              "effects": [
+                {
+                  "type": "ATTACK_RULE",
+                  "target": {
+                    "type": "ALL",
+                    "zone": "FIELD",
+                    "player": "SELF"
+                  },
+                  "condition": {
+                    "type": "ATTACKING_ALONE"
+                  },
+                  "rules": [
+                    "CAN_ATTACK_PLAYER_EVEN_IF_CENTER_OCCUPIED"
+                  ],
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "DESTROY_BURN_TRIGGER",
+              "effects": [
+                {
+                  "type": "REGISTER_TRIGGER_MODIFIER",
+                  "trigger": {
+                    "type": "CARD_DESTROYED",
+                    "target_player": "OPPONENT",
+                    "zone": "FIELD"
+                  },
+                  "effects": [
+                    {
+                      "type": "DAMAGE",
+                      "target": "OPPONENT",
+                      "amount": 2
+                    }
+                  ],
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "You may only cast this card if your initial flag is \"Darkness Dragon World\", \"Dragon Ein\", or \"Dragon Zwei\".\n[Cn/Turn] [Counter] Draw a card, and choose and use one of the following four.\n• Put up to one card with \"Azi Dahaka\" or \"Gaen\" in its card name from your deck into your hand, and shuffle your deck.\n• Drop the top five cards of your deck, and put the top two cards of your deck into your gauge.\n• For this turn, all cards on your field can attack your opponent even if your opponent has a monster in their center if they are attacking alone!\n• For this turn, when a card on your opponent's field is destroyed, deal 2 damage to your opponent!",
+          "segments": [
+            {
+              "text": "You may only cast this card if your initial flag is \"Darkness Dragon World\", \"Dragon Ein\", or \"Dragon Zwei\".\n"
+            },
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " Draw a card, and choose and use one of the following four.\n• Put up to one card with \"Azi Dahaka\" or \"Gaen\" in its card name from your deck into your hand, and shuffle your deck.\n• Drop the top five cards of your deck, and put the top two cards of your deck into your gauge.\n• For this turn, all cards on your field can attack your opponent even if your opponent has a monster in their center if they are attacking alone!\n• For this turn, when a card on your opponent's field is destroyed, deal 2 damage to your opponent!"
+            }
+          ]
+        },
+        "th": {
+          "plain": "เราร่ายการ์ดนี้ได้เมื่อแฟลกเริ่มต้นของเราคือ \"ดาร์คเนสดราก้อนเวิลด์\", \"ดราก้อน・ไอน์\", หรือ \"ดราก้อน・ซไว\" เท่านั้น\n[Cn/Turn] [Counter] จั่วการ์ด 1 ใบ, และเลือกใช้ 1 อย่างต่อไปนี้\n• นำการ์ดที่มีคำว่า \"อาซี ดาฮาการ์\" หรือ \"กาเอ็น\" ในชื่อการ์ดไม่เกิน 1 ใบจากกองการ์ดเราขึ้นมือ, และสับกองการ์ดเรา\n• นำการ์ด 5 ใบบนสุดจากกองการ์ดเราลงช่องดรอบ, และนำการ์ด 2 ใบบนสุดจากกองการ์ดเราเข้าสู่เกจ\n• ในเทิร์นนี้, การ์ดทุกใบบนสนามเราสามารถโจมตีคู่แข่งได้แม้คู่แข่งจะมีมอนสเตอร์ที่ช่องกลางหากโจมตีใบเดียว!\n• ในเทิร์นนี้, เมื่อการ์ดบนสนามคู่แข่งถูกทำลาย, สร้างความเสียหาย 2 หน่วยแก่คู่แข่ง!",
+          "segments": [
+            {
+              "text": "เราร่ายการ์ดนี้ได้เมื่อแฟลกเริ่มต้นของเราคือ \"ดาร์คเนสดราก้อนเวิลด์\", \"ดราก้อน・ไอน์\", หรือ \"ดราก้อน・ซไว\" เท่านั้น\n"
+            },
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " จั่วการ์ด 1 ใบ, และเลือกใช้ 1 อย่างต่อไปนี้\n• นำการ์ดที่มีคำว่า \"อาซี ดาฮาการ์\" หรือ \"กาเอ็น\" ในชื่อการ์ดไม่เกิน 1 ใบจาก"
+            },
+            {
+              "text": "กองการ์ด",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราขึ้น"
+            },
+            {
+              "text": "มือ",
+              "style": "ZONE"
+            },
+            {
+              "text": ", และสับกองการ์ดเรา\n• นำการ์ด 5 ใบบนสุดจาก"
+            },
+            {
+              "text": "กองการ์ด",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราลง"
+            },
+            {
+              "text": "ช่องดรอบ",
+              "style": "ZONE"
+            },
+            {
+              "text": ", และนำการ์ด 2 ใบบนสุดจาก"
+            },
+            {
+              "text": "กองการ์ด",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราเข้าสู่"
+            },
+            {
+              "text": "เกจ",
+              "style": "ZONE"
+            },
+            {
+              "text": "\n• ใน"
+            },
+            {
+              "text": "เทิร์นนี้",
+              "style": "TURN"
+            },
+            {
+              "text": ", การ์ดทุกใบบน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราสามารถโจมตีคู่แข่งได้แม้คู่แข่งจะมีมอนสเตอร์ที่ช่องกลางหากโจมตีใบเดียว!\n• ใน"
+            },
+            {
+              "text": "เทิร์นนี้",
+              "style": "TURN"
+            },
+            {
+              "text": ", เมื่อการ์ดบน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "คู่แข่งถูกทำลาย, สร้างความเสียหาย 2 หน่วยแก่คู่แข่ง!"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

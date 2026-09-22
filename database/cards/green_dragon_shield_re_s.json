@@ -1,0 +1,174 @@
+{
+  "card_id": "GREEN_DRAGON_SHIELD_RE_S",
+  "name": {
+    "en": "Green Dragon Shield \"Re:S\"",
+    "th": "ดราก้อนชิลด์, โล่แห่งมังกรเขียว \"Re:S\""
+  },
+  "image": null,
+  "type": "SPELL",
+  "worlds": [
+    "DRAGON_WORLD"
+  ],
+  "attributes": [
+    "GREEN_DRAGON",
+    "DEFENSE"
+  ],
+  "call_cost": [],
+  "use_restrictions": [],
+  "rules": [
+    {
+      "type": "CANNOT_BE_NULLIFIED"
+    }
+  ],
+  "abilities": [
+    {
+      "id": "GREEN_DRAGON_SHIELD_RE_S-A01",
+      "kind": "ACT",
+      "keywords": [
+        "COUNTER"
+      ],
+      "skill_restrictions": [
+        {
+          "type": "ACTIVATION_LIMIT",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "GREEN_DRAGON_SHIELD_RE_S",
+            "ability_id": "GREEN_DRAGON_SHIELD_RE_S-A01"
+          }
+        }
+      ],
+      "trigger": {
+        "type": "COUNTER_TIMING"
+      },
+      "cost": [],
+      "effects": [
+        {
+          "type": "CHOICE",
+          "choose": 1,
+          "options": [
+            {
+              "id": "PREVENT_DAMAGE",
+              "effects": [
+                {
+                  "type": "MODIFY_NEXT_DAMAGE",
+                  "source": "ATTACK",
+                  "amount": 0,
+                  "occurrences": 1,
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                },
+                {
+                  "type": "MODIFY_NEXT_DAMAGE",
+                  "source": "OPPONENT_CARD_EFFECT",
+                  "amount": 0,
+                  "occurrences": 1,
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "DRAW_GAUGE_LIFE",
+              "effects": [
+                {
+                  "type": "DRAW",
+                  "amount": 1
+                },
+                {
+                  "type": "PUT_TOP_DECK_TO_GAUGE",
+                  "amount": 1
+                },
+                {
+                  "type": "GAIN_LIFE",
+                  "amount": {
+                    "type": "COUNT_CARDS",
+                    "player": "SELF",
+                    "zone": "FIELD"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "This card cannot be nullified.\n[Cn/Turn] Choose and use one of the following two.\n• [Counter] For this turn, the next damage you take by an attack becomes 0, and the next damage you take by your opponent's card effects becomes 0.\n• Draw a card. Then, put the top card of your deck into your gauge and you gain 1 life for each card on your field.",
+          "segments": [
+            {
+              "text": "This card cannot be nullified.\n"
+            },
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " Choose and use one of the following two.\n• "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " For this turn, the next damage you take by an attack becomes 0, and the next damage you take by your opponent's card effects becomes 0.\n• Draw a card. Then, put the top card of your deck into your gauge and you gain 1 life for each card on your field."
+            }
+          ]
+        },
+        "th": {
+          "plain": "การ์ดใบนี้ไม่สามารถถูกยกเลิกได้\n[Cn/Turn] เลือกใช้ 1 อย่างต่อไปนี้\n• [Counter] ในเทิร์นนี้, ความเสียหายครั้งถัดไปที่เราจะได้รับจากการโจมตีกลายเป็น 0, และความเสียหายครั้งถัดไปที่เราจะได้รับจากความสามารถการ์ดคู่แข่งกลายเป็น 0\n• จั่วการ์ด 1 ใบ. จากนั้น, นำใบบนสุดจากกองการ์ดเราเข้าสู่เกจและเราได้รับพลังชีวิต 1 หน่วยตามจำนวนการ์ดบนสนามเรา",
+          "segments": [
+            {
+              "text": "การ์ดใบนี้ไม่สามารถถูกยกเลิกได้\n"
+            },
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " เลือกใช้ 1 อย่างต่อไปนี้\n• "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " ใน"
+            },
+            {
+              "text": "เทิร์นนี้",
+              "style": "TURN"
+            },
+            {
+              "text": ", ความเสียหายครั้งถัดไปที่เราจะได้รับจากการโจมตีกลายเป็น 0, และความเสียหายครั้งถัดไปที่เราจะได้รับจากความสามารถการ์ดคู่แข่งกลายเป็น 0\n• จั่วการ์ด 1 ใบ. จากนั้น, นำใบบนสุดจาก"
+            },
+            {
+              "text": "กองการ์ด",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราเข้าสู่"
+            },
+            {
+              "text": "เกจ",
+              "style": "ZONE"
+            },
+            {
+              "text": "และเราได้รับพลังชีวิต 1 หน่วยตามจำนวนการ์ดบน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรา"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

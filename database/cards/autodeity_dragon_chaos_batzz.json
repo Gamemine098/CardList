@@ -1,0 +1,122 @@
+{
+  "card_id": "AUTODEITY_DRAGON_CHAOS_BATZZ",
+  "name": "Autodeity Dragon, CHAOS Batzz",
+  "type": "MONSTER",
+  "size": 3,
+  "power": 10000,
+  "critical": 2,
+  "defense": 7000,
+  "world": [
+    "DRAGON_WORLD"
+  ],
+  "attributes": [
+    "AUTODEITY_ARMY",
+    "DRAGON",
+    "CHAOS"
+  ],
+  "cost": {
+    "gauge": 2,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "CHAOS_BATZZ_DESTRUCTION_IMMUNITY",
+      "effect_type": "PROTECTION",
+      "condition": {
+        "type": "TURN_PLAYER_IS",
+        "player": "YOU"
+      },
+      "target": "THIS_CARD",
+      "protection": {
+        "cannot_be_destroyed": true
+      }
+    },
+    {
+      "effect_id": "CHAOS_BATZZ_ACT",
+      "effect_type": "ACTIVATED",
+      "name": "Autodeity Army Assemblage",
+      "is_counter": true,
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "cost": {
+        "life": 1
+      },
+      "effects": [
+        {
+          "effect_id": "CHAOS_BATZZ_CALL",
+          "effect_type": "CALL",
+          "source": [
+            "HAND",
+            "DECK"
+          ],
+          "destination": "FIELD",
+          "placement": "ANOTHER_AREA",
+          "pay_cost": true,
+          "target": {
+            "target_type": "CARD",
+            "card_type": "MONSTER",
+            "attributes_all": [
+              "AUTODEITY_ARMY"
+            ],
+            "count": 1
+          },
+          "shuffle_deck": true
+        }
+      ]
+    },
+    {
+      "effect_id": "CHAOS_BATZZ_KEYWORDS",
+      "effect_type": "KEYWORD",
+      "keywords": [
+        "Double Attack"
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Call Cost] [Pay 2 gauge]\nDuring your turn, this card on the field cannot be destroyed.\n[Counter] 【Act】 [An/Turn] \"Autodeity Army Assemblage\" Pay 1 life. If you do, call up to one 《Autodeity Army》 monster from your hand or deck to another area by paying its [Call Cost]. If you searched your deck, shuffle it.\n[Double Attack]",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Call Cost] [Pay 2 gauge]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "During your turn, this card on the field cannot be destroyed."
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] 【Act】 [An/Turn] \"Autodeity Army Assemblage\" Pay 1 life. If you do, call up to one 《Autodeity Army》 monster from your hand or deck to another area by paying its [Call Cost]. If you searched your deck, shuffle it."
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Double Attack]"
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Call Cost] [จ่าย 2 เกจ]\nในระหว่างเทิร์นของคุณ, การ์ดนี้บนสนามไม่สามารถถูกทำลายได้\n[Counter] 【Act】 [An/Turn] \"การรวมพลของกองทัพเทพจักรกล\" จ่าย 1 พลังชีวิต หากทำ, คอลมอนสเตอร์ 《กองทัพเทพจักรกล》 ได้สูงสุด 1 ใบจากบนมือหรือกองการ์ดของคุณไปยังช่องอื่นโดยจ่าย [Call Cost] หากคุณค้นหากองการ์ด ให้สับกองการ์ด\n[Double Attack]",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Call Cost] [จ่าย 2 เกจ]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "ในระหว่างเทิร์นของคุณ, การ์ดนี้บนสนามไม่สามารถถูกทำลายได้"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] 【Act】 [An/Turn] \"การรวมพลของกองทัพเทพจักรกล\" จ่าย 1 พลังชีวิต หากทำ, คอลมอนสเตอร์ 《กองทัพเทพจักรกล》 ได้สูงสุด 1 ใบจากบนมือหรือกองการ์ดของคุณไปยังช่องอื่นโดยจ่าย [Call Cost] หากคุณค้นหากองการ์ด ให้สับกองการ์ด"
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Double Attack]"
+        }
+      ]
+    }
+  },
+  "image": null
+}

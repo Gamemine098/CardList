@@ -1,0 +1,186 @@
+{
+  "card_id": "BONUS_QUEST_RE_S",
+  "name": {
+    "en": "Bonus Quest \"Re:S\"",
+    "th": "โบนัสเควสต์ \"Re:S\""
+  },
+  "image": null,
+  "type": "SPELL",
+  "worlds": [
+    "DUNGEON_WORLD"
+  ],
+  "attributes": [
+    "THUNDER_EMPIRE",
+    "DRAW",
+    "CHARGE",
+    "RECOVERY"
+  ],
+  "call_cost": [],
+  "cast_cost": [
+    {
+      "type": "MOVE_CARD",
+      "from": "HAND",
+      "to": "DROP",
+      "target": {
+        "type": "SELECT",
+        "card_type": "MONSTER",
+        "zone": "HAND",
+        "count": 1
+      }
+    }
+  ],
+  "use_restrictions": [],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "BONUS_QUEST_RE_S-A01",
+      "kind": "ACT",
+      "keywords": [],
+      "skill_restrictions": [
+        {
+          "type": "ACTIVATION_LIMIT",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "BONUS_QUEST_RE_S",
+            "ability_id": "BONUS_QUEST_RE_S-A01"
+          }
+        }
+      ],
+      "cost": [],
+      "effects": [
+        {
+          "type": "PUT_TOP_DECK_TO_GAUGE",
+          "amount": 2
+        },
+        {
+          "type": "GAIN_LIFE",
+          "amount": 2
+        },
+        {
+          "type": "DRAW",
+          "amount": 2
+        },
+        {
+          "type": "IF",
+          "condition": {
+            "type": "DROPPED_COST_CARD_COMPARE",
+            "stat": "SIZE",
+            "operator": "GREATER_THAN_OR_EQUAL",
+            "value": 2
+          },
+          "then": [
+            {
+              "type": "DRAW",
+              "amount": 1
+            }
+          ],
+          "else": []
+        },
+        {
+          "type": "IF",
+          "condition": {
+            "type": "DROPPED_COST_CARD_COMPARE",
+            "stat": "SIZE",
+            "operator": "LESS_THAN_OR_EQUAL",
+            "value": 1
+          },
+          "then": [
+            {
+              "type": "PUT_TOP_DECK_TO_GAUGE",
+              "amount": 1
+            },
+            {
+              "type": "GAIN_LIFE",
+              "amount": 1
+            }
+          ],
+          "else": []
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Cast Cost] [Drop a monster from your hand]\n[Cn/Turn] You charge 2 gauge, heal 2 life, and draw 2 cards. Then, if the card you dropped for this card's [Cast Cost] is size 2 or greater, draw 1 card, and if the card you dropped for this card's [Cast Cost] is size 1 or lower, charge 1 gauge, and you heal 1 life.",
+          "segments": [
+            {
+              "text": "[Cast Cost]",
+              "style": "COST"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Drop a monster from your hand]",
+              "style": "COST"
+            },
+            {
+              "text": "\n"
+            },
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " You charge 2 gauge, heal 2 life, and draw 2 cards. Then, if the card you dropped for this card's [Cast Cost] is size 2 or greater, draw 1 card, and if the card you dropped for this card's [Cast Cost] is size 1 or lower, charge 1 gauge, and you heal 1 life."
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Cast Cost] [ทิ้งมอนสเตอร์จากบนมือ 1 ใบ]\n[Cn/Turn] เราชาร์จ 2 เกจ, ฟื้นฟูพลังชีวิต 2 หน่วย, และจั่วการ์ด 2 ใบ. จากนั้น, ถ้าการ์ดที่เราทิ้งเป็น [Cast Cost] ของการ์ดนี้มีไซส์ 2 หรือมากกว่า, จั่วการ์ด 1 ใบ, และถ้าการ์ดที่เราทิ้งเป็น [Cast Cost] ของการ์ดนี้มีไซส์ 1 หรือต่ำกว่า, ชาร์จ 1 เกจ, และเราฟื้นฟูพลังชีวิต 1 หน่วย",
+          "segments": [
+            {
+              "text": "[Cast Cost]",
+              "style": "COST"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[ทิ้งมอนสเตอร์จากบนมือ 1 ใบ]",
+              "style": "COST"
+            },
+            {
+              "text": "\n"
+            },
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " เราชาร์จ 2 "
+            },
+            {
+              "text": "เกจ",
+              "style": "ZONE"
+            },
+            {
+              "text": ", ฟื้นฟูพลังชีวิต 2 หน่วย, และจั่วการ์ด 2 ใบ. จากนั้น, ถ้าการ์ดที่เราทิ้งเป็น "
+            },
+            {
+              "text": "[Cast Cost]",
+              "style": "COST"
+            },
+            {
+              "text": " ของการ์ดนี้มีไซส์ 2 หรือมากกว่า, จั่วการ์ด 1 ใบ, และถ้าการ์ดที่เราทิ้งเป็น "
+            },
+            {
+              "text": "[Cast Cost]",
+              "style": "COST"
+            },
+            {
+              "text": " ของการ์ดนี้มีไซส์ 1 หรือต่ำกว่า, ชาร์จ 1 "
+            },
+            {
+              "text": "เกจ",
+              "style": "ZONE"
+            },
+            {
+              "text": ", และเราฟื้นฟูพลังชีวิต 1 หน่วย"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "card_id": "FUTURE_PALLETE",
+  "name": "Future Pallete",
+  "type": "SPELL",
+  "world": "GENERIC",
+  "attributes": [
+    "BUDDY",
+    "ENHANCE"
+  ],
+  "cost": {
+    "gauge": 1,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "FUTURE_PALLETE_ENTER_SOUL",
+      "effect_type": "MOVE_CARD",
+      "source": "THIS_CARD",
+      "destination": "SOUL",
+      "target": {
+        "target_type": "CARD",
+        "zone": "FIELD",
+        "controller": "YOU",
+        "is_buddy": true
+      },
+      "then": {
+        "effect_id": "FUTURE_PALLETE_DRAW",
+        "effect_type": "DRAW",
+        "amount": 1
+      }
+    },
+    {
+      "effect_id": "FUTURE_PALLETE_SOUL_BUFF",
+      "effect_type": "CONTINUOUS",
+      "zone": "SOUL",
+      "target": {
+        "target_type": "HOST_CARD",
+        "is_buddy": true
+      },
+      "buffs": {
+        "power": 5000,
+        "defense": 5000,
+        "keywords": [
+          "Soulguard"
+        ],
+        "protection": {
+          "cannot_be_destroyed": true,
+          "cannot_leave_field": true,
+          "cannot_be_rested": true,
+          "source": "OPPONENT_CARD_EFFECT"
+        }
+      }
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Cast Cost] [Pay 1 gauge]\n[Counter] Put this card into the soul of a buddy on your field. If you do, draw a card.\nIf this card is in the soul of your buddy, that card gets power+5000, defense+5000, [Soulguard], and it cannot be destroyed, leave the field or [Rest] by your opponent's card effects.",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [Pay 1 gauge]"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] Put this card into the soul of a buddy on your field. If you do, draw a card."
+        },
+        {
+          "tag": "SOUL",
+          "text": "If this card is in the soul of your buddy, that card gets power+5000, defense+5000, [Soulguard], and it cannot be destroyed, leave the field or [Rest] by your opponent's card effects."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Cast Cost] [จ่าย 1 เกจ]\n[Counter] นำการ์ดนี้เข้าสู่โซลของบัดดี้บนสนามของคุณ หากทำ จั่วการ์ด 1 ใบ\nหากการ์ดนี้อยู่ในโซลของบัดดี้ของคุณ การ์ดนั้นได้รับพลังโจมตี+5000, พลังป้องกัน+5000, [Soulguard], และไม่สามารถถูกทำลาย ออกจากสนาม หรือ [Rest] โดยความสามารถการ์ดของคู่แข่งได้",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [จ่าย 1 เกจ]"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] นำการ์ดนี้เข้าสู่โซลของบัดดี้บนสนามของคุณ หากทำ จั่วการ์ด 1 ใบ"
+        },
+        {
+          "tag": "SOUL",
+          "text": "หากการ์ดนี้อยู่ในโซลของบัดดี้ของคุณ การ์ดนั้นได้รับพลังโจมตี+5000, พลังป้องกัน+5000, [Soulguard], และไม่สามารถถูกทำลาย ออกจากสนาม หรือ [Rest] โดยความสามารถการ์ดของคู่แข่งได้"
+        }
+      ]
+    }
+  },
+  "image": null
+}

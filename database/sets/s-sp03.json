@@ -14,8 +14,16 @@
       "card_id": "GREAT_FIEND_YAMIGEDO_RE_B"
     },
     {
+      "card_number": "S-SP03/0051",
+      "card_id": "FUTURE_CARD_BUDDYFIGHT"
+    },
+    {
       "card_number": "S-SP03/0054",
       "card_id": "EVOLUTION_FUTURE"
+    },
+    {
+      "card_number": "S-SP03/0060",
+      "card_id": "FUTURE_PALLETE"
     }
   ]
 }

@@ -1,0 +1,81 @@
+{
+  "card_id": "CHAOS_OSIRIS",
+  "name": "CHAOS Osiris",
+  "type": "MONSTER",
+  "size": 3,
+  "power": 5000,
+  "critical": 1,
+  "defense": 3000,
+  "world": [
+    "LEGEND_WORLD"
+  ],
+  "attributes": [
+    "DEITY",
+    "DEATH",
+    "CHAOS"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "CHAOS_OSIRIS_ENTER_FIELD",
+      "effect_type": "TRIGGERED",
+      "name": "The Ruler's Puppet",
+      "position_constraint": [
+        "LEFT",
+        "RIGHT"
+      ],
+      "trigger": {
+        "event": "ENTER_FIELD"
+      },
+      "condition": {
+        "type": "AND",
+        "conditions": [
+          {
+            "type": "COUNT_PER_TURN",
+            "count": 1
+          },
+          {
+            "type": "MONSTER_ON_CENTER",
+            "controller": "YOU"
+          }
+        ]
+      },
+      "effects": [
+        {
+          "effect_id": "CHAOS_OSIRIS_CHARGE",
+          "effect_type": "CHARGE_GAUGE",
+          "amount": 1
+        },
+        {
+          "effect_id": "CHAOS_OSIRIS_DRAW",
+          "effect_type": "DRAW",
+          "amount": 1
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "【Left/Right】 [An/Turn] \"The Ruler's Puppet\" When this card enters the field, if you have a monster on your center, charge a gauge and draw a card.",
+      "segments": [
+        {
+          "tag": "TRIGGER",
+          "text": "【Left/Right】 [An/Turn] \"The Ruler's Puppet\" When this card enters the field, if you have a monster on your center, charge a gauge and draw a card."
+        }
+      ]
+    },
+    "th": {
+      "plain": "【Left/Right】 [An/Turn] \"หุ่นเชิดของผู้ปกครอง\" เมื่อการ์ดนี้ลงสู่สนาม, หากคุณมีมอนสเตอร์อยู่ในช่องกลาง, นำการ์ด 1 ใบเข้าสู่เกจและจั่วการ์ด 1 ใบ",
+      "segments": [
+        {
+          "tag": "TRIGGER",
+          "text": "【Left/Right】 [An/Turn] \"หุ่นเชิดของผู้ปกครอง\" เมื่อการ์ดนี้ลงสู่สนาม, หากคุณมีมอนสเตอร์อยู่ในช่องกลาง, นำการ์ด 1 ใบเข้าสู่เกจและจั่วการ์ด 1 ใบ"
+        }
+      ]
+    }
+  },
+  "image": null
+}

@@ -1,0 +1,96 @@
+{
+  "card_id": "THE_CHAOS",
+  "name": "the Chaos",
+  "type": "FLAG",
+  "world": null,
+  "attributes": [
+    "CHAOS"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "THE_CHAOS_CARD_PERMISSION",
+      "effect_type": "RULE",
+      "rule": "ALLOW_CHAOS_CARDS"
+    },
+    {
+      "effect_id": "THE_CHAOS_INITIAL_STATS",
+      "effect_type": "RULE",
+      "rule": "INITIAL_GAME_STATS",
+      "stats": {
+        "initial_hand": 4,
+        "initial_gauge": 2,
+        "initial_life": 10
+      }
+    },
+    {
+      "effect_id": "THE_CHAOS_SIZE_CAP",
+      "effect_type": "RULE",
+      "rule": "TOTAL_FIELD_SIZE_CAP",
+      "size_cap": 99
+    },
+    {
+      "effect_id": "THE_CHAOS_PROTECTION",
+      "effect_type": "PROTECTION",
+      "target": {
+        "target_type": "CARD",
+        "card_type": "MONSTER",
+        "zone": "FIELD",
+        "controller": "YOU",
+        "size_gte": 30
+      },
+      "protection": {
+        "cannot_be_destroyed": true,
+        "cannot_nullify_abilities": true
+      }
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "You may use 《Chaos》 cards.\nYour initial hand becomes four cards, your initial gauge becomes two cards, and your initial life becomes 10!\nYou may put monsters of up to a total size of 99 on your field.\nAll size 30 or greater monsters on your field cannot be destroyed, and their abilities cannot be nullified, by card effects.",
+      "segments": [
+        {
+          "tag": "RULE",
+          "text": "You may use 《Chaos》 cards."
+        },
+        {
+          "tag": "RULE",
+          "text": "Your initial hand becomes four cards, your initial gauge becomes two cards, and your initial life becomes 10!"
+        },
+        {
+          "tag": "RULE",
+          "text": "You may put monsters of up to a total size of 99 on your field."
+        },
+        {
+          "tag": "RULE",
+          "text": "All size 30 or greater monsters on your field cannot be destroyed, and their abilities cannot be nullified, by card effects."
+        }
+      ]
+    },
+    "th": {
+      "plain": "คุณสามารถใช้การ์ด 《เคออส》 ได้\nการ์ดบนมือเริ่มต้นของคุณกลายเป็น 4 ใบ, เกจเริ่มต้นของคุณกลายเป็น 2 ใบ, และพลังชีวิตเริ่มต้นของคุณกลายเป็น 10 หน่วย!\nคุณสามารถวางมอนสเตอร์บนสนามของคุณได้สูงสุดขนาดไซส์รวมไม่เกิน 99\nมอนสเตอร์ไซส์ 30 ขึ้นไปทั้งหมดบนสนามของคุณไม่สามารถถูกทำลาย และความสามารถไม่สามารถถูกยกเลิกได้ โดยความสามารถของการ์ด",
+      "segments": [
+        {
+          "tag": "RULE",
+          "text": "คุณสามารถใช้การ์ด 《เคออส》 ได้"
+        },
+        {
+          "tag": "RULE",
+          "text": "การ์ดบนมือเริ่มต้นของคุณกลายเป็น 4 ใบ, เกจเริ่มต้นของคุณกลายเป็น 2 ใบ, และพลังชีวิตเริ่มต้นของคุณกลายเป็น 10 หน่วย!"
+        },
+        {
+          "tag": "RULE",
+          "text": "คุณสามารถวางมอนสเตอร์บนสนามของคุณได้สูงสุดขนาดไซส์รวมไม่เกิน 99"
+        },
+        {
+          "tag": "RULE",
+          "text": "มอนสเตอร์ไซส์ 30 ขึ้นไปทั้งหมดบนสนามของคุณไม่สามารถถูกทำลาย และความสามารถไม่สามารถถูกยกเลิกได้ โดยความสามารถของการ์ด"
+        }
+      ]
+    }
+  },
+  "image": null
+}

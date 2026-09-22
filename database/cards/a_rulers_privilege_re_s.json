@@ -1,0 +1,236 @@
+{
+  "card_id": "A_RULERS_PRIVILEGE_RE_S",
+  "name": {
+    "en": "A Ruler's Privilege \"Re:S\"",
+    "th": "อภิสิทธิ์ของผู้ปกครอง \"Re:S\""
+  },
+  "image": null,
+  "type": "SPELL",
+  "worlds": [
+    "LEGEND_WORLD"
+  ],
+  "attributes": [
+    "ENHANCE",
+    "CHAOS"
+  ],
+  "call_cost": [],
+  "cast_condition": {
+    "type": "CARDS_ON_FIELD_COUNT",
+    "player": "SELF",
+    "card_type": "MONSTER",
+    "operator": "GREATER_THAN_OR_EQUAL",
+    "value": 3
+  },
+  "use_restrictions": [],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "A_RULERS_PRIVILEGE_RE_S-A01",
+      "kind": "ACT",
+      "keywords": [
+        "COUNTER"
+      ],
+      "skill_restrictions": [
+        {
+          "type": "ACTIVATION_LIMIT",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "A_RULERS_PRIVILEGE_RE_S",
+            "ability_id": "A_RULERS_PRIVILEGE_RE_S-A01"
+          }
+        }
+      ],
+      "trigger": {
+        "type": "COUNTER_TIMING"
+      },
+      "cost": [],
+      "effects": [
+        {
+          "type": "CHOICE",
+          "choose": 1,
+          "options": [
+            {
+              "id": "SALVAGE_CARD",
+              "effects": [
+                {
+                  "type": "MOVE_CARD",
+                  "from": "DROP",
+                  "to": "HAND",
+                  "target": {
+                    "type": "SELECT",
+                    "filter": {
+                      "type": "NOT",
+                      "filter": {
+                        "type": "NAME_EQUALS",
+                        "value": "A Ruler's Privilege \"Re:S\""
+                      }
+                    },
+                    "count": 1
+                  }
+                }
+              ]
+            },
+            {
+              "id": "STAND_ALL_CARDS",
+              "effects": [
+                {
+                  "type": "STAND",
+                  "target": {
+                    "type": "ALL",
+                    "zone": "FIELD",
+                    "player": "SELF"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "NEGATE_ATTACK_AND_END_PHASE",
+              "effects": [
+                {
+                  "type": "NEGATE_ATTACK"
+                },
+                {
+                  "type": "IF",
+                  "condition": {
+                    "type": "AND",
+                    "conditions": [
+                      {
+                        "type": "OPPONENT_ATTACK_COUNT_THIS_TURN",
+                        "operator": "GREATER_THAN_OR_EQUAL",
+                        "value": 3
+                      },
+                      {
+                        "type": "CARD_EXISTS",
+                        "zone": "FIELD",
+                        "card_type": "MONSTER",
+                        "player": "SELF",
+                        "name_contains": "Geargod"
+                      }
+                    ]
+                  },
+                  "then": [
+                    {
+                      "type": "END_PHASE"
+                    }
+                  ],
+                  "else": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "You may only cast this card if you have three or more monsters on your field.\n[Cn/Turn] [Counter] Choose one of the following.\n• Put a card other than \"A Ruler's Privilege \"Re:S\"\" from your drop zone into your hand.\n• [Stand] all cards on your field.\n• Nullify the attack. Then, if your opponent's cards attacked three times or more during this turn, and a monster with \"Geargod\" in its card name is on your field, end this phase.",
+          "segments": [
+            {
+              "text": "You may only cast this card if you have three or more monsters on your field.\n"
+            },
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " Choose one of the following.\n• Put a card other than \"A Ruler's Privilege \"Re:S\"\" from your drop zone into your hand.\n• "
+            },
+            {
+              "text": "[Stand]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " all cards on your field.\n• Nullify the attack. Then, if your opponent's cards attacked three times or more during this turn, and a monster with \"Geargod\" in its card name is on your field, end this phase."
+            }
+          ]
+        },
+        "th": {
+          "plain": "เราร่ายการ์ดนี้ได้เมื่อมีมอนสเตอร์บนสนามเราตั้งแต่ 3 ใบขึ้นไปเท่านั้น\n[Cn/Turn] [Counter] เลือกใช้ 1 อย่างต่อไปนี้\n• นำการ์ดที่ไม่ใช่ \"อภิสิทธิ์ของผู้ปกครอง \"Re:S\"\" 1 ใบจากช่องดรอบเราขึ้นมือ\n• [Stand] การ์ดทุกใบบนสนามเรา\n• ยกเลิกการโจมตีนั้น. จากนั้น, ถ้าการ์ดของคู่แข่งโจมตีตั้งแต่ 3 ครั้งขึ้นไปในเทิร์นนี้, และมีมอนสเตอร์ที่มีคำว่า \"เกียร์ก็อด\" ในชื่อการ์ดอยู่บนสนามเรา, จบเฟสนี้ทันที",
+          "segments": [
+            {
+              "text": "เราร่ายการ์ดนี้ได้เมื่อมีมอนสเตอร์บน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราตั้งแต่ 3 ใบขึ้นไปเท่านั้น\n"
+            },
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " เลือกใช้ 1 อย่างต่อไปนี้\n• นำการ์ดที่ไม่ใช่ \"อภิสิทธิ์ของผู้ปกครอง \"Re:S\"\" 1 ใบจาก"
+            },
+            {
+              "text": "ช่องดรอบ",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราขึ้น"
+            },
+            {
+              "text": "มือ",
+              "style": "ZONE"
+            },
+            {
+              "text": "\n• "
+            },
+            {
+              "text": "[Stand]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " การ์ดทุกใบบน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรา\n• ยกเลิกการโจมตีนั้น. จากนั้น, ถ้าการ์ดของคู่แข่งโจมตีตั้งแต่ 3 ครั้งขึ้นไปใน"
+            },
+            {
+              "text": "เทิร์นนี้",
+              "style": "TURN"
+            },
+            {
+              "text": ", และมีมอนสเตอร์ที่มีคำว่า \"เกียร์ก็อด\" ในชื่อการ์ดอยู่บน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรา, จบ"
+            },
+            {
+              "text": "เฟสนี้",
+              "style": "PHASE"
+            },
+            {
+              "text": "ทันที"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

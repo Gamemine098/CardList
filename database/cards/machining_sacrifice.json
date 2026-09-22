@@ -1,0 +1,78 @@
+{
+  "card_id": "MACHINING_SACRIFICE",
+  "name": "Machining Sacrifice",
+  "type": "SPELL",
+  "world": [
+    "DRAGON_WORLD"
+  ],
+  "attributes": [
+    "SUMMON",
+    "CHAOS"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 0,
+    "drop_monster": {
+      "zone": "FIELD",
+      "controller": "YOU",
+      "count": 1
+    }
+  },
+  "effects": [
+    {
+      "effect_id": "MACHINING_SACRIFICE_CALL",
+      "effect_type": "CALL",
+      "is_counter": true,
+      "condition": {
+        "type": "TURN_PLAYER_IS",
+        "player": "OPPONENT"
+      },
+      "source": "DROP",
+      "destination": "FIELD",
+      "pay_cost": true,
+      "target": {
+        "target_type": "CARD",
+        "card_type": "MONSTER",
+        "size_gte": 3,
+        "count": 1
+      }
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "You may only cast this card during your opponent's turn.\n[Cast Cost] [Put a monster from your field into the drop zone]\n[Counter] Call a size 3 or greater monster from your drop zone by paying its [Call Cost].",
+      "segments": [
+        {
+          "tag": "RULE",
+          "text": "You may only cast this card during your opponent's turn."
+        },
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [Put a monster from your field into the drop zone]"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] Call a size 3 or greater monster from your drop zone by paying its [Call Cost]."
+        }
+      ]
+    },
+    "th": {
+      "plain": "คุณสามารถร่ายการ์ดนี้ได้เฉพาะในระหว่างเทิร์นของคู่แข่งเท่านั้น\n[Cast Cost] [ส่งมอนสเตอร์ 1 ใบจากบนสนามของคุณลงช่องดรอป]\n[Counter] คอลมอนสเตอร์ไซส์ 3 ขึ้นไป 1 ใบจากในช่องดรอปของคุณโดยจ่าย [Call Cost]",
+      "segments": [
+        {
+          "tag": "RULE",
+          "text": "คุณสามารถร่ายการ์ดนี้ได้เฉพาะในระหว่างเทิร์นของคู่แข่งเท่านั้น"
+        },
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [ส่งมอนสเตอร์ 1 ใบจากบนสนามของคุณลงช่องดรอป]"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] คอลมอนสเตอร์ไซส์ 3 ขึ้นไป 1 ใบจากในช่องดรอปของคุณโดยจ่าย [Call Cost]"
+        }
+      ]
+    }
+  },
+  "image": null
+}

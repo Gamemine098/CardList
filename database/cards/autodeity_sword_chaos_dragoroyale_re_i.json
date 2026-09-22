@@ -1,0 +1,134 @@
+{
+  "card_id": "AUTODEITY_SWORD_CHAOS_DRAGOROYALE_RE_I",
+  "name": "Autodeity Sword, CHAOS Dragoroyale \"Re:I\"",
+  "type": "ITEM",
+  "power": 3000,
+  "critical": 2,
+  "world": [
+    "DRAGON_WORLD"
+  ],
+  "attributes": [
+    "AUTODEITY_ARMY",
+    "WEAPON",
+    "CHAOS"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 1
+  },
+  "effects": [
+    {
+      "effect_id": "CHAOS_DRAGOROYALE_ATTACK_RULE",
+      "effect_type": "RULE",
+      "rule": "CAN_ATTACK_WITH_MONSTER_IN_CENTER"
+    },
+    {
+      "effect_id": "CHAOS_DRAGOROYALE_TRIGGER",
+      "effect_type": "TRIGGERED",
+      "trigger": {
+        "event": "ENTER_FIELD",
+        "target": {
+          "target_type": "CARD",
+          "card_type": "MONSTER",
+          "zone": "FIELD",
+          "controller": "YOU",
+          "attributes_all": [
+            "AUTODEITY_ARMY"
+          ]
+        }
+      },
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "effects": [
+        {
+          "effect_id": "CHAOS_DRAGOROYALE_DRAW",
+          "effect_type": "DRAW",
+          "amount": 1
+        },
+        {
+          "effect_id": "CHAOS_DRAGOROYALE_DUO_BONUS",
+          "effect_type": "MULTI_EFFECT",
+          "condition": {
+            "type": "FIELD_COUNT_GTE",
+            "target": {
+              "target_type": "CARD",
+              "card_type": "MONSTER",
+              "zone": "FIELD",
+              "controller": "YOU",
+              "keywords": [
+                "Duo"
+              ]
+            },
+            "count": 1
+          },
+          "effects": [
+            {
+              "effect_id": "CHAOS_DRAGOROYALE_CHARGE",
+              "effect_type": "CHARGE_GAUGE",
+              "amount": 1
+            },
+            {
+              "effect_id": "CHAOS_DRAGOROYALE_HEAL",
+              "effect_type": "GAIN_LIFE",
+              "amount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "effect_id": "CHAOS_DRAGOROYALE_KEYWORDS",
+      "effect_type": "KEYWORD",
+      "keywords": [
+        "Penetrate"
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Equip Cost] [Pay 1 life]\nThis card can attack even if you have a monster on your center.\n[1/Turn] When an 《Autodeity Army》 monster enters your field, draw a card, and if you have a monster with [Duo] on your field, charge a gauge and heal 1 life!\n[Penetrate]",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Equip Cost] [Pay 1 life]"
+        },
+        {
+          "tag": "RULE",
+          "text": "This card can attack even if you have a monster on your center."
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "[1/Turn] When an 《Autodeity Army》 monster enters your field, draw a card, and if you have a monster with [Duo] on your field, charge a gauge and heal 1 life!"
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Penetrate]"
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Equip Cost] [จ่าย 1 พลังชีวิต]\nการ์ดนี้สามารถโจมตีได้แม้ว่าคุณจะมีมอนสเตอร์อยู่ในช่องกลาง\n[1/Turn] เมื่อมอนสเตอร์ 《กองทัพเทพจักรกล》 ลงสู่สนามของคุณ, จั่วการ์ด 1 ใบ, และหากคุณมีมอนสเตอร์ที่มี [Duo] อยู่บนสนามของคุณ, นำการ์ด 1 ใบเข้าสู่เกจและฟื้นฟูพลังชีวิต 1 หน่วย!\n[Penetrate]",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Equip Cost] [จ่าย 1 พลังชีวิต]"
+        },
+        {
+          "tag": "RULE",
+          "text": "การ์ดนี้สามารถโจมตีได้แม้ว่าคุณจะมีมอนสเตอร์อยู่ในช่องกลาง"
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "[1/Turn] เมื่อมอนสเตอร์ 《กองทัพเทพจักรกล》 ลงสู่สนามของคุณ, จั่วการ์ด 1 ใบ, และหากคุณมีมอนสเตอร์ที่มี [Duo] อยู่บนสนามของคุณ, นำการ์ด 1 ใบเข้าสู่เกจและฟื้นฟูพลังชีวิต 1 หน่วย!"
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Penetrate]"
+        }
+      ]
+    }
+  },
+  "image": null
+}

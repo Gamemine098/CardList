@@ -1,0 +1,325 @@
+{
+  "card_id": "ILLUSIONS_FOLKTALE_ECHT_BIBLIO_RE_I",
+  "name": {
+    "en": "Illusions Folktale, Echt Biblio \"Re:I\"",
+    "th": "นิทานมายา, เอกต์ บิบลิโอ้ \"Re:I\""
+  },
+  "image": null,
+  "type": "ITEM",
+  "worlds": [
+    "DUNGEON_WORLD"
+  ],
+  "attributes": [
+    "FOLKTALE",
+    "WEAPON"
+  ],
+  "stats": {
+    "power": 3000,
+    "critical": 1
+  },
+  "call_cost": [],
+  "equip_cost": [],
+  "use_restrictions": [],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "ILLUSIONS_FOLKTALE_ECHT_BIBLIO_RE_I-A01",
+      "kind": "AUTO",
+      "keywords": [],
+      "skill_restrictions": [],
+      "trigger": {
+        "type": "WOULD_BE_DESTROYED",
+        "target": {
+          "type": "FILTER",
+          "zone": "FIELD",
+          "card_type": "MONSTER",
+          "attributes": [
+            "FOLKTALE"
+          ]
+        }
+      },
+      "optional": true,
+      "cost": [
+        {
+          "type": "PAY_LIFE",
+          "amount": 1
+        }
+      ],
+      "effects": [
+        {
+          "type": "MOVE_CARD",
+          "from": "FIELD",
+          "to": "SOUL",
+          "destination_card": "THIS_CARD",
+          "target": "TRIGGERING_CARD"
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "If a《Folktale》monster on your field would be destroyed, you may pay 1 life. If you do, put it into this card's soul.",
+          "segments": [
+            {
+              "text": "If a《Folktale》monster on your field would be destroyed, you may pay 1 life. If you do, put it into this card's soul."
+            }
+          ]
+        },
+        "th": {
+          "plain": "ถ้ามอนสเตอร์ 《นิทาน》 บนสนามเราจะถูกทำลาย, สามารถจ่ายพลังชีวิต 1 หน่วย. ถ้าจ่าย, นำการ์ดนั้นเข้าสู่โซลของการ์ดนี้",
+          "segments": [
+            {
+              "text": "ถ้ามอนสเตอร์ 《นิทาน》 บน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราจะถูกทำลาย, สามารถจ่ายพลังชีวิต 1 หน่วย. ถ้าจ่าย, นำการ์ดนั้นเข้าสู่"
+            },
+            {
+              "text": "โซล",
+              "style": "ZONE"
+            },
+            {
+              "text": "ของการ์ดนี้"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "ILLUSIONS_FOLKTALE_ECHT_BIBLIO_RE_I-A02",
+      "kind": "ACT",
+      "keywords": [
+        "COUNTER"
+      ],
+      "skill_restrictions": [
+        {
+          "type": "ACTIVATION_LIMIT",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "ILLUSIONS_FOLKTALE_ECHT_BIBLIO_RE_I",
+            "ability_id": "ILLUSIONS_FOLKTALE_ECHT_BIBLIO_RE_I-A02"
+          }
+        }
+      ],
+      "trigger": {
+        "type": "COUNTER_TIMING"
+      },
+      "cost": [],
+      "effects": [
+        {
+          "type": "MOVE_CARD",
+          "from": [
+            "FIELD",
+            "DROP"
+          ],
+          "to": "SOUL",
+          "destination_card": "THIS_CARD",
+          "target": {
+            "type": "SELECT",
+            "attributes": [
+              "FOLKTALE"
+            ],
+            "card_type": "MONSTER",
+            "minimum_size": 1,
+            "maximum": 3
+          }
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Counter]【Act】Put up to a total of three size 1 or greater《Folktale》monsters from your field or drop zone into this card's soul. You may only use this ability once per turn.",
+          "segments": [
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": "【Act】",
+              "style": "KEYWORD"
+            },
+            {
+              "text": "Put up to a total of three size 1 or greater《Folktale》monsters from your field or drop zone into this card's soul. You may only use this ability once per turn."
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Counter]【Act】นำมอนสเตอร์ 《นิทาน》 ไซส์ 1 หรือมากกว่ารวมกันไม่เกิน 3 ใบจากบนสนามหรือช่องดรอบเราเข้าสู่โซลของการ์ดนี้. ใช้ความสามารถนี้ได้เพียง 1 ครั้งใน 1 เทิร์น",
+          "segments": [
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": "【Act】",
+              "style": "KEYWORD"
+            },
+            {
+              "text": "นำมอนสเตอร์ 《นิทาน》 ไซส์ 1 หรือมากกว่ารวมกันไม่เกิน 3 ใบจากบน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "หรือ"
+            },
+            {
+              "text": "ช่องดรอบ",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราเข้าสู่"
+            },
+            {
+              "text": "โซล",
+              "style": "ZONE"
+            },
+            {
+              "text": "ของการ์ดนี้. ใช้ความสามารถนี้ได้เพียง 1 ครั้งใน 1 เทิร์น"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "ILLUSIONS_FOLKTALE_ECHT_BIBLIO_RE_I-A03",
+      "kind": "ACT",
+      "keywords": [
+        "COUNTER"
+      ],
+      "skill_restrictions": [
+        {
+          "type": "NAMED_ABILITY_LIMIT",
+          "ability_name": "Marchen Panic",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "ILLUSIONS_FOLKTALE_ECHT_BIBLIO_RE_I",
+            "ability_id": "ILLUSIONS_FOLKTALE_ECHT_BIBLIO_RE_I-A03"
+          }
+        }
+      ],
+      "trigger": {
+        "type": "COUNTER_TIMING"
+      },
+      "cost": [],
+      "effects": [
+        {
+          "type": "CALL",
+          "from": "SOUL",
+          "source_card": "THIS_CARD",
+          "to": "FIELD",
+          "targets": [
+            {
+              "type": "SELECT",
+              "card_type": "MONSTER",
+              "maximum": 3
+            }
+          ],
+          "placement": {
+            "type": "SEPARATE_AREAS"
+          },
+          "pay_call_cost": true
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Counter]【Act】\"Marchen Panic\" Call up to three monsters from this card's soul on separate areas by paying their [Call Cost]. You may only use this ability once per turn.\n[Soulguard]",
+          "segments": [
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": "【Act】",
+              "style": "KEYWORD"
+            },
+            {
+              "text": "\"Marchen Panic\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " Call up to three monsters from this card's soul on separate areas by paying their [Call Cost]. You may only use this ability once per turn.\n"
+            },
+            {
+              "text": "[Soulguard]",
+              "style": "KEYWORD"
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Counter]【Act】\"เมอร์เชน แพนิค\" คอลมอนสเตอร์ไม่เกิน 3 ใบจากในโซลของการ์ดนี้ลงบนพื้นที่ที่ต่างกันโดยจ่าย [Call Cost]. ใช้ความสามารถนี้ได้เพียง 1 ครั้งใน 1 เทิร์น\n[Soulguard]",
+          "segments": [
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": "【Act】",
+              "style": "KEYWORD"
+            },
+            {
+              "text": "\"เมอร์เชน แพนิค\"",
+              "style": "ABILITY_NAME"
+            },
+            {
+              "text": " คอลมอนสเตอร์ไม่เกิน 3 ใบจากใน"
+            },
+            {
+              "text": "โซล",
+              "style": "ZONE"
+            },
+            {
+              "text": "ของการ์ดนี้ลงบนพื้นที่ที่ต่างกันโดยจ่าย "
+            },
+            {
+              "text": "[Call Cost]",
+              "style": "COST"
+            },
+            {
+              "text": ". ใช้ความสามารถนี้ได้เพียง 1 ครั้งใน 1 เทิร์น\n"
+            },
+            {
+              "text": "[Soulguard]",
+              "style": "KEYWORD"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "ILLUSIONS_FOLKTALE_ECHT_BIBLIO_RE_I-A04",
+      "kind": "CONT",
+      "keywords": [
+        "SOULGUARD"
+      ],
+      "skill_restrictions": [],
+      "effects": [],
+      "effect_text": {
+        "en": {
+          "plain": "[Soulguard]",
+          "segments": [
+            {
+              "text": "[Soulguard]",
+              "style": "KEYWORD"
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Soulguard]",
+          "segments": [
+            {
+              "text": "[Soulguard]",
+              "style": "KEYWORD"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

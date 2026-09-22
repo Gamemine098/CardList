@@ -1,0 +1,71 @@
+{
+  "card_id": "CHAOS_ALBERION",
+  "name": "CHAOS Alberion",
+  "type": "MONSTER",
+  "size": 3,
+  "power": 6000,
+  "critical": 2,
+  "defense": 6000,
+  "world": [
+    "DANGER_WORLD",
+    "LEGEND_WORLD"
+  ],
+  "attributes": [
+    "DUEL_DRAGON",
+    "FAIRY",
+    "CHAOS"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "CHAOS_ALBERION_DROP_TRIGGER",
+      "effect_type": "TRIGGERED",
+      "name": "Doragory Ash",
+      "trigger": {
+        "event": "ZONE_CHANGE",
+        "from": "FIELD",
+        "to": "DROP"
+      },
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "effects": [
+        {
+          "effect_id": "CHAOS_ALBERION_MILL",
+          "effect_type": "MILL_DECK",
+          "amount": 2
+        },
+        {
+          "effect_id": "CHAOS_ALBERION_DRAW",
+          "effect_type": "DRAW",
+          "amount": 1
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[An/Turn] \"Doragory Ash\" When this card is put from the field into the drop zone, mill two cards and draw a card.",
+      "segments": [
+        {
+          "tag": "TRIGGER",
+          "text": "[An/Turn] \"Doragory Ash\" When this card is put from the field into the drop zone, mill two cards and draw a card."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[An/Turn] \"โดราโกริแอช\" เมื่อการ์ดนี้ถูกส่งลงช่องดรอปจากสนาม, ทิ้งการ์ด 2 ใบจากใบบนสุดของกองการ์ดลงช่องดรอป และจั่วการ์ด 1 ใบ",
+      "segments": [
+        {
+          "tag": "TRIGGER",
+          "text": "[An/Turn] \"โดราโกริแอช\" เมื่อการ์ดนี้ถูกส่งลงช่องดรอปจากสนาม, ทิ้งการ์ด 2 ใบจากใบบนสุดของกองการ์ดลงช่องดรอป และจั่วการ์ด 1 ใบ"
+        }
+      ]
+    }
+  },
+  "image": null
+}

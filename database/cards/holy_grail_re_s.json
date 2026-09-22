@@ -1,0 +1,166 @@
+{
+  "card_id": "HOLY_GRAIL_RE_S",
+  "name": {
+    "en": "Holy Grail \"Re:S\"",
+    "th": "จอกศักดิ์สิทธิ์ \"Re:S\""
+  },
+  "image": null,
+  "type": "SPELL",
+  "worlds": [
+    "LEGEND_WORLD"
+  ],
+  "attributes": [
+    "HERO",
+    "DEFENSE"
+  ],
+  "call_cost": [],
+  "use_restrictions": [
+    {
+      "type": "CARD_USE_LIMIT",
+      "action": "CAST",
+      "count": 1,
+      "period": "TURN",
+      "source": {
+        "kind": "CARD",
+        "card_id": "HOLY_GRAIL_RE_S"
+      }
+    }
+  ],
+  "rules": [
+    {
+      "type": "CANNOT_BE_NULLIFIED"
+    }
+  ],
+  "abilities": [
+    {
+      "id": "HOLY_GRAIL_RE_S-A01",
+      "kind": "ACT",
+      "keywords": [],
+      "skill_restrictions": [],
+      "cost": [],
+      "effects": [
+        {
+          "type": "CHOICE",
+          "choose": 1,
+          "options": [
+            {
+              "id": "PREVENT_DAMAGE",
+              "effects": [
+                {
+                  "type": "MODIFY_NEXT_DAMAGE",
+                  "source": "ATTACK",
+                  "amount": 0,
+                  "occurrences": 1,
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                },
+                {
+                  "type": "MODIFY_NEXT_DAMAGE",
+                  "source": "OPPONENT_CARD_EFFECT",
+                  "amount": 0,
+                  "occurrences": 1,
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "SEARCH_GREAT_SPELL_DRAW_DROP",
+              "effects": [
+                {
+                  "type": "MOVE_CARD",
+                  "from": "DECK",
+                  "to": "HAND",
+                  "target": {
+                    "type": "SELECT",
+                    "name_contains": "Great Spell",
+                    "maximum": 1
+                  }
+                },
+                {
+                  "type": "SHUFFLE_DECK"
+                },
+                {
+                  "type": "DRAW",
+                  "amount": 1
+                },
+                {
+                  "type": "MOVE_CARD",
+                  "from": "HAND",
+                  "to": "DROP",
+                  "target": {
+                    "type": "SELECT",
+                    "zone": "HAND",
+                    "count": 1
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "This card cannot be nullified.\nChoose and use one of the following two. You may only cast \"Holy Grail \"Re:S\"\" once per turn.\n• [Counter] For this turn, the next damage you take by an attack becomes 0, and the next damage you take by your opponent's card effects becomes 0.\n• Put up to one card with \"Great Spell\" in its card name from your deck into your hand, and shuffle your deck. Then, draw a card, and drop a hand card.",
+          "segments": [
+            {
+              "text": "This card cannot be nullified.\nChoose and use one of the following two. You may only cast \"Holy Grail \"Re:S\"\" once per turn.\n• "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " For this turn, the next damage you take by an attack becomes 0, and the next damage you take by your opponent's card effects becomes 0.\n• Put up to one card with \"Great Spell\" in its card name from your deck into your hand, and shuffle your deck. Then, draw a card, and drop a hand card."
+            }
+          ]
+        },
+        "th": {
+          "plain": "การ์ดใบนี้ไม่สามารถถูกยกเลิกได้\nเลือกใช้ 1 อย่างต่อไปนี้. ร่าย \"จอกศักดิ์สิทธิ์ \"Re:S\"\" ได้เพียง 1 ครั้งใน 1 เทิร์น\n• [Counter] ในเทิร์นนี้, ความเสียหายครั้งถัดไปที่เราจะได้รับจากการโจมตีกลายเป็น 0, และความเสียหายครั้งถัดไปที่เราจะได้รับจากความสามารถการ์ดคู่แข่งกลายเป็น 0\n• นำการ์ดที่มีคำว่า \"มหาเวท\" ในชื่อการ์ดไม่เกิน 1 ใบจากกองการ์ดเราขึ้นมือ, และสับกองการ์ดเรา. จากนั้น, จั่วการ์ด 1 ใบ, และทิ้งการ์ดบนมือ 1 ใบ",
+          "segments": [
+            {
+              "text": "การ์ดใบนี้ไม่สามารถถูกยกเลิกได้\nเลือกใช้ 1 อย่างต่อไปนี้. ร่าย \"จอกศักดิ์สิทธิ์ \"Re:S\"\" ได้เพียง 1 ครั้งใน 1 เทิร์น\n• "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " ใน"
+            },
+            {
+              "text": "เทิร์นนี้",
+              "style": "TURN"
+            },
+            {
+              "text": ", ความเสียหายครั้งถัดไปที่เราจะได้รับจากการโจมตีกลายเป็น 0, และความเสียหายครั้งถัดไปที่เราจะได้รับจากความสามารถการ์ดคู่แข่งกลายเป็น 0\n• นำการ์ดที่มีคำว่า \"มหาเวท\" ในชื่อการ์ดไม่เกิน 1 ใบจาก"
+            },
+            {
+              "text": "กองการ์ด",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราขึ้น"
+            },
+            {
+              "text": "มือ",
+              "style": "ZONE"
+            },
+            {
+              "text": ", และสับกองการ์ดเรา. จากนั้น, จั่วการ์ด 1 ใบ, และทิ้งการ์ดบน"
+            },
+            {
+              "text": "มือ",
+              "style": "ZONE"
+            },
+            {
+              "text": " 1 ใบ"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

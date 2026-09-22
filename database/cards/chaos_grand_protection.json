@@ -1,0 +1,75 @@
+{
+  "card_id": "CHAOS_GRAND_PROTECTION",
+  "name": "Chaos Grand Protection",
+  "type": "SPELL",
+  "world": [
+    "DARKNESS_DRAGON_WORLD",
+    "DANGER_WORLD"
+  ],
+  "attributes": [
+    "CHAOS"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "CHAOS_GRAND_PROTECTION_MAIN",
+      "effect_type": "MULTI_EFFECT",
+      "is_counter": true,
+      "condition": {
+        "type": "AND",
+        "conditions": [
+          {
+            "type": "FLAG_IS",
+            "flag": "∞ Infinity the Chaos ∞"
+          },
+          {
+            "type": "COUNT_PER_GAME",
+            "count": 1
+          }
+        ]
+      },
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "FD10/014",
+        "ability_reference": "FD10/014: Shuffle all cards from your hand and drop zone back into your deck, your life becomes 10, and draw five cards. Then, put this card and one hand card into your gauge, and for this turn, all cards on your field cannot leave the field by, and you cannot take damage from, your opponent's cards.",
+        "missing_capability": "RECYCLE_AND_STATE_SET",
+        "what_is_known": "Comprehensive board recycle (shuffles hand and drop into deck), fixed life assignment (life becomes 10), fixed draw, gauge insertion, and full damage & field departure immunity.",
+        "information_needed": [
+          "Approved schema for SET_LIFE and bulk multi-zone deck recycle."
+        ]
+      }
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "You may only cast this card if your flag is \"∞ Infinity the Chaos ∞\".\n[1/Game] [Counter] Shuffle all cards from your hand and drop zone back into your deck, your life becomes 10, and draw five cards. Then, put this card and one hand card into your gauge, and for this turn, all cards on your field cannot leave the field by, and you cannot take damage from, your opponent's cards.",
+      "segments": [
+        {
+          "tag": "RULE",
+          "text": "You may only cast this card if your flag is \"∞ Infinity the Chaos ∞\"."
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[1/Game] [Counter] Shuffle all cards from your hand and drop zone back into your deck, your life becomes 10, and draw five cards. Then, put this card and one hand card into your gauge, and for this turn, all cards on your field cannot leave the field by, and you cannot take damage from, your opponent's cards."
+        }
+      ]
+    },
+    "th": {
+      "plain": "คุณสามารถร่ายการ์ดนี้ได้เมื่อแฟลกของคุณคือ \"∞ อินฟินิตี้ เดอะ เคออส ∞\" เท่านั้น\n[1/Game] [Counter] สับการ์ดทั้งหมดจากบนมือและในช่องดรอปของคุณกลับเข้ากองการ์ด, พลังชีวิตของคุณกลายเป็น 10, และจั่วการ์ด 5 ใบ จากนั้น นำการ์ดนี้และการ์ดบนมือ 1 ใบเข้าสู่เกจของคุณ, และในเทิร์นนี้ การ์ดทั้งหมดบนสนามของคุณไม่สามารถออกจากสนาม และคุณจะไม่ได้รับความเสียหาย โดยการ์ดของคู่แข่ง",
+      "segments": [
+        {
+          "tag": "RULE",
+          "text": "คุณสามารถร่ายการ์ดนี้ได้เมื่อแฟลกของคุณคือ \"∞ อินฟินิตี้ เดอะ เคออส ∞\" เท่านั้น"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[1/Game] [Counter] สับการ์ดทั้งหมดจากบนมือและในช่องดรอปของคุณกลับเข้ากองการ์ด, พลังชีวิตของคุณกลายเป็น 10, และจั่วการ์ด 5 ใบ จากนั้น นำการ์ดนี้และการ์ดบนมือ 1 ใบเข้าสู่เกจของคุณ, และในเทิร์นนี้ การ์ดทั้งหมดบนสนามของคุณไม่สามารถออกจากสนาม และคุณจะไม่ได้รับความเสียหาย โดยการ์ดของคู่แข่ง"
+        }
+      ]
+    }
+  },
+  "image": null
+}

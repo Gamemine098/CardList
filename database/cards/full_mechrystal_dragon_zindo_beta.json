@@ -1,0 +1,74 @@
+{
+  "card_id": "FULL_MECHRYSTAL_DRAGON_ZINDO_BETA",
+  "name": "Full Mechrystal Dragon, Zindo Beta",
+  "type": "MONSTER",
+  "size": 3,
+  "power": 5000,
+  "critical": 2,
+  "defense": 5000,
+  "world": [
+    "STAR_DRAGON_WORLD"
+  ],
+  "attributes": [
+    "PRISM_DRAGON",
+    "CHAOS"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "ZINDO_BETA_ENTER_FIELD",
+      "effect_type": "TRIGGERED",
+      "name": "Breaking Berth",
+      "trigger": {
+        "event": "ENTER_FIELD"
+      },
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "cost": {
+        "drop_hand": 1
+      },
+      "effects": [
+        {
+          "effect_id": "ZINDO_BETA_SEARCH_SPELL",
+          "effect_type": "SEARCH_DECK",
+          "target": {
+            "target_type": "CARD",
+            "card_type": "SPELL",
+            "attributes_all": [
+              "CHAOS"
+            ],
+            "count": 1
+          },
+          "destination": "HAND",
+          "shuffle_deck": true
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[An/Turn] \"Breaking Berth\" When this card enters the field, you may drop a hand card. If you do, put a 《Chaos》 spell from your deck into your hand, and shuffle your deck.",
+      "segments": [
+        {
+          "tag": "TRIGGER",
+          "text": "[An/Turn] \"Breaking Berth\" When this card enters the field, you may drop a hand card. If you do, put a 《Chaos》 spell from your deck into your hand, and shuffle your deck."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[An/Turn] \"การเบรกเบิร์ธ\" เมื่อการ์ดนี้ลงสู่สนาม, คุณสามารถทิ้งการ์ด 1 ใบจากบนมือได้ หากทำ, นำการ์ดเวทมนตร์ 《เคออส》 1 ใบจากในกองการ์ดของคุณขึ้นมือ, และสับกองการ์ดของคุณ",
+      "segments": [
+        {
+          "tag": "TRIGGER",
+          "text": "[An/Turn] \"การเบรกเบิร์ธ\" เมื่อการ์ดนี้ลงสู่สนาม, คุณสามารถทิ้งการ์ด 1 ใบจากบนมือได้ หากทำ, นำการ์ดเวทมนตร์ 《เคออส》 1 ใบจากในกองการ์ดของคุณขึ้นมือ, และสับกองการ์ดของคุณ"
+        }
+      ]
+    }
+  },
+  "image": null
+}

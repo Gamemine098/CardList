@@ -1,0 +1,116 @@
+{
+  "card_id": "CHAOS_BASILI_GOLLUM",
+  "name": "CHAOS Basili-gollum",
+  "type": "MONSTER",
+  "size": 3,
+  "power": 8000,
+  "critical": 2,
+  "defense": 6000,
+  "world": [
+    "DANGER_WORLD"
+  ],
+  "attributes": [
+    "DUEL_GOLEM",
+    "CHAOS"
+  ],
+  "cost": {
+    "gauge": 1,
+    "life": 1
+  },
+  "effects": [
+    {
+      "effect_id": "CHAOS_BASILI_GOLLUM_PARTS_DROP",
+      "effect_type": "TRIGGERED",
+      "name": "Parts Drop",
+      "trigger": {
+        "event": "DESTROYED_BY_EFFECT"
+      },
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "effects": [
+        {
+          "effect_id": "CHAOS_BASILI_GOLLUM_DRAW",
+          "effect_type": "DRAW",
+          "amount": 2
+        }
+      ]
+    },
+    {
+      "effect_id": "CHAOS_BASILI_GOLLUM_BATTLE_END",
+      "effect_type": "TRIGGERED",
+      "trigger": {
+        "event": "BATTLE_END_ATTACKED"
+      },
+      "choice": {
+        "description": "Pay 1 gauge or destroy this card",
+        "choices": [
+          {
+            "cost": {
+              "gauge": 1
+            }
+          },
+          {
+            "effect_id": "CHAOS_BASILI_GOLLUM_SELF_DESTROY",
+            "effect_type": "DESTROY",
+            "target": "THIS_CARD"
+          }
+        ]
+      }
+    },
+    {
+      "effect_id": "CHAOS_BASILI_GOLLUM_KEYWORDS",
+      "effect_type": "KEYWORD",
+      "keywords": [
+        "Penetrate",
+        "Double Attack"
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Call Cost] [Pay 1 gauge & Pay 1 life]\n[An/Turn] \"Parts Drop\" When this card is destroyed by card effects, draw two cards.\nAt the end of the battle that this card attacked, you may pay 1 gauge. If you do not, destroy this card.\n[Penetrate] [Double Attack]",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Call Cost] [Pay 1 gauge & Pay 1 life]"
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "[An/Turn] \"Parts Drop\" When this card is destroyed by card effects, draw two cards."
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "At the end of the battle that this card attacked, you may pay 1 gauge. If you do not, destroy this card."
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Penetrate] [Double Attack]"
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Call Cost] [จ่าย 1 เกจ & จ่าย 1 พลังชีวิต]\n[An/Turn] \"พาร์ทดรอป\" เมื่อการ์ดนี้ถูกทำลายโดยความสามารถของการ์ด, จั่วการ์ด 2 ใบ\nเมื่อสิ้นสุดการต่อสู้ที่การ์ดนี้โจมตี, คุณสามารถจ่าย 1 เกจได้ หากไม่จ่าย, ทำลายการ์ดนี้\n[Penetrate] [Double Attack]",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Call Cost] [จ่าย 1 เกจ & จ่าย 1 พลังชีวิต]"
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "[An/Turn] \"พาร์ทดรอป\" เมื่อการ์ดนี้ถูกทำลายโดยความสามารถของการ์ด, จั่วการ์ด 2 ใบ"
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "เมื่อสิ้นสุดการต่อสู้ที่การ์ดนี้โจมตี, คุณสามารถจ่าย 1 เกจได้ หากไม่จ่าย, ทำลายการ์ดนี้"
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Penetrate] [Double Attack]"
+        }
+      ]
+    }
+  },
+  "image": null
+}

@@ -1,0 +1,94 @@
+{
+  "card_id": "FUTURE_CARD_BUDDYFIGHT",
+  "name": "Future Card Buddyfight",
+  "type": "SPELL",
+  "world": "DRAGON_WORLD",
+  "attributes": [
+    "GET"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "FUTURE_CARD_BUDDYFIGHT_ALL_FLAGS",
+      "effect_type": "RULE",
+      "rule": "ALLOW_ALL_FLAGS"
+    },
+    {
+      "effect_id": "FUTURE_CARD_BUDDYFIGHT_MAIN",
+      "effect_type": "CHOICE",
+      "choice_count": 1,
+      "condition": {
+        "type": "COUNT_PER_FIGHT",
+        "count": 1
+      },
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "10th/0036",
+        "ability_reference": "10th/0036: put this card in your buddy zone ... You may only cast \"Future Card Buddyfight\" once per fight ... At the start of your attack phase, if this card is in your buddy zone...",
+        "missing_capability": "ZONE_AND_TRIGGER",
+        "what_is_known": "A spell moves into the BUDDY_ZONE upon resolution, is restricted by a once-per-fight cast constraint, and possesses an automatic trigger activating from the BUDDY_ZONE.",
+        "information_needed": [
+          "Approved schema for moving non-monster cards into BUDDY_ZONE.",
+          "Approved condition primitive for COUNT_PER_FIGHT.",
+          "Engine support for abilities triggering from BUDDY_ZONE."
+        ]
+      }
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "You may use this card with all flags.\nChoose and use one of the following two. Then, put the top two cards of your deck into your gauge, and put this card in your buddy zone. You may only cast \"Future Card Buddyfight\" once per fight.\n• Put a buddy from your deck into your hand, and shuffle your deck.\n• [Counter] If you or your opponent has 5 life or less, put an impact from your deck into your hand, and shuffle your deck.\nAt the start of your attack phase, if this card is in your buddy zone, for this turn, a buddy on your field gets critical+2!",
+      "segments": [
+        {
+          "tag": "RULE",
+          "text": "You may use this card with all flags."
+        },
+        {
+          "tag": "CHOICE",
+          "text": "Choose and use one of the following two. Then, put the top two cards of your deck into your gauge, and put this card in your buddy zone. You may only cast \"Future Card Buddyfight\" once per fight."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "• Put a buddy from your deck into your hand, and shuffle your deck."
+        },
+        {
+          "tag": "COUNTER",
+          "text": "• [Counter] If you or your opponent has 5 life or less, put an impact from your deck into your hand, and shuffle your deck."
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "At the start of your attack phase, if this card is in your buddy zone, for this turn, a buddy on your field gets critical+2!"
+        }
+      ]
+    },
+    "th": {
+      "plain": "คุณสามารถใช้การ์ดนี้ได้กับทุกแฟลก\nเลือกใช้ 1 อย่างจากความสามารถต่อไปนี้ จากนั้น นำการ์ด 2 ใบจากใบบนสุดของกองการ์ดคุณเข้าสู่เกจ และนำการ์ดนี้ไปยังบัดดี้โซนของคุณ คุณสามารถร่าย \"ฟิวเจอร์การ์ด บัดดี้ไฟท์\" ได้เพียง 1 ครั้งใน 1 เกม\n• นำบัดดี้จากในกองการ์ดของคุณ 1 ใบขึ้นมือ และสับกองการ์ดของคุณ\n• [Counter] หากคุณหรือคู่แข่งมีพลังชีวิต 5 หน่วยหรือน้อยกว่า นำการ์ดอิมแพ็คจากในกองการ์ดของคุณ 1 ใบขึ้นมือ และสับกองการ์ดของคุณ\nเมื่อเริ่มต้นแอทแทคเฟสของคุณ หากการ์ดนี้อยู่ในบัดดี้โซนของคุณ ในเทิร์นนี้ บัดดี้บนสนามของคุณ 1 ใบได้รับคริติคอล+2!",
+      "segments": [
+        {
+          "tag": "RULE",
+          "text": "คุณสามารถใช้การ์ดนี้ได้กับทุกแฟลก"
+        },
+        {
+          "tag": "CHOICE",
+          "text": "เลือกใช้ 1 อย่างจากความสามารถต่อไปนี้ จากนั้น นำการ์ด 2 ใบจากใบบนสุดของกองการ์ดคุณเข้าสู่เกจ และนำการ์ดนี้ไปยังบัดดี้โซนของคุณ คุณสามารถร่าย \"ฟิวเจอร์การ์ด บัดดี้ไฟท์\" ได้เพียง 1 ครั้งใน 1 เกม"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "• นำบัดดี้จากในกองการ์ดของคุณ 1 ใบขึ้นมือ และสับกองการ์ดของคุณ"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "• [Counter] หากคุณหรือคู่แข่งมีพลังชีวิต 5 หน่วยหรือน้อยกว่า นำการ์ดอิมแพ็คจากในกองการ์ดของคุณ 1 ใบขึ้นมือ และสับกองการ์ดของคุณ"
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "เมื่อเริ่มต้นแอทแทคเฟสของคุณ หากการ์ดนี้อยู่ในบัดดี้โซนของคุณ ในเทิร์นนี้ บัดดี้บนสนามของคุณ 1 ใบได้รับคริติคอล+2!"
+        }
+      ]
+    }
+  },
+  "image": null
+}

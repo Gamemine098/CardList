@@ -1,0 +1,78 @@
+{
+  "card_id": "CHAOS_ORSER_KLEINZ",
+  "name": "CHAOS Orser Kleinz",
+  "type": "MONSTER",
+  "size": 3,
+  "power": 5000,
+  "critical": 2,
+  "defense": 6000,
+  "world": [
+    "DUNGEON_WORLD"
+  ],
+  "attributes": [
+    "ADVENTURER",
+    "CHAOS"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "CHAOS_ORSER_KLEINZ_ENTER_FIELD",
+      "effect_type": "TRIGGERED",
+      "name": "Heavy Query Eight",
+      "trigger": {
+        "event": "ENTER_FIELD"
+      },
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "cost": {
+        "bottom_deck_from_drop": {
+          "monsters": 2,
+          "spells": 1
+        }
+      },
+      "effects": [
+        {
+          "effect_id": "CHAOS_ORSER_KLEINZ_CHARGE",
+          "effect_type": "CHARGE_GAUGE",
+          "amount": 1
+        },
+        {
+          "effect_id": "CHAOS_ORSER_KLEINZ_HEAL",
+          "effect_type": "GAIN_LIFE",
+          "amount": 1
+        },
+        {
+          "effect_id": "CHAOS_ORSER_KLEINZ_DRAW",
+          "effect_type": "DRAW",
+          "amount": 1
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[An/Turn] \"Heavy Query Eight\" When this card enters the field, you may put two monsters and a spell from your drop zone on the bottom of your deck. If you do, charge a gauge, heal 1 life, and draw a card.",
+      "segments": [
+        {
+          "tag": "TRIGGER",
+          "text": "[An/Turn] \"Heavy Query Eight\" When this card enters the field, you may put two monsters and a spell from your drop zone on the bottom of your deck. If you do, charge a gauge, heal 1 life, and draw a card."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[An/Turn] \"เฮฟวี่เคิวรี่ เอท\" เมื่อการ์ดนี้ลงสู่สนาม, คุณสามารถนำมอนสเตอร์ 2 ใบและการ์ดเวทมนตร์ 1 ใบจากในช่องดรอปของคุณไว้ใต้กองการ์ดของคุณได้ หากทำ, นำการ์ด 1 ใบเข้าสู่เกจ, ฟื้นฟูพลังชีวิต 1 หน่วย, และจั่วการ์ด 1 ใบ",
+      "segments": [
+        {
+          "tag": "TRIGGER",
+          "text": "[An/Turn] \"เฮฟวี่เคิวรี่ เอท\" เมื่อการ์ดนี้ลงสู่สนาม, คุณสามารถนำมอนสเตอร์ 2 ใบและการ์ดเวทมนตร์ 1 ใบจากในช่องดรอปของคุณไว้ใต้กองการ์ดของคุณได้ หากทำ, นำการ์ด 1 ใบเข้าสู่เกจ, ฟื้นฟูพลังชีวิต 1 หน่วย, และจั่วการ์ด 1 ใบ"
+        }
+      ]
+    }
+  },
+  "image": null
+}

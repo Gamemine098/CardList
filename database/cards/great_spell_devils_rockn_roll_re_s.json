@@ -1,0 +1,171 @@
+{
+  "card_id": "GREAT_SPELL_DEVILS_ROCKN_ROLL_RE_S",
+  "name": {
+    "en": "Great Spell, Devil's Rock'n Roll \"Re:S\"",
+    "th": "มหาเวท, เดวิลร็อคแอนด์โรล \"Re:S\""
+  },
+  "image": null,
+  "type": "SPELL",
+  "worlds": [
+    "MAGIC_WORLD"
+  ],
+  "attributes": [
+    "72_PILLARS",
+    "SUMMON"
+  ],
+  "call_cost": [],
+  "cast_cost": [
+    {
+      "type": "MOVE_CARD",
+      "from": "HAND",
+      "to": "DROP",
+      "target": {
+        "type": "SELECT",
+        "zone": "HAND",
+        "count": 1
+      }
+    }
+  ],
+  "use_restrictions": [],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "GREAT_SPELL_DEVILS_ROCKN_ROLL_RE_S-A01",
+      "kind": "ACT",
+      "keywords": [],
+      "skill_restrictions": [
+        {
+          "type": "ACTIVATION_LIMIT",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "GREAT_SPELL_DEVILS_ROCKN_ROLL_RE_S",
+            "ability_id": "GREAT_SPELL_DEVILS_ROCKN_ROLL_RE_S-A01"
+          }
+        }
+      ],
+      "cost": [],
+      "effects": [
+        {
+          "type": "SEQUENCE",
+          "effects": [
+            {
+              "type": "LOOK_AT_TOP_DECK",
+              "amount": 5
+            },
+            {
+              "type": "MOVE_CARD",
+              "from": "LOOKED_CARDS",
+              "to": "HAND",
+              "target": {
+                "type": "SELECT",
+                "card_type": "MONSTER",
+                "maximum": 2
+              }
+            },
+            {
+              "type": "MOVE_CARD",
+              "from": "LOOKED_CARDS",
+              "to": "HAND",
+              "target": {
+                "type": "SELECT",
+                "card_type": "SPELL",
+                "maximum": 1
+              }
+            },
+            {
+              "type": "MOVE_CARD",
+              "from": "LOOKED_CARDS",
+              "to": "HAND",
+              "target": {
+                "type": "SELECT",
+                "card_type": "ITEM",
+                "maximum": 1
+              }
+            },
+            {
+              "type": "MOVE_CARD",
+              "from": "LOOKED_CARDS",
+              "to": "DECK_BOTTOM",
+              "target": {
+                "type": "ALL_REMAINING"
+              }
+            },
+            {
+              "type": "SHUFFLE_DECK"
+            }
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Cast Cost] [Drop a hand card]\n[Cn/Turn] Look at the top five cards of your deck, put up to two monsters, up to one spell and up to one item from among them into your hand, and shuffle your deck.",
+          "segments": [
+            {
+              "text": "[Cast Cost]",
+              "style": "COST"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Drop a hand card]",
+              "style": "COST"
+            },
+            {
+              "text": "\n"
+            },
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " Look at the top five cards of your deck, put up to two monsters, up to one spell and up to one item from among them into your hand, and shuffle your deck."
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Cast Cost] [ทิ้งการ์ดบนมือ 1 ใบ]\n[Cn/Turn] ดูการ์ด 5 ใบบนสุดจากกองการ์ดเรา, นำมอนสเตอร์ไม่เกิน 2 ใบ, การ์ดเวทมนตร์ไม่เกิน 1 ใบ และไอเท็มไม่เกิน 1 ใบจากการ์ดเหล่านั้นขึ้นมือ, และสับกองการ์ดเรา",
+          "segments": [
+            {
+              "text": "[Cast Cost]",
+              "style": "COST"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[ทิ้งการ์ดบนมือ 1 ใบ]",
+              "style": "COST"
+            },
+            {
+              "text": "\n"
+            },
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " ดูการ์ด 5 ใบบนสุดจาก"
+            },
+            {
+              "text": "กองการ์ด",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรา, นำมอนสเตอร์ไม่เกิน 2 ใบ, การ์ดเวทมนตร์ไม่เกิน 1 ใบ และไอเท็มไม่เกิน 1 ใบจากการ์ดเหล่านั้นขึ้น"
+            },
+            {
+              "text": "มือ",
+              "style": "ZONE"
+            },
+            {
+              "text": ", และสับกองการ์ดเรา"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

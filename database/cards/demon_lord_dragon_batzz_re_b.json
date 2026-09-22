@@ -1,0 +1,302 @@
+{
+  "card_id": "DEMON_LORD_DRAGON_BATZZ_RE_B",
+  "name": {
+    "en": "Demon Lord Dragon, Batzz \"Re:B\"",
+    "th": "มังกรจอมมาร บัตซ์ “Re:B”"
+  },
+  "image": null,
+  "type": "MONSTER",
+  "worlds": [
+    "DRAGON_WORLD"
+  ],
+  "attributes": [
+    "THUNDER_EMPIRE",
+    "DRAGON"
+  ],
+  "stats": {
+    "size": 2,
+    "power": 13000,
+    "critical": 2,
+    "defense": 6000
+  },
+  "call_cost": [
+    {
+      "type": "PAY_GAUGE",
+      "amount": 2
+    }
+  ],
+  "use_restrictions": [],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "DEMON_LORD_DRAGON_BATZZ_RE_B-A01",
+      "kind": "CONT",
+      "keywords": [],
+      "skill_restrictions": [],
+      "activation_condition": {
+        "type": "TURN",
+        "turn": "YOUR_TURN"
+      },
+      "effects": [
+        {
+          "type": "PROTECTION",
+          "target": "THIS_CARD",
+          "action": "LEAVE_FIELD",
+          "source": "OPPONENT_CARD_EFFECT",
+          "duration": {
+            "type": "WHILE_SOURCE_ACTIVE"
+          }
+        },
+        {
+          "type": "PROTECTION",
+          "target": "THIS_CARD",
+          "action": "REST",
+          "source": "OPPONENT_CARD_EFFECT",
+          "duration": {
+            "type": "WHILE_SOURCE_ACTIVE"
+          }
+        },
+        {
+          "type": "PROTECTION",
+          "target": {
+            "type": "ABILITIES",
+            "of": "THIS_CARD"
+          },
+          "action": "NULLIFY",
+          "source": "OPPONENT_CARD_EFFECT",
+          "duration": {
+            "type": "WHILE_SOURCE_ACTIVE"
+          }
+        },
+        {
+          "type": "PROTECTION",
+          "target": "THIS_CARD",
+          "action": "DESTROY",
+          "source": "ALL",
+          "duration": {
+            "type": "WHILE_SOURCE_ACTIVE"
+          }
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "During your turn, this card cannot leave the field or be [Rest] and its abilities cannot be nullified by your opponent's card effects, and it cannot be destroyed.",
+          "segments": [
+            {
+              "text": "During your turn, this card cannot leave the field or be "
+            },
+            {
+              "text": "[Rest]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " and its abilities cannot be nullified by your opponent's card effects, and it cannot be destroyed."
+            }
+          ]
+        },
+        "th": {
+          "plain": "ในเทิร์นของเรา, การ์ดนี้ไม่สามารถออกจากสนามหรือถูก [Rest] และความสามารถไม่สามารถถูกยกเลิกโดยความสามารถการ์ดคู่แข่ง, และไม่สามารถถูกทำลายได้",
+          "segments": [
+            {
+              "text": "ใน"
+            },
+            {
+              "text": "เทิร์นของเรา",
+              "style": "TURN"
+            },
+            {
+              "text": ", การ์ดนี้ไม่สามารถออกจาก"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "หรือถูก "
+            },
+            {
+              "text": "[Rest]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " และความสามารถไม่สามารถถูกยกเลิกโดยความสามารถการ์ดคู่แข่ง, และไม่สามารถถูกทำลายได้"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "DEMON_LORD_DRAGON_BATZZ_RE_B-A02",
+      "kind": "AUTO",
+      "keywords": [],
+      "skill_restrictions": [
+        {
+          "type": "ACTIVATION_LIMIT",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "DEMON_LORD_DRAGON_BATZZ_RE_B",
+            "ability_id": "DEMON_LORD_DRAGON_BATZZ_RE_B-A02"
+          }
+        }
+      ],
+      "trigger": {
+        "type": "ATTACK_DECLARED",
+        "attacker": "THIS_CARD"
+      },
+      "effects": [
+        {
+          "type": "IF",
+          "condition": {
+            "type": "STAT_COMPARE",
+            "target": "SELF_LIFE",
+            "operator": "LESS_THAN_OR_EQUAL",
+            "value": 4
+          },
+          "then": [
+            {
+              "type": "MODIFY_STAT",
+              "target": "THIS_CARD",
+              "stat": "POWER",
+              "amount": 10000,
+              "duration": {
+                "type": "UNTIL_END_OF_TURN"
+              }
+            },
+            {
+              "type": "MODIFY_STAT",
+              "target": "THIS_CARD",
+              "stat": "CRITICAL",
+              "amount": 1,
+              "duration": {
+                "type": "UNTIL_END_OF_TURN"
+              }
+            },
+            {
+              "type": "GRANT_KEYWORD",
+              "target": "THIS_CARD",
+              "keyword": "HEXTUPLE_ATTACK",
+              "duration": {
+                "type": "UNTIL_END_OF_TURN"
+              }
+            }
+          ],
+          "else": [
+            {
+              "type": "GRANT_KEYWORD",
+              "target": "THIS_CARD",
+              "keyword": "TRIPLE_ATTACK",
+              "duration": {
+                "type": "UNTIL_END_OF_TURN"
+              }
+            }
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "When this card attacks, for this turn, this card gets [Triple Attack]. If you have 4 life or less, for this turn, this card gets power+10000, critical+1 and [Hextuple Attack] instead!! This ability only activates once per turn.",
+          "segments": [
+            {
+              "text": "When this card attacks, for this turn, this card gets "
+            },
+            {
+              "text": "[Triple Attack]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": ". If you have 4 life or less, for this turn, this card gets power+10000, critical+1 and "
+            },
+            {
+              "text": "[Hextuple Attack]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " instead!! This ability only activates once per turn."
+            }
+          ]
+        },
+        "th": {
+          "plain": "เมื่อการ์ดนี้โจมตี, ในเทิร์นนี้, การ์ดนี้ได้รับ [Triple Attack]. ถ้าเรามีพลังชีวิต 4 หรือต่ำกว่า, ในเทิร์นนี้, การ์ดนี้ได้รับพาวเวอร์ +10000, คริติคอล +1 และ [Hextuple Attack] แทน!! ความสามารถนี้ทำงาน 1 ครั้งใน 1 เทิร์น",
+          "segments": [
+            {
+              "text": "เมื่อการ์ดนี้โจมตี, ใน"
+            },
+            {
+              "text": "เทิร์นนี้",
+              "style": "TURN"
+            },
+            {
+              "text": ", การ์ดนี้ได้รับ "
+            },
+            {
+              "text": "[Triple Attack]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": ". ถ้าเรามีพลังชีวิต 4 หรือต่ำกว่า, ใน"
+            },
+            {
+              "text": "เทิร์นนี้",
+              "style": "TURN"
+            },
+            {
+              "text": ", การ์ดนี้ได้รับ"
+            },
+            {
+              "text": "พาวเวอร์ +10000",
+              "style": "STAT_MODIFIER"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "คริติคอล +1",
+              "style": "STAT_MODIFIER"
+            },
+            {
+              "text": " และ "
+            },
+            {
+              "text": "[Hextuple Attack]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " แทน!! ความสามารถนี้ทำงาน 1 ครั้งใน 1 เทิร์น"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "DEMON_LORD_DRAGON_BATZZ_RE_B-A03",
+      "kind": "CONT",
+      "keywords": [
+        "PENETRATE"
+      ],
+      "skill_restrictions": [],
+      "effects": [],
+      "effect_text": {
+        "en": {
+          "plain": "[Penetrate]",
+          "segments": [
+            {
+              "text": "[Penetrate]",
+              "style": "KEYWORD"
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Penetrate]",
+          "segments": [
+            {
+              "text": "[Penetrate]",
+              "style": "KEYWORD"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

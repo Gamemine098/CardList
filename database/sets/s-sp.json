@@ -1,0 +1,21 @@
+{
+  "set_id": "S-SP",
+  "cards": [
+    {
+      "card_number": "S-SP/0007",
+      "card_id": "CHAOS_VANGUARD_GEARGOD_VER_ZERO"
+    },
+    {
+      "card_number": "S-SP/0008",
+      "card_id": "SUPER_CLASH_GEARGOD_AND_WISDOM"
+    },
+    {
+      "card_number": "S-SP/0017",
+      "card_id": "OPERATIVE_MECH_CHAOS_SPHERE"
+    },
+    {
+      "card_number": "S-SP/0022",
+      "card_id": "POPULATION_REDUCTION"
+    }
+  ]
+}

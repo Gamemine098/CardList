@@ -1,0 +1,81 @@
+{
+  "card_id": "ONE_WHO_COMES_FROM_HAVOC",
+  "name": "One Who Comes From Havoc",
+  "type": "SPELL",
+  "world": [
+    "LEGEND_WORLD"
+  ],
+  "attributes": [
+    "DRAW",
+    "CHAOS"
+  ],
+  "cost": {
+    "gauge": 1,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "ONE_WHO_COMES_FROM_HAVOC_DRAW",
+      "effect_type": "DRAW",
+      "condition": {
+        "type": "AND",
+        "conditions": [
+          {
+            "type": "COUNT_PER_TURN",
+            "count": 1
+          },
+          {
+            "type": "FIELD_COUNT_GTE",
+            "target": {
+              "target_type": "CARD",
+              "zone": "FIELD",
+              "controller": "YOU",
+              "attributes_all": [
+                "CHAOS"
+              ]
+            },
+            "count": 2
+          }
+        ]
+      },
+      "amount": 2
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "You may only cast this card if you have two or more 《Chaos》 on your field.\n[Cast Cost] [Pay 1 gauge]\n[Cn/Turn] Draw two cards.",
+      "segments": [
+        {
+          "tag": "RULE",
+          "text": "You may only cast this card if you have two or more 《Chaos》 on your field."
+        },
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [Pay 1 gauge]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "[Cn/Turn] Draw two cards."
+        }
+      ]
+    },
+    "th": {
+      "plain": "คุณสามารถร่ายการ์ดนี้ได้เมื่อมี 《เคออส》 2 ใบขึ้นไปบนสนามของคุณเท่านั้น\n[Cast Cost] [จ่าย 1 เกจ]\n[Cn/Turn] จั่วการ์ด 2 ใบ",
+      "segments": [
+        {
+          "tag": "RULE",
+          "text": "คุณสามารถร่ายการ์ดนี้ได้เมื่อมี 《เคออส》 2 ใบขึ้นไปบนสนามของคุณเท่านั้น"
+        },
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [จ่าย 1 เกจ]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "[Cn/Turn] จั่วการ์ด 2 ใบ"
+        }
+      ]
+    }
+  },
+  "image": null
+}

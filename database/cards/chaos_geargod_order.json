@@ -1,0 +1,84 @@
+{
+  "card_id": "CHAOS_GEARGOD_ORDER",
+  "name": "Chaos Geargod Order",
+  "type": "SPELL",
+  "world": [
+    "DARKNESS_DRAGON_WORLD",
+    "DANGER_WORLD"
+  ],
+  "attributes": [
+    "DEFENSE",
+    "CHAOS"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 1
+  },
+  "effects": [
+    {
+      "effect_id": "CHAOS_GEARGOD_ORDER_CHOICE",
+      "effect_type": "CHOICE",
+      "choice_count": 1,
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "FD10/015",
+        "ability_reference": "FD10/015: Charge two gauge. Then, look at all of your gauge, reveal up to one monster and item each from among them, and put them into your hand. If your initial flag is \"the Chaos\", you may look at all of your gauge and put up to one card from among them into your hand instead / if you have a card with [Duo] on your field, in your drop zone, or in the soul of cards on your field, when you would take 5 or more damage, that damage becomes 0.",
+        "missing_capability": "GAUGE_INSPECTION_AND_DUO_CHECK",
+        "what_is_known": "Ability allows inspecting all cards in gauge with branching criteria based on initial flag. Counter option evaluates presence of [Duo] keyword across FIELD, DROP, and SOUL zones, providing threshold damage negation.",
+        "information_needed": [
+          "Approved schema for LOOK_GAUGE and conditional retrieval.",
+          "Approved predicate for checking keyword presence across multi-zone scopes (KEYWORD_EXISTS in [FIELD, DROP, SOUL])."
+        ]
+      }
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Cast Cost] [Pay 1 life]\n[Cn/Turn] Choose one of the following.\n• Charge two gauge. Then, look at all of your gauge, reveal up to one monster and item each from among them, and put them into your hand. If your initial flag is \"the Chaos\", you may look at all of your gauge and put up to one card from among them into your hand instead.\n• [Counter] For this turn, if you have a card with [Duo] on your field, in your drop zone, or in the soul of cards on your field, when you would take 5 or more damage, that damage becomes 0.",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [Pay 1 life]"
+        },
+        {
+          "tag": "CHOICE",
+          "text": "[Cn/Turn] Choose one of the following."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "• Charge two gauge. Then, look at all of your gauge, reveal up to one monster and item each from among them, and put them into your hand. If your initial flag is \"the Chaos\", you may look at all of your gauge and put up to one card from among them into your hand instead."
+        },
+        {
+          "tag": "COUNTER",
+          "text": "• [Counter] For this turn, if you have a card with [Duo] on your field, in your drop zone, or in the soul of cards on your field, when you would take 5 or more damage, that damage becomes 0."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Cast Cost] [จ่าย 1 พลังชีวิต]\n[Cn/Turn] เลือกใช้ 1 อย่างจากความสามารถต่อไปนี้\n• เพิ่มเกจ 2 ใบ จากนั้น ดูการ์ดทั้งหมดในเกจของคุณ เปิดเผยและนำมอนสเตอร์และไอเท็มอย่างละไม่เกิน 1 ใบขึ้นมือ หากแฟลกเริ่มต้นของคุณคือ \"เดอะ เคออส\" คุณสามารถดูการ์ดทั้งหมดในเกจของคุณและนำการ์ดได้สูงสุด 1 ใบขึ้นมือแทนได้\n• [Counter] ในเทิร์นนี้ หากคุณมีการ์ดที่มี [Duo] อยู่บนสนาม ในช่องดรอป หรือในโซลของการ์ดบนสนามของคุณ เมื่อคุณจะได้รับความเสียหาย 5 หน่วยขึ้นไป ความเสียหายนั้นจะกลายเป็น 0",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [จ่าย 1 พลังชีวิต]"
+        },
+        {
+          "tag": "CHOICE",
+          "text": "[Cn/Turn] เลือกใช้ 1 อย่างจากความสามารถต่อไปนี้"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "• เพิ่มเกจ 2 ใบ จากนั้น ดูการ์ดทั้งหมดในเกจของคุณ เปิดเผยและนำมอนสเตอร์และไอเท็มอย่างละไม่เกิน 1 ใบขึ้นมือ หากแฟลกเริ่มต้นของคุณคือ \"เดอะ เคออส\" คุณสามารถดูการ์ดทั้งหมดในเกจของคุณและนำการ์ดได้สูงสุด 1 ใบขึ้นมือแทนได้"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "• [Counter] ในเทิร์นนี้ หากคุณมีการ์ดที่มี [Duo] อยู่บนสนาม ในช่องดรอป หรือในโซลของการ์ดบนสนามของคุณ เมื่อคุณจะได้รับความเสียหาย 5 หน่วยขึ้นไป ความเสียหายนั้นจะกลายเป็น 0"
+        }
+      ]
+    }
+  },
+  "image": null
+}

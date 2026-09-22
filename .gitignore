@@ -1,2 +1,3 @@
 *.webp
 # !database/images/*.webp
+*.txt

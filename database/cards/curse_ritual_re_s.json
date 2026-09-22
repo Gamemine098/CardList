@@ -1,0 +1,212 @@
+{
+  "card_id": "CURSE_RITUAL_RE_S",
+  "name": {
+    "en": "Curse Ritual \"Re:S\"",
+    "th": "เคิร์ส・ริชวล \"Re:S\""
+  },
+  "image": null,
+  "type": "SPELL",
+  "worlds": [
+    "DARKNESS_DRAGON_WORLD"
+  ],
+  "attributes": [
+    "CURSE_DRAGON",
+    "EXECUTIONERS",
+    "DRAW"
+  ],
+  "call_cost": [],
+  "cast_cost": [
+    {
+      "type": "DESTROY",
+      "target": {
+        "type": "SELECT",
+        "zone": "FIELD",
+        "card_type": "MONSTER",
+        "player": "SELF",
+        "count": 1
+      }
+    }
+  ],
+  "use_restrictions": [
+    {
+      "type": "CARD_USE_LIMIT",
+      "action": "CAST",
+      "count": 1,
+      "period": "TURN",
+      "source": {
+        "kind": "CARD",
+        "card_id": "CURSE_RITUAL_RE_S"
+      }
+    }
+  ],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "CURSE_RITUAL_RE_S-A01",
+      "kind": "ACT",
+      "keywords": [],
+      "skill_restrictions": [],
+      "cost": [],
+      "effects": [
+        {
+          "type": "CHOICE",
+          "choose": 1,
+          "options": [
+            {
+              "id": "CHARGE_HEAL_DRAW",
+              "effects": [
+                {
+                  "type": "PUT_TOP_DECK_TO_GAUGE",
+                  "amount": 2
+                },
+                {
+                  "type": "GAIN_LIFE",
+                  "amount": 2
+                },
+                {
+                  "type": "DRAW",
+                  "amount": 1
+                }
+              ]
+            },
+            {
+              "id": "CALL_TWO_DIFFERENT_SIZES",
+              "effects": [
+                {
+                  "type": "CALL",
+                  "from": "DROP",
+                  "to": "FIELD",
+                  "targets": [
+                    {
+                      "type": "SELECT",
+                      "card_type": "MONSTER",
+                      "filter": {
+                        "type": "OR",
+                        "filters": [
+                          {
+                            "type": "WORLD",
+                            "value": "DARKNESS_DRAGON_WORLD"
+                          },
+                          {
+                            "type": "ATTRIBUTE",
+                            "value": "EXECUTIONERS"
+                          }
+                        ]
+                      },
+                      "distinct_sizes": true,
+                      "maximum": 2
+                    }
+                  ],
+                  "pay_call_cost": true
+                }
+              ]
+            },
+            {
+              "id": "COUNTER_DESTROY_THREE",
+              "effects": [
+                {
+                  "type": "DESTROY",
+                  "target": {
+                    "type": "SELECT",
+                    "target_player": "OPPONENT",
+                    "zone": "FIELD",
+                    "maximum": 3
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Cast Cost] [Destroy a monster on your field]\nChoose and use one of the following three. You may only cast \"Curse Ritual \"Re:S\"\" once per turn.\n• Put the top two cards of your deck into your gauge, You gain 2 life, and draw a card.\n• Call up to two <Darkness Dragon World> or《Executioners》monsters with different sizes from your drop zone by paying their [Call Cost].\n• [Counter] Destroy up to three cards on your opponent's field.",
+          "segments": [
+            {
+              "text": "[Cast Cost]",
+              "style": "COST"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Destroy a monster on your field]",
+              "style": "COST"
+            },
+            {
+              "text": "\nChoose and use one of the following three. You may only cast \"Curse Ritual \"Re:S\"\" once per turn.\n• Put the top two cards of your deck into your gauge, You gain 2 life, and draw a card.\n• Call up to two <Darkness Dragon World> or《Executioners》monsters with different sizes from your drop zone by paying their [Call Cost].\n• "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " Destroy up to three cards on your opponent's field."
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Cast Cost] [ทำลายมอนสเตอร์บนสนามเรา 1 ใบ]\nเลือกใช้ 1 อย่างต่อไปนี้. ร่าย \"เคิร์ส・ริชวล \"Re:S\"\" ได้เพียง 1 ครั้งใน 1 เทิร์น\n• นำการ์ด 2 ใบบนสุดจากกองการ์ดเราเข้าสู่เกจ, เราได้รับพลังชีวิต 2 หน่วย, และจั่วการ์ด 1 ใบ\n• คอลมอนสเตอร์ <ดาร์คเนสดราก้อนเวิลด์> หรือ 《เพชฌฆาต》 ที่มีไซส์ต่างกันไม่เกิน 2 ใบจากช่องดรอบเราโดยจ่าย [Call Cost]\n• [Counter] ทำลายการ์ดบนสนามคู่แข่งไม่เกิน 3 ใบ",
+          "segments": [
+            {
+              "text": "[Cast Cost]",
+              "style": "COST"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[ทำลายมอนสเตอร์บนสนามเรา 1 ใบ]",
+              "style": "COST"
+            },
+            {
+              "text": "\nเลือกใช้ 1 อย่างต่อไปนี้. ร่าย \"เคิร์ส・ริชวล \"Re:S\"\" ได้เพียง 1 ครั้งใน 1 เทิร์น\n• นำการ์ด 2 ใบบนสุดจาก"
+            },
+            {
+              "text": "กองการ์ด",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราเข้าสู่"
+            },
+            {
+              "text": "เกจ",
+              "style": "ZONE"
+            },
+            {
+              "text": ", เราได้รับพลังชีวิต 2 หน่วย, และจั่วการ์ด 1 ใบ\n• คอลมอนสเตอร์ <ดาร์คเนสดราก้อนเวิลด์> หรือ 《เพชฌฆาต》 ที่มีไซส์ต่างกันไม่เกิน 2 ใบจาก"
+            },
+            {
+              "text": "ช่องดรอบ",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราโดยจ่าย "
+            },
+            {
+              "text": "[Call Cost]",
+              "style": "COST"
+            },
+            {
+              "text": "\n• "
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " ทำลายการ์ดบน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "คู่แข่งไม่เกิน 3 ใบ"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

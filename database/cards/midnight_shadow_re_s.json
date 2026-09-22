@@ -1,0 +1,156 @@
+{
+  "card_id": "MIDNIGHT_SHADOW_RE_S",
+  "name": {
+    "en": "Midnight Shadow \"Re:S\"",
+    "th": "มิดไนท์・ชาโดว์ \"Re:S\""
+  },
+  "image": null,
+  "type": "SPELL",
+  "worlds": [
+    "DARKNESS_DRAGON_WORLD"
+  ],
+  "attributes": [
+    "DEATH",
+    "DEFENSE"
+  ],
+  "call_cost": [],
+  "use_restrictions": [
+    {
+      "type": "CARD_USE_LIMIT",
+      "action": "CAST",
+      "count": 1,
+      "period": "TURN",
+      "source": {
+        "kind": "CARD",
+        "card_id": "MIDNIGHT_SHADOW_RE_S"
+      }
+    }
+  ],
+  "rules": [
+    {
+      "type": "CANNOT_BE_NULLIFIED"
+    }
+  ],
+  "abilities": [
+    {
+      "id": "MIDNIGHT_SHADOW_RE_S-A01",
+      "kind": "ACT",
+      "keywords": [
+        "COUNTER"
+      ],
+      "skill_restrictions": [],
+      "trigger": {
+        "type": "COUNTER_TIMING"
+      },
+      "cost": [],
+      "effects": [
+        {
+          "type": "CHOICE",
+          "choose": 1,
+          "options": [
+            {
+              "id": "PREVENT_DAMAGE",
+              "effects": [
+                {
+                  "type": "MODIFY_NEXT_DAMAGE",
+                  "source": "ATTACK",
+                  "amount": 0,
+                  "occurrences": 1,
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                },
+                {
+                  "type": "MODIFY_NEXT_DAMAGE",
+                  "source": "OPPONENT_CARD_EFFECT",
+                  "amount": 0,
+                  "occurrences": 1,
+                  "duration": {
+                    "type": "UNTIL_END_OF_TURN"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "DESTROY_AND_DISCARD",
+              "effects": [
+                {
+                  "type": "DESTROY",
+                  "target": {
+                    "type": "SELECT",
+                    "zone": "FIELD",
+                    "maximum": 1
+                  }
+                },
+                {
+                  "type": "MOVE_CARD",
+                  "from": "HAND",
+                  "to": "DROP",
+                  "target": {
+                    "type": "SELECT",
+                    "player": "OPPONENT",
+                    "zone": "HAND",
+                    "count": 1
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "This card cannot be nullified.\n[Counter] Choose and use one of the following two. You may only cast \"Midnight Shadow \"Re:S\"\" once per turn.\n• For this turn, the next damage you take by an attack becomes 0, and the next damage you take by your opponent's card effects becomes 0.\n• Destroy up to one card on the field, and your opponent drops a hand card.",
+          "segments": [
+            {
+              "text": "This card cannot be nullified.\n"
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " Choose and use one of the following two. You may only cast \"Midnight Shadow \"Re:S\"\" once per turn.\n• For this turn, the next damage you take by an attack becomes 0, and the next damage you take by your opponent's card effects becomes 0.\n• Destroy up to one card on the field, and your opponent drops a hand card."
+            }
+          ]
+        },
+        "th": {
+          "plain": "การ์ดใบนี้ไม่สามารถถูกยกเลิกได้\n[Counter] เลือกใช้ 1 อย่างต่อไปนี้. ร่าย \"มิดไนท์・ชาโดว์ \"Re:S\"\" ได้เพียง 1 ครั้งใน 1 เทิร์น\n• ในเทิร์นนี้, ความเสียหายครั้งถัดไปที่เราจะได้รับจากการโจมตีกลายเป็น 0, และความเสียหายครั้งถัดไปที่เราจะได้รับจากความสามารถการ์ดคู่แข่งกลายเป็น 0\n• ทำลายการ์ดบนสนามไม่เกิน 1 ใบ, และคู่แข่งทิ้งการ์ดบนมือ 1 ใบ",
+          "segments": [
+            {
+              "text": "การ์ดใบนี้ไม่สามารถถูกยกเลิกได้\n"
+            },
+            {
+              "text": "[Counter]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " เลือกใช้ 1 อย่างต่อไปนี้. ร่าย \"มิดไนท์・ชาโดว์ \"Re:S\"\" ได้เพียง 1 ครั้งใน 1 เทิร์น\n• ใน"
+            },
+            {
+              "text": "เทิร์นนี้",
+              "style": "TURN"
+            },
+            {
+              "text": ", ความเสียหายครั้งถัดไปที่เราจะได้รับจากการโจมตีกลายเป็น 0, และความเสียหายครั้งถัดไปที่เราจะได้รับจากความสามารถการ์ดคู่แข่งกลายเป็น 0\n• ทำลายการ์ดบน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "ไม่เกิน 1 ใบ, และคู่แข่งทิ้งการ์ดบน"
+            },
+            {
+              "text": "มือ",
+              "style": "ZONE"
+            },
+            {
+              "text": " 1 ใบ"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

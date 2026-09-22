@@ -1,0 +1,151 @@
+{
+  "card_id": "PROTO_BARRIER_RE_S",
+  "name": "Proto Barrier \"Re:S\"",
+  "type": "SPELL",
+  "world": "STAR_DRAGON_WORLD",
+  "attributes": [
+    "DEFENSE"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "PROTO_BARRIER_RE_S_CANNOT_BE_NULLIFIED",
+      "effect_type": "RULE",
+      "target_rules": {
+        "cannot_be_nullified": true
+      }
+    },
+    {
+      "effect_id": "PROTO_BARRIER_RE_S_SOUL_PROTECTION",
+      "effect_type": "PROTECTION",
+      "zone": "SOUL",
+      "target": {
+        "target_type": "SOUL_MASTER_SOULS"
+      },
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "10th/0032",
+        "ability_reference": "10th/0032: The soul master's souls cannot be dropped or returned to deck by your opponent's card effects.",
+        "missing_capability": "PROTECTION_RULE",
+        "what_is_known": "While this card is in a card's soul, that host card's souls are protected from being dropped or returned to deck by opponent card effects.",
+        "information_needed": [
+          "Approved continuous soul protection rule syntax for soul master's souls."
+        ]
+      }
+    },
+    {
+      "effect_id": "PROTO_BARRIER_RE_S_CHOICE",
+      "effect_type": "CHOICE",
+      "choice_count": 1,
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "choices": [
+        {
+          "description": "For this turn, the next damage you take by an attack becomes 0, and the next damage you take by your opponent's card effects becomes 0.",
+          "effects": [
+            {
+              "effect_id": "PROTO_BARRIER_RE_S_PREVENT_ATTACK_DAMAGE",
+              "effect_type": "DAMAGE_PROTECTION",
+              "target": "PLAYER",
+              "source": "ATTACK",
+              "instances": 1,
+              "duration": "THIS_TURN",
+              "amount_prevented": "ALL"
+            },
+            {
+              "effect_id": "PROTO_BARRIER_RE_S_PREVENT_EFFECT_DAMAGE",
+              "effect_type": "DAMAGE_PROTECTION",
+              "target": "PLAYER",
+              "source": "OPPONENT_CARD_EFFECT",
+              "instances": 1,
+              "duration": "THIS_TURN",
+              "amount_prevented": "ALL"
+            }
+          ]
+        },
+        {
+          "description": "Draw a card, put this card and a card from your drop zone into the soul of a card on your field.",
+          "effects": [
+            {
+              "effect_id": "PROTO_BARRIER_RE_S_DRAW",
+              "effect_type": "DRAW",
+              "amount": 1
+            },
+            {
+              "effect_id": "PROTO_BARRIER_RE_S_PUT_SOUL",
+              "effect_type": "MOVE_CARD",
+              "source": [
+                "THIS_CARD",
+                "DROP"
+              ],
+              "destination": "SOUL",
+              "target": {
+                "target_type": "CARD",
+                "zone": "FIELD",
+                "controller": "YOU"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "This card cannot be nullified.\n【Soul】 The soul master's souls cannot be dropped or returned to deck by your opponent's card effects.\n[Cn/Turn] Choose and use one of the following two.\n• [Counter] For this turn, the next damage you take by an attack becomes 0, and the next damage you take by your opponent's card effects becomes 0.\n• Draw a card, put this card and a card from your drop zone into the soul of a card on your field.",
+      "segments": [
+        {
+          "tag": "RULE",
+          "text": "This card cannot be nullified."
+        },
+        {
+          "tag": "SOUL",
+          "text": "【Soul】 The soul master's souls cannot be dropped or returned to deck by your opponent's card effects."
+        },
+        {
+          "tag": "CHOICE",
+          "text": "[Cn/Turn] Choose and use one of the following two."
+        },
+        {
+          "tag": "COUNTER",
+          "text": "• [Counter] For this turn, the next damage you take by an attack becomes 0, and the next damage you take by your opponent's card effects becomes 0."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "• Draw a card, put this card and a card from your drop zone into the soul of a card on your field."
+        }
+      ]
+    },
+    "th": {
+      "plain": "การ์ดนี้ไม่สามารถถูกยกเลิกได้\n【Soul】 โซลของโซลมาสเตอร์ไม่สามารถถูกส่งลงช่องดรอปหรือนำกลับเข้ากองการ์ดโดยความสามารถการ์ดของคู่แข่งได้\n[Cn/Turn] เลือกใช้ 1 อย่างจากความสามารถต่อไปนี้\n• [Counter] ในเทิร์นนี้ ความเสียหายครั้งต่อไปที่คุณจะได้รับจากการโจมตีกลายเป็น 0 และความเสียหายครั้งต่อไปที่คุณจะได้รับจากความสามารถการ์ดของคู่แข่งกลายเป็น 0\n• จั่วการ์ด 1 ใบ, นำการ์ดนี้และการ์ด 1 ใบจากช่องดรอปของคุณเข้าสู่โซลของการ์ดบนสนามของคุณ",
+      "segments": [
+        {
+          "tag": "RULE",
+          "text": "การ์ดนี้ไม่สามารถถูกยกเลิกได้"
+        },
+        {
+          "tag": "SOUL",
+          "text": "【Soul】 โซลของโซลมาสเตอร์ไม่สามารถถูกส่งลงช่องดรอปหรือนำกลับเข้ากองการ์ดโดยความสามารถการ์ดของคู่แข่งได้"
+        },
+        {
+          "tag": "CHOICE",
+          "text": "[Cn/Turn] เลือกใช้ 1 อย่างจากความสามารถต่อไปนี้"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "• [Counter] ในเทิร์นนี้ ความเสียหายครั้งต่อไปที่คุณจะได้รับจากการโจมตีกลายเป็น 0 และความเสียหายครั้งต่อไปที่คุณจะได้รับจากความสามารถการ์ดของคู่แข่งกลายเป็น 0"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "• จั่วการ์ด 1 ใบ, นำการ์ดนี้และการ์ด 1 ใบจากช่องดรอปของคุณเข้าสู่โซลของการ์ดบนสนามของคุณ"
+        }
+      ]
+    }
+  },
+  "image": null
+}

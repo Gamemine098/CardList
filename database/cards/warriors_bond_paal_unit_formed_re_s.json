@@ -1,0 +1,293 @@
+{
+  "card_id": "WARRIORS_BOND_PAAL_UNIT_FORMED_RE_S",
+  "name": {
+    "en": "Warrior's Bond! Paal Unit Formed! \"Re:S\"",
+    "th": "สายสัมพันธ์แห่งนักรบ! ก่อตั้งหน่วยยอดมิตรภาพ! \"Re:S\""
+  },
+  "image": null,
+  "type": "SPELL",
+  "worlds": [
+    "HERO_WORLD"
+  ],
+  "attributes": [
+    "SUPER_ROBOT",
+    "GET"
+  ],
+  "call_cost": [],
+  "cast_cost": [
+    {
+      "type": "PAY_LIFE",
+      "amount": 1
+    }
+  ],
+  "use_restrictions": [],
+  "rules": [],
+  "abilities": [
+    {
+      "id": "WARRIORS_BOND_PAAL_UNIT_FORMED_RE_S-A01",
+      "kind": "ACT",
+      "keywords": [],
+      "skill_restrictions": [
+        {
+          "type": "ACTIVATION_LIMIT",
+          "count": 1,
+          "period": "TURN",
+          "source": {
+            "kind": "CARD",
+            "card_id": "WARRIORS_BOND_PAAL_UNIT_FORMED_RE_S",
+            "ability_id": "WARRIORS_BOND_PAAL_UNIT_FORMED_RE_S-A01"
+          }
+        }
+      ],
+      "cost": [],
+      "effects": [
+        {
+          "type": "CHOICE",
+          "choose": 1,
+          "options": [
+            {
+              "id": "SEARCH_TRANSFORMATION_MONSTER",
+              "effects": [
+                {
+                  "type": "MOVE_CARD",
+                  "from": "DECK",
+                  "to": "HAND",
+                  "target": {
+                    "type": "SELECT",
+                    "card_type": "MONSTER",
+                    "filter": {
+                      "type": "HAS_TRANSFORMATION_KEYWORD"
+                    },
+                    "count": 1
+                  }
+                },
+                {
+                  "type": "MOVE_CARD",
+                  "from": "DECK",
+                  "to": "DROP",
+                  "target": {
+                    "type": "SELECT",
+                    "card_type": "MONSTER",
+                    "filter": {
+                      "type": "HAS_TRANSFORMATION_KEYWORD"
+                    },
+                    "maximum": 1
+                  }
+                },
+                {
+                  "type": "SHUFFLE_DECK"
+                }
+              ]
+            },
+            {
+              "id": "LOAD_SOUL_AND_SALVAGE",
+              "effects": [
+                {
+                  "type": "MOVE_CARD",
+                  "from": "DROP",
+                  "to": "SOUL",
+                  "destination_card": {
+                    "type": "SELECT",
+                    "zone": "FIELD",
+                    "filter": {
+                      "type": "OR",
+                      "filters": [
+                        {
+                          "type": "ATTRIBUTE",
+                          "value": "SUPER_ROBOT"
+                        },
+                        {
+                          "type": "ATTRIBUTE",
+                          "value": "BATTLESHIP"
+                        }
+                      ]
+                    }
+                  },
+                  "target": {
+                    "type": "SELECT",
+                    "world": "HERO_WORLD",
+                    "card_type": "MONSTER",
+                    "maximum": 3
+                  }
+                },
+                {
+                  "type": "MOVE_CARD",
+                  "from": "SOUL",
+                  "source_card": {
+                    "type": "SELECT",
+                    "zone": "FIELD",
+                    "filter": {
+                      "type": "ATTRIBUTE",
+                      "value": "BATTLESHIP"
+                    }
+                  },
+                  "to": "HAND",
+                  "target": {
+                    "type": "SELECT",
+                    "maximum": 1
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "effect_text": {
+        "en": {
+          "plain": "[Cast Cost] [Pay 1 life]\n[Cn/Turn] Choose one of the following.\n• Choose up to two monsters with [Transform], [Ride], or [Station] from your deck, put one card from among them into your hand, and drop the rest. Then, shuffle your deck.\n• Choose up to three <Hero World> monsters from your drop zone, and put them into the soul of a《Super Robot》or《Battleship》on your field. Then, put up to one card from the soul of a《Battleship》on your field into your hand.",
+          "segments": [
+            {
+              "text": "[Cast Cost]",
+              "style": "COST"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[Pay 1 life]",
+              "style": "COST"
+            },
+            {
+              "text": "\n"
+            },
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " Choose one of the following.\n• Choose up to two monsters with "
+            },
+            {
+              "text": "[Transform]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "[Ride]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": ", or "
+            },
+            {
+              "text": "[Station]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " from your deck, put one card from among them into your hand, and drop the rest. Then, shuffle your deck.\n• Choose up to three <Hero World> monsters from your drop zone, and put them into the soul of a《Super Robot》or《Battleship》on your field. Then, put up to one card from the soul of a《Battleship》on your field into your hand."
+            }
+          ]
+        },
+        "th": {
+          "plain": "[Cast Cost] [จ่ายพลังชีวิต 1 หน่วย]\n[Cn/Turn] เลือกใช้ 1 อย่างต่อไปนี้\n• เลือกมอนสเตอร์ที่มี [Transform], [Ride], หรือ [Station] ไม่เกิน 2 ใบจากกองการ์ดเรา, นำการ์ด 1 ใบจากการ์ดเหล่านั้นขึ้นมือ, และนำการ์ดที่เหลือลงช่องดรอบ. จากนั้น, สับกองการ์ดเรา\n• เลือกมอนสเตอร์ <ฮีโร่เวิลด์> ไม่เกิน 3 ใบจากช่องดรอบเรา, และนำเข้าสู่โซลของ 《หุ่นยนต์ยักษ์》 หรือ 《ยานรบ》 บนสนามเรา. จากนั้น, นำการ์ดไม่เกิน 1 ใบจากในโซลของ 《ยานรบ》 บนสนามเราขึ้นมือ",
+          "segments": [
+            {
+              "text": "[Cast Cost]",
+              "style": "COST"
+            },
+            {
+              "text": " "
+            },
+            {
+              "text": "[จ่ายพลังชีวิต 1 หน่วย]",
+              "style": "COST"
+            },
+            {
+              "text": "\n"
+            },
+            {
+              "text": "[Cn/Turn]",
+              "style": "RESTRICTION"
+            },
+            {
+              "text": " เลือกใช้ 1 อย่างต่อไปนี้\n• เลือกมอนสเตอร์ที่มี "
+            },
+            {
+              "text": "[Transform]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "[Ride]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": ", หรือ "
+            },
+            {
+              "text": "[Station]",
+              "style": "KEYWORD"
+            },
+            {
+              "text": " ไม่เกิน 2 ใบจาก"
+            },
+            {
+              "text": "กองการ์ด",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรา, นำการ์ด 1 ใบจากการ์ดเหล่านั้นขึ้น"
+            },
+            {
+              "text": "มือ",
+              "style": "ZONE"
+            },
+            {
+              "text": ", และนำการ์ดที่เหลือลง"
+            },
+            {
+              "text": "ช่องดรอบ",
+              "style": "ZONE"
+            },
+            {
+              "text": ". จากนั้น, สับกองการ์ดเรา\n• เลือกมอนสเตอร์ <ฮีโร่เวิลด์> ไม่เกิน 3 ใบจาก"
+            },
+            {
+              "text": "ช่องดรอบ",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรา, และนำเข้าสู่"
+            },
+            {
+              "text": "โซล",
+              "style": "ZONE"
+            },
+            {
+              "text": "ของ 《หุ่นยนต์ยักษ์》 หรือ 《ยานรบ》 บน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เรา. จากนั้น, นำการ์ดไม่เกิน 1 ใบจากใน"
+            },
+            {
+              "text": "โซล",
+              "style": "ZONE"
+            },
+            {
+              "text": "ของ 《ยานรบ》 บน"
+            },
+            {
+              "text": "สนาม",
+              "style": "ZONE"
+            },
+            {
+              "text": "เราขึ้น"
+            },
+            {
+              "text": "มือ",
+              "style": "ZONE"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

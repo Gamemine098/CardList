@@ -1,0 +1,117 @@
+{
+  "set_id": "FD10",
+  "cards": [
+    {
+      "card_number": "FD10/001",
+      "card_id": "CHAOS_WIZARD_AURORA"
+    },
+    {
+      "card_number": "FD10/002",
+      "card_id": "CHAOS_GOLEM_YOMAR"
+    },
+    {
+      "card_number": "FD10/003",
+      "card_id": "CHAOS_DARRYL_BERCK_RE_B"
+    },
+    {
+      "card_number": "FD10/004",
+      "card_id": "GENOME_UPGRADER_GEARGOD_VER_1000_RE_B"
+    },
+    {
+      "card_number": "FD10/005",
+      "card_id": "CHAOS_VANGUARD_GEARGOD_VER_ZERO"
+    },
+    {
+      "card_number": "FD10/006",
+      "card_id": "REPLENISH_MECH_CHAOS_PENTAR"
+    },
+    {
+      "card_number": "FD10/007",
+      "card_id": "OPERATIVE_MECH_CHAOS_SPHERE"
+    },
+    {
+      "card_number": "FD10/008",
+      "card_id": "FULL_MECHRYSTAL_DRAGON_ZINDO_BETA"
+    },
+    {
+      "card_number": "FD10/009",
+      "card_id": "CHAOS_OSIRIS"
+    },
+    {
+      "card_number": "FD10/010",
+      "card_id": "CHAOS_ORSER_KLEINZ"
+    },
+    {
+      "card_number": "FD10/011",
+      "card_id": "CHAOS_BASILI_GOLLUM"
+    },
+    {
+      "card_number": "FD10/012",
+      "card_id": "CHAOS_ALBERION"
+    },
+    {
+      "card_number": "FD10/013",
+      "card_id": "AUTODEITY_DRAGON_CHAOS_BATZZ"
+    },
+    {
+      "card_number": "FD10/014",
+      "card_id": "CHAOS_GRAND_PROTECTION"
+    },
+    {
+      "card_number": "FD10/015",
+      "card_id": "CHAOS_GEARGOD_ORDER"
+    },
+    {
+      "card_number": "FD10/016",
+      "card_id": "THE_CHAOS_UPGRADE"
+    },
+    {
+      "card_number": "FD10/017",
+      "card_id": "SUPER_CLASH_GEARGOD_AND_WISDOM"
+    },
+    {
+      "card_number": "FD10/018",
+      "card_id": "POPULATION_REDUCTION"
+    },
+    {
+      "card_number": "FD10/019",
+      "card_id": "ONE_WHO_COMES_FROM_HAVOC"
+    },
+    {
+      "card_number": "FD10/020",
+      "card_id": "MACHINING_SACRIFICE"
+    },
+    {
+      "card_number": "FD10/021",
+      "card_id": "LAUNCH_THE_AUTODEITY"
+    },
+    {
+      "card_number": "FD10/022",
+      "card_id": "ELECTRIFICATION"
+    },
+    {
+      "card_number": "FD10/023",
+      "card_id": "CHAOS_MILLENNIUM"
+    },
+    {
+      "card_number": "FD10/024",
+      "card_id": "A_RULERS_PRIVILEGE"
+    },
+    {
+      "card_number": "FD10/025",
+      "card_id": "AUTODEITY_SWORD_CHAOS_DRAGOROYALE_RE_I"
+    },
+    {
+      "card_number": "FD10/026",
+      "card_id": "INFINITY_THE_CHAOS"
+    },
+    {
+      "card_number": "FD10/027",
+      "card_id": "THE_CHAOS"
+    },
+    {
+      "card_number": "FD10/S005",
+      "card_id": "A_RULERS_PRIVILEGE_RE_S"
+    }
+  ]
+}

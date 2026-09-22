@@ -1,0 +1,114 @@
+{
+  "card_id": "A_RULERS_PRIVILEGE",
+  "name": "A Ruler's Privilege",
+  "type": "SPELL",
+  "world": [
+    "LEGEND_WORLD"
+  ],
+  "attributes": [
+    "ENHANCE",
+    "CHAOS"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "A_RULERS_PRIVILEGE_CHOICE",
+      "effect_type": "CHOICE",
+      "choice_count": 1,
+      "condition": {
+        "type": "FIELD_COUNT_GTE",
+        "target": {
+          "target_type": "CARD",
+          "card_type": "MONSTER",
+          "zone": "FIELD",
+          "controller": "YOU",
+          "original_size_gte": 3
+        },
+        "count": 3
+      },
+      "choices": [
+        {
+          "description": "Put a card other than \"A Ruler's Privilege\" from your drop zone into your hand.",
+          "effects": [
+            {
+              "effect_id": "A_RULERS_PRIVILEGE_SALVAGE",
+              "effect_type": "SALVAGE_DROP",
+              "target": {
+                "target_type": "CARD",
+                "exclude_card_name": "A Ruler's Privilege",
+                "count": 1
+              },
+              "destination": "HAND"
+            }
+          ]
+        },
+        {
+          "description": "[Stand] a size 3 or greater monster on your field.",
+          "is_counter": true,
+          "effects": [
+            {
+              "effect_id": "A_RULERS_PRIVILEGE_STAND",
+              "effect_type": "STAND",
+              "target": {
+                "target_type": "CARD",
+                "card_type": "MONSTER",
+                "zone": "FIELD",
+                "controller": "YOU",
+                "size_gte": 3,
+                "count": 1
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "You may only cast this card if you have three or more originally size 3 or greater monsters on your field.\nChoose and use one of the following two.\n• Put a card other than \"A Ruler's Privilege\" from your drop zone into your hand.\n• [Counter] [Stand] a size 3 or greater monster on your field.",
+      "segments": [
+        {
+          "tag": "RULE",
+          "text": "You may only cast this card if you have three or more originally size 3 or greater monsters on your field."
+        },
+        {
+          "tag": "CHOICE",
+          "text": "Choose and use one of the following two."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "• Put a card other than \"A Ruler's Privilege\" from your drop zone into your hand."
+        },
+        {
+          "tag": "COUNTER",
+          "text": "• [Counter] [Stand] a size 3 or greater monster on your field."
+        }
+      ]
+    },
+    "th": {
+      "plain": "คุณสามารถร่ายการ์ดนี้ได้เมื่อมีมอนสเตอร์ที่มีไซส์ดั้งเดิมตั้งแต่ไซส์ 3 ขึ้นไป 3 ใบขึ้นไปบนสนามของคุณเท่านั้น\nเลือกใช้ 1 อย่างจากความสามารถต่อไปนี้\n• นำการ์ด 1 ใบที่ไม่ใช่ \"อภิสิทธิ์ของผู้ปกครอง\" จากในช่องดรอปของคุณขึ้นมือ\n• [Counter] [Stand] มอนสเตอร์ไซส์ 3 ขึ้นไป 1 ใบ บนสนามของคุณ",
+      "segments": [
+        {
+          "tag": "RULE",
+          "text": "คุณสามารถร่ายการ์ดนี้ได้เมื่อมีมอนสเตอร์ที่มีไซส์ดั้งเดิมตั้งแต่ไซส์ 3 ขึ้นไป 3 ใบขึ้นไปบนสนามของคุณเท่านั้น"
+        },
+        {
+          "tag": "CHOICE",
+          "text": "เลือกใช้ 1 อย่างจากความสามารถต่อไปนี้"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "• นำการ์ด 1 ใบที่ไม่ใช่ \"อภิสิทธิ์ของผู้ปกครอง\" จากในช่องดรอปของคุณขึ้นมือ"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "• [Counter] [Stand] มอนสเตอร์ไซส์ 3 ขึ้นไป 1 ใบ บนสนามของคุณ"
+        }
+      ]
+    }
+  },
+  "image": null
+}

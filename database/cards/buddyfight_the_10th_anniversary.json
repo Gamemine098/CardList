@@ -1,0 +1,120 @@
+{
+  "card_id": "BUDDYFIGHT_THE_10TH_ANNIVERSARY",
+  "name": "Buddyfight \"the 10th anniversary\"",
+  "type": "SPELL",
+  "world": "GENERIC",
+  "attributes": [
+    "ARMORDRAGON",
+    "SUN_DRAGON",
+    "THUNDER_EMPIRE",
+    "DEITY_DRAGON_TRIBE"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "BUDDYFIGHT_THE_10TH_ANNIVERSARY_CHOICE",
+      "effect_type": "CHOICE",
+      "choice_count": 1,
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "choices": [
+        {
+          "description": "During your opponent's turn, if your hand has seven or less cards, return up to three cards from your hand to your deck, and shuffle it. Then, you gain life and draw cards equal to the number of cards returned.",
+          "unsupported_mechanic": {
+            "status": "UNSUPPORTED_MECHANIC",
+            "card_reference": "10th/0035",
+            "ability_reference": "10th/0035: Then, you gain life and draw cards equal to the number of cards returned.",
+            "missing_capability": "EFFECT_TYPE",
+            "what_is_known": "Life gain and draw amounts are dynamically bound to the count of cards returned to deck during the preceding effect step.",
+            "information_needed": [
+              "Approved schema for dynamic count evaluation referencing returned card count."
+            ]
+          }
+        },
+        {
+          "description": "For this turn, choose up to three cards with the same attribute as your buddy, and they get power+20000 and critical+1!",
+          "unsupported_mechanic": {
+            "status": "UNSUPPORTED_MECHANIC",
+            "card_reference": "10th/0035",
+            "ability_reference": "10th/0035: choose up to three cards with the same attribute as your buddy",
+            "missing_capability": "TARGET_SELECTOR",
+            "what_is_known": "Target selector requires inspecting the attributes of the player's active buddy monster and matching field cards to those attributes.",
+            "information_needed": [
+              "Approved selector predicate for matching active buddy attributes (e.g. MATCH_BUDDY_ATTRIBUTES)."
+            ]
+          }
+        },
+        {
+          "description": "Return any number of monsters and items from your drop zone to your deck, and shuffle it.",
+          "effects": [
+            {
+              "effect_id": "BUDDYFIGHT_THE_10TH_ANNIVERSARY_RETURN_DROP",
+              "effect_type": "MOVE_CARD",
+              "source": "DROP",
+              "destination": "DECK",
+              "shuffle_deck": true,
+              "target": {
+                "target_type": "CARD",
+                "card_type_any": [
+                  "MONSTER",
+                  "ITEM"
+                ],
+                "count": "ANY"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Cn/Turn] [Counter] Choose and use one of the following three.\n• During your opponent's turn, if your hand has seven or less cards, return up to three cards from your hand to your deck, and shuffle it. Then, you gain life and draw cards equal to the number of cards returned.\n• For this turn, choose up to three cards with the same attribute as your buddy, and they get power+20000 and critical+1!\n• Return any number of monsters and items from your drop zone to your deck, and shuffle it.",
+      "segments": [
+        {
+          "tag": "COUNTER",
+          "text": "[Cn/Turn] [Counter] Choose and use one of the following three."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "• During your opponent's turn, if your hand has seven or less cards, return up to three cards from your hand to your deck, and shuffle it. Then, you gain life and draw cards equal to the number of cards returned."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "• For this turn, choose up to three cards with the same attribute as your buddy, and they get power+20000 and critical+1!"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "• Return any number of monsters and items from your drop zone to your deck, and shuffle it."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Cn/Turn] [Counter] เลือกใช้ 1 อย่างจากความสามารถต่อไปนี้\n• ในระหว่างเทิร์นของคู่แข่ง หากการ์ดบนมือของคุณมี 7 ใบหรือน้อยกว่า นำการ์ดบนมือของคุณได้สูงสุด 3 ใบกลับเข้ากองการ์ด และสับกองการ์ด จากนั้น คุณได้รับพลังชีวิตและจั่วการ์ดตามจำนวนการ์ดที่นำกลับเข้ากอง\n• ในเทิร์นนี้ เลือกการ์ดที่มีคุณลักษณะเดียวกันกับบัดดี้ของคุณได้สูงสุด 3 ใบ และการ์ดเหล่านั้นได้รับพลังโจมตี+20000 และคริติคอล+1!\n• นำมอนสเตอร์และไอเท็มกี่ใบก็ได้จากช่องดรอปของคุณกลับเข้ากองการ์ด และสับกองการ์ด",
+      "segments": [
+        {
+          "tag": "COUNTER",
+          "text": "[Cn/Turn] [Counter] เลือกใช้ 1 อย่างจากความสามารถต่อไปนี้"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "• ในระหว่างเทิร์นของคู่แข่ง หากการ์ดบนมือของคุณมี 7 ใบหรือน้อยกว่า นำการ์ดบนมือของคุณได้สูงสุด 3 ใบกลับเข้ากองการ์ด และสับกองการ์ด จากนั้น คุณได้รับพลังชีวิตและจั่วการ์ดตามจำนวนการ์ดที่นำกลับเข้ากอง"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "• ในเทิร์นนี้ เลือกการ์ดที่มีคุณลักษณะเดียวกันกับบัดดี้ของคุณได้สูงสุด 3 ใบ และการ์ดเหล่านั้นได้รับพลังโจมตี+20000 และคริติคอล+1!"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "• นำมอนสเตอร์และไอเท็มกี่ใบก็ได้จากช่องดรอปของคุณกลับเข้ากองการ์ด และสับกองการ์ด"
+        }
+      ]
+    }
+  },
+  "image": null
+}
