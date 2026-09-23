@@ -1,0 +1,121 @@
+{
+  "card_id": "BEYOND_ASPIRATION_CHIBI_PANDA",
+  "name": "Beyond Aspiration, Chibi Panda",
+  "type": "MONSTER",
+  "size": 1,
+  "power": 4000,
+  "critical": 1,
+  "defense": 1000,
+  "world": [
+    "DRAGON_WORLD"
+  ],
+  "attributes": [
+    "THUNDER_EMPIRE",
+    "DRAGON"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "CHIBI_PANDA_ENTER_FIELD",
+      "effect_type": "TRIGGERED",
+      "trigger": {
+        "event": "ENTER_FIELD"
+      },
+      "cost": {
+        "drop_hand": 1
+      },
+      "effects": [
+        {
+          "effect_id": "CHIBI_PANDA_SEARCH",
+          "effect_type": "SEARCH_DECK",
+          "target": {
+            "target_type": "CARD",
+            "any_of": [
+              {
+                "card_type": "MONSTER",
+                "name_contains": "Batzz",
+                "size_gte": 2
+              },
+              {
+                "card_type": "ITEM",
+                "attributes_all": [
+                  "THUNDER_EMPIRE"
+                ]
+              }
+            ],
+            "count": 1
+          },
+          "destination": "HAND",
+          "shuffle_deck": true
+        }
+      ]
+    },
+    {
+      "effect_id": "CHIBI_PANDA_REPLACEMENT",
+      "effect_type": "REPLACEMENT_RULE",
+      "trigger": {
+        "event": "WOULD_LEAVE_FIELD",
+        "target": {
+          "target_type": "CARD",
+          "zone": "FIELD",
+          "controller": "YOU",
+          "attributes_all": [
+            "THUNDER_EMPIRE"
+          ],
+          "exclude_this": true
+        }
+      },
+      "cost": {
+        "drop_this_card": true
+      },
+      "action": "REMAIN_ON_FIELD"
+    },
+    {
+      "effect_id": "CHIBI_PANDA_KEYWORDS",
+      "effect_type": "KEYWORD",
+      "keywords": [
+        "Move"
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "When this card enters the field, you may drop a hand card. If you do, put up to one size 2 or greater monster with \"Batzz\" in its card name or up to one 《Thunder Empire》 item from your deck into your hand, and shuffle your deck.\n【Field】 If another 《Thunder Empire》 would leave your field, you may drop this card. If you do, that card remains on the field.\n[Move]",
+      "segments": [
+        {
+          "tag": "TRIGGER",
+          "text": "When this card enters the field, you may drop a hand card. If you do, put up to one size 2 or greater monster with \"Batzz\" in its card name or up to one 《Thunder Empire》 item from your deck into your hand, and shuffle your deck."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "【Field】 If another 《Thunder Empire》 would leave your field, you may drop this card. If you do, that card remains on the field."
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Move]"
+        }
+      ]
+    },
+    "th": {
+      "plain": "เมื่อการ์ดนี้ลงสู่สนาม, คุณสามารถทิ้งการ์ด 1 ใบจากบนมือได้ หากทำ, นำมอนสเตอร์ไซส์ 2 ขึ้นไปที่มี \"บัตซ์\" ในชื่อการ์ดได้สูงสุด 1 ใบ หรือไอเท็ม 《ภาคีจักรพรรดิสายฟ้า》 ได้สูงสุด 1 ใบจากในกองการ์ดของคุณขึ้นมือ, และสับกองการ์ดของคุณ\n【Field】 หาก 《ภาคีจักรพรรดิสายฟ้า》 ใบอื่นจะออกจากสนามของคุณ, คุณสามารถส่งการ์ดนี้ลงช่องดรอปได้ หากทำ การ์ดใบนั้นจะยังคงอยู่บนสนาม\n[Move]",
+      "segments": [
+        {
+          "tag": "TRIGGER",
+          "text": "เมื่อการ์ดนี้ลงสู่สนาม, คุณสามารถทิ้งการ์ด 1 ใบจากบนมือได้ หากทำ, นำมอนสเตอร์ไซส์ 2 ขึ้นไปที่มี \"บัตซ์\" ในชื่อการ์ดได้สูงสุด 1 ใบ หรือไอเท็ม 《ภาคีจักรพรรดิสายฟ้า》 ได้สูงสุด 1 ใบจากในกองการ์ดของคุณขึ้นมือ, และสับกองการ์ดของคุณ"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "【Field】 หาก 《ภาคีจักรพรรดิสายฟ้า》 ใบอื่นจะออกจากสนามของคุณ, คุณสามารถส่งการ์ดนี้ลงช่องดรอปได้ หากทำ การ์ดใบนั้นจะยังคงอยู่บนสนาม"
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Move]"
+        }
+      ]
+    }
+  },
+  "image": null
+}

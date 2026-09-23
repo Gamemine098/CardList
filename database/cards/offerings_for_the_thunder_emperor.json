@@ -1,0 +1,66 @@
+{
+  "card_id": "OFFERINGS_FOR_THE_THUNDER_EMPEROR",
+  "name": "Offerings for the Thunder Emperor",
+  "type": "SPELL",
+  "world": [
+    "DRAGON_WORLD"
+  ],
+  "attributes": [
+    "THUNDER_EMPIRE"
+  ],
+  "effects": [
+    {
+      "effect_id": "OFFERINGS_CAST_CONDITION",
+      "effect_type": "CAST_CONDITION",
+      "condition": {
+        "type": "FLAG_IS",
+        "flag": "Thunder Emperor's Fangs"
+      }
+    },
+    {
+      "effect_id": "OFFERINGS_CHOICE",
+      "effect_type": "CHOICE",
+      "choices": [
+        {
+          "effect_id": "OFFERINGS_CHARGE_3",
+          "effect_type": "GAUGE_CHARGE",
+          "count": 3
+        },
+        {
+          "effect_id": "OFFERINGS_GAIN_LIFE_3",
+          "effect_type": "LIFE_GAIN",
+          "amount": 3
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "You may only cast this card if your flag is \"Thunder Emperor's Fangs\".\nChoose one of the following.\n• Charge three gauge.\n• You gain 3 life!",
+      "segments": [
+        {
+          "tag": "CAST_CONDITION",
+          "text": "You may only cast this card if your flag is \"Thunder Emperor's Fangs\"."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "Choose one of the following.\n• Charge three gauge.\n• You gain 3 life!"
+        }
+      ]
+    },
+    "th": {
+      "plain": "คุณสามารถร่ายการ์ดนี้ได้เฉพาะถ้าการ์ดแฟลกของคุณคือ \"เขี้ยวแห่งจักรพรรดิสายฟ้า\"\nเลือกหนึ่งอย่างจากต่อไปนี้\n• ชาร์จ 3 เกจ\n• คุณได้รับ 3 พลังชีวิต!",
+      "segments": [
+        {
+          "tag": "CAST_CONDITION",
+          "text": "คุณสามารถร่ายการ์ดนี้ได้เฉพาะถ้าการ์ดแฟลกของคุณคือ \"เขี้ยวแห่งจักรพรรดิสายฟ้า\""
+        },
+        {
+          "tag": "EFFECT",
+          "text": "เลือกหนึ่งอย่างจากต่อไปนี้\n• ชาร์จ 3 เกจ\n• คุณได้รับ 3 พลังชีวิต!"
+        }
+      ]
+    }
+  },
+  "image": null
+}

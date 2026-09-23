@@ -1,0 +1,65 @@
+{
+  "card_id": "WARLORD_SWORD_RELEASED",
+  "name": "Warlord Sword Released",
+  "type": "SPELL",
+  "cost": {
+    "gauge": 1,
+    "life": 2
+  },
+  "world": [
+    "DRAGON_WORLD"
+  ],
+  "attributes": [
+    "THUNDER_EMPIRE",
+    "DRAGON"
+  ],
+  "effects": [
+    {
+      "effect_id": "WARLORD_SWORD_RELEASED_DRAW",
+      "effect_type": "DRAW",
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "FD09/016",
+        "ability_reference": "FD09/016: [Cn/Turn] Draw cards equal to the number of different world names of cards on your field.",
+        "missing_capability": "DRAW_EQUALS_DISTINCT_WORLDS",
+        "what_is_known": "Draws count equal to unique worlds represented on the field.",
+        "information_needed": [
+          "Approved schema for dynamically sized DRAW based on distinct worlds."
+        ]
+      }
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Cast Cost] [Pay 1 gauge & Pay 2 life]\n[Cn/Turn] Draw cards equal to the number of different world names of cards on your field.",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [Pay 1 gauge & Pay 2 life]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "[Cn/Turn] Draw cards equal to the number of different world names of cards on your field."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Cast Cost] [จ่าย 1 เกจ & จ่าย 2 พลังชีวิต]\n[Cn/Turn] จั่วการ์ดตามจำนวนชื่อเวิลด์ที่แตกต่างกันของการ์ดบนสนามของคุณ",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [จ่าย 1 เกจ & จ่าย 2 พลังชีวิต]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "[Cn/Turn] จั่วการ์ดตามจำนวนชื่อเวิลด์ที่แตกต่างกันของการ์ดบนสนามของคุณ"
+        }
+      ]
+    }
+  },
+  "image": null
+}

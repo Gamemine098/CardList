@@ -1,0 +1,76 @@
+{
+  "card_id": "ANOINTMENT_CEREMONY_OF_THUNDER_FLARES",
+  "name": "Anointment Ceremony of Thunder Flares",
+  "type": "SPELL",
+  "world": [
+    "DUNGEON_WORLD",
+    "MAGIC_WORLD"
+  ],
+  "attributes": [
+    "THUNDER_EMPIRE"
+  ],
+  "effects": [
+    {
+      "effect_id": "ANOINTMENT_CEREMONY_CAST_CONDITION",
+      "effect_type": "CAST_CONDITION",
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "FD09/014",
+        "ability_reference": "FD09/014: You may cast this card if you have 6 or more different world names of cards in your drop zone, and your flag is \"Thunder Emperor's Fangs\".",
+        "missing_capability": "DISTINCT_WORLDS_IN_DROP_COUNT",
+        "what_is_known": "Requires at least 6 unique world names among cards in drop zone and specific flag.",
+        "information_needed": [
+          "Approved condition schema for DISTINCT_WORLDS_IN_DROP_COUNT."
+        ]
+      }
+    },
+    {
+      "effect_id": "ANOINTMENT_CEREMONY_EFFECT",
+      "effect_type": "ACTIVATED",
+      "is_counter": true,
+      "condition": {
+        "type": "COUNT_PER_GAME",
+        "count": 1
+      },
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "FD09/014",
+        "ability_reference": "FD09/014: [1/Game] [Counter] Shuffle all cards from your hand and drop zone into your deck. Then, draw 4 cards and charge 2 gauge. Then, you do not take damage until the end of this turn, and you do not lose the game from the effects of \"World Linking Key the First, Drago-Uno\" for the rest of this fight. Remove this card.",
+        "missing_capability": "SPECIFIC_LOSS_CONDITION_IMMUNITY",
+        "what_is_known": "Mass zone return to deck, damage immunity for the turn, immunity against a specific named loss condition for the rest of the fight, and self removal.",
+        "information_needed": [
+          "Approved schema for immunity against specific named game loss effects."
+        ]
+      }
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "You may cast this card if you have 6 or more different world names of cards in your drop zone, and your flag is \"Thunder Emperor's Fangs\".\n[1/Game] [Counter] Shuffle all cards from your hand and drop zone into your deck. Then, draw 4 cards and charge 2 gauge. Then, you do not take damage until the end of this turn, and you do not lose the game from the effects of \"World Linking Key the First, Drago-Uno\" for the rest of this fight. Remove this card.",
+      "segments": [
+        {
+          "tag": "CAST_CONDITION",
+          "text": "You may cast this card if you have 6 or more different world names of cards in your drop zone, and your flag is \"Thunder Emperor's Fangs\"."
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[1/Game] [Counter] Shuffle all cards from your hand and drop zone into your deck. Then, draw 4 cards and charge 2 gauge. Then, you do not take damage until the end of this turn, and you do not lose the game from the effects of \"World Linking Key the First, Drago-Uno\" for the rest of this fight. Remove this card."
+        }
+      ]
+    },
+    "th": {
+      "plain": "คุณสามารถร่ายการ์ดนี้ได้ถ้าคุณมีการ์ดที่มีชื่อเวิลด์ต่างกันตั้งแต่ 6 ชนิดขึ้นไปในช่องดรอปของคุณ, และการ์ดแฟลกของคุณคือ \"เขี้ยวแห่งจักรพรรดิสายฟ้า\"\n[1/Game] [Counter] สับการ์ดทั้งหมดจากบนมือและในช่องดรอปของคุณกลับเข้ากองการ์ดของคุณ จากนั้น, จั่วการ์ด 4 ใบ และชาร์จ 2 เกจ จากนั้น, คุณจะไม่ได้รับความเสียหายจนกระทั่งจบเทิร์นนี้, และคุณจะไม่แพ้เกมจากความสามารถของ \"กุญแจเชื่อมโยงโลกที่หนึ่ง, ดราโก・อูโน\" ในช่วงเวลาที่เหลือของการแข่งขันนี้ นำการ์ดนี้ออกนอกเกม",
+      "segments": [
+        {
+          "tag": "CAST_CONDITION",
+          "text": "คุณสามารถร่ายการ์ดนี้ได้ถ้าคุณมีการ์ดที่มีชื่อเวิลด์ต่างกันตั้งแต่ 6 ชนิดขึ้นไปในช่องดรอปของคุณ, และการ์ดแฟลกของคุณคือ \"เขี้ยวแห่งจักรพรรดิสายฟ้า\""
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[1/Game] [Counter] สับการ์ดทั้งหมดจากบนมือและในช่องดรอปของคุณกลับเข้ากองการ์ดของคุณ จากนั้น, จั่วการ์ด 4 ใบ และชาร์จ 2 เกจ จากนั้น, คุณจะไม่ได้รับความเสียหายจนกระทั่งจบเทิร์นนี้, และคุณจะไม่แพ้เกมจากความสามารถของ \"กุญแจเชื่อมโยงโลกที่หนึ่ง, ดราโก・อูโน\" ในช่วงเวลาที่เหลือของการแข่งขันนี้ นำการ์ดนี้ออกนอกเกม"
+        }
+      ]
+    }
+  },
+  "image": null
+}

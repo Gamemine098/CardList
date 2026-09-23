@@ -1,0 +1,69 @@
+{
+  "card_id": "THUNDER_X_ASSAULT_RE_S",
+  "name": "Thunder X Assault \"Re:S\"",
+  "type": "SPELL",
+  "world": [
+    "DRAGON_WORLD"
+  ],
+  "attributes": [
+    "THUNDER_EMPIRE"
+  ],
+  "effects": [
+    {
+      "effect_id": "THUNDER_X_ASSAULT_CAST_CONDITION",
+      "effect_type": "CAST_CONDITION",
+      "condition": {
+        "type": "TURN_PLAYER_IS",
+        "player": "YOU"
+      }
+    },
+    {
+      "effect_id": "THUNDER_X_ASSAULT_COUNTER",
+      "effect_type": "ACTIVATED",
+      "is_counter": true,
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "FD09/018",
+        "ability_reference": "FD09/018: [Cn/Turn] [Counter] [Stand] all 《Thunder Empire》 on your field, and if you have used [Overturn], [Overthrow], or [OverDrive] this game, draw a card, and for this turn, all monsters that were affected by this card's ability can also attack during your final phase.",
+        "missing_capability": "SPECIAL_KEYWORD_HISTORY_AND_FINAL_PHASE_ATTACK",
+        "what_is_known": "Stands all Thunder Empire cards. Queries game history for usage of Overturn/Overthrow/OverDrive, and grants final phase attack capability to affected monsters.",
+        "information_needed": [
+          "Approved schema for special keyword game history queries and granting final phase attack permissions."
+        ]
+      }
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "You may only cast this card during your turn.\n[Cn/Turn] [Counter] [Stand] all 《Thunder Empire》 on your field, and if you have used [Overturn], [Overthrow], or [OverDrive] this game, draw a card, and for this turn, all monsters that were affected by this card's ability can also attack during your final phase.",
+      "segments": [
+        {
+          "tag": "CAST_CONDITION",
+          "text": "You may only cast this card during your turn."
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Cn/Turn] [Counter] [Stand] all 《Thunder Empire》 on your field, and if you have used [Overturn], [Overthrow], or [OverDrive] this game, draw a card, and for this turn, all monsters that were affected by this card's ability can also attack during your final phase."
+        }
+      ]
+    },
+    "th": {
+      "plain": "คุณสามารถร่ายการ์ดนี้ได้เฉพาะในระหว่างเทิร์นของคุณเท่านั้น\n[Cn/Turn] [Counter] [Stand] 《ภาคีจักรพรรดิสายฟ้า》 ทั้งหมดบนสนามของคุณ, และถ้าคุณเคยใช้ [Overturn], [Overthrow], หรือ [OverDrive] ในเกมนี้, จั่วการ์ด 1 ใบ, และในเทิร์นนี้ มอนสเตอร์ทั้งหมดที่ได้รับผลจากความสามารถของการ์ดนี้จะสามารถโจมตีในระหว่างไฟนอลเฟสของคุณได้ด้วย",
+      "segments": [
+        {
+          "tag": "CAST_CONDITION",
+          "text": "คุณสามารถร่ายการ์ดนี้ได้เฉพาะในระหว่างเทิร์นของคุณเท่านั้น"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Cn/Turn] [Counter] [Stand] 《ภาคีจักรพรรดิสายฟ้า》 ทั้งหมดบนสนามของคุณ, และถ้าคุณเคยใช้ [Overturn], [Overthrow], หรือ [OverDrive] ในเกมนี้, จั่วการ์ด 1 ใบ, และในเทิร์นนี้ มอนสเตอร์ทั้งหมดที่ได้รับผลจากความสามารถของการ์ดนี้จะสามารถโจมตีในระหว่างไฟนอลเฟสของคุณได้ด้วย"
+        }
+      ]
+    }
+  },
+  "image": null
+}

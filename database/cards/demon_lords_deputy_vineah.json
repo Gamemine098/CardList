@@ -1,0 +1,81 @@
+{
+  "card_id": "DEMON_LORDS_DEPUTY_VINEAH",
+  "name": "Demon Lord's Deputy, Vineah",
+  "type": "MONSTER",
+  "size": 1,
+  "power": 4000,
+  "critical": 1,
+  "defense": 1000,
+  "world": [
+    "MAGIC_WORLD"
+  ],
+  "attributes": [
+    "72_PILLARS",
+    "THUNDER_EMPIRE"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "VINEAH_DISCARD_TRIGGER",
+      "effect_type": "TRIGGERED",
+      "name": "Yes, I'm Here",
+      "trigger": {
+        "event": "DISCARDED_FROM_HAND"
+      },
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "effects": [
+        {
+          "effect_id": "VINEAH_CHARGE",
+          "effect_type": "CHARGE_GAUGE",
+          "amount": 1
+        },
+        {
+          "effect_id": "VINEAH_RETURN_TO_HAND",
+          "effect_type": "SALVAGE_DROP",
+          "condition": {
+            "type": "FIELD_COUNT_GTE",
+            "target": {
+              "target_type": "CARD",
+              "zone": "FIELD",
+              "controller": "YOU",
+              "attributes_any": [
+                "72_PILLARS",
+                "THUNDER_EMPIRE"
+              ]
+            },
+            "count": 1
+          },
+          "target": "THIS_CARD",
+          "destination": "HAND"
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[An/Turn] \"Yes, I'm Here\" When this card is discarded from your hand, put the top card of your deck into your gauge. Then, if you have a 《72 Pillars》 or 《Thunder Empire》 on your field, you may return this card from the drop zone to your hand.",
+      "segments": [
+        {
+          "tag": "TRIGGER",
+          "text": "[An/Turn] \"Yes, I'm Here\" When this card is discarded from your hand, put the top card of your deck into your gauge. Then, if you have a 《72 Pillars》 or 《Thunder Empire》 on your field, you may return this card from the drop zone to your hand."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[An/Turn] \"ครับ, ผมอยู่นี่\" เมื่อการ์ดนี้ถูกทิ้งจากบนมือของคุณ, นำการ์ด 1 ใบจากใบบนสุดของกองการ์ดเข้าสู่เกจ จากนั้น หากคุณมี 《72 เสาหลัก》 หรือ 《ภาคีจักรพรรดิสายฟ้า》 อยู่บนสนามของคุณ, คุณสามารถนำการ์ดนี้จากในช่องดรอปกลับขึ้นมือได้",
+      "segments": [
+        {
+          "tag": "TRIGGER",
+          "text": "[An/Turn] \"ครับ, ผมอยู่นี่\" เมื่อการ์ดนี้ถูกทิ้งจากบนมือของคุณ, นำการ์ด 1 ใบจากใบบนสุดของกองการ์ดเข้าสู่เกจ จากนั้น หากคุณมี 《72 เสาหลัก》 หรือ 《ภาคีจักรพรรดิสายฟ้า》 อยู่บนสนามของคุณ, คุณสามารถนำการ์ดนี้จากในช่องดรอปกลับขึ้นมือได้"
+        }
+      ]
+    }
+  },
+  "image": null
+}

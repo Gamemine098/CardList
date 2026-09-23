@@ -2,6 +2,10 @@
   "set_id": "S-SP",
   "cards": [
     {
+      "card_number": "S-SP/0002",
+      "card_id": "SUPER_CLASH_BATZZ_X_GAO"
+    },
+    {
       "card_number": "S-SP/0007",
       "card_id": "CHAOS_VANGUARD_GEARGOD_VER_ZERO"
     },
@@ -10,12 +14,28 @@
       "card_id": "SUPER_CLASH_GEARGOD_AND_WISDOM"
     },
     {
+      "card_number": "S-SP/0011",
+      "card_id": "OPERATIVE_SPHERE"
+    },
+    {
+      "card_number": "S-SP/0015",
+      "card_id": "THUNDER_EMPEROR_DREADNOUGHT_BATTLESHIP_SATSUKI"
+    },
+    {
       "card_number": "S-SP/0017",
       "card_id": "OPERATIVE_MECH_CHAOS_SPHERE"
     },
     {
       "card_number": "S-SP/0022",
       "card_id": "POPULATION_REDUCTION"
+    },
+    {
+      "card_number": "S-SP/0025",
+      "card_id": "BEYOND_ASPIRATION_CHIBI_PANDA"
+    },
+    {
+      "card_number": "S-SP/0026",
+      "card_id": "MISFIRING_DEMON_GLOBES"
     }
   ]
 }

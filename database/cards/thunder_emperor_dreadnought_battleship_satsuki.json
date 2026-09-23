@@ -1,0 +1,170 @@
+{
+  "card_id": "THUNDER_EMPEROR_DREADNOUGHT_BATTLESHIP_SATSUKI",
+  "name": "Thunder Emperor Dreadnought Battleship, Satsuki",
+  "type": "MONSTER",
+  "size": 5,
+  "power": 12000,
+  "critical": 3,
+  "defense": 5000,
+  "world": [
+    "HERO_WORLD"
+  ],
+  "attributes": [
+    "BATTLESHIP",
+    "THUNDER_EMPIRE"
+  ],
+  "cost": {
+    "gauge": 3,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "SATSUKI_PROTECTION",
+      "effect_type": "PROTECTION",
+      "target": "THIS_CARD",
+      "protection": {
+        "cannot_be_destroyed": true,
+        "cannot_nullify_abilities": true,
+        "source": "OPPONENT_CARD_EFFECT"
+      }
+    },
+    {
+      "effect_id": "SATSUKI_ON_STATION",
+      "effect_type": "TRIGGERED",
+      "trigger": {
+        "event": "ON_STATION"
+      },
+      "effects": [
+        {
+          "effect_id": "SATSUKI_DROP_TO_SOUL",
+          "effect_type": "MOVE_CARD",
+          "source": "DROP",
+          "destination": "SOUL",
+          "target": {
+            "target_type": "CARD",
+            "card_type": "MONSTER",
+            "count": 2
+          }
+        }
+      ]
+    },
+    {
+      "effect_id": "SATSUKI_END_OF_TURN",
+      "effect_type": "TRIGGERED",
+      "trigger": {
+        "event": "TURN_END"
+      },
+      "effects": [
+        {
+          "effect_id": "SATSUKI_FIELD_TO_SOUL",
+          "effect_type": "MOVE_CARD",
+          "source": "FIELD",
+          "destination": "SOUL",
+          "target": {
+            "target_type": "CARD",
+            "card_type": "MONSTER",
+            "controller": "YOU",
+            "attributes_any": [
+              "CREW_TROOPER",
+              "THUNDER_EMPIRE"
+            ],
+            "count": 3
+          }
+        }
+      ]
+    },
+    {
+      "effect_id": "SATSUKI_CALL_FROM_SOUL",
+      "effect_type": "ACTIVATED",
+      "is_counter": true,
+      "condition": {
+        "type": "AND",
+        "conditions": [
+          {
+            "type": "PHASE_IS",
+            "phase": "ATTACK_PHASE"
+          },
+          {
+            "type": "COUNT_PER_TURN",
+            "count": 1
+          }
+        ]
+      },
+      "effects": [
+        {
+          "effect_id": "SATSUKI_CALL",
+          "effect_type": "CALL",
+          "source": "SOUL",
+          "destination": "FIELD",
+          "pay_cost": true,
+          "target": {
+            "target_type": "CARD",
+            "card_type": "MONSTER",
+            "count": 1
+          }
+        }
+      ]
+    },
+    {
+      "effect_id": "SATSUKI_KEYWORDS",
+      "effect_type": "KEYWORD",
+      "keywords": [
+        "Soulguard",
+        "Station"
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "This card on your field cannot be destroyed and its abilities cannot be nullified by your opponent's card effects.\nWhen you [Station], put up to two monsters from your drop zone into this card's soul.\nAt the end of turn, put up to three 《Crew Trooper》 or 《Thunder Empire》 monsters from your field into this card's soul.\n[1/Turn] [Counter] 【Act】 During each player's attack phase, you may call up to one monster from this card's soul by paying its [Call Cost].\n[Soulguard] [Station] [Pay 3 gauge]",
+      "segments": [
+        {
+          "tag": "EFFECT",
+          "text": "This card on your field cannot be destroyed and its abilities cannot be nullified by your opponent's card effects."
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "When you [Station], put up to two monsters from your drop zone into this card's soul."
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "At the end of turn, put up to three 《Crew Trooper》 or 《Thunder Empire》 monsters from your field into this card's soul."
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[1/Turn] [Counter] 【Act】 During each player's attack phase, you may call up to one monster from this card's soul by paying its [Call Cost]."
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Soulguard] [Station] [Pay 3 gauge]"
+        }
+      ]
+    },
+    "th": {
+      "plain": "การ์ดนี้บนสนามของคุณไม่สามารถถูกทำลาย และความสามารถไม่สามารถถูกยกเลิกได้ โดยความสามารถการ์ดของคู่แข่ง\nเมื่อคุณ [Station], นำมอนสเตอร์ได้สูงสุด 2 ใบจากในช่องดรอปของคุณเข้าสู่โซลของการ์ดนี้\nเมื่อสิ้นสุดเทิร์น, นำมอนสเตอร์ 《ลูกเรือผู้กล้า》 หรือ 《ภาคีจักรพรรดิสายฟ้า》 ได้สูงสุด 3 ใบจากบนสนามของคุณเข้าสู่โซลของการ์ดนี้\n[1/Turn] [Counter] 【Act】 ในระหว่างแอทแทคเฟสของผู้เล่นแต่ละคน, คุณสามารถคอลมอนสเตอร์ได้สูงสุด 1 ใบจากในโซลของการ์ดนี้โดยจ่าย [Call Cost]\n[Soulguard] [Station] [จ่าย 3 เกจ]",
+      "segments": [
+        {
+          "tag": "EFFECT",
+          "text": "การ์ดนี้บนสนามของคุณไม่สามารถถูกทำลาย และความสามารถไม่สามารถถูกยกเลิกได้ โดยความสามารถการ์ดของคู่แข่ง"
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "เมื่อคุณ [Station], นำมอนสเตอร์ได้สูงสุด 2 ใบจากในช่องดรอปของคุณเข้าสู่โซลของการ์ดนี้"
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "เมื่อสิ้นสุดเทิร์น, นำมอนสเตอร์ 《ลูกเรือผู้กล้า》 หรือ 《ภาคีจักรพรรดิสายฟ้า》 ได้สูงสุด 3 ใบจากบนสนามของคุณเข้าสู่โซลของการ์ดนี้"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[1/Turn] [Counter] 【Act】 ในระหว่างแอทแทคเฟสของผู้เล่นแต่ละคน, คุณสามารถคอลมอนสเตอร์ได้สูงสุด 1 ใบจากในโซลของการ์ดนี้โดยจ่าย [Call Cost]"
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Soulguard] [Station] [จ่าย 3 เกจ]"
+        }
+      ]
+    }
+  },
+  "image": null
+}

@@ -1,0 +1,52 @@
+{
+  "card_id": "RED_THUNDER_EMPERORS_AWAKENING",
+  "name": "Red Thunder Emperor's Awakening",
+  "type": "SPELL",
+  "world": [
+    "DRAGON_WORLD"
+  ],
+  "attributes": [
+    "THUNDER_EMPIRE"
+  ],
+  "effects": [
+    {
+      "effect_id": "RED_THUNDER_EMPERORS_AWAKENING_EFFECT",
+      "effect_type": "ACTIVATED",
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "FD09/022",
+        "ability_reference": "FD09/022: [Cn/Turn] Put the top card of your deck into your gauge, and you gain 1 life. Then, if you have three or more different world names of cards in your drop zone, put up to one card from your drop zone into your hand, and if six or more, draw a card.",
+        "missing_capability": "DISTINCT_WORLDS_IN_DROP_SCALED_EFFECTS",
+        "what_is_known": "Charges gauge, heals 1, and branches salvage and draw actions based on distinct worlds in drop zone (>=3, >=6).",
+        "information_needed": [
+          "Approved schema for distinct worlds in drop zone condition branching."
+        ]
+      }
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Cn/Turn] Put the top card of your deck into your gauge, and you gain 1 life. Then, if you have three or more different world names of cards in your drop zone, put up to one card from your drop zone into your hand, and if six or more, draw a card.",
+      "segments": [
+        {
+          "tag": "EFFECT",
+          "text": "[Cn/Turn] Put the top card of your deck into your gauge, and you gain 1 life. Then, if you have three or more different world names of cards in your drop zone, put up to one card from your drop zone into your hand, and if six or more, draw a card."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Cn/Turn] นำการ์ดใบบนสุดของกองการ์ดของคุณเข้าสู่ช่องเกจ, และคุณได้รับ 1 พลังชีวิต จากนั้น, ถ้าคุณมีการ์ดที่มีชื่อเวิลด์ต่างกันตั้งแต่ 3 ชนิดขึ้นไปในช่องดรอปของคุณ, นำการ์ดได้สูงสุด 1 ใบจากในช่องดรอปของคุณขึ้นมือ, และถ้าตั้งแต่ 6 ชนิดขึ้นไป, จั่วการ์ด 1 ใบ",
+      "segments": [
+        {
+          "tag": "EFFECT",
+          "text": "[Cn/Turn] นำการ์ดใบบนสุดของกองการ์ดของคุณเข้าสู่ช่องเกจ, และคุณได้รับ 1 พลังชีวิต จากนั้น, ถ้าคุณมีการ์ดที่มีชื่อเวิลด์ต่างกันตั้งแต่ 3 ชนิดขึ้นไปในช่องดรอปของคุณ, นำการ์ดได้สูงสุด 1 ใบจากในช่องดรอปของคุณขึ้นมือ, และถ้าตั้งแต่ 6 ชนิดขึ้นไป, จั่วการ์ด 1 ใบ"
+        }
+      ]
+    }
+  },
+  "image": null
+}

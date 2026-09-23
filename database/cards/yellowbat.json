@@ -1,0 +1,79 @@
+{
+  "card_id": "YELLOWBAT",
+  "name": "Yellowbat",
+  "type": "MONSTER",
+  "size": 0,
+  "power": 2000,
+  "critical": 1,
+  "defense": 1000,
+  "world": [
+    "DUNGEON_WORLD"
+  ],
+  "attributes": [
+    "DUNGEON_ENEMY",
+    "THUNDER_EMPIRE"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "YELLOWBAT_ENTER_FIELD",
+      "effect_type": "TRIGGERED",
+      "trigger": {
+        "event": "ENTER_FIELD"
+      },
+      "cost": {
+        "drop_hand": 1
+      },
+      "effects": [
+        {
+          "effect_id": "YELLOWBAT_CHARGE",
+          "effect_type": "CHARGE_GAUGE",
+          "amount": 1
+        },
+        {
+          "effect_id": "YELLOWBAT_DRAW_CONDITIONAL",
+          "effect_type": "DRAW",
+          "condition": {
+            "type": "FIELD_COUNT_GTE",
+            "target": {
+              "target_type": "CARD",
+              "zone": "FIELD",
+              "controller": "YOU",
+              "attributes_any": [
+                "DUNGEON_ENEMY",
+                "THUNDER_EMPIRE"
+              ],
+              "exclude_this": true
+            },
+            "count": 1
+          },
+          "amount": 1
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "When this card enters the field, you may drop a hand card. If you do, charge a gauge. Then, if you have another 《Dungeon Enemy》 or 《Thunder Empire》 on your field, draw a card.",
+      "segments": [
+        {
+          "tag": "TRIGGER",
+          "text": "When this card enters the field, you may drop a hand card. If you do, charge a gauge. Then, if you have another 《Dungeon Enemy》 or 《Thunder Empire》 on your field, draw a card."
+        }
+      ]
+    },
+    "th": {
+      "plain": "เมื่อการ์ดนี้ลงสู่สนาม, คุณสามารถทิ้งการ์ด 1 ใบจากบนมือได้ หากทำ, นำการ์ด 1 ใบเข้าสู่เกจ จากนั้น หากคุณมี 《ศัตรูดันเจี้ยน》 หรือ 《ภาคีจักรพรรดิสายฟ้า》 ใบอื่นอยู่บนสนามของคุณ, จั่วการ์ด 1 ใบ",
+      "segments": [
+        {
+          "tag": "TRIGGER",
+          "text": "เมื่อการ์ดนี้ลงสู่สนาม, คุณสามารถทิ้งการ์ด 1 ใบจากบนมือได้ หากทำ, นำการ์ด 1 ใบเข้าสู่เกจ จากนั้น หากคุณมี 《ศัตรูดันเจี้ยน》 หรือ 《ภาคีจักรพรรดิสายฟ้า》 ใบอื่นอยู่บนสนามของคุณ, จั่วการ์ด 1 ใบ"
+        }
+      ]
+    }
+  },
+  "image": null
+}

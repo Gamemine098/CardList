@@ -1,0 +1,155 @@
+{
+  "card_id": "THUNDER_FLARE_FIST_SUNBLAZE",
+  "name": "Thunder Flare Fist, Sunblaze",
+  "type": "ITEM",
+  "cost": {
+    "gauge": 1,
+    "life": 0,
+    "drop_to_soul": {
+      "zone": "DROP",
+      "controller": "YOU",
+      "attributes_all": [
+        "THUNDER_EMPIRE"
+      ],
+      "count": 2
+    }
+  },
+  "power": 5000,
+  "critical": 2,
+  "world": [
+    "DRAGON_WORLD"
+  ],
+  "attributes": [
+    "THUNDER_EMPIRE",
+    "WEAPON"
+  ],
+  "effects": [
+    {
+      "effect_id": "SUNBLAZE_PROTECTION",
+      "effect_type": "PROTECTION",
+      "target": {
+        "target_type": "CARD",
+        "zone": "FIELD",
+        "controller": "YOU",
+        "name_contains": "Thunder Flare"
+      },
+      "protection": {
+        "cannot_be_returned_to_hand": true,
+        "cannot_nullify_abilities": true,
+        "source": "OPPONENT_CARD_EFFECT"
+      }
+    },
+    {
+      "effect_id": "SUNBLAZE_BATZZ_BUFF",
+      "effect_type": "CONTINUOUS",
+      "condition": {
+        "type": "CARD_COUNT_GTE",
+        "zone": "FIELD",
+        "controller": "YOU",
+        "name_contains": "Batzz",
+        "count": 1
+      },
+      "target": "THIS_CARD",
+      "stats_buff": {
+        "power": 10000
+      }
+    },
+    {
+      "effect_id": "SUNBLAZE_CALL_FROM_DROP",
+      "effect_type": "ACTIVATED",
+      "is_counter": true,
+      "condition": {
+        "type": "AND",
+        "conditions": [
+          {
+            "type": "PHASE_IS",
+            "phase": "ATTACK_PHASE"
+          },
+          {
+            "type": "COUNT_PER_TURN",
+            "count": 1
+          }
+        ]
+      },
+      "effects": [
+        {
+          "effect_id": "SUNBLAZE_CALL",
+          "effect_type": "CALL",
+          "source": "DROP",
+          "destination": "FIELD",
+          "pay_cost": true,
+          "target": {
+            "target_type": "CARD",
+            "card_type": "MONSTER",
+            "attributes_all": [
+              "THUNDER_EMPIRE"
+            ],
+            "size_lte": 1,
+            "count": 1
+          }
+        }
+      ]
+    },
+    {
+      "effect_id": "SUNBLAZE_KEYWORDS",
+      "effect_type": "KEYWORD",
+      "keywords": [
+        "Double Attack",
+        "Soulguard"
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Equip Cost] [Put two 《Thunder Empire》 from your drop zone into its soul & Pay 1 gauge]\nAll cards with \"Thunder Flare\" in their card names on your field cannot be returned to hand and their abilities cannot be nullified by your opponent's card effects.\nIf a monster with \"Batzz\" in its card name is on your field, this card gets power+10000!\n[1/Turn] [Counter] 【Act】 During each player's attack phase, call up to one size 1 or less 《Thunder Empire》 monster from your drop zone by paying its [Call Cost].\n[Double Attack] [Soulguard]",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Equip Cost] [Put two 《Thunder Empire》 from your drop zone into its soul & Pay 1 gauge]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "All cards with \"Thunder Flare\" in their card names on your field cannot be returned to hand and their abilities cannot be nullified by your opponent's card effects."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "If a monster with \"Batzz\" in its card name is on your field, this card gets power+10000!"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[1/Turn] [Counter] 【Act】 During each player's attack phase, call up to one size 1 or less 《Thunder Empire》 monster from your drop zone by paying its [Call Cost]."
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Double Attack] [Soulguard]"
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Equip Cost] [นำ 《ภาคีจักรพรรดิสายฟ้า》 2 ใบจากในช่องดรอปของคุณเข้าสู่โซลของการ์ดนี้ & จ่าย 1 เกจ]\nการ์ดทั้งหมดที่มีคำว่า \"ภาคีตะวันอัสนี\" ในชื่อการ์ดบนสนามของคุณไม่สามารถถูกนำกลับขึ้นมือ และความสามารถไม่สามารถถูกยกเลิกได้ โดยความสามารถการ์ดของคู่แข่ง\nถ้ามีมอนสเตอร์ที่มีคำว่า \"บัตซ์\" ในชื่อการ์ดอยู่บนสนามของคุณ, การ์ดนี้ได้รับพลังโจมตี+10000!\n[1/Turn] [Counter] 【Act】 ในระหว่างแอทแทคเฟสของผู้เล่นแต่ละคน, คอลมอนสเตอร์ 《ภาคีจักรพรรดิสายฟ้า》 ไซส์ 1 หรือต่ำกว่า ได้สูงสุด 1 ใบจากในช่องดรอปของคุณโดยจ่าย [Call Cost]\n[Double Attack] [Soulguard]",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Equip Cost] [นำ 《ภาคีจักรพรรดิสายฟ้า》 2 ใบจากในช่องดรอปของคุณเข้าสู่โซลของการ์ดนี้ & จ่าย 1 เกจ]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "การ์ดทั้งหมดที่มีคำว่า \"ภาคีตะวันอัสนี\" ในชื่อการ์ดบนสนามของคุณไม่สามารถถูกนำกลับขึ้นมือ และความสามารถไม่สามารถถูกยกเลิกได้ โดยความสามารถการ์ดของคู่แข่ง"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "ถ้ามีมอนสเตอร์ที่มีคำว่า \"บัตซ์\" ในชื่อการ์ดอยู่บนสนามของคุณ, การ์ดนี้ได้รับพลังโจมตี+10000!"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[1/Turn] [Counter] 【Act】 ในระหว่างแอทแทคเฟสของผู้เล่นแต่ละคน, คอลมอนสเตอร์ 《ภาคีจักรพรรดิสายฟ้า》 ไซส์ 1 หรือต่ำกว่า ได้สูงสุด 1 ใบจากในช่องดรอปของคุณโดยจ่าย [Call Cost]"
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Double Attack] [Soulguard]"
+        }
+      ]
+    }
+  },
+  "image": null
+}

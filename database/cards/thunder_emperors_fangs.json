@@ -1,0 +1,59 @@
+{
+  "card_id": "THUNDER_EMPERORS_FANGS",
+  "name": "Thunder Emperor's Fangs",
+  "type": "FLAG",
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "world": null,
+  "attributes": [
+    "THUNDER_EMPIRE"
+  ],
+  "effects": [
+    {
+      "effect_id": "THUNDER_EMPERORS_FANGS_PERMISSION",
+      "effect_type": "RULE",
+      "rule": "ALLOW_THUNDER_EMPIRE_CARDS"
+    },
+    {
+      "effect_id": "THUNDER_EMPERORS_FANGS_INITIAL_STATS",
+      "effect_type": "RULE",
+      "rule": "INITIAL_GAME_STATS",
+      "stats": {
+        "initial_hand": 7,
+        "initial_gauge": 1,
+        "initial_life": 11
+      }
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "You may use 《Thunder Empire》 cards.\nYour initial hand becomes seven cards, your initial gauge becomes one card, and your initial life becomes 11!",
+      "segments": [
+        {
+          "tag": "RULE",
+          "text": "You may use 《Thunder Empire》 cards."
+        },
+        {
+          "tag": "RULE",
+          "text": "Your initial hand becomes seven cards, your initial gauge becomes one card, and your initial life becomes 11!"
+        }
+      ]
+    },
+    "th": {
+      "plain": "คุณสามารถใช้การ์ด 《ภาคีจักรพรรดิสายฟ้า》 ได้\nการ์ดบนมือเริ่มต้นของคุณกลายเป็น 7 ใบ, เกจเริ่มต้นของคุณกลายเป็น 1 ใบ, และพลังชีวิตเริ่มต้นของคุณกลายเป็น 11 หน่วย!",
+      "segments": [
+        {
+          "tag": "RULE",
+          "text": "คุณสามารถใช้การ์ด 《ภาคีจักรพรรดิสายฟ้า》 ได้"
+        },
+        {
+          "tag": "RULE",
+          "text": "การ์ดบนมือเริ่มต้นของคุณกลายเป็น 7 ใบ, เกจเริ่มต้นของคุณกลายเป็น 1 ใบ, และพลังชีวิตเริ่มต้นของคุณกลายเป็น 11 หน่วย!"
+        }
+      ]
+    }
+  },
+  "image": null
+}

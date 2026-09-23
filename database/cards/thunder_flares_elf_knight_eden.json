@@ -1,0 +1,115 @@
+{
+  "card_id": "THUNDER_FLARES_ELF_KNIGHT_EDEN",
+  "name": "Thunder Flares Elf Knight, Eden",
+  "type": "MONSTER",
+  "size": 1,
+  "power": 8000,
+  "critical": 2,
+  "defense": 3000,
+  "world": [
+    "DUNGEON_WORLD",
+    "MAGIC_WORLD"
+  ],
+  "attributes": [
+    "THUNDER_EMPIRE",
+    "KNIGHT",
+    "FOLKTALE"
+  ],
+  "cost": {
+    "gauge": 1,
+    "life": 0,
+    "soul_from_drop": 1
+  },
+  "effects": [
+    {
+      "effect_id": "EDEN_DUO",
+      "effect_type": "TRIGGERED",
+      "keyword": "Duo",
+      "duo_partner": "Thunder Flares Crimson Princess Knight, Frey",
+      "trigger": {
+        "event": "ATTACK"
+      },
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "FD09/002",
+        "ability_reference": "FD09/002: When this card attacks your opponent's monster alone, nullify the abilities of the monster in battle with this card, and your opponent cannot use [Counter].",
+        "missing_capability": "BATTLE_RESTRICTION",
+        "what_is_known": "Attacking alone against opponent monster nullifies defending monster abilities for the battle and completely seals opponent's [Counter] response timing.",
+        "information_needed": [
+          "Approved schema for battle-duration ability nullification and sealing opponent [Counter]."
+        ]
+      }
+    },
+    {
+      "effect_id": "EDEN_CRIMSON_THUNDER_HOWLING",
+      "effect_type": "TRIGGERED",
+      "name": "Crimson Thunder Howling",
+      "trigger": {
+        "event": "DESTROY_OPPONENT_MONSTER_BY_BATTLE"
+      },
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "FD09/002",
+        "ability_reference": "FD09/002: if your drop zone has 3 or more different world names, you heal 2 life, and if six or more, deal 2 damage to your opponent!!",
+        "missing_capability": "DISTINCT_WORLDS_IN_DROP",
+        "what_is_known": "Evaluates the number of mutually distinct printed world names among all cards currently residing in player's drop zone (>= 3, >= 6).",
+        "information_needed": [
+          "Approved condition primitive for distinct world names in drop (e.g. DISTINCT_WORLDS_COUNT_GTE)."
+        ]
+      }
+    },
+    {
+      "effect_id": "EDEN_KEYWORDS",
+      "effect_type": "KEYWORD",
+      "keywords": [
+        "Triple Attack",
+        "Penetrate"
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Call Cost] [Put a monster from your drop zone into its soul & Pay 1 gauge]\n[Duo] \"Thunder Flares Crimson Princess Knight, Frey\" (The following ability is active as long as you have a card with the name specified in the [Duo] ability on your field, in your drop zone, or in your face-up soul) When this card attacks your opponent's monster alone, nullify the abilities of the monster in battle with this card, and your opponent cannot use [Counter].\n\"Crimson Thunder Howling\" When this card's attack destroys your opponent's monster, if your drop zone has 3 or more different world names, you heal 2 life, and if six or more, deal 2 damage to your opponent!!\n[Triple Attack] [Penetrate]",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Call Cost] [Put a monster from your drop zone into its soul & Pay 1 gauge]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "[Duo] \"Thunder Flares Crimson Princess Knight, Frey\" (The following ability is active as long as you have a card with the name specified in the [Duo] ability on your field, in your drop zone, or in your face-up soul) When this card attacks your opponent's monster alone, nullify the abilities of the monster in battle with this card, and your opponent cannot use [Counter]."
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "\"Crimson Thunder Howling\" When this card's attack destroys your opponent's monster, if your drop zone has 3 or more different world names, you heal 2 life, and if six or more, deal 2 damage to your opponent!!"
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Triple Attack] [Penetrate]"
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Call Cost] [นำมอนสเตอร์ 1 ใบจากในช่องดรอปของคุณเข้าสู่โซลของการ์ดนี้ & จ่าย 1 เกจ]\n[Duo] \"เจ้าหญิงอัศวินแห่งภาคีตะวันอัสนี, เฟรย์\" (ความสามารถต่อไปนี้จะทำงานตราบใดที่คุณมีการ์ดที่มีชื่อระบุไว้ในความสามารถ [Duo] อยู่บนสนาม ในช่องดรอป หรือในโซลที่หงายหน้าของคุณ) เมื่อการ์ดนี้โจมตีมอนสเตอร์ของคู่แข่งเพียงลำพัง, ยกเลิกความสามารถทั้งหมดของมอนสเตอร์ที่กำลังต่อสู้กับการ์ดนี้, และคู่แข่งไม่สามารถใช้ [Counter] ได้\n\"เสียงคำรามแห่งสายฟ้าสีชาด\" เมื่อการโจมตีของการ์ดนี้ทำลายมอนสเตอร์ของคู่แข่ง, หากช่องดรอปของคุณมีชื่อเวิลด์แตกต่างกัน 3 เวิลด์ขึ้นไป, คุณฟื้นฟูพลังชีวิต 2 หน่วย, และหากมี 6 เวิลด์ขึ้นไป, สร้างความเสียหาย 2 หน่วยแก่คู่แข่ง!!\n[Triple Attack] [Penetrate]",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Call Cost] [นำมอนสเตอร์ 1 ใบจากในช่องดรอปของคุณเข้าสู่โซลของการ์ดนี้ & จ่าย 1 เกจ]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "[Duo] \"เจ้าหญิงอัศวินแห่งภาคีตะวันอัสนี, เฟรย์\" (ความสามารถต่อไปนี้จะทำงานตราบใดที่คุณมีการ์ดที่มีชื่อระบุไว้ในความสามารถ [Duo] อยู่บนสนาม ในช่องดรอป หรือในโซลที่หงายหน้าของคุณ) เมื่อการ์ดนี้โจมตีมอนสเตอร์ของคู่แข่งเพียงลำพัง, ยกเลิกความสามารถทั้งหมดของมอนสเตอร์ที่กำลังต่อสู้กับการ์ดนี้, และคู่แข่งไม่สามารถใช้ [Counter] ได้"
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "\"เสียงคำรามแห่งสายฟ้าสีชาด\" เมื่อการโจมตีของการ์ดนี้ทำลายมอนสเตอร์ของคู่แข่ง, หากช่องดรอปของคุณมีชื่อเวิลด์แตกต่างกัน 3 เวิลด์ขึ้นไป, คุณฟื้นฟูพลังชีวิต 2 หน่วย, และหากมี 6 เวิลด์ขึ้นไป, สร้างความเสียหาย 2 หน่วยแก่คู่แข่ง!!"
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Triple Attack] [Penetrate]"
+        }
+      ]
+    }
+  },
+  "image": null
+}

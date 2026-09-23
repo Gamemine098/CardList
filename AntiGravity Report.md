@@ -66,3 +66,23 @@
   - `PR`: 1 set mapping (`PR/0398` in `database/sets/pr.json`)
 - **Sets Removed**:
   - `FG`: Removed legacy set `database/sets/fg.json`
+
+---
+
+## 2026-09-24
+- **Total New Cards Added**: 28 cards (`FD09/001`–`FD09/028`)
+- **Total Canonical Cards Migrated**: 28 cards (`FD09` to `database/cards/` and `database/images/`)
+- **Total Set Card Mappings Added**: 55 mappings across 12 sets
+- **Sets Processed**:
+  - `FD09`: 28 card definitions (migrated to `database/cards/` and `database/images/`), 28 set mappings (`WIP/fighter_decks/FD09/fd09.json` and `database/sets/fd09.json`)
+  - `S-SP`: 5 set mappings (`S-SP/0002`, `S-SP/0011`, `S-SP/0015`, `S-SP/0025`, `S-SP/0026` in `database/sets/s-sp.json`)
+  - `X-BT04`: 1 set mapping (`X-BT04/0103` in `database/sets/x-bt04.json`)
+  - `X-BT03`: 7 set mappings (`X-BT03/0010`, `X-BT03/0036`, `X-BT03/0069`, `X-BT03/0073`, `X-BT03/0077`, `X-BT03/0100`, `X-BT03/0101` in `database/sets/x-bt03.json`)
+  - `X-BT01`: 1 set mapping (`X-BT01/0001` in `database/sets/x-bt01.json`)
+  - `X-CBT01`: 3 set mappings (`X-CBT01/0001`, `X-CBT01/0048`, `X-CBT01/0056` in `database/sets/x-cbt01.json`)
+  - `S-UB06`: 3 set mappings (`S-UB06/0010`, `S-UB06/0021`, `S-UB06/0041` in `database/sets/s-ub06.json`)
+  - `X2-SP`: 1 set mapping (`X2-SP/0006` in `database/sets/x2-sp.json`)
+  - `X-SS04`: 3 set mappings (`X-SS04/0015`, `X-SS04/0020`, `X-SS04/0025` in `database/sets/x-ss04.json`)
+  - `S-TD01`: 1 set mapping (`S-TD01/0016` in `database/sets/s-td01.json`)
+  - `PR`: 1 set mapping (`PR/0429` in `database/sets/pr.json`)
+  - `X-TD03`: 1 set mapping (`X-TD03/0017` in `database/sets/x-td03.json`)

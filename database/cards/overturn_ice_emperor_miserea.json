@@ -1,0 +1,97 @@
+{
+  "card_id": "OVERTURN_ICE_EMPEROR_MISEREA",
+  "name": "Overturn Ice Emperor, Miserea",
+  "type": "MONSTER",
+  "size": 3,
+  "power": 8000,
+  "critical": 2,
+  "defense": 6000,
+  "world": [
+    "DUNGEON_WORLD",
+    "LEGEND_WORLD"
+  ],
+  "attributes": [
+    "DUNGEON_ENEMY",
+    "DEMON_LORD",
+    "WATER",
+    "THUNDER_EMPIRE"
+  ],
+  "cost": {
+    "gauge": 2,
+    "life": 0,
+    "soul_from_drop": {
+      "card_type": "SPELL",
+      "count": 1
+    }
+  },
+  "effects": [
+    {
+      "effect_id": "MISEREA_OVERTURN",
+      "effect_type": "KEYWORD_ABILITY",
+      "keyword": "Overturn",
+      "cost": {
+        "gauge": 2
+      },
+      "condition": {
+        "type": "PHASE_IS",
+        "phase": "MAIN_PHASE"
+      },
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "FD09/005",
+        "ability_reference": "FD09/005: [Overturn] [Pay 2 gauge during your main phase] Nullify all abilities of cards on the field, and return all other cards from each player's hand, gauge, drop zone, and field to their owner's decks, and shuffle the decks! Then, each player draws six cards, and put the top two cards of their deck into their gauge!!",
+        "missing_capability": "KEYWORD_OVERTURN_RESET",
+        "what_is_known": "[Overturn] resets every card across all active zones (field, hand, gauge, drop) to deck, nullifies field abilities, and restarts hand/gauge for both players.",
+        "information_needed": [
+          "Approved schema for [Overturn] and complete game-state restart effect."
+        ]
+      }
+    },
+    {
+      "effect_id": "MISEREA_KEYWORDS",
+      "effect_type": "KEYWORD",
+      "keywords": [
+        "Double Attack",
+        "Soulguard",
+        "Lifelink 2"
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Call Cost] [Put up to one spell from your drop zone into this card's soul & Pay 2 gauge]\n[Overturn] [Pay 2 gauge during your main phase] Nullify all abilities of cards on the field, and return all other cards from each player's hand, gauge, drop zone, and field to their owner's decks, and shuffle the decks! Then, each player draws six cards, and put the top two cards of their deck into their gauge!!\n[Double Attack] [Soulguard] [Lifelink 2]",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Call Cost] [Put up to one spell from your drop zone into this card's soul & Pay 2 gauge]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "[Overturn] [Pay 2 gauge during your main phase] Nullify all abilities of cards on the field, and return all other cards from each player's hand, gauge, drop zone, and field to their owner's decks, and shuffle the decks! Then, each player draws six cards, and put the top two cards of their deck into their gauge!!"
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Double Attack] [Soulguard] [Lifelink 2]"
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Call Cost] [นำการ์ดเวทมนตร์ได้สูงสุด 1 ใบจากในช่องดรอปของคุณเข้าสู่โซลของการ์ดนี้ & จ่าย 2 เกจ]\n[Overturn] [จ่าย 2 เกจ ในระหว่างเมนเฟสของคุณ] ยกเลิกความสามารถทั้งหมดของการ์ดบนสนาม, และนำการ์ดใบอื่นทั้งหมดจากบนมือ เกจ ช่องดรอป และสนามของผู้เล่นแต่ละคนกลับเข้ากองการ์ดของเจ้าของ, และสับกองการ์ด! จากนั้น ผู้เล่นแต่ละคนจั่วการ์ด 6 ใบ, และนำการ์ด 2 ใบจากใบบนสุดของกองการ์ดเข้าสู่เกจ!!\n[Double Attack] [Soulguard] [Lifelink 2]",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Call Cost] [นำการ์ดเวทมนตร์ได้สูงสุด 1 ใบจากในช่องดรอปของคุณเข้าสู่โซลของการ์ดนี้ & จ่าย 2 เกจ]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "[Overturn] [จ่าย 2 เกจ ในระหว่างเมนเฟสของคุณ] ยกเลิกความสามารถทั้งหมดของการ์ดบนสนาม, และนำการ์ดใบอื่นทั้งหมดจากบนมือ เกจ ช่องดรอป และสนามของผู้เล่นแต่ละคนกลับเข้ากองการ์ดของเจ้าของ, และสับกองการ์ด! จากนั้น ผู้เล่นแต่ละคนจั่วการ์ด 6 ใบ, และนำการ์ด 2 ใบจากใบบนสุดของกองการ์ดเข้าสู่เกจ!!"
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Double Attack] [Soulguard] [Lifelink 2]"
+        }
+      ]
+    }
+  },
+  "image": null
+}

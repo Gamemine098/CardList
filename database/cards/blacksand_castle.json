@@ -1,0 +1,103 @@
+{
+  "card_id": "BLACKSAND_CASTLE",
+  "name": "Blacksand Castle",
+  "type": "SPELL",
+  "world": [
+    "DARKNESS_DRAGON_WORLD"
+  ],
+  "attributes": [
+    "THUNDER_EMPIRE",
+    "DEFENSE"
+  ],
+  "effects": [
+    {
+      "effect_id": "BLACKSAND_CASTLE_SET",
+      "effect_type": "SET"
+    },
+    {
+      "effect_id": "BLACKSAND_CASTLE_PROTECTION",
+      "effect_type": "PROTECTION",
+      "target": {
+        "target_type": "ALL_CARDS",
+        "zone": "FIELD",
+        "controller": "YOU",
+        "attributes_any": [
+          "THUNDER_EMPIRE"
+        ]
+      },
+      "protection": {
+        "cannot_be_returned_to_hand": true,
+        "source": "OPPONENT_CARD_EFFECT"
+      }
+    },
+    {
+      "effect_id": "BLACKSAND_CASTLE_DAMAGE_REDUCTION",
+      "effect_type": "ACTIVATED",
+      "name": "Damage Reduction",
+      "is_counter": true,
+      "condition": {
+        "type": "AND",
+        "conditions": [
+          {
+            "type": "TURN_PLAYER_IS",
+            "player": "OPPONENT"
+          },
+          {
+            "type": "DISTINCT_WORLDS_ON_FIELD_GTE",
+            "count": 2
+          }
+        ]
+      },
+      "cost": {
+        "put_self_to_drop": true
+      },
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "FD09/025",
+        "ability_reference": "FD09/025: [Counter] 【Act】 During your opponent's turn, if you have two or more different world names of cards on your field, you may put this card from the field into the drop zone. If you do, for this turn, the next time damage would be dealt to you, it is reduced by 3.",
+        "missing_capability": "NEXT_DAMAGE_REDUCTION_SHIELD",
+        "what_is_known": "One-shot replacement/interception shield reducing the next damage dealt to player by 3.",
+        "information_needed": [
+          "Approved schema for NEXT_TIME_DAMAGE_DEALT interception shield."
+        ]
+      }
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Set]\nAll 《Thunder Empire》 on your field cannot be returned to hand by your opponent's card effects.\n[Counter] 【Act】 During your opponent's turn, if you have two or more different world names of cards on your field, you may put this card from the field into the drop zone. If you do, for this turn, the next time damage would be dealt to you, it is reduced by 3.",
+      "segments": [
+        {
+          "tag": "KEYWORD",
+          "text": "[Set]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "All 《Thunder Empire》 on your field cannot be returned to hand by your opponent's card effects."
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] 【Act】 During your opponent's turn, if you have two or more different world names of cards on your field, you may put this card from the field into the drop zone. If you do, for this turn, the next time damage would be dealt to you, it is reduced by 3."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Set]\n《ภาคีจักรพรรดิสายฟ้า》 ทั้งหมดบนสนามของคุณไม่สามารถถูกนำกลับขึ้นมือโดยความสามารถการ์ดของคู่แข่ง\n[Counter] 【Act】 ในระหว่างเทิร์นของคู่แข่ง, ถ้าคุณมีชื่อเวิลด์ที่แตกต่างกันของการ์ดบนสนามตั้งแต่ 2 ชนิดขึ้นไป, คุณสามารถนำการ์ดนี้จากบนสนามลงช่องดรอปได้ ถ้าทำ, ในเทิร์นนี้, ในครั้งต่อไปที่คุณจะได้รับความเสียหาย จะลดลง 3",
+      "segments": [
+        {
+          "tag": "KEYWORD",
+          "text": "[Set]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "《ภาคีจักรพรรดิสายฟ้า》 ทั้งหมดบนสนามของคุณไม่สามารถถูกนำกลับขึ้นมือโดยความสามารถการ์ดของคู่แข่ง"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] 【Act】 ในระหว่างเทิร์นของคู่แข่ง, ถ้าคุณมีชื่อเวิลด์ที่แตกต่างกันของการ์ดบนสนามตั้งแต่ 2 ชนิดขึ้นไป, คุณสามารถนำการ์ดนี้จากบนสนามลงช่องดรอปได้ ถ้าทำ, ในเทิร์นนี้, ในครั้งต่อไปที่คุณจะได้รับความเสียหาย จะลดลง 3"
+        }
+      ]
+    }
+  },
+  "image": null
+}

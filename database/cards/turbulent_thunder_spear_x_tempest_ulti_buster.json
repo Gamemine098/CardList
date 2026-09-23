@@ -1,0 +1,94 @@
+{
+  "card_id": "TURBULENT_THUNDER_SPEAR_X_TEMPEST_ULTI_BUSTER",
+  "name": "Turbulent Thunder Spear X Tempest Ulti-Buster!",
+  "type": "IMPACT",
+  "cost": {
+    "gauge": 12,
+    "life": 0
+  },
+  "world": [
+    "DRAGON_WORLD"
+  ],
+  "attributes": [
+    "THUNDER_EMPIRE"
+  ],
+  "effects": [
+    {
+      "effect_id": "ULTI_BUSTER_CAST_CONDITION",
+      "effect_type": "CAST_CONDITION",
+      "condition": {
+        "type": "AND",
+        "conditions": [
+          {
+            "type": "ATTACK_COUNT_THIS_TURN_GTE",
+            "count": 4
+          },
+          {
+            "type": "CARD_COUNT_GTE",
+            "zone": "FIELD",
+            "controller": "YOU",
+            "name_contains": "Batzz",
+            "count": 1
+          },
+          {
+            "type": "HAS_EQUIPPED_ITEM",
+            "controller": "YOU"
+          }
+        ]
+      }
+    },
+    {
+      "effect_id": "ULTI_BUSTER_DAMAGE",
+      "effect_type": "DAMAGE_OPPONENT",
+      "amount": 20,
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "FD09/027",
+        "ability_reference": "FD09/027: [Cast Cost] [Pay 12 gauge. The gauge cost is reduced by the number of times your cards attacked during this turn] / Deal 20 damage to your opponent!! This damage cannot be reduced.",
+        "missing_capability": "COST_REDUCTION_SCALED_BY_ATTACK_COUNT_AND_UNREDUCIBLE_DAMAGE",
+        "what_is_known": "Reduces gauge cast cost dynamically based on attack counter during turn, and deals direct damage that cannot be reduced.",
+        "information_needed": [
+          "Approved schema for dynamic cast cost reduction scaled by attack counter.",
+          "Approved schema for unreducible damage specification."
+        ]
+      }
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "You may only cast this card if your cards have attacked four times or more during this turn, you have a card with \"Batzz\" in its card name on your field, and an item equipped.\n[Cast Cost] [Pay 12 gauge. The gauge cost is reduced by the number of times your cards attacked during this turn]\nDeal 20 damage to your opponent!! This damage cannot be reduced.",
+      "segments": [
+        {
+          "tag": "CAST_CONDITION",
+          "text": "You may only cast this card if your cards have attacked four times or more during this turn, you have a card with \"Batzz\" in its card name on your field, and an item equipped."
+        },
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [Pay 12 gauge. The gauge cost is reduced by the number of times your cards attacked during this turn]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "Deal 20 damage to your opponent!! This damage cannot be reduced."
+        }
+      ]
+    },
+    "th": {
+      "plain": "คุณสามารถร่ายการ์ดนี้ได้ถ้าการ์ดของคุณโจมตีตั้งแต่ 4 ครั้งขึ้นไปในเทิร์นนี้, คุณมีการ์ดที่มีคำว่า \"บัตซ์\" ในชื่อการ์ดอยู่บนสนามของคุณ, และสวมใส่ไอเท็มอยู่\n[Cast Cost] [จ่าย 12 เกจ ค่าร่ายเกจนี้จะลดลงตามจำนวนครั้งที่การ์ดของคุณทำการโจมตีในเทิร์นนี้]\nสร้างความเสียหาย 20 หน่วยแก่คู่แข่งของคุณ!! ความเสียหายนี้ไม่สามารถลดทอนได้",
+      "segments": [
+        {
+          "tag": "CAST_CONDITION",
+          "text": "คุณสามารถร่ายการ์ดนี้ได้ถ้าการ์ดของคุณโจมตีตั้งแต่ 4 ครั้งขึ้นไปในเทิร์นนี้, คุณมีการ์ดที่มีคำว่า \"บัตซ์\" ในชื่อการ์ดอยู่บนสนามของคุณ, และสวมใส่ไอเท็มอยู่"
+        },
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [จ่าย 12 เกจ ค่าร่ายเกจนี้จะลดลงตามจำนวนครั้งที่การ์ดของคุณทำการโจมตีในเทิร์นนี้]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "สร้างความเสียหาย 20 หน่วยแก่คู่แข่งของคุณ!! ความเสียหายนี้ไม่สามารถลดทอนได้"
+        }
+      ]
+    }
+  },
+  "image": null
+}

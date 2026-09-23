@@ -1,0 +1,107 @@
+{
+  "card_id": "MISFIRING_DEMON_GLOBES",
+  "name": "Misfiring Demon, Globes",
+  "type": "MONSTER",
+  "size": 1,
+  "power": 3000,
+  "critical": 1,
+  "defense": 1000,
+  "world": [
+    "DRAGON_WORLD"
+  ],
+  "attributes": [
+    "THUNDER_EMPIRE",
+    "DRAGON"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "GLOBES_ENTER_FIELD_TRIGGER",
+      "effect_type": "TRIGGERED",
+      "name": "Split the Reward",
+      "trigger": {
+        "event": "ENTER_FIELD",
+        "target": {
+          "target_type": "CARD",
+          "card_type": "MONSTER",
+          "zone": "FIELD",
+          "controller": "YOU",
+          "attributes_all": [
+            "THUNDER_EMPIRE"
+          ],
+          "exclude_this": true
+        }
+      },
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "effects": [
+        {
+          "effect_id": "GLOBES_CHARGE",
+          "effect_type": "CHARGE_GAUGE",
+          "amount": 1
+        },
+        {
+          "effect_id": "GLOBES_DRAW",
+          "effect_type": "DRAW",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "effect_id": "GLOBES_ATTACK_BUFF",
+      "effect_type": "TRIGGERED",
+      "trigger": {
+        "event": "ATTACK"
+      },
+      "effects": [
+        {
+          "effect_id": "GLOBES_BUFF_CRITICAL",
+          "effect_type": "MODIFY_STAT",
+          "target": {
+            "target_type": "CARD",
+            "zone": "FIELD",
+            "controller": "YOU",
+            "count": 1
+          },
+          "duration": "THIS_TURN",
+          "stat": "CRITICAL",
+          "amount": 1
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[An/Turn] \"Split the Reward\" When another 《Thunder Empire》 monster enters your field, charge a gauge, and draw a card.\nWhen this card attacks, for this turn, a card on your field gets critical+1!",
+      "segments": [
+        {
+          "tag": "TRIGGER",
+          "text": "[An/Turn] \"Split the Reward\" When another 《Thunder Empire》 monster enters your field, charge a gauge, and draw a card."
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "When this card attacks, for this turn, a card on your field gets critical+1!"
+        }
+      ]
+    },
+    "th": {
+      "plain": "[An/Turn] \"แบ่งรางวัล\" เมื่อมอนสเตอร์ 《ภาคีจักรพรรดิสายฟ้า》 ใบอื่นลงสู่สนามของคุณ, นำการ์ด 1 ใบเข้าสู่เกจ, และจั่วการ์ด 1 ใบ\nเมื่อการ์ดนี้โจมตี, ในเทิร์นนี้ การ์ด 1 ใบ บนสนามของคุณได้รับคริติคอล+1!",
+      "segments": [
+        {
+          "tag": "TRIGGER",
+          "text": "[An/Turn] \"แบ่งรางวัล\" เมื่อมอนสเตอร์ 《ภาคีจักรพรรดิสายฟ้า》 ใบอื่นลงสู่สนามของคุณ, นำการ์ด 1 ใบเข้าสู่เกจ, และจั่วการ์ด 1 ใบ"
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "เมื่อการ์ดนี้โจมตี, ในเทิร์นนี้ การ์ด 1 ใบ บนสนามของคุณได้รับคริติคอล+1!"
+        }
+      ]
+    }
+  },
+  "image": null
+}

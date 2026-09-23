@@ -1,0 +1,70 @@
+{
+  "card_id": "STORM_SPIRITS",
+  "name": "Storm Spirits",
+  "type": "SPELL",
+  "cost": {
+    "drop_hand": 1
+  },
+  "world": [
+    "DRAGON_WORLD"
+  ],
+  "attributes": [
+    "THUNDER_EMPIRE",
+    "GET"
+  ],
+  "effects": [
+    {
+      "effect_id": "STORM_SPIRITS_SEARCH",
+      "effect_type": "LOOK_AND_CHOOSE",
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "look_count": 5,
+      "choose_targets": [
+        {
+          "target_type": "CARD",
+          "attributes_any": [
+            "THUNDER_EMPIRE"
+          ],
+          "card_types_any": [
+            "MONSTER",
+            "ITEM"
+          ],
+          "count_max": 2,
+          "destination": "HAND"
+        }
+      ],
+      "remaining_destination": "GAUGE"
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Cast Cost] [Drop a hand card]\n[Cn/Turn] Look at the top five cards of your deck, put up to two 《Thunder Empire》 monsters or items in total from among them into your hand, and put the rest into your gauge.",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [Drop a hand card]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "[Cn/Turn] Look at the top five cards of your deck, put up to two 《Thunder Empire》 monsters or items in total from among them into your hand, and put the rest into your gauge."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Cast Cost] [ทิ้งการ์ด 1 ใบจากบนมือ]\n[Cn/Turn] ดูการ์ด 5 ใบจากใบบนสุดของกองการ์ดของคุณ, นำมอนสเตอร์หรือไอเท็ม 《ภาคีจักรพรรดิสายฟ้า》 รวมกันได้สูงสุด 2 ใบจากในนั้นขึ้นมือ, และนำการ์ดที่เหลือเข้าสู่ช่องเกจ",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [ทิ้งการ์ด 1 ใบจากบนมือ]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "[Cn/Turn] ดูการ์ด 5 ใบจากใบบนสุดของกองการ์ดของคุณ, นำมอนสเตอร์หรือไอเท็ม 《ภาคีจักรพรรดิสายฟ้า》 รวมกันได้สูงสุด 2 ใบจากในนั้นขึ้นมือ, และนำการ์ดที่เหลือเข้าสู่ช่องเกจ"
+        }
+      ]
+    }
+  },
+  "image": null
+}

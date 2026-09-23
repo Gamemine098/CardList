@@ -1,0 +1,62 @@
+{
+  "card_id": "LOUD_VOICE",
+  "name": "Loud Voice",
+  "type": "SPELL",
+  "cost": {
+    "drop_hand_variable": {
+      "min": 1
+    }
+  },
+  "world": [
+    "DRAGON_WORLD"
+  ],
+  "attributes": [
+    "THUNDER_EMPIRE"
+  ],
+  "effects": [
+    {
+      "effect_id": "LOUD_VOICE_COUNTER",
+      "effect_type": "ACTIVATED",
+      "is_counter": true,
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "FD09/024",
+        "ability_reference": "FD09/024: [Counter] For this turn, all cards on your opponent's field get power-3000, defense-3000, and critical-1 for each card dropped by this card's [Cast Cost]!",
+        "missing_capability": "STAT_DEBUFF_SCALED_BY_PAID_COST",
+        "what_is_known": "Variable cost payment modifies dynamic debuff applied to all cards on opponent's field.",
+        "information_needed": [
+          "Approved schema for variable cost multipliers in stat reduction effects."
+        ]
+      }
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Cast Cost] [Drop one or more hand cards]\n[Counter] For this turn, all cards on your opponent's field get power-3000, defense-3000, and critical-1 for each card dropped by this card's [Cast Cost]!",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [Drop one or more hand cards]"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] For this turn, all cards on your opponent's field get power-3000, defense-3000, and critical-1 for each card dropped by this card's [Cast Cost]!"
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Cast Cost] [ทิ้งการ์ดตั้งแต่ 1 ใบขึ้นไปจากบนมือ]\n[Counter] ในเทิร์นนี้, การ์ดทั้งหมดบนสนามของคู่แข่งได้รับพลังโจมตี-3000, พลังป้องกัน-3000, และคริติคอล-1 ต่อการ์ดแต่ละใบที่ทิ้งไปด้วย [Cast Cost] ของการ์ดนี้!",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [ทิ้งการ์ดตั้งแต่ 1 ใบขึ้นไปจากบนมือ]"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] ในเทิร์นนี้, การ์ดทั้งหมดบนสนามของคู่แข่งได้รับพลังโจมตี-3000, พลังป้องกัน-3000, และคริติคอล-1 ต่อการ์ดแต่ละใบที่ทิ้งไปด้วย [Cast Cost] ของการ์ดนี้!"
+        }
+      ]
+    }
+  },
+  "image": null
+}

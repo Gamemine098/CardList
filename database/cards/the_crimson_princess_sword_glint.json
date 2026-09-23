@@ -1,0 +1,67 @@
+{
+  "card_id": "THE_CRIMSON_PRINCESS_SWORD_GLINT",
+  "name": "The Crimson Princess' Sword Glint",
+  "type": "SPELL",
+  "cost": {
+    "life": 1,
+    "gauge": 0
+  },
+  "world": [
+    "DUNGEON_WORLD",
+    "MAGIC_WORLD"
+  ],
+  "attributes": [
+    "THUNDER_EMPIRE",
+    "SUMMON",
+    "GET"
+  ],
+  "effects": [
+    {
+      "effect_id": "CRIMSON_PRINCESS_SWORD_GLINT_CHOICE",
+      "effect_type": "CHOICE",
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "FD09/015",
+        "ability_reference": "FD09/015: look at all of your gauge, reveal up to one monster and item each from among them, and put them into your hand / If you would call a monster with [Duo], you may call it while ignoring the effects of \"Loyalty\".",
+        "missing_capability": "INSPECT_ALL_GAUGE_AND_IGNORE_RESTRICTION",
+        "what_is_known": "Inspects entire gauge to retrieve cards, and provides permission to ignore named restriction cards ('Loyalty') during call.",
+        "information_needed": [
+          "Approved schema for INSPECT_ALL_GAUGE and IGNORE_NAMED_RESTRICTION."
+        ]
+      }
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Cast Cost] [Pay 1 life]\n[Cn/Turn] Choose one of the following.\n• Charge 2 gauge. Then, look at all of your gauge, reveal up to one monster and item each from among them, and put them into your hand. If your flag is \"Thunder Emperor's Fangs\", you may look at all of your gauge and put up to one card from among them into your hand instead.\n• [Counter] During your attack phase, call up to one size 1 or less 《Thunder Empire》 monster from your drop zone by paying its [Call Cost]. If you would call a monster with [Duo], you may call it while ignoring the effects of \"Loyalty\".",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [Pay 1 life]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "[Cn/Turn] Choose one of the following.\n• Charge 2 gauge. Then, look at all of your gauge, reveal up to one monster and item each from among them, and put them into your hand. If your flag is \"Thunder Emperor's Fangs\", you may look at all of your gauge and put up to one card from among them into your hand instead.\n• [Counter] During your attack phase, call up to one size 1 or less 《Thunder Empire》 monster from your drop zone by paying its [Call Cost]. If you would call a monster with [Duo], you may call it while ignoring the effects of \"Loyalty\"."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Cast Cost] [จ่าย 1 พลังชีวิต]\n[Cn/Turn] เลือกหนึ่งอย่างจากต่อไปนี้\n• ชาร์จ 2 เกจ จากนั้น, ดูการ์ดทั้งหมดในช่องเกจของคุณ, เปิดเผยการ์ดมอนสเตอร์และไอเท็มได้อย่างละสูงสุด 1 ใบจากในนั้น, และนำขึ้นมือ ถ้าการ์ดแฟลกของคุณคือ \"เขี้ยวแห่งจักรพรรดิสายฟ้า\", คุณสามารถดูการ์ดทั้งหมดในช่องเกจของคุณและนำการ์ดได้สูงสุด 1 ใบจากในนั้นขึ้นมือแทนได้\n• [Counter] ในระหว่างแอทแทคเฟสของคุณ, คอลมอนสเตอร์ 《ภาคีจักรพรรดิสายฟ้า》 ไซส์ 1 หรือต่ำกว่า ได้สูงสุด 1 ใบจากในช่องดรอปของคุณโดยจ่าย [Call Cost] ถ้าคุณจะคอลมอนสเตอร์ที่มี [Duo], คุณสามารถคอลได้โดยไม่ต้องสนใจผลของ \"ความภักดี\"",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [จ่าย 1 พลังชีวิต]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "[Cn/Turn] เลือกหนึ่งอย่างจากต่อไปนี้\n• ชาร์จ 2 เกจ จากนั้น, ดูการ์ดทั้งหมดในช่องเกจของคุณ, เปิดเผยการ์ดมอนสเตอร์และไอเท็มได้อย่างละสูงสุด 1 ใบจากในนั้น, และนำขึ้นมือ ถ้าการ์ดแฟลกของคุณคือ \"เขี้ยวแห่งจักรพรรดิสายฟ้า\", คุณสามารถดูการ์ดทั้งหมดในช่องเกจของคุณและนำการ์ดได้สูงสุด 1 ใบจากในนั้นขึ้นมือแทนได้\n• [Counter] ในระหว่างแอทแทคเฟสของคุณ, คอลมอนสเตอร์ 《ภาคีจักรพรรดิสายฟ้า》 ไซส์ 1 หรือต่ำกว่า ได้สูงสุด 1 ใบจากในช่องดรอปของคุณโดยจ่าย [Call Cost] ถ้าคุณจะคอลมอนสเตอร์ที่มี [Duo], คุณสามารถคอลได้โดยไม่ต้องสนใจผลของ \"ความภักดี\""
+        }
+      ]
+    }
+  },
+  "image": null
+}

@@ -1,0 +1,131 @@
+{
+  "card_id": "THUNDER_FLARES_BLUE_BAT",
+  "name": "Thunder Flares, Blue Bat",
+  "type": "MONSTER",
+  "size": 0,
+  "power": 3000,
+  "critical": 1,
+  "defense": 1000,
+  "world": [
+    "DUNGEON_WORLD"
+  ],
+  "attributes": [
+    "DUNGEON_ENEMY",
+    "THUNDER_EMPIRE"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "BLUE_BAT_ENTER_BY_EFFECT",
+      "effect_type": "TRIGGERED",
+      "name": "Not Yellow, I'm Blue!",
+      "trigger": {
+        "event": "ENTER_FIELD_BY_EFFECT"
+      },
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "effects": [
+        {
+          "effect_id": "BLUE_BAT_CHARGE",
+          "effect_type": "CHARGE_GAUGE",
+          "amount": 1
+        },
+        {
+          "effect_id": "BLUE_BAT_HEAL",
+          "effect_type": "GAIN_LIFE",
+          "amount": 1
+        },
+        {
+          "effect_id": "BLUE_BAT_DRAW",
+          "effect_type": "DRAW",
+          "amount": 2
+        }
+      ]
+    },
+    {
+      "effect_id": "BLUE_BAT_ATTACK_BUFF",
+      "effect_type": "TRIGGERED",
+      "trigger": {
+        "event": "ATTACK"
+      },
+      "condition": {
+        "type": "AND",
+        "conditions": [
+          {
+            "type": "COUNT_PER_TURN",
+            "count": 1
+          },
+          {
+            "type": "FIELD_COUNT_GTE",
+            "target": {
+              "target_type": "CARD",
+              "zone": "FIELD",
+              "controller": "YOU",
+              "name_contains": "Batzz"
+            },
+            "count": 1
+          }
+        ]
+      },
+      "effects": [
+        {
+          "effect_id": "BLUE_BAT_GRANT_CRIT_AND_DOUBLE_ATTACK",
+          "effect_type": "MULTI_EFFECT",
+          "effects": [
+            {
+              "effect_id": "BLUE_BAT_CRIT",
+              "effect_type": "MODIFY_STAT",
+              "target": "THIS_CARD",
+              "duration": "THIS_TURN",
+              "stat": "CRITICAL",
+              "amount": 2
+            },
+            {
+              "effect_id": "BLUE_BAT_DOUBLE_ATTACK",
+              "effect_type": "GRANT_KEYWORD",
+              "target": "THIS_CARD",
+              "duration": "THIS_TURN",
+              "keywords": [
+                "Double Attack"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[An/Turn] \"Not Yellow, I'm Blue!\" When this card enters the field by card effects, charge a gauge, heal 1 life, and draw two cards.\n[1/Turn] When this card attacks, if a card with \"Batzz\" in its card name is on your field, for this turn, this card get critical+2 and [Double Attack].",
+      "segments": [
+        {
+          "tag": "TRIGGER",
+          "text": "[An/Turn] \"Not Yellow, I'm Blue!\" When this card enters the field by card effects, charge a gauge, heal 1 life, and draw two cards."
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "[1/Turn] When this card attacks, if a card with \"Batzz\" in its card name is on your field, for this turn, this card get critical+2 and [Double Attack]."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[An/Turn] \"ไม่ใช่สีเหลือง, ฉันสีนํ้าเงิน!\" เมื่อการ์ดนี้ลงสู่สนามโดยความสามารถของการ์ด, นำการ์ด 1 ใบเข้าสู่เกจ, ฟื้นฟูพลังชีวิต 1 หน่วย, และจั่วการ์ด 2 ใบ\n[1/Turn] เมื่อการ์ดนี้โจมตี, หากมีการ์ดที่มี \"บัตซ์\" ในชื่อการ์ดอยู่บนสนามของคุณ, ในเทิร์นนี้ การ์ดนี้ได้รับคริติคอล+2 และ [Double Attack]",
+      "segments": [
+        {
+          "tag": "TRIGGER",
+          "text": "[An/Turn] \"ไม่ใช่สีเหลือง, ฉันสีนํ้าเงิน!\" เมื่อการ์ดนี้ลงสู่สนามโดยความสามารถของการ์ด, นำการ์ด 1 ใบเข้าสู่เกจ, ฟื้นฟูพลังชีวิต 1 หน่วย, และจั่วการ์ด 2 ใบ"
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "[1/Turn] เมื่อการ์ดนี้โจมตี, หากมีการ์ดที่มี \"บัตซ์\" ในชื่อการ์ดอยู่บนสนามของคุณ, ในเทิร์นนี้ การ์ดนี้ได้รับคริติคอล+2 และ [Double Attack]"
+        }
+      ]
+    }
+  },
+  "image": null
+}

@@ -1,0 +1,150 @@
+{
+  "card_id": "THUNDER_FLARES_LEADER_BARLBATZZ_DRAGOROYALE_RE_B",
+  "name": "Thunder Flares Leader, Barlbatzz Dragoroyale \"Re:B\"",
+  "type": "MONSTER",
+  "size": 3,
+  "power": 15000,
+  "critical": 2,
+  "defense": 7000,
+  "world": [
+    "DRAGON_WORLD"
+  ],
+  "attributes": [
+    "THUNDER_EMPIRE",
+    "DRAGON"
+  ],
+  "cost": {
+    "gauge": 2,
+    "life": 0,
+    "drop_monster": {
+      "zone": "FIELD",
+      "controller": "YOU",
+      "attributes_all": [
+        "THUNDER_EMPIRE"
+      ],
+      "count": 1
+    }
+  },
+  "effects": [
+    {
+      "effect_id": "BARLBATZZ_PROTECTION",
+      "effect_type": "PROTECTION",
+      "condition": {
+        "type": "TURN_PLAYER_IS",
+        "player": "YOU"
+      },
+      "target": "THIS_CARD",
+      "protection": {
+        "cannot_be_destroyed": true,
+        "cannot_be_rested": true,
+        "source": "OPPONENT_CARD_EFFECT"
+      }
+    },
+    {
+      "effect_id": "BARLBATZZ_SIZE_REDUCTION",
+      "effect_type": "CONTINUOUS",
+      "zone": [
+        "FIELD",
+        "REMOVE_ZONE"
+      ],
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "FD09/004",
+        "ability_reference": "FD09/004: 【Field/Remove Zone】 The size of all originally size 1 《Thunder Empire》 on your field are reduced by 1.",
+        "missing_capability": "REMOVE_ZONE_PASSIVE",
+        "what_is_known": "Continuous stat modification active even while card is banished / residing in the REMOVE_ZONE.",
+        "information_needed": [
+          "Approved engine support for passive abilities radiating from REMOVE_ZONE."
+        ]
+      }
+    },
+    {
+      "effect_id": "BARLBATZZ_OVERDRIVE",
+      "effect_type": "KEYWORD_ABILITY",
+      "keyword": "OverDrive",
+      "zone": [
+        "FIELD",
+        "HAND"
+      ],
+      "condition": {
+        "type": "PHASE_IS",
+        "phase": "ATTACK_PHASE"
+      },
+      "cost": {
+        "remove_this_card": true,
+        "drop_hand": 1
+      },
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "FD09/004",
+        "ability_reference": "FD09/004: 【Field/Hand】 [OverDrive] [During your attack phase, remove this card & Drop a hand card] Call up to one 《Thunder Empire》 from your deck by paying its [Call Cost], and shuffle your deck. Then, during this fight, all cards on your field get power+10000 and critical+1.",
+        "missing_capability": "FIGHT_DURATION_BUFF",
+        "what_is_known": "OverDrive activation from either Hand or Field removes this card and grants an unconditioned buff persisting for the remainder of the game (during this fight).",
+        "information_needed": [
+          "Approved duration taxonomy for FIGHT_DURATION / THIS_FIGHT."
+        ]
+      }
+    },
+    {
+      "effect_id": "BARLBATZZ_KEYWORDS",
+      "effect_type": "KEYWORD",
+      "keywords": [
+        "Penetrate",
+        "Triple Attack"
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Call Cost] [Drop a 《Thunder Empire》 on your field & Pay 2 gauge]\nDuring your turn, this card on the field cannot be destroyed, nor [Rest], by your opponent's card effects.\n【Field/Remove Zone】 The size of all originally size 1 《Thunder Empire》 on your field are reduced by 1.\n【Field/Hand】 [OverDrive] [During your attack phase, remove this card & Drop a hand card] Call up to one 《Thunder Empire》 from your deck by paying its [Call Cost], and shuffle your deck. Then, during this fight, all cards on your field get power+10000 and critical+1.\n[Penetrate] [Triple Attack]",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Call Cost] [Drop a 《Thunder Empire》 on your field & Pay 2 gauge]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "During your turn, this card on the field cannot be destroyed, nor [Rest], by your opponent's card effects."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "【Field/Remove Zone】 The size of all originally size 1 《Thunder Empire》 on your field are reduced by 1."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "【Field/Hand】 [OverDrive] [During your attack phase, remove this card & Drop a hand card] Call up to one 《Thunder Empire》 from your deck by paying its [Call Cost], and shuffle your deck. Then, during this fight, all cards on your field get power+10000 and critical+1."
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Penetrate] [Triple Attack]"
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Call Cost] [ส่ง 《ภาคีจักรพรรดิสายฟ้า》 1 ใบ บนสนามของคุณลงช่องดรอป & จ่าย 2 เกจ]\nในระหว่างเทิร์นของคุณ, การ์ดนี้บนสนามไม่สามารถถูกทำลาย หรือ [Rest] โดยความสามารถการ์ดของคู่แข่ง\n【Field/Remove Zone】 ไซส์ของการ์ด 《ภาคีจักรพรรดิสายฟ้า》 ที่มีไซส์ดั้งเดิมเป็นไซส์ 1 ทั้งหมดบนสนามของคุณจะลดลง 1\n【Field/Hand】 [OverDrive] [ในระหว่างแอทแทคเฟสของคุณ, นำการ์ดนี้ออกนอกเกม & ทิ้งการ์ด 1 ใบจากบนมือ] คอล 《ภาคีจักรพรรดิสายฟ้า》 ได้สูงสุด 1 ใบจากในกองการ์ดของคุณโดยจ่าย [Call Cost], และสับกองการ์ดของคุณ จากนั้น, ในระหว่างเกมนี้ การ์ดทั้งหมดบนสนามของคุณได้รับพลังโจมตี+10000 และคริติคอล+1\n[Penetrate] [Triple Attack]",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Call Cost] [ส่ง 《ภาคีจักรพรรดิสายฟ้า》 1 ใบ บนสนามของคุณลงช่องดรอป & จ่าย 2 เกจ]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "ในระหว่างเทิร์นของคุณ, การ์ดนี้บนสนามไม่สามารถถูกทำลาย หรือ [Rest] โดยความสามารถการ์ดของคู่แข่ง"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "【Field/Remove Zone】 ไซส์ของการ์ด 《ภาคีจักรพรรดิสายฟ้า》 ที่มีไซส์ดั้งเดิมเป็นไซส์ 1 ทั้งหมดบนสนามของคุณจะลดลง 1"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "【Field/Hand】 [OverDrive] [ในระหว่างแอทแทคเฟสของคุณ, นำการ์ดนี้ออกนอกเกม & ทิ้งการ์ด 1 ใบจากบนมือ] คอล 《ภาคีจักรพรรดิสายฟ้า》 ได้สูงสุด 1 ใบจากในกองการ์ดของคุณโดยจ่าย [Call Cost], และสับกองการ์ดของคุณ จากนั้น, ในระหว่างเกมนี้ การ์ดทั้งหมดบนสนามของคุณได้รับพลังโจมตี+10000 และคริติคอล+1"
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Penetrate] [Triple Attack]"
+        }
+      ]
+    }
+  },
+  "image": null
+}

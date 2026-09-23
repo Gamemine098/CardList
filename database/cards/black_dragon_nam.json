@@ -1,0 +1,77 @@
+{
+  "card_id": "BLACK_DRAGON_NAM",
+  "name": "Black Dragon, Nam",
+  "type": "MONSTER",
+  "size": 0,
+  "power": 1000,
+  "critical": 1,
+  "defense": 1000,
+  "world": [
+    "DARKNESS_DRAGON_WORLD"
+  ],
+  "attributes": [
+    "BLACK_DRAGON",
+    "THUNDER_EMPIRE"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "NAM_BATTLE_END",
+      "effect_type": "TRIGGERED",
+      "trigger": {
+        "event": "BATTLE_END"
+      },
+      "condition": {
+        "type": "DISTINCT_WORLDS_ON_FIELD_GTE",
+        "count": 2
+      },
+      "cost": {
+        "destroy_this_card": true
+      },
+      "effects": [
+        {
+          "effect_id": "NAM_CHARGE",
+          "effect_type": "CHARGE_GAUGE",
+          "amount": 1
+        },
+        {
+          "effect_id": "NAM_SALVAGE",
+          "effect_type": "SALVAGE_DROP",
+          "target": {
+            "target_type": "CARD",
+            "card_type": "MONSTER",
+            "attributes_all": [
+              "THUNDER_EMPIRE"
+            ],
+            "count": 1
+          },
+          "destination": "HAND"
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "At the end of the battle of this card, if you have two or more different world names of cards on your field, choose up to one 《Thunder Empire》 monster in your drop zone, and you may destroy this card. If you do, charge a gauge, and put the chosen card into your hand.",
+      "segments": [
+        {
+          "tag": "TRIGGER",
+          "text": "At the end of the battle of this card, if you have two or more different world names of cards on your field, choose up to one 《Thunder Empire》 monster in your drop zone, and you may destroy this card. If you do, charge a gauge, and put the chosen card into your hand."
+        }
+      ]
+    },
+    "th": {
+      "plain": "เมื่อสิ้นสุดการต่อสู้ของการ์ดนี้, หากมีการ์ดที่มีชื่อเวิลด์แตกต่างกัน 2 เวิลด์ขึ้นไปอยู่บนสนามของคุณ, เลือกมอนสเตอร์ 《ภาคีจักรพรรดิสายฟ้า》 ได้สูงสุด 1 ใบในช่องดรอปของคุณ, และคุณสามารถทำลายการ์ดนี้ได้ หากทำ, นำการ์ด 1 ใบเข้าสู่เกจ, และนำการ์ดที่เลือกขึ้นมือ",
+      "segments": [
+        {
+          "tag": "TRIGGER",
+          "text": "เมื่อสิ้นสุดการต่อสู้ของการ์ดนี้, หากมีการ์ดที่มีชื่อเวิลด์แตกต่างกัน 2 เวิลด์ขึ้นไปอยู่บนสนามของคุณ, เลือกมอนสเตอร์ 《ภาคีจักรพรรดิสายฟ้า》 ได้สูงสุด 1 ใบในช่องดรอปของคุณ, และคุณสามารถทำลายการ์ดนี้ได้ หากทำ, นำการ์ด 1 ใบเข้าสู่เกจ, และนำการ์ดที่เลือกขึ้นมือ"
+        }
+      ]
+    }
+  },
+  "image": null
+}

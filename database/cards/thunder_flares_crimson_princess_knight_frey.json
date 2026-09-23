@@ -1,0 +1,140 @@
+{
+  "card_id": "THUNDER_FLARES_CRIMSON_PRINCESS_KNIGHT_FREY",
+  "name": "Thunder Flares Crimson Princess Knight, Frey",
+  "type": "MONSTER",
+  "size": 1,
+  "power": 5000,
+  "critical": 2,
+  "defense": 5000,
+  "world": [
+    "DUNGEON_WORLD",
+    "MAGIC_WORLD"
+  ],
+  "attributes": [
+    "THUNDER_EMPIRE",
+    "KNIGHT",
+    "FOLKTALE",
+    "PRINCESS"
+  ],
+  "cost": {
+    "gauge": 1,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "FREY_CALL_LIMIT",
+      "effect_type": "RULE",
+      "rule": "CALL_1_PER_TURN"
+    },
+    {
+      "effect_id": "FREY_DUO",
+      "effect_type": "CONTINUOUS",
+      "keyword": "Duo",
+      "duo_partner": "Thunder Flares Elf Knight, Eden",
+      "position_constraint": [
+        "LEFT",
+        "RIGHT"
+      ],
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "FD09/001",
+        "ability_reference": "FD09/001: You may have one more of this card's [Duo] on this card's area, and this card and its [Duo] cannot be [Rest] by your opponent's card effects.",
+        "missing_capability": "AREA_STACKING",
+        "what_is_known": "Permits placing a second monster (the Duo partner) onto the same field area (Left or Right), sharing area occupancy, and grants Rest immunity to both.",
+        "information_needed": [
+          "Approved schema for multi-card area stacking rules."
+        ]
+      }
+    },
+    {
+      "effect_id": "FREY_ACT",
+      "effect_type": "ACTIVATED",
+      "name": "Crimson Princess",
+      "is_counter": true,
+      "condition": {
+        "type": "AND",
+        "conditions": [
+          {
+            "type": "TURN_PLAYER_IS",
+            "player": "YOU"
+          },
+          {
+            "type": "COUNT_PER_TURN",
+            "count": 1
+          }
+        ]
+      },
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "FD09/001",
+        "ability_reference": "FD09/001: search your deck for up to one card, put it into your drop or soul of your item, shuffle your deck, and for this turn, the world name of this card on the field is regarded as the same as that card's, and you draw up to two cards.",
+        "missing_capability": "WORLD_MUTATION",
+        "what_is_known": "Searches deck for any card, puts it into drop or item soul, dynamically copies the world identity of that card onto this monster, and draws up to 2.",
+        "information_needed": [
+          "Approved schema for temporary world attribute mutation (e.g. COPY_WORLD_FROM_SEARCHED_CARD)."
+        ]
+      }
+    },
+    {
+      "effect_id": "FREY_KEYWORDS",
+      "effect_type": "KEYWORD",
+      "keywords": [
+        "Double Attack",
+        "Penetrate"
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Call/1Turn]\n[Call Cost] [Pay 1 gauge]\n【Left/Right】 [Duo] \"Thunder Flares Elf Knight, Eden\" (The following ability is active as long as you have a card with the name specified in the [Duo] ability on your field, in your drop zone, or in your face-up soul) You may have one more of this card's [Duo] on this card's area, and this card and its [Duo] cannot be [Rest] by your opponent's card effects.\n[Counter] 【Act】 [An/Turn] \"Crimson Princess\" During your turn, search your deck for up to one card, put it into your drop or soul of your item, shuffle your deck, and for this turn, the world name of this card on the field is regarded as the same as that card's, and you draw up to two cards.\n[Double Attack] [Penetrate]",
+      "segments": [
+        {
+          "tag": "RULE",
+          "text": "[Call/1Turn]"
+        },
+        {
+          "tag": "COST",
+          "text": "[Call Cost] [Pay 1 gauge]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "【Left/Right】 [Duo] \"Thunder Flares Elf Knight, Eden\" (The following ability is active as long as you have a card with the name specified in the [Duo] ability on your field, in your drop zone, or in your face-up soul) You may have one more of this card's [Duo] on this card's area, and this card and its [Duo] cannot be [Rest] by your opponent's card effects."
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] 【Act】 [An/Turn] \"Crimson Princess\" During your turn, search your deck for up to one card, put it into your drop or soul of your item, shuffle your deck, and for this turn, the world name of this card on the field is regarded as the same as that card's, and you draw up to two cards."
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Double Attack] [Penetrate]"
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Call/1Turn]\n[Call Cost] [จ่าย 1 เกจ]\n【Left/Right】 [Duo] \"อัศวินเอลฟ์แห่งภาคีตะวันอัสนี, เอเดน\" (ความสามารถต่อไปนี้จะทำงานตราบใดที่คุณมีการ์ดที่มีชื่อระบุไว้ในความสามารถ [Duo] อยู่บนสนาม ในช่องดรอป หรือในโซลที่หงายหน้าของคุณ) คุณสามารถมี [Duo] ของการ์ดนี้เพิ่มอีกหนึ่งใบในช่องของการ์ดนี้ได้, และการ์ดนี้กับ [Duo] ของมันไม่สามารถถูก [Rest] โดยความสามารถการ์ดของคู่แข่ง\n[Counter] 【Act】 [An/Turn] \"เจ้าหญิงสีชาด\" ในระหว่างเทิร์นของคุณ, ค้นหาการ์ดได้สูงสุด 1 ใบจากในกองการ์ดของคุณ, นำลงช่องดรอปหรือนำเข้าสู่โซลของไอเท็มของคุณ, สับกองการ์ดของคุณ, และในเทิร์นนี้, ชื่อเวิลด์ของการ์ดนี้บนสนามจะถือว่าเป็นเวิลด์เดียวกับการ์ดใบนั้น, และคุณจั่วการ์ดได้สูงสุด 2 ใบ\n[Double Attack] [Penetrate]",
+      "segments": [
+        {
+          "tag": "RULE",
+          "text": "[Call/1Turn]"
+        },
+        {
+          "tag": "COST",
+          "text": "[Call Cost] [จ่าย 1 เกจ]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "【Left/Right】 [Duo] \"อัศวินเอลฟ์แห่งภาคีตะวันอัสนี, เอเดน\" (ความสามารถต่อไปนี้จะทำงานตราบใดที่คุณมีการ์ดที่มีชื่อระบุไว้ในความสามารถ [Duo] อยู่บนสนาม ในช่องดรอป หรือในโซลที่หงายหน้าของคุณ) คุณสามารถมี [Duo] ของการ์ดนี้เพิ่มอีกหนึ่งใบในช่องของการ์ดนี้ได้, และการ์ดนี้กับ [Duo] ของมันไม่สามารถถูก [Rest] โดยความสามารถการ์ดของคู่แข่ง"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] 【Act】 [An/Turn] \"เจ้าหญิงสีชาด\" ในระหว่างเทิร์นของคุณ, ค้นหาการ์ดได้สูงสุด 1 ใบจากในกองการ์ดของคุณ, นำลงช่องดรอปหรือนำเข้าสู่โซลของไอเท็มของคุณ, สับกองการ์ดของคุณ, และในเทิร์นนี้, ชื่อเวิลด์ของการ์ดนี้บนสนามจะถือว่าเป็นเวิลด์เดียวกับการ์ดใบนั้น, และคุณจั่วการ์ดได้สูงสุด 2 ใบ"
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Double Attack] [Penetrate]"
+        }
+      ]
+    }
+  },
+  "image": null
+}

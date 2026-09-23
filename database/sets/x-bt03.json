@@ -6,8 +6,36 @@
       "card_id": "CHAOS_BASILI_GOLLUM"
     },
     {
+      "card_number": "X-BT03/0010",
+      "card_id": "OPERATIVE_SPHERE"
+    },
+    {
       "card_number": "X-BT03/0020",
       "card_id": "CHAOS_ALBERION"
+    },
+    {
+      "card_number": "X-BT03/0036",
+      "card_id": "CONNECT_NINJA_TOMONOSHIN"
+    },
+    {
+      "card_number": "X-BT03/0069",
+      "card_id": "BLACK_DRAGON_NAM"
+    },
+    {
+      "card_number": "X-BT03/0073",
+      "card_id": "BLACKSAND_CASTLE"
+    },
+    {
+      "card_number": "X-BT03/0077",
+      "card_id": "OFFERINGS_FOR_THE_THUNDER_EMPEROR"
+    },
+    {
+      "card_number": "X-BT03/0100",
+      "card_id": "TURBULENT_THUNDER_SPEAR_X_TEMPEST_ULTI_BUSTER"
+    },
+    {
+      "card_number": "X-BT03/0101",
+      "card_id": "THUNDER_EMPERORS_FANGS"
     }
   ]
 }

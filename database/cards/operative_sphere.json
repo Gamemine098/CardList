@@ -1,0 +1,76 @@
+{
+  "card_id": "OPERATIVE_SPHERE",
+  "name": "Operative, Sphere",
+  "type": "MONSTER",
+  "size": 1,
+  "power": 4000,
+  "critical": 1,
+  "defense": 1000,
+  "world": [
+    "DRAGON_WORLD"
+  ],
+  "attributes": [
+    "THUNDER_EMPIRE",
+    "DRAGON"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "OPERATIVE_SPHERE_ENTER_FIELD",
+      "effect_type": "TRIGGERED",
+      "name": "Secret Operation",
+      "trigger": {
+        "event": "ENTER_FIELD"
+      },
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "effects": [
+        {
+          "effect_id": "OPERATIVE_SPHERE_CHARGE",
+          "effect_type": "CHARGE_GAUGE",
+          "amount": 1
+        },
+        {
+          "effect_id": "OPERATIVE_SPHERE_HEAL",
+          "effect_type": "GAIN_LIFE",
+          "amount": 1
+        },
+        {
+          "effect_id": "OPERATIVE_SPHERE_DRAW_CONDITIONAL",
+          "effect_type": "DRAW",
+          "condition": {
+            "type": "DISTINCT_WORLDS_ON_FIELD_GTE",
+            "count": 2
+          },
+          "amount": 1
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[An/Turn] \"Secret Operation\" When this card enters the field, charge a gauge, and you gain 1 life! Then, if two or more different world names of cards are on your field, draw a card.",
+      "segments": [
+        {
+          "tag": "TRIGGER",
+          "text": "[An/Turn] \"Secret Operation\" When this card enters the field, charge a gauge, and you gain 1 life! Then, if two or more different world names of cards are on your field, draw a card."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[An/Turn] \"ปฏิบัติการลับ\" เมื่อการ์ดนี้ลงสู่สนาม, นำการ์ด 1 ใบเข้าสู่เกจ, และคุณได้รับพลังชีวิต 1 หน่วย! จากนั้น หากมีการ์ดที่มีชื่อเวิลด์แตกต่างกัน 2 เวิลด์ขึ้นไปอยู่บนสนามของคุณ, จั่วการ์ด 1 ใบ",
+      "segments": [
+        {
+          "tag": "TRIGGER",
+          "text": "[An/Turn] \"ปฏิบัติการลับ\" เมื่อการ์ดนี้ลงสู่สนาม, นำการ์ด 1 ใบเข้าสู่เกจ, และคุณได้รับพลังชีวิต 1 หน่วย! จากนั้น หากมีการ์ดที่มีชื่อเวิลด์แตกต่างกัน 2 เวิลด์ขึ้นไปอยู่บนสนามของคุณ, จั่วการ์ด 1 ใบ"
+        }
+      ]
+    }
+  },
+  "image": null
+}

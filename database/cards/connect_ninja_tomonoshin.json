@@ -1,0 +1,78 @@
+{
+  "card_id": "CONNECT_NINJA_TOMONOSHIN",
+  "name": "Connect Ninja, Tomonoshin",
+  "type": "MONSTER",
+  "size": 1,
+  "power": 4000,
+  "critical": 1,
+  "defense": 1000,
+  "world": [
+    "KATANA_WORLD"
+  ],
+  "attributes": [
+    "NINJA",
+    "THUNDER_EMPIRE"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "TOMONOSHIN_ENTER_TRIGGER",
+      "effect_type": "TRIGGERED",
+      "name": "BFF Sensor",
+      "trigger": {
+        "event": "ENTER_FIELD",
+        "target": {
+          "target_type": "CARD",
+          "card_type": "MONSTER",
+          "zone": "FIELD",
+          "controller": "YOU",
+          "exclude_this": true
+        }
+      },
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "effects": [
+        {
+          "effect_id": "TOMONOSHIN_LOOK_CHOOSE",
+          "effect_type": "LOOK_AND_CHOOSE",
+          "look_amount": 3,
+          "target": {
+            "target_type": "CARD",
+            "attributes_all": [
+              "THUNDER_EMPIRE"
+            ],
+            "count": 1
+          },
+          "destination": "HAND",
+          "remaining_destination": "DECK_BOTTOM"
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[An/Turn] \"BFF Sensor\" When another monster enters your field, look at the top three cards of your deck, put up to one 《Thunder Empire》 from among them into your hand, and put the rest on the bottom of the deck in any order.",
+      "segments": [
+        {
+          "tag": "TRIGGER",
+          "text": "[An/Turn] \"BFF Sensor\" When another monster enters your field, look at the top three cards of your deck, put up to one 《Thunder Empire》 from among them into your hand, and put the rest on the bottom of the deck in any order."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[An/Turn] \"เซนเซอร์เพื่อนสนิท\" เมื่อมอนสเตอร์ใบอื่นลงสู่สนามของคุณ, ดูการ์ด 3 ใบจากใบบนสุดของกองการ์ดคุณ, นำ 《ภาคีจักรพรรดิสายฟ้า》 ได้สูงสุด 1 ใบจากในนั้นขึ้นมือ, และนำการ์ดที่เหลือไว้ใต้กองการ์ดตามลำดับใดก็ได้",
+      "segments": [
+        {
+          "tag": "TRIGGER",
+          "text": "[An/Turn] \"เซนเซอร์เพื่อนสนิท\" เมื่อมอนสเตอร์ใบอื่นลงสู่สนามของคุณ, ดูการ์ด 3 ใบจากใบบนสุดของกองการ์ดคุณ, นำ 《ภาคีจักรพรรดิสายฟ้า》 ได้สูงสุด 1 ใบจากในนั้นขึ้นมือ, และนำการ์ดที่เหลือไว้ใต้กองการ์ดตามลำดับใดก็ได้"
+        }
+      ]
+    }
+  },
+  "image": null
+}
