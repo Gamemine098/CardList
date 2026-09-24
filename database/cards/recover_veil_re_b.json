@@ -1,0 +1,76 @@
+{
+  "card_id": "RECOVER_VEIL_RE_B",
+  "name": "Recover Veil \"Re:B\"",
+  "type": "SPELL",
+  "world": [
+    "GENERIC"
+  ],
+  "attributes": [
+    "DEFENSE"
+  ],
+  "effects": [
+    {
+      "effect_id": "RECOVER_VEIL_HAND_PROTECTION",
+      "effect_type": "REPLACEMENT",
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "Re:TH/014TH",
+        "ability_reference": "Re:TH/014TH: If your hand cards would be dropped or returned to your deck by your opponent's card effects, you may reveal this hand card and pay 1 life. If you do, your hand cards cannot be dropped by that effect.",
+        "missing_capability": "HAND_REVEAL_REPLACEMENT_PROTECTION",
+        "what_is_known": "Replaces hand discard or bounce from hand by revealing this card from hand and paying 1 life.",
+        "information_needed": [
+          "Approved schema for hand-reveal replacement abilities protecting the hand zone."
+        ]
+      }
+    },
+    {
+      "effect_id": "RECOVER_VEIL_COUNTER",
+      "effect_type": "CHOICE",
+      "is_counter": true,
+      "choices": [
+        {
+          "effect_id": "RECOVER_VEIL_CHARGE_2",
+          "effect_type": "GAUGE_CHARGE",
+          "count": 2
+        },
+        {
+          "effect_id": "RECOVER_VEIL_DAMAGE_REDUCTION",
+          "effect_type": "DAMAGE_REDUCTION",
+          "target": "YOU",
+          "reduced_to": 0,
+          "applies_to": "NEXT_ATTACK_DAMAGE",
+          "duration": "THIS_TURN"
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "If your hand cards would be dropped or returned to your deck by your opponent's card effects, you may reveal this hand card and pay 1 life. If you do, your hand cards cannot be dropped by that effect.\n[Counter] Choose and use one of the following two.\n• Put the top two cards of your deck into your gauge.\n• For this turn, the next damage you take by attacks is reduced to 0.",
+      "segments": [
+        {
+          "tag": "EFFECT",
+          "text": "If your hand cards would be dropped or returned to your deck by your opponent's card effects, you may reveal this hand card and pay 1 life. If you do, your hand cards cannot be dropped by that effect."
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] Choose and use one of the following two.\n• Put the top two cards of your deck into your gauge.\n• For this turn, the next damage you take by attacks is reduced to 0."
+        }
+      ]
+    },
+    "th": {
+      "plain": "ถ้าการ์ดบนมือของคุณจะถูกส่งลงช่องดรอปหรือนำกลับเข้ากองการ์ดของคุณโดยความสามารถการ์ดของคู่แข่ง, คุณสามารถเปิดเผยการ์ดนี้บนมือและจ่าย 1 พลังชีวิต ถ้าทำ, การ์ดบนมือของคุณไม่สามารถถูกส่งลงช่องดรอปโดยผลนั้น\n[Counter] เลือกใช้หนึ่งอย่างจากสองอย่างต่อไปนี้\n• นำการ์ด 2 ใบจากใบบนสุดของกองการ์ดของคุณเข้าสู่ช่องเกจ\n• ในเทิร์นนี้, ความเสียหายครั้งต่อไปที่คุณจะได้รับจากการโจมตีจะกลายเป็น 0",
+      "segments": [
+        {
+          "tag": "EFFECT",
+          "text": "ถ้าการ์ดบนมือของคุณจะถูกส่งลงช่องดรอปหรือนำกลับเข้ากองการ์ดของคุณโดยความสามารถการ์ดของคู่แข่ง, คุณสามารถเปิดเผยการ์ดนี้บนมือและจ่าย 1 พลังชีวิต ถ้าทำ, การ์ดบนมือของคุณไม่สามารถถูกส่งลงช่องดรอปโดยผลนั้น"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] เลือกใช้หนึ่งอย่างจากสองอย่างต่อไปนี้\n• นำการ์ด 2 ใบจากใบบนสุดของกองการ์ดของคุณเข้าสู่ช่องเกจ\n• ในเทิร์นนี้, ความเสียหายครั้งต่อไปที่คุณจะได้รับจากการโจมตีจะกลายเป็น 0"
+        }
+      ]
+    }
+  },
+  "image": null
+}

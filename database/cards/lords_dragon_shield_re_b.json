@@ -1,0 +1,102 @@
+{
+  "card_id": "LORDS_DRAGON_SHIELD_RE_B",
+  "name": "Lord's Dragon Shield \"Re:B\"",
+  "type": "SPELL",
+  "cost": {
+    "take_damage": 2
+  },
+  "world": [
+    "DRAGON_WORLD"
+  ],
+  "attributes": [
+    "GREEN_DRAGON",
+    "DEFENSE"
+  ],
+  "effects": [
+    {
+      "effect_id": "LORDS_DRAGON_SHIELD_CAST_CONDITION",
+      "effect_type": "CAST_CONDITION",
+      "condition": {
+        "type": "AND",
+        "conditions": [
+          {
+            "type": "TURN_PLAYER_IS",
+            "player": "OPPONENT"
+          },
+          {
+            "type": "IN_ATTACK"
+          }
+        ]
+      }
+    },
+    {
+      "effect_id": "LORDS_DRAGON_SHIELD_COUNTER",
+      "effect_type": "ACTIVATED",
+      "is_counter": true,
+      "effects": [
+        {
+          "effect_id": "LORDS_SHIELD_NULLIFY",
+          "effect_type": "NULLIFY_ATTACK"
+        },
+        {
+          "effect_id": "LORDS_SHIELD_END_PHASE",
+          "effect_type": "END_PHASE",
+          "condition": {
+            "type": "AND",
+            "conditions": [
+              {
+                "type": "ATTACK_COUNT_THIS_TURN_GTE",
+                "player": "OPPONENT",
+                "count": 3
+              },
+              {
+                "type": "CARD_COUNT_GTE",
+                "zone": "FIELD",
+                "controller": "YOU",
+                "name_contains": "Fifth Omni",
+                "count": 1
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "You may only cast this card during an attack on your opponent's turn.\n[Cast Cost] [You take 2 damage]\n[Counter] Nullify the attack. Then, if your opponent's cards have attacked three or more times this turn and you have a card with \"Fifth Omni\" in its name on your field, end the phase.",
+      "segments": [
+        {
+          "tag": "CAST_CONDITION",
+          "text": "You may only cast this card during an attack on your opponent's turn."
+        },
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [You take 2 damage]"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] Nullify the attack. Then, if your opponent's cards have attacked three or more times this turn and you have a card with \"Fifth Omni\" in its name on your field, end the phase."
+        }
+      ]
+    },
+    "th": {
+      "plain": "คุณสามารถร่ายการ์ดนี้ได้เฉพาะในระหว่างการโจมตีในเทิร์นของคู่แข่ง\n[Cast Cost] [คุณได้รับความเสียหาย 2 หน่วย]\n[Counter] ยกเลิกการโจมตี จากนั้น, ถ้าการ์ดของคู่แข่งทำการโจมตีตั้งแต่ 3 ครั้งขึ้นไปในเทิร์นนี้และคุณมีการ์ดที่มีคำว่า \"ห้าราชันรอบทิศ\" ในชื่อการ์ดอยู่บนสนามของคุณ, จบเฟส",
+      "segments": [
+        {
+          "tag": "CAST_CONDITION",
+          "text": "คุณสามารถร่ายการ์ดนี้ได้เฉพาะในระหว่างการโจมตีในเทิร์นของคู่แข่ง"
+        },
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [คุณได้รับความเสียหาย 2 หน่วย]"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] ยกเลิกการโจมตี จากนั้น, ถ้าการ์ดของคู่แข่งทำการโจมตีตั้งแต่ 3 ครั้งขึ้นไปในเทิร์นนี้และคุณมีการ์ดที่มีคำว่า \"ห้าราชันรอบทิศ\" ในชื่อการ์ดอยู่บนสนามของคุณ, จบเฟส"
+        }
+      ]
+    }
+  },
+  "image": null
+}

@@ -1,0 +1,92 @@
+{
+  "card_id": "RA07_HEINLEIN_RE_B",
+  "name": "RA07: Heinlein \"Re:B\"",
+  "type": "MONSTER",
+  "size": 1,
+  "power": 3000,
+  "critical": 2,
+  "defense": 2000,
+  "world": [
+    "STAR_DRAGON_WORLD"
+  ],
+  "attributes": [
+    "COSMO_DRAGOON"
+  ],
+  "effects": [
+    {
+      "effect_id": "HEINLEIN_LUNAR_GATE",
+      "effect_type": "TRIGGERED",
+      "name": "Lunar Gate",
+      "trigger": {
+        "event": "ON_ENTER_FIELD"
+      },
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "effects": [
+        {
+          "effect_id": "HEINLEIN_REVEAL",
+          "effect_type": "REVEAL_TOP_OF_DECK",
+          "count": 1,
+          "condition_branch": {
+            "if_target_attributes_any": [
+              "COSMO_DRAGOON"
+            ],
+            "then": [
+              {
+                "type": "DRAW",
+                "count": 2
+              },
+              {
+                "type": "GAUGE_CHARGE",
+                "count": 2
+              }
+            ],
+            "else": [
+              {
+                "type": "MOVE_TO_BOTTOM_OF_DECK"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "effect_id": "HEINLEIN_KEYWORDS",
+      "effect_type": "KEYWORD",
+      "keywords": [
+        "Double Attack"
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[An/Turn] \"Lunar Gate\" When this card enters the field, reveal the top card of your deck. If the card revealed is a 《Cosmo Dragoon》, draw two cards and charge two gauge. If it is not, put it on the bottom of your deck.\n[Double Attack]",
+      "segments": [
+        {
+          "tag": "TRIGGER",
+          "text": "[An/Turn] \"Lunar Gate\" When this card enters the field, reveal the top card of your deck. If the card revealed is a 《Cosmo Dragoon》, draw two cards and charge two gauge. If it is not, put it on the bottom of your deck."
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Double Attack]"
+        }
+      ]
+    },
+    "th": {
+      "plain": "[An/Turn] \"ลูนาร์ เกต\" เมื่อการ์ดนี้เข้าสู่สนาม, เปิดเผยการ์ดใบบนสุดของกองการ์ดของคุณ ถ้าการ์ดที่เปิดเผยเป็น 《คอสโมดรากูน》, จั่วการ์ด 2 ใบ และชาร์จ 2 เกจ ถ้าไม่ใช่, นำไปไว้ใต้กองการ์ดของคุณ\n[Double Attack]",
+      "segments": [
+        {
+          "tag": "TRIGGER",
+          "text": "[An/Turn] \"ลูนาร์ เกต\" เมื่อการ์ดนี้เข้าสู่สนาม, เปิดเผยการ์ดใบบนสุดของกองการ์ดของคุณ ถ้าการ์ดที่เปิดเผยเป็น 《คอสโมดรากูน》, จั่วการ์ด 2 ใบ และชาร์จ 2 เกจ ถ้าไม่ใช่, นำไปไว้ใต้กองการ์ดของคุณ"
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Double Attack]"
+        }
+      ]
+    }
+  },
+  "image": null
+}

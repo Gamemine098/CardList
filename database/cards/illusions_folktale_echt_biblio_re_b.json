@@ -1,0 +1,124 @@
+{
+  "card_id": "ILLUSIONS_FOLKTALE_ECHT_BIBLIO_RE_B",
+  "name": "Illusions Folktale, Echt Biblio \"Re:B\"",
+  "type": "ITEM",
+  "power": 3000,
+  "critical": 1,
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "world": [
+    "DUNGEON_WORLD"
+  ],
+  "attributes": [
+    "FOLKTALE",
+    "WEAPON"
+  ],
+  "effects": [
+    {
+      "effect_id": "ECHT_BIBLIO_NO_SOUL_PROTECTION",
+      "effect_type": "PROTECTION",
+      "condition": {
+        "type": "CARD_COUNT",
+        "zone": "SOUL",
+        "count": 0
+      },
+      "target": "THIS_CARD",
+      "protection": {
+        "cannot_be_returned_to_hand": true,
+        "source": "OPPONENT_CARD_EFFECT"
+      }
+    },
+    {
+      "effect_id": "ECHT_BIBLIO_LEAVE_FIELD_REPLACEMENT",
+      "effect_type": "REPLACEMENT",
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "Re:TH/003TH",
+        "ability_reference": "Re:TH/003TH: If a 《Folktale》 monster on your field would be destroyed or returned to hand, you may pay 1 life. If you do, put it into this card's soul.",
+        "missing_capability": "REPLACEMENT_LEAVE_FIELD_TO_ITEM_SOUL",
+        "what_is_known": "Replaces destruction or bounce of a friendly Folktale monster by paying 1 life to redirect it into this item's soul.",
+        "information_needed": [
+          "Approved schema for WOULD_LEAVE_FIELD redirection to host item soul."
+        ]
+      }
+    },
+    {
+      "effect_id": "ECHT_BIBLIO_ACT",
+      "effect_type": "ACTIVATED",
+      "name": "Marchen Panic",
+      "is_counter": true,
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 3
+      },
+      "effects": [
+        {
+          "effect_id": "ECHT_BIBLIO_CALL",
+          "effect_type": "CALL",
+          "source": "SOUL",
+          "destination": "FIELD",
+          "pay_cost": true,
+          "target": {
+            "target_type": "CARD",
+            "card_type": "MONSTER",
+            "count": 1
+          }
+        }
+      ]
+    },
+    {
+      "effect_id": "ECHT_BIBLIO_KEYWORDS",
+      "effect_type": "KEYWORD",
+      "keywords": [
+        "Soulguard"
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "If this card does not have souls, this card cannot be returned to hand by your opponent's card effects.\nIf a 《Folktale》 monster on your field would be destroyed or returned to hand, you may pay 1 life. If you do, put it into this card's soul.\n[Counter] 【Act】 [3/Turn] \"Marchen Panic\" Call a monster from this card's soul by paying its [Call Cost].\n[Soulguard]",
+      "segments": [
+        {
+          "tag": "EFFECT",
+          "text": "If this card does not have souls, this card cannot be returned to hand by your opponent's card effects."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "If a 《Folktale》 monster on your field would be destroyed or returned to hand, you may pay 1 life. If you do, put it into this card's soul."
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] 【Act】 [3/Turn] \"Marchen Panic\" Call a monster from this card's soul by paying its [Call Cost]."
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Soulguard]"
+        }
+      ]
+    },
+    "th": {
+      "plain": "ถ้าการ์ดนี้ไม่มีโซล, การ์ดนี้ไม่สามารถถูกนำกลับขึ้นมือโดยความสามารถการ์ดของคู่แข่ง\nถ้ามอนสเตอร์ 《นิทาน》 บนสนามของคุณจะถูกทำลายหรือนำกลับขึ้นมือ, คุณสามารถจ่าย 1 พลังชีวิต ถ้าทำ, นำการ์ดนั้นเข้าสู่โซลของการ์ดนี้\n[Counter] 【Act】 [3/Turn] \"เมลเชน แพนิก\" คอลมอนสเตอร์จากในโซลของการ์ดนี้โดยจ่าย [Call Cost]\n[Soulguard]",
+      "segments": [
+        {
+          "tag": "EFFECT",
+          "text": "ถ้าการ์ดนี้ไม่มีโซล, การ์ดนี้ไม่สามารถถูกนำกลับขึ้นมือโดยความสามารถการ์ดของคู่แข่ง"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "ถ้ามอนสเตอร์ 《นิทาน》 บนสนามของคุณจะถูกทำลายหรือนำกลับขึ้นมือ, คุณสามารถจ่าย 1 พลังชีวิต ถ้าทำ, นำการ์ดนั้นเข้าสู่โซลของการ์ดนี้"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] 【Act】 [3/Turn] \"เมลเชน แพนิก\" คอลมอนสเตอร์จากในโซลของการ์ดนี้โดยจ่าย [Call Cost]"
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Soulguard]"
+        }
+      ]
+    }
+  },
+  "image": null
+}

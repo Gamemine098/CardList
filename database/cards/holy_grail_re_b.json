@@ -1,0 +1,93 @@
+{
+  "card_id": "HOLY_GRAIL_RE_B",
+  "name": "Holy Grail \"Re:B\"",
+  "type": "SPELL",
+  "world": [
+    "LEGEND_WORLD"
+  ],
+  "attributes": [
+    "HERO",
+    "DEFENSE"
+  ],
+  "effects": [
+    {
+      "effect_id": "HOLY_GRAIL_CAST_CONDITION",
+      "effect_type": "CAST_CONDITION",
+      "condition": {
+        "type": "AND",
+        "conditions": [
+          {
+            "type": "TURN_PLAYER_IS",
+            "player": "OPPONENT"
+          },
+          {
+            "type": "IN_ATTACK"
+          }
+        ]
+      }
+    },
+    {
+      "effect_id": "HOLY_GRAIL_COUNTER",
+      "effect_type": "ACTIVATED",
+      "is_counter": true,
+      "effects": [
+        {
+          "effect_id": "HOLY_GRAIL_NULLIFY",
+          "effect_type": "NULLIFY_ATTACK"
+        },
+        {
+          "effect_id": "HOLY_GRAIL_END_PHASE",
+          "effect_type": "END_PHASE",
+          "condition": {
+            "type": "AND",
+            "conditions": [
+              {
+                "type": "ATTACK_COUNT_THIS_TURN_GTE",
+                "player": "OPPONENT",
+                "count": 3
+              },
+              {
+                "type": "CARD_COUNT_GTE",
+                "zone": "FIELD",
+                "controller": "YOU",
+                "attributes_any": [
+                  "HERO"
+                ],
+                "count": 1
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "You may only cast this card during an attack on your opponent's turn.\n[Counter] Nullify the attack. Then, if your opponent's cards have attacked three or more times this turn and you have a 《Hero》 on your field, end the phase.",
+      "segments": [
+        {
+          "tag": "CAST_CONDITION",
+          "text": "You may only cast this card during an attack on your opponent's turn."
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] Nullify the attack. Then, if your opponent's cards have attacked three or more times this turn and you have a 《Hero》 on your field, end the phase."
+        }
+      ]
+    },
+    "th": {
+      "plain": "คุณสามารถร่ายการ์ดนี้ได้เฉพาะในระหว่างการโจมตีในเทิร์นของคู่แข่ง\n[Counter] ยกเลิกการโจมตี จากนั้น, ถ้าการ์ดของคู่แข่งทำการโจมตีตั้งแต่ 3 ครั้งขึ้นไปในเทิร์นนี้และคุณมี 《ฮีโร่》 อยู่บนสนามของคุณ, จบเฟส",
+      "segments": [
+        {
+          "tag": "CAST_CONDITION",
+          "text": "คุณสามารถร่ายการ์ดนี้ได้เฉพาะในระหว่างการโจมตีในเทิร์นของคู่แข่ง"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] ยกเลิกการโจมตี จากนั้น, ถ้าการ์ดของคู่แข่งทำการโจมตีตั้งแต่ 3 ครั้งขึ้นไปในเทิร์นนี้และคุณมี 《ฮีโร่》 อยู่บนสนามของคุณ, จบเฟส"
+        }
+      ]
+    }
+  },
+  "image": null
+}

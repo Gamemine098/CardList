@@ -1,0 +1,93 @@
+{
+  "card_id": "INVINCIBLE_KNUCKLE_RE_B",
+  "name": "Invincible Knuckle! \"Re:B\"",
+  "type": "SPELL",
+  "world": [
+    "DANGER_WORLD"
+  ],
+  "attributes": [
+    "GODPUNK",
+    "DEFENSE"
+  ],
+  "effects": [
+    {
+      "effect_id": "INVINCIBLE_KNUCKLE_CAST_CONDITION",
+      "effect_type": "CAST_CONDITION",
+      "condition": {
+        "type": "AND",
+        "conditions": [
+          {
+            "type": "TURN_PLAYER_IS",
+            "player": "OPPONENT"
+          },
+          {
+            "type": "IN_ATTACK"
+          },
+          {
+            "type": "CARD_COUNT_GTE",
+            "zone": "FIELD",
+            "controller": "YOU",
+            "attributes_any": [
+              "GODPUNK"
+            ],
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "effect_id": "INVINCIBLE_KNUCKLE_COUNTER",
+      "effect_type": "ACTIVATED",
+      "is_counter": true,
+      "effects": [
+        {
+          "effect_id": "KNUCKLE_NULLIFY",
+          "effect_type": "NULLIFY_ATTACK"
+        },
+        {
+          "effect_id": "KNUCKLE_DROP_GAUGE",
+          "effect_type": "DROP_OPPONENT_GAUGE",
+          "count": 1
+        },
+        {
+          "effect_id": "KNUCKLE_END_PHASE",
+          "effect_type": "END_PHASE",
+          "condition": {
+            "type": "ATTACK_COUNT_THIS_TURN_GTE",
+            "player": "OPPONENT",
+            "count": 3
+          }
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "You may only cast this card during an attack on your opponent's turn, and if you have a 《Godpunk》 on your field.\n[Counter] Nullify the attack and drop one of your opponent's gauge. Then, if your opponent's cards have attacked three or more times this turn, end the phase.",
+      "segments": [
+        {
+          "tag": "CAST_CONDITION",
+          "text": "You may only cast this card during an attack on your opponent's turn, and if you have a 《Godpunk》 on your field."
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] Nullify the attack and drop one of your opponent's gauge. Then, if your opponent's cards have attacked three or more times this turn, end the phase."
+        }
+      ]
+    },
+    "th": {
+      "plain": "คุณสามารถร่ายการ์ดนี้ได้เฉพาะในระหว่างการโจมตีในเทิร์นของคู่แข่ง, และถ้าคุณมี 《ก็อดพังค์》 อยู่บนสนามของคุณ\n[Counter] ยกเลิกการโจมตี และส่งเกจ 1 ใบของคู่แข่งลงช่องดรอป จากนั้น, ถ้าการ์ดของคู่แข่งทำการโจมตีตั้งแต่ 3 ครั้งขึ้นไปในเทิร์นนี้, จบเฟส",
+      "segments": [
+        {
+          "tag": "CAST_CONDITION",
+          "text": "คุณสามารถร่ายการ์ดนี้ได้เฉพาะในระหว่างการโจมตีในเทิร์นของคู่แข่ง, และถ้าคุณมี 《ก็อดพังค์》 อยู่บนสนามของคุณ"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] ยกเลิกการโจมตี และส่งเกจ 1 ใบของคู่แข่งลงช่องดรอป จากนั้น, ถ้าการ์ดของคู่แข่งทำการโจมตีตั้งแต่ 3 ครั้งขึ้นไปในเทิร์นนี้, จบเฟส"
+        }
+      ]
+    }
+  },
+  "image": null
+}

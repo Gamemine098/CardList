@@ -1,0 +1,84 @@
+{
+  "card_id": "NICE_ONE_RE_B",
+  "name": "Nice one! \"Re:B\"",
+  "type": "SPELL",
+  "cost": {
+    "gauge": 1,
+    "life": 0
+  },
+  "world": [
+    "MAGIC_WORLD"
+  ],
+  "attributes": [
+    "MAGIC_POWER"
+  ],
+  "effects": [
+    {
+      "effect_id": "NICE_ONE_RE_B_DRAW",
+      "effect_type": "DRAW",
+      "count": 2,
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      }
+    },
+    {
+      "effect_id": "NICE_ONE_RE_B_BONUS",
+      "effect_type": "CHOICE",
+      "condition": {
+        "type": "CARD_COUNT_GTE",
+        "zone": "DROP",
+        "controller": "YOU",
+        "card_name": "Nice one!",
+        "count": 1
+      },
+      "choices": [
+        {
+          "effect_id": "NICE_ONE_BONUS_DRAW",
+          "effect_type": "DRAW",
+          "count": 1
+        },
+        {
+          "effect_id": "NICE_ONE_BONUS_SALVAGE",
+          "effect_type": "SALVAGE",
+          "source": "DROP",
+          "destination": "HAND",
+          "target": {
+            "target_type": "CARD",
+            "card_name": "Nice one!",
+            "count": 1
+          }
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Cast Cost] [Pay 1 gauge]\n[Cn/Turn] Draw two cards. Then, if you have \"Nice one!\" in your drop zone, draw a card or put a \"Nice one!\" from your drop zone into your hand.",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [Pay 1 gauge]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "[Cn/Turn] Draw two cards. Then, if you have \"Nice one!\" in your drop zone, draw a card or put a \"Nice one!\" from your drop zone into your hand."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Cast Cost] [จ่าย 1 เกจ]\n[Cn/Turn] จั่วการ์ด 2 ใบ จากนั้น, ถ้าคุณมี \"ไนซ์วัน!\" อยู่ในช่องดรอปของคุณ, จั่วการ์ด 1 ใบ หรือนำ \"ไนซ์วัน!\" 1 ใบจากในช่องดรอปของคุณขึ้นมือ",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [จ่าย 1 เกจ]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "[Cn/Turn] จั่วการ์ด 2 ใบ จากนั้น, ถ้าคุณมี \"ไนซ์วัน!\" อยู่ในช่องดรอปของคุณ, จั่วการ์ด 1 ใบ หรือนำ \"ไนซ์วัน!\" 1 ใบจากในช่องดรอปของคุณขึ้นมือ"
+        }
+      ]
+    }
+  },
+  "image": null
+}

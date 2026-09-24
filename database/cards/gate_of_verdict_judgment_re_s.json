@@ -1,0 +1,134 @@
+{
+  "card_id": "GATE_OF_VERDICT_JUDGMENT_RE_S",
+  "name": "Gate of Verdict, -Judgment- \"Re:S\"",
+  "type": "SPELL",
+  "world": [
+    "DARKNESS_DRAGON_WORLD"
+  ],
+  "attributes": [
+    "GET",
+    "EXECUTIONERS"
+  ],
+  "effects": [
+    {
+      "effect_id": "JUDGMENT_SET",
+      "effect_type": "SET"
+    },
+    {
+      "effect_id": "JUDGMENT_LIMIT",
+      "effect_type": "RULE",
+      "rule": "SET_1_PER_FIELD"
+    },
+    {
+      "effect_id": "JUDGMENT_ADMINISTRATION",
+      "effect_type": "ACTIVATED",
+      "name": "Administration of Verdict",
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "effects": [
+        {
+          "effect_id": "JUDGMENT_MILL",
+          "effect_type": "MOVE_CARD",
+          "source": "DECK",
+          "destination": "DROP",
+          "target": {
+            "target_type": "TOP_CARD",
+            "count_max": 3
+          },
+          "condition_branch": {
+            "if_target_attributes_any": [
+              "EXECUTIONERS"
+            ],
+            "then": [
+              {
+                "type": "GAUGE_CHARGE",
+                "count_max": 2
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "effect_id": "JUDGMENT_PURGATORIAL_VERDICT",
+      "effect_type": "ACTIVATED",
+      "name": "Purgatorial Verdict!",
+      "is_counter": true,
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "cost": {
+        "gauge": 1
+      },
+      "effects": [
+        {
+          "effect_id": "JUDGMENT_SALVAGE",
+          "effect_type": "SALVAGE",
+          "source": "DROP",
+          "destination": "HAND",
+          "target": {
+            "target_type": "CARD",
+            "attributes_any": [
+              "EXECUTIONERS"
+            ],
+            "count_max": 1
+          }
+        },
+        {
+          "effect_id": "JUDGMENT_BONUS_DRAW",
+          "effect_type": "DRAW",
+          "count": 1,
+          "condition": {
+            "type": "CARD_COUNT_GTE",
+            "zone": "DROP",
+            "controller": "YOU",
+            "attributes_any": [
+              "EXECUTIONERS"
+            ],
+            "count": 20
+          }
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Set] [1/Set]\n【Act】 [An/Turn] \"Administration of Verdict\" Mill up to three cards. If there is an 《Executioners》 among them, charge up to two gauge.\n[Counter] 【Act】 [An/Turn] \"Purgatorial Verdict!\" Pay 1 gauge. If you do, put up to one 《Executioners》 from your drop zone into your hand. Then, if there are 20 or more 《Executioners》 in your drop zone, draw a card.",
+      "segments": [
+        {
+          "tag": "KEYWORD",
+          "text": "[Set] [1/Set]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "【Act】 [An/Turn] \"Administration of Verdict\" Mill up to three cards. If there is an 《Executioners》 among them, charge up to two gauge."
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] 【Act】 [An/Turn] \"Purgatorial Verdict!\" Pay 1 gauge. If you do, put up to one 《Executioners》 from your drop zone into your hand. Then, if there are 20 or more 《Executioners》 in your drop zone, draw a card."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Set] [1/Set]\n【Act】 [An/Turn] \"การพิพากษาคดี\" ทิ้งการ์ดได้สูงสุด 3 ใบจากใบบนสุดของกองการ์ดลงช่องดรอป ถ้ามี 《เพชฌฆาต》 อยู่ในนั้น, ชาร์จได้สูงสุด 2 เกจ\n[Counter] 【Act】 [An/Turn] \"การพิพากษาแห่งแดนชำระ!\" จ่าย 1 เกจ ถ้าทำ, นำ 《เพชฌฆาต》 ได้สูงสุด 1 ใบจากในช่องดรอปของคุณขึ้นมือ จากนั้น, ถ้ามี 《เพชฌฆาต》 ตั้งแต่ 20 ใบขึ้นไปในช่องดรอปของคุณ, จั่วการ์ด 1 ใบ",
+      "segments": [
+        {
+          "tag": "KEYWORD",
+          "text": "[Set] [1/Set]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "【Act】 [An/Turn] \"การพิพากษาคดี\" ทิ้งการ์ดได้สูงสุด 3 ใบจากใบบนสุดของกองการ์ดลงช่องดรอป ถ้ามี 《เพชฌฆาต》 อยู่ในนั้น, ชาร์จได้สูงสุด 2 เกจ"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] 【Act】 [An/Turn] \"การพิพากษาแห่งแดนชำระ!\" จ่าย 1 เกจ ถ้าทำ, นำ 《เพชฌฆาต》 ได้สูงสุด 1 ใบจากในช่องดรอปของคุณขึ้นมือ จากนั้น, ถ้ามี 《เพชฌฆาต》 ตั้งแต่ 20 ใบขึ้นไปในช่องดรอปของคุณ, จั่วการ์ด 1 ใบ"
+        }
+      ]
+    }
+  },
+  "image": null
+}

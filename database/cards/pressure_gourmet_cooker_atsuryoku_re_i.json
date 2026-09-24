@@ -1,0 +1,100 @@
+{
+  "card_id": "PRESSURE_GOURMET_COOKER_ATSURYOKU_RE_I",
+  "name": "Pressure Gourmet Cooker, Atsuryoku \"Re:I\"",
+  "type": "ITEM",
+  "power": 0,
+  "critical": 0,
+  "world": [
+    "DANGER_WORLD"
+  ],
+  "attributes": [
+    "DANGEROUS_VEGGIES",
+    "WEAPON"
+  ],
+  "effects": [
+    {
+      "effect_id": "ATSURYOKU_ACT",
+      "effect_type": "ACTIVATED",
+      "is_counter": true,
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "cost": {
+        "destroy_friendly_monster": {
+          "zone": "FIELD",
+          "controller": "YOU",
+          "attributes_any": [
+            "DANGEROUS_VEGGIES"
+          ],
+          "count": 1
+        }
+      },
+      "effects": [
+        {
+          "effect_id": "ATSURYOKU_DRAW",
+          "effect_type": "DRAW",
+          "count": 2
+        },
+        {
+          "effect_id": "ATSURYOKU_GAUGE",
+          "effect_type": "MOVE_CARD",
+          "source": "HAND",
+          "destination": "GAUGE",
+          "target": {
+            "target_type": "CARD",
+            "count_max": 1
+          }
+        }
+      ]
+    },
+    {
+      "effect_id": "ATSURYOKU_PROTECTION",
+      "effect_type": "REPLACEMENT",
+      "target": {
+        "target_type": "CARD",
+        "zone": "FIELD",
+        "controller": "YOU",
+        "attributes_any": [
+          "DANGEROUS_VEGGIES"
+        ]
+      },
+      "replacement": {
+        "event": "WOULD_BE_DESTROYED",
+        "cost": {
+          "drop_this_card": true
+        },
+        "action": "REMAINS_ON_FIELD"
+      }
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[1/Turn] [Counter] 【Act】 Destroy a 《Dangerous Veggies》 monster on your field. If you do, draw two cards. Then, you may up to one hand card into your gauge.\nIf a 《Dangerous Veggies》 on your field would be destroyed, you may drop this card. If you do, that card remains on the field.",
+      "segments": [
+        {
+          "tag": "COUNTER",
+          "text": "[1/Turn] [Counter] 【Act】 Destroy a 《Dangerous Veggies》 monster on your field. If you do, draw two cards. Then, you may up to one hand card into your gauge."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "If a 《Dangerous Veggies》 on your field would be destroyed, you may drop this card. If you do, that card remains on the field."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[1/Turn] [Counter] 【Act】 ทำลายมอนสเตอร์ 《ผักอันตราย》 1 ใบ บนสนามของคุณ ถ้าทำ, จั่วการ์ด 2 ใบ จากนั้น, คุณสามารถนำการ์ดได้สูงสุด 1 ใบจากบนมือเข้าสู่ช่องเกจของคุณ\nถ้า 《ผักอันตราย》 บนสนามของคุณจะถูกทำลาย, คุณสามารถส่งการ์ดนี้ลงช่องดรอปได้ ถ้าทำ, การ์ดใบนั้นจะยังคงอยู่บนสนาม",
+      "segments": [
+        {
+          "tag": "COUNTER",
+          "text": "[1/Turn] [Counter] 【Act】 ทำลายมอนสเตอร์ 《ผักอันตราย》 1 ใบ บนสนามของคุณ ถ้าทำ, จั่วการ์ด 2 ใบ จากนั้น, คุณสามารถนำการ์ดได้สูงสุด 1 ใบจากบนมือเข้าสู่ช่องเกจของคุณ"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "ถ้า 《ผักอันตราย》 บนสนามของคุณจะถูกทำลาย, คุณสามารถส่งการ์ดนี้ลงช่องดรอปได้ ถ้าทำ, การ์ดใบนั้นจะยังคงอยู่บนสนาม"
+        }
+      ]
+    }
+  },
+  "image": null
+}

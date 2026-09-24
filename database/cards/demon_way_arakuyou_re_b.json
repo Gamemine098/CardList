@@ -1,0 +1,79 @@
+{
+  "card_id": "DEMON_WAY_ARAKUYOU_RE_B",
+  "name": "Demon Way, Arakuyou \"Re:B\"",
+  "type": "SPELL",
+  "cost": {
+    "destroy_friendly_monster": {
+      "zone": "FIELD",
+      "controller": "YOU",
+      "attributes_any": [
+        "SKULL_WARRIOR"
+      ],
+      "count": 2
+    }
+  },
+  "world": [
+    "KATANA_WORLD"
+  ],
+  "attributes": [
+    "DEMON_WAY",
+    "DRAW"
+  ],
+  "effects": [
+    {
+      "effect_id": "ARAKUYOU_DRAW",
+      "effect_type": "DRAW",
+      "is_counter": true,
+      "count": 2,
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      }
+    },
+    {
+      "effect_id": "ARAKUYOU_BONUS_DRAW",
+      "effect_type": "DRAW",
+      "is_counter": true,
+      "count": 1,
+      "condition": {
+        "type": "CARD_COUNT_GTE",
+        "zone": "DROP",
+        "controller": "YOU",
+        "attributes_any": [
+          "SKULL_WARRIOR",
+          "DEMON_WAY"
+        ],
+        "count": 5
+      }
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Cast Cost] [Destroy two 《Skull Warrior》 on your field]\n[Counter] [Cn/Turn] Draw two cards, and if your drop zone has five or more 《Skull Warrior》 or 《Demon Way》, draw a card.",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [Destroy two 《Skull Warrior》 on your field]"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] [Cn/Turn] Draw two cards, and if your drop zone has five or more 《Skull Warrior》 or 《Demon Way》, draw a card."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Cast Cost] [ทำลาย 《นักรบกะโหลก》 2 ใบ บนสนามของคุณ]\n[Counter] [Cn/Turn] จั่วการ์ด 2 ใบ, และถ้าในช่องดรอปของคุณมี 《นักรบกะโหลก》 หรือ 《ขบวนอสูร》 รวมกันตั้งแต่ 5 ใบขึ้นไป, จั่วการ์ด 1 ใบ",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [ทำลาย 《นักรบกะโหลก》 2 ใบ บนสนามของคุณ]"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] [Cn/Turn] จั่วการ์ด 2 ใบ, และถ้าในช่องดรอปของคุณมี 《นักรบกะโหลก》 หรือ 《ขบวนอสูร》 รวมกันตั้งแต่ 5 ใบขึ้นไป, จั่วการ์ด 1 ใบ"
+        }
+      ]
+    }
+  },
+  "image": null
+}

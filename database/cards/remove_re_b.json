@@ -1,0 +1,60 @@
+{
+  "card_id": "REMOVE_RE_B",
+  "name": "Remove \"Re:B\"",
+  "type": "SPELL",
+  "cost": {
+    "gauge": 1,
+    "life": 0
+  },
+  "world": [
+    "GENERIC"
+  ],
+  "attributes": [
+    "DESTRUCTION"
+  ],
+  "effects": [
+    {
+      "effect_id": "REMOVE_SOUL_DROP",
+      "effect_type": "MOVE_CARD",
+      "is_counter": true,
+      "source": "SOUL",
+      "destination": "DROP",
+      "target": {
+        "target_type": "CARD",
+        "count_max": 2,
+        "host": {
+          "zone": "FIELD"
+        }
+      }
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Cast Cost] [Pay 1 gauge]\n[Counter] Put up to two souls from a card on the field into the drop zone.",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [Pay 1 gauge]"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] Put up to two souls from a card on the field into the drop zone."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Cast Cost] [จ่าย 1 เกจ]\n[Counter] นำโซลได้สูงสุด 2 ใบจากการ์ดบนสนามลงช่องดรอป",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [จ่าย 1 เกจ]"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] นำโซลได้สูงสุด 2 ใบจากการ์ดบนสนามลงช่องดรอป"
+        }
+      ]
+    }
+  },
+  "image": null
+}

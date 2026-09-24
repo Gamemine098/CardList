@@ -1,0 +1,144 @@
+{
+  "card_id": "GATE_OF_PARDON_FORGIVEN_RE_S",
+  "name": "Gate of Pardon, -Forgiven- \"Re:S\"",
+  "type": "SPELL",
+  "world": [
+    "DRAGON_WORLD"
+  ],
+  "attributes": [
+    "SUMMON",
+    "RECOVERY",
+    "GUARDIANS"
+  ],
+  "effects": [
+    {
+      "effect_id": "FORGIVEN_SET",
+      "effect_type": "SET"
+    },
+    {
+      "effect_id": "FORGIVEN_LIMIT",
+      "effect_type": "RULE",
+      "rule": "SET_1_PER_FIELD"
+    },
+    {
+      "effect_id": "FORGIVEN_ATONEMENT",
+      "effect_type": "ACTIVATED",
+      "name": "Atonement",
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "effects": [
+        {
+          "effect_id": "FORGIVEN_BOTTOM_DECK",
+          "effect_type": "MOVE_CARD",
+          "source": "DROP",
+          "destination": "BOTTOM_OF_DECK",
+          "target": {
+            "target_type": "CARD",
+            "count_max": 3
+          },
+          "condition_branch": {
+            "if_count_gte": 1,
+            "then": [
+              {
+                "type": "DRAW",
+                "count": 1
+              },
+              {
+                "type": "LIFE_GAIN",
+                "amount": 1
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "effect_id": "FORGIVEN_ADVENT_OF_DIVINITY",
+      "effect_type": "ACTIVATED",
+      "name": "Advent of Divinity",
+      "is_counter": true,
+      "condition": {
+        "type": "AND",
+        "conditions": [
+          {
+            "type": "CARD_COUNT_LTE",
+            "zone": "DROP",
+            "controller": "YOU",
+            "count": 5
+          },
+          {
+            "type": "COUNT_PER_TURN",
+            "count": 1
+          }
+        ]
+      },
+      "cost": {
+        "return_to_deck": {
+          "zone": "FIELD",
+          "controller": "YOU",
+          "card_type": "MONSTER",
+          "attributes_any": [
+            "GUARDIANS"
+          ],
+          "count": 1
+        }
+      },
+      "effects": [
+        {
+          "effect_id": "FORGIVEN_CALL_FROM_DECK",
+          "effect_type": "CALL",
+          "source": "DECK",
+          "destination": "FIELD",
+          "pay_cost": true,
+          "target": {
+            "target_type": "CARD",
+            "card_type": "MONSTER",
+            "attributes_any": [
+              "GUARDIANS"
+            ],
+            "count": 1
+          }
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Set] [1/Set]\n【Act】 [An/Turn] \"Atonement\" Put up to three cards from your drop zone on the bottom of your deck. If you put one or more, draw a card and heal 1 life.\n[Counter] 【Act】 [An/Turn] \"Advent of Divinity\" If your drop zone has 5 or less cards, return a 《Guardians》 monster from your field to your deck. If you do, call up to one 《Guardians》 monster from your deck by paying its [Call Cost].",
+      "segments": [
+        {
+          "tag": "KEYWORD",
+          "text": "[Set] [1/Set]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "【Act】 [An/Turn] \"Atonement\" Put up to three cards from your drop zone on the bottom of your deck. If you put one or more, draw a card and heal 1 life."
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] 【Act】 [An/Turn] \"Advent of Divinity\" If your drop zone has 5 or less cards, return a 《Guardians》 monster from your field to your deck. If you do, call up to one 《Guardians》 monster from your deck by paying its [Call Cost]."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Set] [1/Set]\n【Act】 [An/Turn] \"การชดใช้บาป\" นำการ์ดได้สูงสุด 3 ใบจากในช่องดรอปของคุณไปไว้ใต้กองการ์ดของคุณ ถ้าคุณนำไปตั้งแต่ 1 ใบขึ้นไป, จั่วการ์ด 1 ใบ และฟื้นฟู 1 พลังชีวิต\n[Counter] 【Act】 [An/Turn] \"การมาเยือนของเทพเจ้า\" ถ้าช่องดรอปของคุณมีการ์ดไม่เกิน 5 ใบ, นำมอนสเตอร์ 《ผู้พิทักษ์》 1 ใบจากบนสนามของคุณกลับเข้ากองการ์ดของคุณ ถ้าทำ, คอลมอนสเตอร์ 《ผู้พิทักษ์》 ได้สูงสุด 1 ใบจากในกองการ์ดของคุณโดยจ่าย [Call Cost]",
+      "segments": [
+        {
+          "tag": "KEYWORD",
+          "text": "[Set] [1/Set]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "【Act】 [An/Turn] \"การชดใช้บาป\" นำการ์ดได้สูงสุด 3 ใบจากในช่องดรอปของคุณไปไว้ใต้กองการ์ดของคุณ ถ้าคุณนำไปตั้งแต่ 1 ใบขึ้นไป, จั่วการ์ด 1 ใบ และฟื้นฟู 1 พลังชีวิต"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] 【Act】 [An/Turn] \"การมาเยือนของเทพเจ้า\" ถ้าช่องดรอปของคุณมีการ์ดไม่เกิน 5 ใบ, นำมอนสเตอร์ 《ผู้พิทักษ์》 1 ใบจากบนสนามของคุณกลับเข้ากองการ์ดของคุณ ถ้าทำ, คอลมอนสเตอร์ 《ผู้พิทักษ์》 ได้สูงสุด 1 ใบจากในกองการ์ดของคุณโดยจ่าย [Call Cost]"
+        }
+      ]
+    }
+  },
+  "image": null
+}

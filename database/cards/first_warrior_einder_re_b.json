@@ -1,0 +1,103 @@
+{
+  "card_id": "FIRST_WARRIOR_EINDER_RE_B",
+  "name": "First Warrior, Einder \"Re:B\"",
+  "type": "MONSTER",
+  "size": 1,
+  "power": 6000,
+  "critical": 2,
+  "defense": 5000,
+  "world": [
+    "HERO_WORLD"
+  ],
+  "attributes": [
+    "HERO",
+    "QUARTET_FIVE"
+  ],
+  "effects": [
+    {
+      "effect_id": "EINDER_ITEM_SOUL_PROTECTION",
+      "effect_type": "PROTECTION",
+      "condition": {
+        "type": "CARD_IS_IN_SOUL_OR_EQUIPPED",
+        "host_attributes_any": [
+          "QUARTET_FIVE"
+        ]
+      },
+      "target": {
+        "target_type": "ALL_CARDS",
+        "zone": "FIELD",
+        "controller": "YOU",
+        "attributes_any": [
+          "QUARTET_FIVE"
+        ]
+      },
+      "protection": {
+        "cannot_be_rested": true,
+        "cannot_be_destroyed": true,
+        "cannot_leave_field": true,
+        "source": "OPPONENT_CARD_EFFECT"
+      }
+    },
+    {
+      "effect_id": "EINDER_OVERDRIVE",
+      "effect_type": "KEYWORD_ABILITY",
+      "keyword": "OverDrive",
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "Re:TH/035TH",
+        "ability_reference": "Re:TH/035TH: [OverDrive] [During your turn] Call up a total of three different 《Quartet Five》 from your deck and drop zone without paying their [Call Cost], shuffle your deck, and for this turn, those cards get [Double Attack] and power+10000. This ability ignores the effects of \"Loyalty\".",
+        "missing_capability": "KEYWORD_OVERDRIVE_AND_IGNORE_RESTRICTION",
+        "what_is_known": "[OverDrive] keyword activation during turn calling 3 unique Quartet Five monsters from deck/drop without cost and ignoring Loyalty restriction.",
+        "information_needed": [
+          "Approved schema for [OverDrive] ability structure and ability-scoped ignore restrictions."
+        ]
+      }
+    },
+    {
+      "effect_id": "EINDER_KEYWORDS",
+      "effect_type": "KEYWORD",
+      "keywords": [
+        "Double Attack",
+        "Penetrate",
+        "Transform"
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "【Item/Soul of 《Quartet Five》 Item】《Quartet Five》 on your field cannot be [Rest], destroyed, or leave the field, by your opponent's card effects.\n[OverDrive] [During your turn] Call up a total of three different 《Quartet Five》 from your deck and drop zone without paying their [Call Cost], shuffle your deck, and for this turn, those cards get [Double Attack] and power+10000. This ability ignores the effects of \"Loyalty\".\n[Double Attack] [Penetrate] [Transform] [Pay 1 gauge]",
+      "segments": [
+        {
+          "tag": "EFFECT",
+          "text": "【Item/Soul of 《Quartet Five》 Item】《Quartet Five》 on your field cannot be [Rest], destroyed, or leave the field, by your opponent's card effects."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "[OverDrive] [During your turn] Call up a total of three different 《Quartet Five》 from your deck and drop zone without paying their [Call Cost], shuffle your deck, and for this turn, those cards get [Double Attack] and power+10000. This ability ignores the effects of \"Loyalty\"."
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Double Attack] [Penetrate] [Transform] [Pay 1 gauge]"
+        }
+      ]
+    },
+    "th": {
+      "plain": "【Item/Soul of 《Quartet Five》 Item】 《ควอเต็ตไฟว์》 บนสนามของคุณไม่สามารถถูก [Rest], ถูกทำลาย, หรือออกจากสนาม โดยความสามารถการ์ดของคู่แข่ง\n[OverDrive] [ในระหว่างเทิร์นของคุณ] คอล 《ควอเต็ตไฟว์》 ที่มีชื่อการ์ดแตกต่างกันรวมกันได้สูงสุด 3 ใบจากในกองการ์ดและในช่องดรอปของคุณโดยไม่ต้องจ่าย [Call Cost], สับกองการ์ดของคุณ, และในเทิร์นนี้, การ์ดเหล่านั้นได้รับ [Double Attack] และพลังโจมตี+10000 ความสามารถนี้ไม่สนใจผลของ \"ความภักดี\"\n[Double Attack] [Penetrate] [Transform] [จ่าย 1 เกจ]",
+      "segments": [
+        {
+          "tag": "EFFECT",
+          "text": "【Item/Soul of 《Quartet Five》 Item】 《ควอเต็ตไฟว์》 บนสนามของคุณไม่สามารถถูก [Rest], ถูกทำลาย, หรือออกจากสนาม โดยความสามารถการ์ดของคู่แข่ง"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "[OverDrive] [ในระหว่างเทิร์นของคุณ] คอล 《ควอเต็ตไฟว์》 ที่มีชื่อการ์ดแตกต่างกันรวมกันได้สูงสุด 3 ใบจากในกองการ์ดและในช่องดรอปของคุณโดยไม่ต้องจ่าย [Call Cost], สับกองการ์ดของคุณ, และในเทิร์นนี้, การ์ดเหล่านั้นได้รับ [Double Attack] และพลังโจมตี+10000 ความสามารถนี้ไม่สนใจผลของ \"ความภักดี\""
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Double Attack] [Penetrate] [Transform] [จ่าย 1 เกจ]"
+        }
+      ]
+    }
+  },
+  "image": null
+}

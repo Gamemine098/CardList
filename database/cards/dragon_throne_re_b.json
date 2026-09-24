@@ -1,0 +1,134 @@
+{
+  "card_id": "DRAGON_THRONE_RE_B",
+  "name": "Dragon Throne \"Re:B\"",
+  "type": "SPELL",
+  "world": [
+    "DARKNESS_DRAGON_WORLD"
+  ],
+  "attributes": [
+    "DRAGON"
+  ],
+  "effects": [
+    {
+      "effect_id": "DRAGON_THRONE_SET",
+      "effect_type": "SET"
+    },
+    {
+      "effect_id": "DRAGON_THRONE_CAST_CONDITION",
+      "effect_type": "CAST_CONDITION",
+      "condition": {
+        "type": "FLAG_IS",
+        "flag": "Dragon Ein"
+      }
+    },
+    {
+      "effect_id": "DRAGON_THRONE_ABILITY_PROTECTION",
+      "effect_type": "PROTECTION",
+      "target": "THIS_CARD",
+      "protection": {
+        "cannot_nullify_abilities": true
+      }
+    },
+    {
+      "effect_id": "DRAGON_THRONE_SIZE_CAP",
+      "effect_type": "RULE",
+      "rule": "TOTAL_FIELD_SIZE_CAP",
+      "size_cap": 4,
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "Re:TH/005TH",
+        "ability_reference": "Re:TH/005TH: You may put monsters of up to a total size of 4 on your field. / Items on your field cannot be destroyed, be returned to hand, or leave the field, by card effects.",
+        "missing_capability": "TOTAL_SIZE_CAP_EXPANSION_TO_4",
+        "what_is_known": "Expands continuous size capacity to 4 and grants total leave-field immunity to all friendly items.",
+        "information_needed": [
+          "Approved schema for continuous total field size cap override to 4."
+        ]
+      }
+    },
+    {
+      "effect_id": "DRAGON_THRONE_PROTECTION",
+      "effect_type": "PROTECTION",
+      "target": "THIS_CARD",
+      "protection": {
+        "cannot_be_destroyed": true,
+        "cannot_be_returned_to_hand": true
+      }
+    },
+    {
+      "effect_id": "DRAGON_THRONE_ITEM_PROTECTION",
+      "effect_type": "PROTECTION",
+      "target": {
+        "target_type": "ALL_CARDS",
+        "card_type": "ITEM",
+        "zone": "FIELD",
+        "controller": "YOU"
+      },
+      "protection": {
+        "cannot_be_destroyed": true,
+        "cannot_be_returned_to_hand": true,
+        "cannot_leave_field": true
+      }
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Set]\nYou may only cast this card if your flag is \"Dragon Ein\".\nThe ability of this card cannot be nullified.\nYou may put monsters of up to a total size of 4 on your field.\nThis card cannot be destroyed or returned to hand by card effects.\nItems on your field cannot be destroyed, be returned to hand, or leave the field, by card effects.",
+      "segments": [
+        {
+          "tag": "KEYWORD",
+          "text": "[Set]"
+        },
+        {
+          "tag": "CAST_CONDITION",
+          "text": "You may only cast this card if your flag is \"Dragon Ein\"."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "The ability of this card cannot be nullified."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "You may put monsters of up to a total size of 4 on your field."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "This card cannot be destroyed or returned to hand by card effects."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "Items on your field cannot be destroyed, be returned to hand, or leave the field, by card effects."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Set]\nคุณสามารถร่ายการ์ดนี้ได้เฉพาะถ้าการ์ดแฟลกของคุณคือ \"ดราก้อน ไอน์\"\nความสามารถของการ์ดนี้ไม่สามารถถูกยกเลิกได้\nคุณสามารถวางมอนสเตอร์บนสนามของคุณได้ขนาดไซส์รวมไม่เกิน 4\nการ์ดนี้ไม่สามารถถูกทำลายหรือนำกลับขึ้นมือโดยความสามารถของการ์ด\nไอเท็มบนสนามของคุณไม่สามารถถูกทำลาย, ถูกนำกลับขึ้นมือ, หรือออกจากสนาม โดยความสามารถของการ์ด",
+      "segments": [
+        {
+          "tag": "KEYWORD",
+          "text": "[Set]"
+        },
+        {
+          "tag": "CAST_CONDITION",
+          "text": "คุณสามารถร่ายการ์ดนี้ได้เฉพาะถ้าการ์ดแฟลกของคุณคือ \"ดราก้อน ไอน์\""
+        },
+        {
+          "tag": "EFFECT",
+          "text": "ความสามารถของการ์ดนี้ไม่สามารถถูกยกเลิกได้"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "คุณสามารถวางมอนสเตอร์บนสนามของคุณได้ขนาดไซส์รวมไม่เกิน 4"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "การ์ดนี้ไม่สามารถถูกทำลายหรือนำกลับขึ้นมือโดยความสามารถของการ์ด"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "ไอเท็มบนสนามของคุณไม่สามารถถูกทำลาย, ถูกนำกลับขึ้นมือ, หรือออกจากสนาม โดยความสามารถของการ์ด"
+        }
+      ]
+    }
+  },
+  "image": null
+}

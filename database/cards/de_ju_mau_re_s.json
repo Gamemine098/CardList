@@ -1,0 +1,53 @@
+{
+  "card_id": "DE_JU_MAU_RE_S",
+  "name": "De Ju Mau \"Re:S\"",
+  "type": "SPELL",
+  "world": [
+    "LEGEND_WORLD"
+  ],
+  "attributes": [
+    "LEGEND_DRAGON",
+    "GET"
+  ],
+  "effects": [
+    {
+      "effect_id": "DE_JU_MAU_EFFECT",
+      "effect_type": "ACTIVATED",
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "Re:TH/032TH",
+        "ability_reference": "Re:TH/032TH: [Cn/Turn] [Stand] all 《Legend Dragon》 in your buddy zone, put up to a total of three 《King》 items or monsters with both 《Dragod》 and 《Legend Dragon》 with different names from your deck into your hand, and shuffle your deck. If you put three cards, drop a hand card.",
+        "missing_capability": "BUDDY_ZONE_STAND",
+        "what_is_known": "Stands cards residing inside the buddy zone and searches for up to 3 distinct matching cards from deck.",
+        "information_needed": [
+          "Approved schema for stand/rest operations targeting cards in the buddy zone."
+        ]
+      }
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Cn/Turn] [Stand] all 《Legend Dragon》 in your buddy zone, put up to a total of three 《King》 items or monsters with both 《Dragod》 and 《Legend Dragon》 with different names from your deck into your hand, and shuffle your deck. If you put three cards, drop a hand card.",
+      "segments": [
+        {
+          "tag": "EFFECT",
+          "text": "[Cn/Turn] [Stand] all 《Legend Dragon》 in your buddy zone, put up to a total of three 《King》 items or monsters with both 《Dragod》 and 《Legend Dragon》 with different names from your deck into your hand, and shuffle your deck. If you put three cards, drop a hand card."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Cn/Turn] [Stand] 《มังกรเทพนิยาย》 ทั้งหมดในบัดดี้โซนของคุณ, นำไอเท็ม 《ราชัน》 หรือมอนสเตอร์ที่มีทั้ง 《ดราก็อด》 และ 《มังกรเทพนิยาย》 ที่มีชื่อการ์ดแตกต่างกันรวมกันได้สูงสุด 3 ใบจากในกองการ์ดของคุณขึ้นมือ, และสับกองการ์ดของคุณ ถ้าคุณนำการ์ดขึ้นมือ 3 ใบ, ทิ้งการ์ด 1 ใบจากบนมือ",
+      "segments": [
+        {
+          "tag": "EFFECT",
+          "text": "[Cn/Turn] [Stand] 《มังกรเทพนิยาย》 ทั้งหมดในบัดดี้โซนของคุณ, นำไอเท็ม 《ราชัน》 หรือมอนสเตอร์ที่มีทั้ง 《ดราก็อด》 และ 《มังกรเทพนิยาย》 ที่มีชื่อการ์ดแตกต่างกันรวมกันได้สูงสุด 3 ใบจากในกองการ์ดของคุณขึ้นมือ, และสับกองการ์ดของคุณ ถ้าคุณนำการ์ดขึ้นมือ 3 ใบ, ทิ้งการ์ด 1 ใบจากบนมือ"
+        }
+      ]
+    }
+  },
+  "image": null
+}

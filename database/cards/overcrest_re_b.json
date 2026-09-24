@@ -1,0 +1,122 @@
+{
+  "card_id": "OVERCREST_RE_B",
+  "name": "Overcrest \"Re:B\"",
+  "type": "SPELL",
+  "world": [
+    "ANCIENT_WORLD"
+  ],
+  "attributes": [
+    "MAX_DRAGON"
+  ],
+  "effects": [
+    {
+      "effect_id": "OVERCREST_SET",
+      "effect_type": "SET"
+    },
+    {
+      "effect_id": "OVERCREST_LIMIT",
+      "effect_type": "RULE",
+      "rule": "SET_1_PER_FIELD"
+    },
+    {
+      "effect_id": "OVERCREST_SIZE_CAP",
+      "effect_type": "RULE",
+      "rule": "TOTAL_FIELD_SIZE_CAP",
+      "size_cap": 6,
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "Re:TH/007TH",
+        "ability_reference": "Re:TH/007TH: If you have a 《MAX Dragon》 monster on your field, this card cannot leave the field by your opponent's card effects, and you may put monsters up to a total size of 6 on your field. / At the end of each player's turn, you may call a size 4 or greater 《MAX Dragon》 from your hand, deck, or drop zone by paying its [Call Cost].",
+        "missing_capability": "TOTAL_SIZE_CAP_EXPANSION_TO_6",
+        "what_is_known": "Expands continuous total field monster size to 6 and triggers end-of-turn call from hand/deck/drop.",
+        "information_needed": [
+          "Approved schema for continuous total field size cap override to 6."
+        ]
+      }
+    },
+    {
+      "effect_id": "OVERCREST_PROTECTION",
+      "effect_type": "PROTECTION",
+      "target": "THIS_CARD",
+      "condition": {
+        "type": "CARD_COUNT_GTE",
+        "zone": "FIELD",
+        "controller": "YOU",
+        "attributes_any": [
+          "MAX_DRAGON"
+        ],
+        "count": 1
+      },
+      "protection": {
+        "cannot_leave_field": true,
+        "source": "OPPONENT_CARD_EFFECT"
+      }
+    },
+    {
+      "effect_id": "OVERCREST_FIELD_ABILITY_PROTECTION",
+      "effect_type": "PROTECTION",
+      "target": {
+        "target_type": "ALL_CARDS",
+        "zone": "FIELD",
+        "controller": "YOU"
+      },
+      "protection": {
+        "cannot_nullify_abilities": true,
+        "source": "OPPONENT_CARD_EFFECT"
+      }
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Set]\nYou may only [Set] one \"Overcrest \"Re:B\"\" on your field.\nIf you have a 《MAX Dragon》 monster on your field, this card cannot leave the field by your opponent's card effects, and you may put monsters up to a total size of 6 on your field.\nAbilities of all cards on your field cannot be nullified by your opponent's card effects.\nAt the end of each player's turn, you may call a size 4 or greater 《MAX Dragon》 from your hand, deck, or drop zone by paying its [Call Cost].",
+      "segments": [
+        {
+          "tag": "KEYWORD",
+          "text": "[Set]"
+        },
+        {
+          "tag": "RULE",
+          "text": "You may only [Set] one \"Overcrest \"Re:B\"\" on your field."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "If you have a 《MAX Dragon》 monster on your field, this card cannot leave the field by your opponent's card effects, and you may put monsters up to a total size of 6 on your field."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "Abilities of all cards on your field cannot be nullified by your opponent's card effects."
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "At the end of each player's turn, you may call a size 4 or greater 《MAX Dragon》 from your hand, deck, or drop zone by paying its [Call Cost]."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Set]\nคุณสามารถ [Set] \"โอเวอร์เครสต์ \"Re:B\"\" บนสนามของคุณได้เพียง 1 ใบเท่านั้น\nถ้าคุณมีมอนสเตอร์ 《มังกร MAX》 อยู่บนสนามของคุณ, การ์ดนี้ไม่สามารถออกจากสนามโดยความสามารถการ์ดของคู่แข่ง, และคุณสามารถวางมอนสเตอร์บนสนามของคุณได้ขนาดไซส์รวมไม่เกิน 6\nความสามารถของการ์ดทั้งหมดบนสนามของคุณไม่สามารถถูกยกเลิกได้โดยความสามารถการ์ดของคู่แข่ง\nเมื่อสิ้นสุดเทิร์นของผู้เล่นแต่ละคน, คุณสามารถคอล 《มังกร MAX》 ไซส์ 4 หรือมากกว่า 1 ใบจากบนมือ, ในกองการ์ด หรือในช่องดรอปของคุณโดยจ่าย [Call Cost]",
+      "segments": [
+        {
+          "tag": "KEYWORD",
+          "text": "[Set]"
+        },
+        {
+          "tag": "RULE",
+          "text": "คุณสามารถ [Set] \"โอเวอร์เครสต์ \"Re:B\"\" บนสนามของคุณได้เพียง 1 ใบเท่านั้น"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "ถ้าคุณมีมอนสเตอร์ 《มังกร MAX》 อยู่บนสนามของคุณ, การ์ดนี้ไม่สามารถออกจากสนามโดยความสามารถการ์ดของคู่แข่ง, และคุณสามารถวางมอนสเตอร์บนสนามของคุณได้ขนาดไซส์รวมไม่เกิน 6"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "ความสามารถของการ์ดทั้งหมดบนสนามของคุณไม่สามารถถูกยกเลิกได้โดยความสามารถการ์ดของคู่แข่ง"
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "เมื่อสิ้นสุดเทิร์นของผู้เล่นแต่ละคน, คุณสามารถคอล 《มังกร MAX》 ไซส์ 4 หรือมากกว่า 1 ใบจากบนมือ, ในกองการ์ด หรือในช่องดรอปของคุณโดยจ่าย [Call Cost]"
+        }
+      ]
+    }
+  },
+  "image": null
+}

@@ -1,0 +1,135 @@
+{
+  "card_id": "GREAT_DEMON_LORD_OF_THUNDERSTORM_BATZZ_RE_B",
+  "name": "Great Demon Lord of Thunderstorm, Batzz \"Re:B\"",
+  "type": "MONSTER",
+  "size": 3,
+  "power": 7000,
+  "critical": 2,
+  "defense": 7000,
+  "cost": {
+    "gauge": 2,
+    "life": 0,
+    "drop_to_soul": {
+      "zone": "DROP",
+      "controller": "YOU",
+      "count": 1
+    }
+  },
+  "world": [
+    "DUNGEON_WORLD",
+    "DRAGON_WORLD"
+  ],
+  "attributes": [
+    "DUNGEON_ENEMY",
+    "DEMON_LORD",
+    "THUNDER_EMPIRE"
+  ],
+  "effects": [
+    {
+      "effect_id": "BATZZ_PROTECTION",
+      "effect_type": "PROTECTION",
+      "condition": {
+        "type": "TURN_PLAYER_IS",
+        "player": "YOU"
+      },
+      "target": {
+        "target_type": "ALL_CARDS",
+        "zone": "FIELD",
+        "controller": "YOU",
+        "attributes_any": [
+          "DEMON_LORD"
+        ]
+      },
+      "protection": {
+        "cannot_be_destroyed": true,
+        "cannot_be_rested": true,
+        "source": "OPPONENT_CARD_EFFECT"
+      }
+    },
+    {
+      "effect_id": "BATZZ_CENTER_ACT",
+      "effect_type": "ACTIVATED",
+      "is_counter": true,
+      "condition": {
+        "type": "AND",
+        "conditions": [
+          {
+            "type": "CARD_POSITION_IS",
+            "area": "CENTER"
+          },
+          {
+            "type": "COUNT_PER_TURN",
+            "count": 1
+          }
+        ]
+      },
+      "cost": {
+        "drop_hand": 1
+      },
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "Re:TH/020TH",
+        "ability_reference": "Re:TH/020TH: [Counter] 【Act】 [1/Turn] If this card is on your center, you may drop a hand card. If you do, call up to one size 3 《Demon Lord》 monster from your deck to an open area on your field by paying its [Call Cost], and shuffle your deck. That card becomes a size 0 until it leaves the field.",
+        "missing_capability": "DYNAMIC_SIZE_MUTATION_ON_CALL",
+        "what_is_known": "Calls size 3 Demon Lord from deck and modifies its size attribute to 0 until it leaves the field.",
+        "information_needed": [
+          "Approved schema for dynamic size alteration on called monsters lasting until leave-field."
+        ]
+      }
+    },
+    {
+      "effect_id": "BATZZ_KEYWORDS",
+      "effect_type": "KEYWORD",
+      "keywords": [
+        "Double Attack",
+        "Soulguard",
+        "Lifelink 2"
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Call Cost] [Pay 2 gauge. Then, put a card from your drop zone into its soul]\nDuring your turn, all 《Demon Lord》 on your field cannot be destroyed or [Rest] by your opponent's card effects.\n[Counter] 【Act】 [1/Turn] If this card is on your center, you may drop a hand card. If you do, call up to one size 3 《Demon Lord》 monster from your deck to an open area on your field by paying its [Call Cost], and shuffle your deck. That card becomes a size 0 until it leaves the field.\n[Double Attack] [Soulguard] [Lifelink 2]",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Call Cost] [Pay 2 gauge. Then, put a card from your drop zone into its soul]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "During your turn, all 《Demon Lord》 on your field cannot be destroyed or [Rest] by your opponent's card effects."
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] 【Act】 [1/Turn] If this card is on your center, you may drop a hand card. If you do, call up to one size 3 《Demon Lord》 monster from your deck to an open area on your field by paying its [Call Cost], and shuffle your deck. That card becomes a size 0 until it leaves the field."
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Double Attack] [Soulguard] [Lifelink 2]"
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Call Cost] [จ่าย 2 เกจ จากนั้น, นำการ์ด 1 ใบจากในช่องดรอปของคุณเข้าสู่โซลของการ์ดนี้]\nในระหว่างเทิร์นของคุณ, 《จอมมาร》 ทั้งหมดบนสนามของคุณไม่สามารถถูกทำลาย หรือ [Rest] โดยความสามารถการ์ดของคู่แข่ง\n[Counter] 【Act】 [1/Turn] ถ้าการ์ดนี้อยู่ที่ช่องกลางของคุณ, คุณสามารถทิ้งการ์ด 1 ใบจากบนมือ ถ้าทำ, คอลมอนสเตอร์ 《จอมมาร》 ไซส์ 3 ได้สูงสุด 1 ใบจากในกองการ์ดของคุณไปยังช่องที่ว่างอยู่บนสนามของคุณโดยจ่าย [Call Cost], และสับกองการ์ดของคุณ การ์ดใบนั้นจะกลายเป็นไซส์ 0 จนกว่าจะออกจากสนาม\n[Double Attack] [Soulguard] [Lifelink 2]",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Call Cost] [จ่าย 2 เกจ จากนั้น, นำการ์ด 1 ใบจากในช่องดรอปของคุณเข้าสู่โซลของการ์ดนี้]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "ในระหว่างเทิร์นของคุณ, 《จอมมาร》 ทั้งหมดบนสนามของคุณไม่สามารถถูกทำลาย หรือ [Rest] โดยความสามารถการ์ดของคู่แข่ง"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] 【Act】 [1/Turn] ถ้าการ์ดนี้อยู่ที่ช่องกลางของคุณ, คุณสามารถทิ้งการ์ด 1 ใบจากบนมือ ถ้าทำ, คอลมอนสเตอร์ 《จอมมาร》 ไซส์ 3 ได้สูงสุด 1 ใบจากในกองการ์ดของคุณไปยังช่องที่ว่างอยู่บนสนามของคุณโดยจ่าย [Call Cost], และสับกองการ์ดของคุณ การ์ดใบนั้นจะกลายเป็นไซส์ 0 จนกว่าจะออกจากสนาม"
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Double Attack] [Soulguard] [Lifelink 2]"
+        }
+      ]
+    }
+  },
+  "image": null
+}

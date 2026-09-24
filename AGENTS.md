@@ -7,4 +7,4 @@ make sure to update "AntiGravity Report.md" For AntiGravity Only
 
 Do not modified "card list.md" and "dupe_card.md" that in WIP folder
 
-Do not automatic commit for me
+I'll commit by my self

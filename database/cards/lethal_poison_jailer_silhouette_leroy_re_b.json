@@ -1,0 +1,92 @@
+{
+  "card_id": "LETHAL_POISON_JAILER_SILHOUETTE_LEROY_RE_B",
+  "name": "Lethal Poison Jailer, Silhouette Leroy \"Re:B\"",
+  "type": "MONSTER",
+  "size": 0,
+  "power": 1000,
+  "critical": 1,
+  "defense": 1000,
+  "world": [
+    "MAGIC_WORLD"
+  ],
+  "attributes": [
+    "SHADOW_SHADE",
+    "EXECUTIONERS"
+  ],
+  "effects": [
+    {
+      "effect_id": "LEROY_COUNTER_CALL",
+      "effect_type": "ACTIVATED",
+      "zone": "HAND",
+      "is_counter": true,
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "Re:TH/030TH",
+        "ability_reference": "Re:TH/030TH: 【Hand】: [Counter] 【Act】 During an attack on your opponent's turn, if there are four or more spells in your drop zone or in the souls of monsters on your field, call this card and change the target of the attack to this card.",
+        "missing_capability": "COUNTER_CALL_FROM_HAND_AND_REDIRECT_ATTACK",
+        "what_is_known": "Calls this card from hand during opponent attack as Counter and redirects attack target to self.",
+        "information_needed": [
+          "Approved schema for in-attack Counter call and redirection from hand."
+        ]
+      }
+    },
+    {
+      "effect_id": "LEROY_ON_DESTROYED",
+      "effect_type": "TRIGGERED",
+      "trigger": {
+        "event": "ON_DESTROYED"
+      },
+      "condition": {
+        "type": "TURN_PLAYER_IS",
+        "player": "OPPONENT"
+      },
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "Re:TH/030TH",
+        "ability_reference": "Re:TH/030TH: When this card is destroyed during your opponent's turn, put it into the soul of another monster on your field, and draw a card. / 【Soul:《Shadow Shade》 or 《Executioners》】 The soul master gets [Triple Attack].",
+        "missing_capability": "DESTROY_TRIGGER_PUT_TO_ANOTHER_SOUL",
+        "what_is_known": "When destroyed on opponent's turn, redirects self to another monster's soul, draws 1, and grants Triple Attack to host monster.",
+        "information_needed": [
+          "Approved schema for on-destruction redirection into another card's soul."
+        ]
+      }
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "【Hand】: [Counter] 【Act】 During an attack on your opponent's turn, if there are four or more spells in your drop zone or in the souls of monsters on your field, call this card and change the target of the attack to this card.\nWhen this card is destroyed during your opponent's turn, put it into the soul of another monster on your field, and draw a card.\n【Soul:《Shadow Shade》 or 《Executioners》】 The soul master gets [Triple Attack].",
+      "segments": [
+        {
+          "tag": "COUNTER",
+          "text": "【Hand】: [Counter] 【Act】 During an attack on your opponent's turn, if there are four or more spells in your drop zone or in the souls of monsters on your field, call this card and change the target of the attack to this card."
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "When this card is destroyed during your opponent's turn, put it into the soul of another monster on your field, and draw a card."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "【Soul:《Shadow Shade》 or 《Executioners》】 The soul master gets [Triple Attack]."
+        }
+      ]
+    },
+    "th": {
+      "plain": "【Hand】: [Counter] 【Act】 ในระหว่างการโจมตีในเทิร์นของคู่แข่ง, ถ้ามีการ์ดเวทมนตร์ตั้งแต่ 4 ใบขึ้นไปในช่องดรอปของคุณหรือในโซลของมอนสเตอร์บนสนามของคุณ, คอลการ์ดนี้และเปลี่ยนเป้าหมายการโจมตีมาที่การ์ดนี้\nเมื่อการ์ดนี้ถูกทำลายในระหว่างเทิร์นของคู่แข่ง, นำการ์ดนี้เข้าสู่โซลของมอนสเตอร์ใบอื่นบนสนามของคุณ, และจั่วการ์ด 1 ใบ\n【Soul:《แชโดว์เชด》 หรือ 《เพชฌฆาต》】 การ์ดที่เป็นเจ้าของโซลนี้จะได้รับ [Triple Attack]",
+      "segments": [
+        {
+          "tag": "COUNTER",
+          "text": "【Hand】: [Counter] 【Act】 ในระหว่างการโจมตีในเทิร์นของคู่แข่ง, ถ้ามีการ์ดเวทมนตร์ตั้งแต่ 4 ใบขึ้นไปในช่องดรอปของคุณหรือในโซลของมอนสเตอร์บนสนามของคุณ, คอลการ์ดนี้และเปลี่ยนเป้าหมายการโจมตีมาที่การ์ดนี้"
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "เมื่อการ์ดนี้ถูกทำลายในระหว่างเทิร์นของคู่แข่ง, นำการ์ดนี้เข้าสู่โซลของมอนสเตอร์ใบอื่นบนสนามของคุณ, และจั่วการ์ด 1 ใบ"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "【Soul:《แชโดว์เชด》 หรือ 《เพชฌฆาต》】 การ์ดที่เป็นเจ้าของโซลนี้จะได้รับ [Triple Attack]"
+        }
+      ]
+    }
+  },
+  "image": null
+}

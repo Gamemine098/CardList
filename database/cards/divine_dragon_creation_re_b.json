@@ -1,0 +1,102 @@
+{
+  "card_id": "DIVINE_DRAGON_CREATION_RE_B",
+  "name": "Divine Dragon Creation \"Re:B\"",
+  "type": "SPELL",
+  "cost": {
+    "life": 2,
+    "gauge": 0
+  },
+  "world": [
+    "ANCIENT_WORLD"
+  ],
+  "attributes": [
+    "DRAGON"
+  ],
+  "effects": [
+    {
+      "effect_id": "DIVINE_DRAGON_COST_REDUCTION",
+      "effect_type": "CONTINUOUS",
+      "cost_reduction_per_card_in_drop": {
+        "card_name": "Divine Dragon Creation",
+        "life": 1
+      }
+    },
+    {
+      "effect_id": "DIVINE_DRAGON_DRAW",
+      "effect_type": "DRAW",
+      "count": 1,
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      }
+    },
+    {
+      "effect_id": "DIVINE_DRAGON_CHOICE",
+      "effect_type": "CHOICE",
+      "choices": [
+        {
+          "effect_id": "DIVINE_DRAGON_SALVAGE",
+          "effect_type": "SALVAGE",
+          "source": "DROP",
+          "destination": "HAND",
+          "target": {
+            "target_type": "CARD",
+            "card_name": "Divine Dragon Creation",
+            "count": 1
+          }
+        },
+        {
+          "effect_id": "DIVINE_DRAGON_DRAW_AND_GAUGE",
+          "effect_type": "COMPOSITE",
+          "effects": [
+            {
+              "type": "DRAW",
+              "count": 1
+            },
+            {
+              "type": "MOVE_THIS_CARD",
+              "destination": "GAUGE"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "The life cost written in this card's [Cast Cost] is reduced by 1 for each \"Divine Dragon Creation\" in your drop zone.\n[Cast Cost] [Pay 2 life]\n[Cn/Turn] Draw a card. Then, put a \"Divine Dragon Creation\" from your drop zone into your hand, or draw a card and put this card into your gauge.",
+      "segments": [
+        {
+          "tag": "EFFECT",
+          "text": "The life cost written in this card's [Cast Cost] is reduced by 1 for each \"Divine Dragon Creation\" in your drop zone."
+        },
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [Pay 2 life]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "[Cn/Turn] Draw a card. Then, put a \"Divine Dragon Creation\" from your drop zone into your hand, or draw a card and put this card into your gauge."
+        }
+      ]
+    },
+    "th": {
+      "plain": "ค่าร่ายพลังชีวิตที่ระบุไว้ใน [Cast Cost] ของการ์ดนี้จะลดลง 1 ต่อการ์ด \"มังกรสวรรค์สร้างโลก\" แต่ละใบในช่องดรอปของคุณ\n[Cast Cost] [จ่าย 2 พลังชีวิต]\n[Cn/Turn] จั่วการ์ด 1 ใบ จากนั้น, นำ \"มังกรสวรรค์สร้างโลก\" 1 ใบจากในช่องดรอปของคุณขึ้นมือ, หรือจั่วการ์ด 1 ใบและนำการ์ดนี้เข้าสู่ช่องเกจของคุณ",
+      "segments": [
+        {
+          "tag": "EFFECT",
+          "text": "ค่าร่ายพลังชีวิตที่ระบุไว้ใน [Cast Cost] ของการ์ดนี้จะลดลง 1 ต่อการ์ด \"มังกรสวรรค์สร้างโลก\" แต่ละใบในช่องดรอปของคุณ"
+        },
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [จ่าย 2 พลังชีวิต]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "[Cn/Turn] จั่วการ์ด 1 ใบ จากนั้น, นำ \"มังกรสวรรค์สร้างโลก\" 1 ใบจากในช่องดรอปของคุณขึ้นมือ, หรือจั่วการ์ด 1 ใบและนำการ์ดนี้เข้าสู่ช่องเกจของคุณ"
+        }
+      ]
+    }
+  },
+  "image": null
+}

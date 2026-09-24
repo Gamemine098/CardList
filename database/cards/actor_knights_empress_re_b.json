@@ -1,0 +1,90 @@
+{
+  "card_id": "ACTOR_KNIGHTS_EMPRESS_RE_B",
+  "name": "Actor Knights Empress \"Re:B\"",
+  "type": "MONSTER",
+  "size": 1,
+  "power": 2000,
+  "critical": 1,
+  "defense": 4000,
+  "world": [
+    "GENERIC"
+  ],
+  "attributes": [
+    "TAROT"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "EMPRESS_HAND_COUNTER_ACT",
+      "effect_type": "ACTIVATED",
+      "is_counter": true,
+      "source_zone": "HAND",
+      "cost": {
+        "type": "DROP_THIS_CARD"
+      },
+      "effects": [
+        {
+          "effect_id": "EMPRESS_RESTRICT_OPPONENT_SEARCH",
+          "effect_type": "REPLACEMENT_RULE",
+          "target_player": "OPPONENT",
+          "duration": "THIS_TURN",
+          "trigger_event": "SEARCH_DECK",
+          "action": "LOOK_TOP_5_INSTEAD"
+        },
+        {
+          "effect_id": "EMPRESS_CONDITIONAL_REMOVE_COST_AND_DRAW",
+          "effect_type": "SEQUENCE",
+          "cost": {
+            "type": "REMOVE_FROM_DROP",
+            "filter": {
+              "name_contains": "ReAc: Empress"
+            },
+            "count": 1
+          },
+          "effects": [
+            {
+              "effect_id": "EMPRESS_DRAW",
+              "effect_type": "DRAW",
+              "count": 2
+            }
+          ]
+        }
+      ],
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "BFO-RP01/S003",
+        "ability_reference": "BFO-RP01/S003: 【Hand】: [Counter] 【Act】 [Cost] [Drop this card], for this turn, the next time your opponent would search their entire deck for a card, they search the top 5 cards of their deck instead. Then, [Cost] [Remove 1 card with the name \"ReAc: Empress\" from your drop zone] draw two cards.",
+        "missing_capability": "OPPONENT_SEARCH_SCOPE_REPLACEMENT_AND_SECONDARY_EFFECT_COST",
+        "what_is_known": "Activated from hand during Counter timing. Sets a pending one-shot replacement modifying opponent's next deck search this turn to inspect only top 5 cards. Contains a follow-up secondary cost paying drop card removal to draw 2 cards.",
+        "information_needed": [
+          "Approved schema for intercepting and scoping opponent deck searches.",
+          "Approved schema for sequential optional follow-up cost payment within ability resolution."
+        ]
+      }
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "【Hand】: [Counter] 【Act】 [Cost] [Drop this card], for this turn, the next time your opponent would search their entire deck for a card, they search the top 5 cards of their deck instead. Then, [Cost] [Remove 1 card with the name \"ReAc: Empress\" from your drop zone] draw two cards.",
+      "segments": [
+        {
+          "tag": "COUNTER",
+          "text": "【Hand】: [Counter] 【Act】 [Cost] [Drop this card], for this turn, the next time your opponent would search their entire deck for a card, they search the top 5 cards of their deck instead. Then, [Cost] [Remove 1 card with the name \"ReAc: Empress\" from your drop zone] draw two cards."
+        }
+      ]
+    },
+    "th": {
+      "plain": "【มือ】 [Counter] 【Act】 [Cost] [นำการ์ดนี้ลงดรอป] ในเทิร์นนี้ ครั้งต่อไปที่คู่แข่งค้นหาการ์ดจากกองการ์ด, คู่แข่งจะต้องดูใบบนสุดจากกองการ์ดคู่แข่ง 5 ใบแทน, จากนั้น [Cost] [รีมูฟ การ์ด \"ReAc:เอ็มเพรส\" ในชื่อการ์ดจากดรอบเรา 1 ใบ] เราจั่วการ์ด 2 ใบ",
+      "segments": [
+        {
+          "tag": "COUNTER",
+          "text": "【มือ】 [Counter] 【Act】 [Cost] [นำการ์ดนี้ลงดรอป] ในเทิร์นนี้ ครั้งต่อไปที่คู่แข่งค้นหาการ์ดจากกองการ์ด, คู่แข่งจะต้องดูใบบนสุดจากกองการ์ดคู่แข่ง 5 ใบแทน, จากนั้น [Cost] [รีมูฟ การ์ด \"ReAc:เอ็มเพรส\" ในชื่อการ์ดจากดรอบเรา 1 ใบ] เราจั่วการ์ด 2 ใบ"
+        }
+      ]
+    }
+  },
+  "image": null
+}

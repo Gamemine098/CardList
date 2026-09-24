@@ -1,0 +1,112 @@
+{
+  "card_id": "ANGEL_TROOP_LYNTIS_RE_B",
+  "name": "Angel Troop, Lyntis \"Re:B\"",
+  "type": "MONSTER",
+  "size": 1,
+  "power": 3000,
+  "critical": 2,
+  "defense": 1000,
+  "world": [
+    "LEGEND_WORLD"
+  ],
+  "attributes": [
+    "EMPYREAL_CORPS"
+  ],
+  "effects": [
+    {
+      "effect_id": "LYNTIS_ADVENT",
+      "effect_type": "ACTIVATED",
+      "name": "Advent",
+      "is_counter": true,
+      "condition": {
+        "type": "AND",
+        "conditions": [
+          {
+            "type": "TURN_PLAYER_IS",
+            "player": "OPPONENT"
+          },
+          {
+            "type": "PHASE_IS",
+            "phase": "ATTACK_PHASE"
+          }
+        ]
+      },
+      "effects": [
+        {
+          "effect_id": "LYNTIS_CALL",
+          "effect_type": "CALL",
+          "source": "HAND",
+          "destination": "OPEN_AREA",
+          "pay_cost": true
+        }
+      ]
+    },
+    {
+      "effect_id": "LYNTIS_ON_ENTER",
+      "effect_type": "TRIGGERED",
+      "trigger": {
+        "event": "ON_ENTER_FIELD"
+      },
+      "effects": [
+        {
+          "effect_id": "LYNTIS_CHARGE",
+          "effect_type": "GAUGE_CHARGE",
+          "count": 1
+        },
+        {
+          "effect_id": "LYNTIS_BONUS_DRAW",
+          "effect_type": "DRAW",
+          "count": 1,
+          "condition": {
+            "type": "AND",
+            "conditions": [
+              {
+                "type": "ENTERED_BY_ABILITY",
+                "name": "Advent"
+              },
+              {
+                "type": "CARD_COUNT_GTE",
+                "zone": "FIELD",
+                "controller": "YOU",
+                "attributes_any": [
+                  "EMPYREAL_CORPS"
+                ],
+                "exclude_self": true,
+                "count": 1
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Counter] 【Act】 \"Advent\" During your opponent's attack phase, call this card from your hand to an open area by paying it's [Call Cost].\nWhen this card enters the field, charge 1 gauge. Then, if this card entered the field by \"Advent\" and you have another 《Empyreal Corps》 on your field, draw 1 card.",
+      "segments": [
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] 【Act】 \"Advent\" During your opponent's attack phase, call this card from your hand to an open area by paying it's [Call Cost]."
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "When this card enters the field, charge 1 gauge. Then, if this card entered the field by \"Advent\" and you have another 《Empyreal Corps》 on your field, draw 1 card."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Counter] 【Act】 \"จุติ\" ในระหว่างแอทแทคเฟสของคู่แข่ง, คอลการ์ดนี้จากบนมือของคุณไปยังช่องที่ว่างอยู่โดยจ่าย [Call Cost] ของการ์ดนี้\nเมื่อการ์ดนี้เข้าสู่สนาม, ชาร์จ 1 เกจ จากนั้น, ถ้าการ์ดนี้เข้าสู่สนามโดย \"จุติ\" และคุณมี 《กองทัพสวรรค์》 ใบอื่นอยู่บนสนามของคุณ, จั่วการ์ด 1 ใบ",
+      "segments": [
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] 【Act】 \"จุติ\" ในระหว่างแอทแทคเฟสของคู่แข่ง, คอลการ์ดนี้จากบนมือของคุณไปยังช่องที่ว่างอยู่โดยจ่าย [Call Cost] ของการ์ดนี้"
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "เมื่อการ์ดนี้เข้าสู่สนาม, ชาร์จ 1 เกจ จากนั้น, ถ้าการ์ดนี้เข้าสู่สนามโดย \"จุติ\" และคุณมี 《กองทัพสวรรค์》 ใบอื่นอยู่บนสนามของคุณ, จั่วการ์ด 1 ใบ"
+        }
+      ]
+    }
+  },
+  "image": null
+}

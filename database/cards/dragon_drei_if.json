@@ -1,0 +1,156 @@
+{
+  "card_id": "DRAGON_DREI_IF",
+  "name": "Dragon Drei \"IF\"",
+  "type": "FLAG",
+  "world": null,
+  "attributes": [],
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "effects": [
+    {
+      "effect_id": "DRAGON_DREI_IF_DECK_RULE",
+      "effect_type": "RULE",
+      "rule": "IN_DECK_FLAG",
+      "condition": {
+        "type": "INITIAL_FLAG_IS",
+        "flag": "Dragon Zwei"
+      },
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "BFO-RP01/S001",
+        "ability_reference": "BFO-RP01/S001: You cannot choose this card as your flag during the start of the fight. You may put this card into your deck and use it if your initial flag is \"Dragon Zwei\".",
+        "missing_capability": "IN_DECK_FLAG_CONSTRUCTION",
+        "what_is_known": "Pre-game deck construction rule permitting this flag card to be included in the main deck if initial flag is Dragon Zwei.",
+        "information_needed": [
+          "Approved schema for main-deck flag inclusion based on initial flag."
+        ]
+      }
+    },
+    {
+      "effect_id": "DRAGON_DREI_IF_CARD_PERMISSION",
+      "effect_type": "RULE",
+      "rule": "ALLOW_ORIGINALLY_DRAGON_ATTRIBUTE_MONSTERS",
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "BFO-RP01/S001",
+        "ability_reference": "BFO-RP01/S001: You may use originally monster cards that have \"Dragon\" in its attribute.",
+        "missing_capability": "DECK_BUILDING_PERMISSION_ORIGINAL_ATTRIBUTE",
+        "what_is_known": "Grants deck construction permission to include cards that originally possess 'Dragon' attribute and are monsters.",
+        "information_needed": [
+          "Approved schema for flag card inclusion filters on printed/original attributes."
+        ]
+      }
+    },
+    {
+      "effect_id": "DRAGON_DREI_IF_EVOLUTION_TRIGGER",
+      "effect_type": "TRIGGERED",
+      "trigger": {
+        "event": "LIFE_BECOMES_ZERO"
+      },
+      "condition": {
+        "type": "COUNT_PER_GAME",
+        "count": 1
+      },
+      "cost": {
+        "type": "STACK_ON_FLAG",
+        "target_flag": "Dragon Zwei"
+      },
+      "effects": [
+        {
+          "effect_id": "DRAGON_DREI_IF_IMMUNITY",
+          "effect_type": "PROTECTION",
+          "target": {
+            "target_type": "ALL_CARDS",
+            "zone": "FIELD",
+            "controller": "YOU"
+          },
+          "duration": "UNTIL_START_OF_OPPONENT_NEXT_TURN",
+          "protection": {
+            "cannot_be_destroyed": true,
+            "cannot_leave_field": true,
+            "cannot_be_rested": true
+          }
+        },
+        {
+          "effect_id": "DRAGON_DREI_IF_PREVENT_LOSS",
+          "effect_type": "RULE",
+          "duration": "UNTIL_START_OF_OPPONENT_NEXT_TURN",
+          "rule": "CANNOT_LOSE_GAME"
+        }
+      ],
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "BFO-RP01/S001",
+        "ability_reference": "BFO-RP01/S001: [1/Game] If your life would become 0, [Cost] [Put this card on top of your \"Dragon Zwei\" flag], and until the start of your opponent's next turn, all cards on your field cannot be destroyed, leave the field, or [Rest], by your opponent's card effects, and you cannot lose the game.",
+        "missing_capability": "MID_GAME_FLAG_EVOLUTION_AND_LOSS_IMMUNITY",
+        "what_is_known": "Triggers on lethal life loss, replaces/stacks this card from hand/deck onto active Dragon Zwei flag, grants comprehensive field immunity and prevents game loss until opponent next turn start.",
+        "information_needed": [
+          "Approved schema for dynamic flag zone stacking/evolution triggered by lethal damage.",
+          "Approved schema for CANNOT_LOSE_GAME temporary state modifier."
+        ]
+      }
+    },
+    {
+      "effect_id": "DRAGON_DREI_IF_CONTINUOUS_PLAY",
+      "effect_type": "RULE",
+      "rule": "CONTINUE_GAME_AT_ZERO_LIFE_OR_DECK",
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "BFO-RP01/S001",
+        "ability_reference": "BFO-RP01/S001: (The game will continue even if your life becomes 0 or there are no cards remaining in your deck.)",
+        "missing_capability": "CONTINUE_GAME_OVERRIDE",
+        "what_is_known": "Passive game rule override where normal win/loss conditions (0 life, 0 deck cards) are suppressed while this flag is active.",
+        "information_needed": [
+          "Approved engine rule representation for game continuation under 0 life and 0 deck conditions."
+        ]
+      }
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "You cannot choose this card as your flag during the start of the fight. You may put this card into your deck and use it if your initial flag is \"Dragon Zwei\".\nYou may use originally monster cards that have \"Dragon\" in its attribute.\n[1/Game] If your life would become 0, [Cost] [Put this card on top of your \"Dragon Zwei\" flag], and until the start of your opponent's next turn, all cards on your field cannot be destroyed, leave the field, or [Rest], by your opponent's card effects, and you cannot lose the game.\n(The game will continue even if your life becomes 0 or there are no cards remaining in your deck.)",
+      "segments": [
+        {
+          "tag": "RULE",
+          "text": "You cannot choose this card as your flag during the start of the fight. You may put this card into your deck and use it if your initial flag is \"Dragon Zwei\"."
+        },
+        {
+          "tag": "RULE",
+          "text": "You may use originally monster cards that have \"Dragon\" in its attribute."
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "[1/Game] If your life would become 0, [Cost] [Put this card on top of your \"Dragon Zwei\" flag], and until the start of your opponent's next turn, all cards on your field cannot be destroyed, leave the field, or [Rest], by your opponent's card effects, and you cannot lose the game."
+        },
+        {
+          "tag": "RULE",
+          "text": "(The game will continue even if your life becomes 0 or there are no cards remaining in your deck.)"
+        }
+      ]
+    },
+    "th": {
+      "plain": "เราไม่สามารถใช้การ์ดนี้เป็นแฟลกเริ่มต้นได้ หากแฟลกเริ่มต้นเราเป็น\"ดราก้อน・ซไว\" เราสามารถใส่การ์ดนี้ในกองการ์ดและใช้ได้\nเราสามารถใช้มอนสเตอร์ที่มีคำว่า \"มังกร\" หรือ \"ดราก้อน\" ในชื่อคุณลักษณะได้\n[1/Game] หากไลฟ์เราจะกลายเป็น 0, [Cost] [วางการ์ดนี้ทับ \"ดราก้อน・ซไว\" เรา] จนกว่าจะเริ่มต้นเทิร์นถัดไปของคู่แข่ง, การ์ดบนสนามเราทุกใบไม่ถูกทำลาย, ไม่ถูกนำออกจากสนาม, ไม่ถูก [Rest] โดยความสามารถการ์ดคู่แข่ง และเราจะไม่สามารถแพ้เกมนี้ได้\n(เกมจะดำเนินต่อไปถึงแม้ไลฟ์เราจะเป็น 0 หรือการ์ดในเด็คเราจะหมดก็ตาม)",
+      "segments": [
+        {
+          "tag": "RULE",
+          "text": "เราไม่สามารถใช้การ์ดนี้เป็นแฟลกเริ่มต้นได้ หากแฟลกเริ่มต้นเราเป็น\"ดราก้อน・ซไว\" เราสามารถใส่การ์ดนี้ในกองการ์ดและใช้ได้"
+        },
+        {
+          "tag": "RULE",
+          "text": "เราสามารถใช้มอนสเตอร์ที่มีคำว่า \"มังกร\" หรือ \"ดราก้อน\" ในชื่อคุณลักษณะได้"
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "[1/Game] หากไลฟ์เราจะกลายเป็น 0, [Cost] [วางการ์ดนี้ทับ \"ดราก้อน・ซไว\" เรา] จนกว่าจะเริ่มต้นเทิร์นถัดไปของคู่แข่ง, การ์ดบนสนามเราทุกใบไม่ถูกทำลาย, ไม่ถูกนำออกจากสนาม, ไม่ถูก [Rest] โดยความสามารถการ์ดคู่แข่ง และเราจะไม่สามารถแพ้เกมนี้ได้"
+        },
+        {
+          "tag": "RULE",
+          "text": "(เกมจะดำเนินต่อไปถึงแม้ไลฟ์เราจะเป็น 0 หรือการ์ดในเด็คเราจะหมดก็ตาม)"
+        }
+      ]
+    }
+  },
+  "image": null
+}

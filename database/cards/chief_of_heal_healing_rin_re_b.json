@@ -1,0 +1,109 @@
+{
+  "card_id": "CHIEF_OF_HEAL_HEALING_RIN_RE_B",
+  "name": "Chief of Heal, Healing Rin \"Re:B\"",
+  "type": "MONSTER",
+  "size": 2,
+  "power": 3000,
+  "critical": 2,
+  "defense": 6000,
+  "world": [
+    "ANCIENT_WORLD"
+  ],
+  "attributes": [
+    "DRAGON_CHIEF_EMPEROR"
+  ],
+  "effects": [
+    {
+      "effect_id": "HEALING_RIN_SWEET_IDOL",
+      "effect_type": "ACTIVATED",
+      "name": "Sweet Idol",
+      "zone": "HAND",
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "effects": [
+        {
+          "effect_id": "RIN_TO_SOUL",
+          "effect_type": "MOVE_THIS_CARD",
+          "destination": "SOUL",
+          "target_host": {
+            "zone": "FIELD",
+            "controller": "YOU",
+            "attributes_any": [
+              "DRAGON_CHIEF_EMPEROR"
+            ]
+          }
+        },
+        {
+          "effect_id": "RIN_DRAW_1",
+          "effect_type": "DRAW",
+          "count": 1
+        },
+        {
+          "effect_id": "RIN_BONUS",
+          "effect_type": "COMPOSITE",
+          "condition": {
+            "type": "CARD_COUNT_GTE",
+            "zone": "DROP",
+            "controller": "YOU",
+            "attributes_any": [
+              "DRAGON_CHIEF_EMPEROR"
+            ],
+            "count": 5
+          },
+          "effects": [
+            {
+              "type": "DRAW",
+              "count": 1
+            },
+            {
+              "type": "GAUGE_CHARGE",
+              "count": 2
+            },
+            {
+              "type": "LIFE_GAIN",
+              "amount": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "effect_id": "HEALING_RIN_KEYWORDS",
+      "effect_type": "KEYWORD",
+      "keywords": [
+        "Lifelink 1"
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[An/Turn] \"Sweet Idol\" Put this hand card into the soul of a 《Dragon Chief Emperor》 on your field and draw a card. Then, if there are five or more 《Dragon Chief Emperor》 in your drop zone, draw a card, charge two gauge, and heal 2 life!\n[Lifelink 1]",
+      "segments": [
+        {
+          "tag": "EFFECT",
+          "text": "[An/Turn] \"Sweet Idol\" Put this hand card into the soul of a 《Dragon Chief Emperor》 on your field and draw a card. Then, if there are five or more 《Dragon Chief Emperor》 in your drop zone, draw a card, charge two gauge, and heal 2 life!"
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Lifelink 1]"
+        }
+      ]
+    },
+    "th": {
+      "plain": "[An/Turn] \"สวีท ไอดอล\" นำการ์ดใบนี้จากบนมือเข้าสู่โซลของ 《จักรพรรดิหัวหน้ามังกร》 บนสนามของคุณ และจั่วการ์ด 1 ใบ จากนั้น, ถ้ามี 《จักรพรรดิหัวหน้ามังกร》 ตั้งแต่ 5 ใบขึ้นไปในช่องดรอปของคุณ, จั่วการ์ด 1 ใบ, ชาร์จ 2 เกจ, และฟื้นฟู 2 พลังชีวิต!\n[Lifelink 1]",
+      "segments": [
+        {
+          "tag": "EFFECT",
+          "text": "[An/Turn] \"สวีท ไอดอล\" นำการ์ดใบนี้จากบนมือเข้าสู่โซลของ 《จักรพรรดิหัวหน้ามังกร》 บนสนามของคุณ และจั่วการ์ด 1 ใบ จากนั้น, ถ้ามี 《จักรพรรดิหัวหน้ามังกร》 ตั้งแต่ 5 ใบขึ้นไปในช่องดรอปของคุณ, จั่วการ์ด 1 ใบ, ชาร์จ 2 เกจ, และฟื้นฟู 2 พลังชีวิต!"
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Lifelink 1]"
+        }
+      ]
+    }
+  },
+  "image": null
+}

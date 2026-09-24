@@ -1,0 +1,145 @@
+{
+  "card_id": "ZEROTH_STYLE_GALE_AZURE_SKIES_MAYUZUMI_FUBUKI_RE_B",
+  "name": "\"Zeroth Style Gale, Azure Skies\" Mayuzumi Fubuki \"Re:B\"",
+  "type": "MONSTER",
+  "size": 3,
+  "power": 7000,
+  "critical": 2,
+  "defense": 5000,
+  "cost": {
+    "gauge": 2,
+    "life": 0
+  },
+  "world": [
+    "HERO_WORLD"
+  ],
+  "attributes": [
+    "MOBILE_AERIAL_TEAM"
+  ],
+  "effects": [
+    {
+      "effect_id": "MAYUZUMI_FUBUKI_WEAPONRY_LINK",
+      "effect_type": "KEYWORD",
+      "condition": {
+        "type": "CARD_COUNT_LTE",
+        "zone": "SOUL",
+        "count": 2
+      },
+      "keywords": [
+        "Weaponry Link"
+      ]
+    },
+    {
+      "effect_id": "MAYUZUMI_FUBUKI_ON_WEAPONRY",
+      "effect_type": "TRIGGERED",
+      "trigger": {
+        "event": "SOUL_ADDED",
+        "target": {
+          "attributes_any": [
+            "WEAPONRY"
+          ]
+        }
+      },
+      "effects": [
+        {
+          "effect_id": "FUBUKI_LIFE",
+          "effect_type": "LIFE_GAIN",
+          "amount": 1
+        },
+        {
+          "effect_id": "FUBUKI_DRAW",
+          "effect_type": "DRAW",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "effect_id": "MAYUZUMI_FUBUKI_SOUL_BUFF",
+      "effect_type": "CONTINUOUS",
+      "target": {
+        "target_type": "ALL_CARDS",
+        "zone": "FIELD",
+        "controller": "YOU",
+        "attributes_any": [
+          "MOBILE_AERIAL_TEAM"
+        ]
+      },
+      "stats_buff_per_soul": {
+        "power": 3000,
+        "defense": 3000
+      }
+    },
+    {
+      "effect_id": "MAYUZUMI_FUBUKI_KEYWORDS",
+      "effect_type": "KEYWORD",
+      "keywords": [
+        "Purge",
+        "Move",
+        "Double Attack",
+        "Soulguard",
+        "Ride"
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Call Cost] [Pay 2 gauge]\nIf this card has two or less soul, it gets [Weaponry Link].\nWhen a 《Weaponry》 is put into this card's soul, you gain 1 life and draw 1 card.\nFor each card in this card's soul, all 《Mobile Aerial Team》 on your field get power+3000 and defense+3000.\n[Purge] [Move] [Double Attack] [Soulguard]\n[Ride] [Pay 2 gauge]",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Call Cost] [Pay 2 gauge]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "If this card has two or less soul, it gets [Weaponry Link]."
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "When a 《Weaponry》 is put into this card's soul, you gain 1 life and draw 1 card."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "For each card in this card's soul, all 《Mobile Aerial Team》 on your field get power+3000 and defense+3000."
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Purge] [Move] [Double Attack] [Soulguard]"
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Ride] [Pay 2 gauge]"
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Call Cost] [จ่าย 2 เกจ]\nถ้าการ์ดนี้มีโซลไม่เกิน 2 ใบ, การ์ดนี้จะได้รับ [Weaponry Link]\nเมื่อการ์ด 《เวพอนรี่》 ถูกนำเข้าสู่โซลของการ์ดนี้, คุณได้รับ 1 พลังชีวิต และจั่วการ์ด 1 ใบ\nต่อการ์ดแต่ละใบในโซลของการ์ดนี้, 《หน่วยบินเคลื่อนที่เร็ว》 ทั้งหมดบนสนามของคุณได้รับพลังโจมตี+3000 และพลังป้องกัน+3000\n[Purge] [Move] [Double Attack] [Soulguard]\n[Ride] [จ่าย 2 เกจ]",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Call Cost] [จ่าย 2 เกจ]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "ถ้าการ์ดนี้มีโซลไม่เกิน 2 ใบ, การ์ดนี้จะได้รับ [Weaponry Link]"
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "เมื่อการ์ด 《เวพอนรี่》 ถูกนำเข้าสู่โซลของการ์ดนี้, คุณได้รับ 1 พลังชีวิต และจั่วการ์ด 1 ใบ"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "ต่อการ์ดแต่ละใบในโซลของการ์ดนี้, 《หน่วยบินเคลื่อนที่เร็ว》 ทั้งหมดบนสนามของคุณได้รับพลังโจมตี+3000 และพลังป้องกัน+3000"
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Purge] [Move] [Double Attack] [Soulguard]"
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Ride] [จ่าย 2 เกจ]"
+        }
+      ]
+    }
+  },
+  "image": null
+}

@@ -1,0 +1,90 @@
+{
+  "card_id": "SOARING_DRAGON_FAIR_SKYLINES_RE_B",
+  "name": "Soaring Dragon, Fair Skylines \"Re:B\"",
+  "type": "SPELL",
+  "cost": {
+    "gauge": 1,
+    "life": 0
+  },
+  "world": [
+    "ANCIENT_WORLD"
+  ],
+  "attributes": [
+    "DRAGON",
+    "DRAW"
+  ],
+  "effects": [
+    {
+      "effect_id": "FAIR_SKYLINES_DRAW",
+      "effect_type": "DRAW",
+      "count": 2,
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      }
+    },
+    {
+      "effect_id": "FAIR_SKYLINES_DROP_HAND",
+      "effect_type": "DISCARD",
+      "count": 1
+    },
+    {
+      "effect_id": "FAIR_SKYLINES_BONUS",
+      "effect_type": "CHOICE",
+      "condition": {
+        "type": "CARD_COUNT_GTE",
+        "zone": "DROP",
+        "controller": "YOU",
+        "card_name": "Soaring Dragon, Fair Skylines",
+        "count": 1
+      },
+      "choices": [
+        {
+          "effect_id": "FAIR_SKYLINES_BONUS_DRAW",
+          "effect_type": "DRAW",
+          "count": 1
+        },
+        {
+          "effect_id": "FAIR_SKYLINES_BONUS_SALVAGE",
+          "effect_type": "SALVAGE",
+          "source": "DROP",
+          "destination": "HAND",
+          "target": {
+            "target_type": "CARD",
+            "card_name": "Soaring Dragon, Fair Skylines",
+            "count": 1
+          }
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Cast Cost] [Pay 1 gauge]\n[Cn/Turn] Draw two cards and drop a hand card. Then, draw a card if you have another \"Soaring Dragon, Fair Skylines\" in your drop zone, or put a \"Soaring Dragon, Fair Skylines\" from your drop zone into your hand.",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [Pay 1 gauge]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "[Cn/Turn] Draw two cards and drop a hand card. Then, draw a card if you have another \"Soaring Dragon, Fair Skylines\" in your drop zone, or put a \"Soaring Dragon, Fair Skylines\" from your drop zone into your hand."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Cast Cost] [จ่าย 1 เกจ]\n[Cn/Turn] จั่วการ์ด 2 ใบและทิ้งการ์ด 1 ใบจากบนมือ จากนั้น, จั่วการ์ด 1 ใบถ้าคุณมี \"มังกรเมฆา จันทรา นํ้าข้าง\" ใบอื่นอยู่ในช่องดรอปของคุณ, หรือนำ \"มังกรเมฆา จันทรา นํ้าข้าง\" 1 ใบจากในช่องดรอปของคุณขึ้นมือ",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [จ่าย 1 เกจ]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "[Cn/Turn] จั่วการ์ด 2 ใบและทิ้งการ์ด 1 ใบจากบนมือ จากนั้น, จั่วการ์ด 1 ใบถ้าคุณมี \"มังกรเมฆา จันทรา นํ้าข้าง\" ใบอื่นอยู่ในช่องดรอปของคุณ, หรือนำ \"มังกรเมฆา จันทรา นํ้าข้าง\" 1 ใบจากในช่องดรอปของคุณขึ้นมือ"
+        }
+      ]
+    }
+  },
+  "image": null
+}

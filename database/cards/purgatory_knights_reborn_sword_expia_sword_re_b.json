@@ -1,0 +1,108 @@
+{
+  "card_id": "PURGATORY_KNIGHTS_REBORN_SWORD_EXPIA_SWORD_RE_B",
+  "name": "Purgatory Knights Reborn Sword, Expia Sword \"Re:B\"",
+  "type": "ITEM",
+  "power": 7000,
+  "critical": 2,
+  "cost": {
+    "gauge": 1,
+    "life": 1
+  },
+  "world": [
+    "DRAGON_WORLD",
+    "DARKNESS_DRAGON_WORLD"
+  ],
+  "attributes": [
+    "DRAGON",
+    "WEAPON"
+  ],
+  "effects": [
+    {
+      "effect_id": "EXPIA_SWORD_ACT",
+      "effect_type": "ACTIVATED",
+      "name": "Expia Sword",
+      "is_counter": true,
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "effects": [
+        {
+          "effect_id": "EXPIA_SWORD_CALL",
+          "effect_type": "CALL",
+          "sources": [
+            "DECK",
+            "DROP"
+          ],
+          "destination": "FIELD",
+          "pay_cost": true,
+          "target": {
+            "target_type": "CARD",
+            "card_type": "MONSTER",
+            "name_contains": "Purgatory Knights",
+            "count": 1
+          }
+        }
+      ]
+    },
+    {
+      "effect_id": "EXPIA_SWORD_FIELD_BUFF_PROTECTION",
+      "effect_type": "CONTINUOUS",
+      "condition": {
+        "type": "TURN_PLAYER_IS",
+        "player": "YOU"
+      },
+      "target": {
+        "target_type": "ALL_CARDS",
+        "zone": "FIELD",
+        "controller": "YOU",
+        "name_contains": "Purgatory Knights"
+      },
+      "stats_buff": {
+        "power": 5000
+      },
+      "protection": {
+        "cannot_leave_field": true,
+        "cannot_be_rested": true,
+        "source": "OPPONENT_CARD_EFFECT"
+      }
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Equip Cost] [Pay 1 gauge & 1 life]\n[Counter] 【Act】 [An/Turn] \"Expia Sword\" You may call a monster with \"Purgatory Knights\" in its name from your deck or drop zone by paying its [Call Cost]. If you searched your deck, shuffle it.\nDuring your turn, monsters on your field with \"Purgatory Knights\" in their name cannot leave the field or be [Rest] by your opponent's card effects, and they get power+5000.",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Equip Cost] [Pay 1 gauge & 1 life]"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] 【Act】 [An/Turn] \"Expia Sword\" You may call a monster with \"Purgatory Knights\" in its name from your deck or drop zone by paying its [Call Cost]. If you searched your deck, shuffle it."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "During your turn, monsters on your field with \"Purgatory Knights\" in their name cannot leave the field or be [Rest] by your opponent's card effects, and they get power+5000."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Equip Cost] [จ่าย 1 เกจ & 1 พลังชีวิต]\n[Counter] 【Act】 [An/Turn] \"เอ็กซ์เปียซอร์ด\" คุณสามารถคอลมอนสเตอร์ที่มีคำว่า \"อัศวินแห่งแดนชำระ\" ในชื่อการ์ด 1 ใบจากในกองการ์ดหรือในช่องดรอปของคุณโดยจ่าย [Call Cost] ถ้าคุณค้นหาจากในกองการ์ดของคุณ, สับกองการ์ด\nในระหว่างเทิร์นของคุณ, มอนสเตอร์บนสนามของคุณที่มีคำว่า \"อัศวินแห่งแดนชำระ\" ในชื่อการ์ดไม่สามารถออกจากสนาม หรือถูก [Rest] โดยความสามารถการ์ดของคู่แข่ง, และได้รับพลังโจมตี+5000",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Equip Cost] [จ่าย 1 เกจ & 1 พลังชีวิต]"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] 【Act】 [An/Turn] \"เอ็กซ์เปียซอร์ด\" คุณสามารถคอลมอนสเตอร์ที่มีคำว่า \"อัศวินแห่งแดนชำระ\" ในชื่อการ์ด 1 ใบจากในกองการ์ดหรือในช่องดรอปของคุณโดยจ่าย [Call Cost] ถ้าคุณค้นหาจากในกองการ์ดของคุณ, สับกองการ์ด"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "ในระหว่างเทิร์นของคุณ, มอนสเตอร์บนสนามของคุณที่มีคำว่า \"อัศวินแห่งแดนชำระ\" ในชื่อการ์ดไม่สามารถออกจากสนาม หรือถูก [Rest] โดยความสามารถการ์ดของคู่แข่ง, และได้รับพลังโจมตี+5000"
+        }
+      ]
+    }
+  },
+  "image": null
+}

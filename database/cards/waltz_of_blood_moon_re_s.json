@@ -1,0 +1,167 @@
+{
+  "card_id": "WALTZ_OF_BLOOD_MOON_RE_S",
+  "name": "Waltz of Blood Moon \"Re:S\"",
+  "type": "SPELL",
+  "world": [
+    "DARKNESS_DRAGON_WORLD"
+  ],
+  "attributes": [
+    "EVIL_DEMONIC_DRAGON",
+    "CHARGE"
+  ],
+  "cost": {
+    "gauge": 0,
+    "life": 0,
+    "soulcharge": 3
+  },
+  "effects": [
+    {
+      "effect_id": "WALTZ_SET",
+      "effect_type": "SET"
+    },
+    {
+      "effect_id": "WALTZ_SET_LIMIT",
+      "effect_type": "RULE",
+      "rule": "SET_1"
+    },
+    {
+      "effect_id": "WALTZ_ON_ENTER_TRIGGER",
+      "effect_type": "TRIGGERED",
+      "trigger": {
+        "event": "ON_ENTER_FIELD",
+        "target": {
+          "zone": "FIELD",
+          "controller": "YOU",
+          "attributes_any": [
+            "EVIL_DEMONIC_DRAGON"
+          ]
+        }
+      },
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "cost": {
+        "type": "PUT_HAND_TO_SOUL",
+        "filter": {
+          "attributes_any": [
+            "EVIL_DEMONIC_DRAGON"
+          ]
+        },
+        "count": 1
+      },
+      "effects": [
+        {
+          "effect_id": "WALTZ_LOOK_CHOOSE",
+          "effect_type": "LOOK_AND_CHOOSE",
+          "look_count": 3,
+          "choose_count": 1,
+          "choose_filter": {
+            "attributes_any": [
+              "EVIL_DEMONIC_DRAGON"
+            ]
+          },
+          "choose_destination": "HAND",
+          "rest_destination": "GAUGE"
+        }
+      ]
+    },
+    {
+      "effect_id": "WALTZ_PREVENT_LETHAL",
+      "effect_type": "TRIGGERED",
+      "trigger": {
+        "event": "LIFE_BECOMES_ZERO"
+      },
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "cost": {
+        "type": "DROP_SOUL",
+        "filter": {
+          "card_type": "MONSTER",
+          "attributes_any": [
+            "EVIL_DEMONIC_DRAGON"
+          ]
+        },
+        "count": 1
+      },
+      "effects": [
+        {
+          "effect_id": "WALTZ_SET_LIFE_1",
+          "effect_type": "SET_LIFE",
+          "target": "YOU",
+          "amount": 1
+        }
+      ],
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "BFO-RP01/S002",
+        "ability_reference": "BFO-RP01/S002: [1/Turn] If your life would become 0, [Cost] [Drop an 《Evil Demonic Dragon》 monster from this card's soul], your life becomes 1!",
+        "missing_capability": "REPLACEMENT_LETHAL_LIFE_SET_TO_1",
+        "what_is_known": "Intercepts fatal life reduction (would become 0) limited to 1/Turn, pays cost by dropping an Evil Demonic Dragon monster from this set spell's soul, and modifies player's life state to 1.",
+        "information_needed": [
+          "Approved schema for lethal damage interception replacement triggering SET_LIFE to 1 using soul drop cost with turn limit."
+        ]
+      }
+    },
+    {
+      "effect_id": "WALTZ_SOULGUARD",
+      "effect_type": "CONTINUOUS",
+      "keyword": "Soulguard"
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Set] [1/Set]\n[Cast Cost] [Soulcharge three cards]\n[1/Turn] When an 《Evil Demonic Dragon》 enters your field, [Cost] [Put an 《Evil Demonic Dragon》 from your hand into this card's soul], look at up to the top three cards of your deck, put up to one 《Evil Demonic Dragon》 from among them into your hand, and put the rest into your gauge.\n[1/Turn] If your life would become 0, [Cost] [Drop an 《Evil Demonic Dragon》 monster from this card's soul], your life becomes 1!\n[Soulguard]",
+      "segments": [
+        {
+          "tag": "SET",
+          "text": "[Set] [1/Set]"
+        },
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [Soulcharge three cards]"
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "[1/Turn] When an 《Evil Demonic Dragon》 enters your field, [Cost] [Put an 《Evil Demonic Dragon》 from your hand into this card's soul], look at up to the top three cards of your deck, put up to one 《Evil Demonic Dragon》 from among them into your hand, and put the rest into your gauge."
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "[1/Turn] If your life would become 0, [Cost] [Drop an 《Evil Demonic Dragon》 monster from this card's soul], your life becomes 1!"
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Soulguard]"
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Set] [1/Set]\n[Cast Cost] โซลชาร์จ 3 ใบ\n[1/Turn] เมื่อ 《มังกรปีศาจ》 เข้าสู่สนาม, [Cost] [นำ 《มังกรปีศาจ》 จากบนมือเรา 1 ใบเข้าโซลการ์ดนี้] ดูการ์ดใบบนสุดจากกองการ์ดเราไม่เกิน 3 ใบ นำ 《มังกรปีศาจ》 ไม่เกิน 1 ใบนำกลับขึ้นมือ, นำการ์ดที่เหลือเข้าสู่ช่องเกจ\n[1/Turn] หากไลฟ์เราจะกลายเป็น 0, [Cost] [ถอดมอนสเตอร์ 《มังกรปีศาจ》 จากโซลการ์ดนี้ 1 ใบ] ไลฟ์เราจะกลายเป็น 1!\n[Soulguard]",
+      "segments": [
+        {
+          "tag": "SET",
+          "text": "[Set] [1/Set]"
+        },
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] โซลชาร์จ 3 ใบ"
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "[1/Turn] เมื่อ 《มังกรปีศาจ》 เข้าสู่สนาม, [Cost] [นำ 《มังกรปีศาจ》 จากบนมือเรา 1 ใบเข้าโซลการ์ดนี้] ดูการ์ดใบบนสุดจากกองการ์ดเราไม่เกิน 3 ใบ นำ 《มังกรปีศาจ》 ไม่เกิน 1 ใบนำกลับขึ้นมือ, นำการ์ดที่เหลือเข้าสู่ช่องเกจ"
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "[1/Turn] หากไลฟ์เราจะกลายเป็น 0, [Cost] [ถอดมอนสเตอร์ 《มังกรปีศาจ》 จากโซลการ์ดนี้ 1 ใบ] ไลฟ์เราจะกลายเป็น 1!"
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Soulguard]"
+        }
+      ]
+    }
+  },
+  "image": null
+}

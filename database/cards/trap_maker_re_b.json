@@ -1,0 +1,146 @@
+{
+  "card_id": "TRAP_MAKER_RE_B",
+  "name": "Trap Maker \"Re:B\"",
+  "type": "ITEM",
+  "power": 5000,
+  "critical": 1,
+  "cost": {
+    "life": 1,
+    "gauge": 0
+  },
+  "world": [
+    "DUNGEON_WORLD"
+  ],
+  "attributes": [
+    "ADVENTURER",
+    "TRAP",
+    "WEAPON"
+  ],
+  "effects": [
+    {
+      "effect_id": "TRAP_MAKER_ACT",
+      "effect_type": "ACTIVATED",
+      "is_counter": true,
+      "condition": {
+        "type": "AND",
+        "conditions": [
+          {
+            "type": "TURN_PLAYER_IS",
+            "player": "OPPONENT"
+          },
+          {
+            "type": "IN_ATTACK"
+          },
+          {
+            "type": "CARD_COUNT_GTE",
+            "zone": "FIELD",
+            "controller": "YOU",
+            "attributes_any": [
+              "TRAP"
+            ],
+            "count": 1
+          },
+          {
+            "type": "COUNT_PER_TURN",
+            "count": 2
+          }
+        ]
+      },
+      "effects": [
+        {
+          "effect_id": "TRAP_MAKER_MILL_CHECK",
+          "effect_type": "MOVE_CARD",
+          "source": "DECK",
+          "destination": "DROP",
+          "target": {
+            "target_type": "TOP_CARD",
+            "count": 1
+          },
+          "condition_branch": {
+            "if_target_attributes_any": [
+              "TRAP"
+            ],
+            "if_target_card_type": "SPELL",
+            "then": [
+              {
+                "type": "NULLIFY_ATTACK"
+              }
+            ],
+            "else": [
+              {
+                "type": "DRAW",
+                "count": 1
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "effect_id": "TRAP_MAKER_COST_REDUCTION",
+      "effect_type": "CONTINUOUS",
+      "target": {
+        "target_type": "CARD",
+        "card_type": "SPELL",
+        "attributes_any": [
+          "TRAP"
+        ]
+      },
+      "cost_reduction": {
+        "gauge": 1
+      }
+    },
+    {
+      "effect_id": "TRAP_MAKER_KEYWORDS",
+      "effect_type": "KEYWORD",
+      "keywords": [
+        "Penetrate"
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Equip Cost] [Pay 1 life]\n[Counter] 【Act】 [2/Turn] During an attack on your opponent's turn, if you have a 《Trap》 monster on your field, put the top card of your deck into your drop zone. If that card is a 《Trap》 spell, nullify the attack. If it is not, draw a card.\nThe gauge cost written in the [Cast Cost] of each of your 《Trap》 spells is reduced by 1.\n[Penetrate]",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Equip Cost] [Pay 1 life]"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] 【Act】 [2/Turn] During an attack on your opponent's turn, if you have a 《Trap》 monster on your field, put the top card of your deck into your drop zone. If that card is a 《Trap》 spell, nullify the attack. If it is not, draw a card."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "The gauge cost written in the [Cast Cost] of each of your 《Trap》 spells is reduced by 1."
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Penetrate]"
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Equip Cost] [จ่าย 1 พลังชีวิต]\n[Counter] 【Act】 [2/Turn] ในระหว่างการโจมตีในเทิร์นของคู่แข่ง, ถ้าคุณมีมอนสเตอร์ 《กับดัก》 อยู่บนสนามของคุณ, นำการ์ดใบบนสุดของกองการ์ดของคุณลงช่องดรอป ถ้าการ์ดใบนั้นเป็นการ์ดเวทมนตร์ 《กับดัก》, ยกเลิกการโจมตี ถ้าไม่ใช่, จั่วการ์ด 1 ใบ\nค่าร่ายเกจที่ระบุไว้ใน [Cast Cost] ของการ์ดเวทมนตร์ 《กับดัก》 แต่ละใบของคุณจะลดลง 1\n[Penetrate]",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Equip Cost] [จ่าย 1 พลังชีวิต]"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] 【Act】 [2/Turn] ในระหว่างการโจมตีในเทิร์นของคู่แข่ง, ถ้าคุณมีมอนสเตอร์ 《กับดัก》 อยู่บนสนามของคุณ, นำการ์ดใบบนสุดของกองการ์ดของคุณลงช่องดรอป ถ้าการ์ดใบนั้นเป็นการ์ดเวทมนตร์ 《กับดัก》, ยกเลิกการโจมตี ถ้าไม่ใช่, จั่วการ์ด 1 ใบ"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "ค่าร่ายเกจที่ระบุไว้ใน [Cast Cost] ของการ์ดเวทมนตร์ 《กับดัก》 แต่ละใบของคุณจะลดลง 1"
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Penetrate]"
+        }
+      ]
+    }
+  },
+  "image": null
+}

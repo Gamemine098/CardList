@@ -1,0 +1,110 @@
+{
+  "card_id": "DRAGONARMS_RADIANT_KANONE_RE_B",
+  "name": "Dragonarms, Radiant Kanone \"Re:B\"",
+  "type": "MONSTER",
+  "size": 1,
+  "power": 4000,
+  "critical": 1,
+  "defense": 2000,
+  "world": [
+    "STAR_DRAGON_WORLD"
+  ],
+  "attributes": [
+    "DRAGONARMS"
+  ],
+  "effects": [
+    {
+      "effect_id": "RADIANT_KANONE_HOST_BUFF",
+      "effect_type": "CONTINUOUS",
+      "condition": {
+        "type": "CARD_IS_IN_SOUL",
+        "host_attributes_any": [
+          "NEODRAGON"
+        ]
+      },
+      "host_stats_buff": {
+        "defense": 2000
+      }
+    },
+    {
+      "effect_id": "RADIANT_KANONE_SOUL_SWAP",
+      "effect_type": "ACTIVATED",
+      "name": "Wuft Wulff",
+      "is_counter": true,
+      "condition": {
+        "type": "AND",
+        "conditions": [
+          {
+            "type": "CARD_IS_IN_SOUL",
+            "host_attributes_any": [
+              "NEODRAGON"
+            ]
+          },
+          {
+            "type": "COUNT_PER_TURN",
+            "count": 1
+          }
+        ]
+      },
+      "cost": {
+        "drop_soul_from_host": 1
+      },
+      "effects": [
+        {
+          "effect_id": "RADIANT_KANONE_LOAD_SOUL",
+          "effect_type": "MOVE_CARD",
+          "source": "DROP",
+          "destination": "HOST_SOUL",
+          "target": {
+            "target_type": "CARD",
+            "count": 1
+          }
+        }
+      ]
+    },
+    {
+      "effect_id": "RADIANT_KANONE_KEYWORDS",
+      "effect_type": "KEYWORD",
+      "keywords": [
+        "Crossnize"
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "《Neodragon》 with this card in its soul get defense+2000.\n[Counter]【Act】[An/Turn] \"Wuft Wulff\" If this card is in the soul of your 《Neodragon》, you may drop a card from its soul. If you do, put a card from your drop zone into its soul.\n[Crossnize]",
+      "segments": [
+        {
+          "tag": "EFFECT",
+          "text": "《Neodragon》 with this card in its soul get defense+2000."
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter]【Act】[An/Turn] \"Wuft Wulff\" If this card is in the soul of your 《Neodragon》, you may drop a card from its soul. If you do, put a card from your drop zone into its soul."
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Crossnize]"
+        }
+      ]
+    },
+    "th": {
+      "plain": "《นีโอดราก้อน》 ที่มีการ์ดนี้อยู่ในโซลได้รับพลังป้องกัน+2000\n[Counter] 【Act】 [An/Turn] \"วุฟต์ วูลฟ์\" ถ้าการ์ดนี้อยู่ในโซลของ 《นีโอดราก้อน》 ของคุณ, คุณสามารถนำการ์ด 1 ใบจากในโซลของการ์ดนั้นลงช่องดรอป ถ้าทำ, นำการ์ด 1 ใบจากในช่องดรอปของคุณเข้าสู่โซลของการ์ดนั้น\n[Crossnize]",
+      "segments": [
+        {
+          "tag": "EFFECT",
+          "text": "《นีโอดราก้อน》 ที่มีการ์ดนี้อยู่ในโซลได้รับพลังป้องกัน+2000"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] 【Act】 [An/Turn] \"วุฟต์ วูลฟ์\" ถ้าการ์ดนี้อยู่ในโซลของ 《นีโอดราก้อน》 ของคุณ, คุณสามารถนำการ์ด 1 ใบจากในโซลของการ์ดนั้นลงช่องดรอป ถ้าทำ, นำการ์ด 1 ใบจากในช่องดรอปของคุณเข้าสู่โซลของการ์ดนั้น"
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Crossnize]"
+        }
+      ]
+    }
+  },
+  "image": null
+}

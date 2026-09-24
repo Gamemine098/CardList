@@ -1,0 +1,102 @@
+{
+  "card_id": "TRANSCEND_STAR_DRAGON_EMPEROR_EWIGKEIT_RE_B",
+  "name": "Transcend Star Dragon Emperor, Ewigkeit \"Re:B\"",
+  "type": "MONSTER",
+  "size": 3,
+  "power": 9000,
+  "critical": 2,
+  "defense": 6000,
+  "cost": {
+    "gauge": 2,
+    "life": 0,
+    "drop_to_soul": {
+      "zone": "DROP",
+      "controller": "YOU",
+      "count": 1
+    }
+  },
+  "world": [
+    "STAR_DRAGON_WORLD",
+    "ANCIENT_WORLD"
+  ],
+  "attributes": [
+    "NEODRAGON",
+    "DRAGON_LORD"
+  ],
+  "effects": [
+    {
+      "effect_id": "EWIGKEIT_EXCEED_STAR",
+      "effect_type": "ACTIVATED",
+      "name": "Exceed Star",
+      "is_counter": true,
+      "condition": {
+        "type": "AND",
+        "conditions": [
+          {
+            "type": "PHASE_IS",
+            "phase": "ATTACK_PHASE"
+          },
+          {
+            "type": "COUNT_PER_TURN",
+            "count": 1
+          }
+        ]
+      },
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "Re:TH/022TH",
+        "ability_reference": "Re:TH/022TH: [Counter] 【Act】 [An/Turn] \"Exceed Star\" During either players' attack phase, look at the top five cards of your deck, and call up to one monster from among them by paying its [Call Cost]. That card becomes a size 0 until it leaves the field.",
+        "missing_capability": "DYNAMIC_SIZE_MUTATION_ON_CALL",
+        "what_is_known": "Inspects top 5 cards, calls a monster by paying Call Cost, and dynamically alters that monster's size attribute to 0 until it leaves the field.",
+        "information_needed": [
+          "Approved schema for dynamic size alteration on called monsters lasting until leave-field."
+        ]
+      }
+    },
+    {
+      "effect_id": "EWIGKEIT_KEYWORDS",
+      "effect_type": "KEYWORD",
+      "keywords": [
+        "Double Attack",
+        "Soulguard"
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Call Cost] [Pay 2 gauge. Then, put a card from your drop zone into its soul]\n[Counter] 【Act】 [An/Turn] \"Exceed Star\" During either players' attack phase, look at the top five cards of your deck, and call up to one monster from among them by paying its [Call Cost]. That card becomes a size 0 until it leaves the field.\n[Double Attack] [Soulguard]",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Call Cost] [Pay 2 gauge. Then, put a card from your drop zone into its soul]"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] 【Act】 [An/Turn] \"Exceed Star\" During either players' attack phase, look at the top five cards of your deck, and call up to one monster from among them by paying its [Call Cost]. That card becomes a size 0 until it leaves the field."
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Double Attack] [Soulguard]"
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Call Cost] [จ่าย 2 เกจ จากนั้น, นำการ์ด 1 ใบจากในช่องดรอปของคุณเข้าสู่โซลของการ์ดนี้]\n[Counter] 【Act】 [An/Turn] \"เอ็กซีด สตาร์\" ในระหว่างแอทแทคเฟสของผู้เล่นคนใดคนหนึ่ง, ดูการ์ด 5 ใบจากใบบนสุดของกองการ์ดของคุณ, และคอลมอนสเตอร์ได้สูงสุด 1 ใบจากในนั้นโดยจ่าย [Call Cost] การ์ดใบนั้นจะกลายเป็นไซส์ 0 จนกว่าจะออกจากสนาม\n[Double Attack] [Soulguard]",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Call Cost] [จ่าย 2 เกจ จากนั้น, นำการ์ด 1 ใบจากในช่องดรอปของคุณเข้าสู่โซลของการ์ดนี้]"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] 【Act】 [An/Turn] \"เอ็กซีด สตาร์\" ในระหว่างแอทแทคเฟสของผู้เล่นคนใดคนหนึ่ง, ดูการ์ด 5 ใบจากใบบนสุดของกองการ์ดของคุณ, และคอลมอนสเตอร์ได้สูงสุด 1 ใบจากในนั้นโดยจ่าย [Call Cost] การ์ดใบนั้นจะกลายเป็นไซส์ 0 จนกว่าจะออกจากสนาม"
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Double Attack] [Soulguard]"
+        }
+      ]
+    }
+  },
+  "image": null
+}

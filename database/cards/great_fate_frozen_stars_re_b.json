@@ -1,0 +1,143 @@
+{
+  "card_id": "GREAT_FATE_FROZEN_STARS_RE_B",
+  "name": "Great Fate, Frozen Stars \"Re:B\"",
+  "type": "SPELL",
+  "cost": {
+    "gauge": 1,
+    "life": 0
+  },
+  "world": [
+    "LEGEND_WORLD"
+  ],
+  "attributes": [
+    "STAR"
+  ],
+  "effects": [
+    {
+      "effect_id": "FROZEN_STARS_SET",
+      "effect_type": "SET"
+    },
+    {
+      "effect_id": "FROZEN_STARS_LIMIT",
+      "effect_type": "RULE",
+      "rule": "SET_1_PER_FIELD"
+    },
+    {
+      "effect_id": "FROZEN_STARS_MASS_NULLIFY",
+      "effect_type": "CONTINUOUS",
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "Re:TH/009TH",
+        "ability_reference": "Re:TH/009TH: If there are 《Star》 on your left and right, nullify all abilities of cards on your opponent's field and in the soul of your opponent's cards.",
+        "missing_capability": "MASS_NULLIFY_OPPONENT_CARDS_AND_SOULS",
+        "what_is_known": "Continuously nullifies all abilities of opponent field cards and cards inside their souls while Star cards are present on both Left and Right.",
+        "information_needed": [
+          "Approved schema for continuous soul and field ability nullification across opponent zone."
+        ]
+      }
+    },
+    {
+      "effect_id": "FROZEN_STARS_PROTECTION",
+      "effect_type": "PROTECTION",
+      "condition": {
+        "type": "AND",
+        "conditions": [
+          {
+            "type": "CARD_COUNT_GTE",
+            "zone": "FIELD",
+            "area": "LEFT",
+            "controller": "YOU",
+            "attributes_any": [
+              "STAR"
+            ],
+            "count": 1
+          },
+          {
+            "type": "CARD_COUNT_GTE",
+            "zone": "FIELD",
+            "area": "RIGHT",
+            "controller": "YOU",
+            "attributes_any": [
+              "STAR"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "target": "THIS_CARD",
+      "protection": {
+        "cannot_be_destroyed": true,
+        "source": "OPPONENT_CARD_EFFECT"
+      }
+    },
+    {
+      "effect_id": "FROZEN_STARS_ABILITY_PROTECTION",
+      "effect_type": "PROTECTION",
+      "target": "THIS_CARD",
+      "protection": {
+        "cannot_nullify_abilities": true
+      }
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[Cast Cost] [Pay 1 gauge]\n[Set] [1/Set]\nIf there are 《Star》 on your left and right, nullify all abilities of cards on your opponent's field and in the soul of your opponent's cards.\nIf there are 《Star》 on your left and right, this card cannot be destroyed by your opponent's card effects.\nThis card's abilities cannot be nullified.\nYou may only [Set] one \"Great Fate, Frozen Stars \"Re:B\"\" on your field.",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [Pay 1 gauge]"
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Set] [1/Set]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "If there are 《Star》 on your left and right, nullify all abilities of cards on your opponent's field and in the soul of your opponent's cards."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "If there are 《Star》 on your left and right, this card cannot be destroyed by your opponent's card effects."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "This card's abilities cannot be nullified."
+        },
+        {
+          "tag": "RULE",
+          "text": "You may only [Set] one \"Great Fate, Frozen Stars \"Re:B\"\" on your field."
+        }
+      ]
+    },
+    "th": {
+      "plain": "[Cast Cost] [จ่าย 1 เกจ]\n[Set] [1/Set]\nถ้ามี 《ดวงดาว》 อยู่ที่ช่องซ้ายและขวาของคุณ, ยกเลิกความสามารถทั้งหมดของการ์ดบนสนามของคู่แข่งและในโซลของการ์ดของคู่แข่ง\nถ้ามี 《ดวงดาว》 อยู่ที่ช่องซ้ายและขวาของคุณ, การ์ดนี้ไม่สามารถถูกทำลายโดยความสามารถการ์ดของคู่แข่ง\nความสามารถของการ์ดนี้ไม่สามารถถูกยกเลิกได้\nคุณสามารถ [Set] \"มหาโชคชะตา, ดาราเยือกแข็ง \"Re:B\"\" บนสนามของคุณได้เพียง 1 ใบเท่านั้น",
+      "segments": [
+        {
+          "tag": "COST",
+          "text": "[Cast Cost] [จ่าย 1 เกจ]"
+        },
+        {
+          "tag": "KEYWORD",
+          "text": "[Set] [1/Set]"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "ถ้ามี 《ดวงดาว》 อยู่ที่ช่องซ้ายและขวาของคุณ, ยกเลิกความสามารถทั้งหมดของการ์ดบนสนามของคู่แข่งและในโซลของการ์ดของคู่แข่ง"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "ถ้ามี 《ดวงดาว》 อยู่ที่ช่องซ้ายและขวาของคุณ, การ์ดนี้ไม่สามารถถูกทำลายโดยความสามารถการ์ดของคู่แข่ง"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "ความสามารถของการ์ดนี้ไม่สามารถถูกยกเลิกได้"
+        },
+        {
+          "tag": "RULE",
+          "text": "คุณสามารถ [Set] \"มหาโชคชะตา, ดาราเยือกแข็ง \"Re:B\"\" บนสนามของคุณได้เพียง 1 ใบเท่านั้น"
+        }
+      ]
+    }
+  },
+  "image": null
+}

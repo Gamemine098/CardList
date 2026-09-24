@@ -1,0 +1,104 @@
+{
+  "card_id": "WINDBLADE_JOKER_RE_B",
+  "name": "Windblade Joker \"Re:B\"",
+  "type": "MONSTER",
+  "size": 0,
+  "power": 3000,
+  "critical": 1,
+  "defense": 1000,
+  "world": [
+    "DUNGEON_WORLD",
+    "LEGEND_WORLD"
+  ],
+  "attributes": [
+    "DUNGEON_ENEMY",
+    "DEMON_LORD",
+    "ASGARD"
+  ],
+  "effects": [
+    {
+      "effect_id": "WINDBLADE_JOKER_ON_ENTER",
+      "effect_type": "TRIGGERED",
+      "name": "Your Order!",
+      "trigger": {
+        "event": "ON_ENTER_FIELD"
+      },
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "effects": [
+        {
+          "effect_id": "WINDBLADE_SEARCH",
+          "effect_type": "SEARCH_DECK",
+          "target": {
+            "target_type": "CARD",
+            "count_max": 3,
+            "any_condition": [
+              {
+                "keyword": "Omni Lord"
+              },
+              {
+                "name_contains": "Joker"
+              }
+            ]
+          },
+          "choose_to_hand": 1,
+          "remaining_destination": "DROP"
+        }
+      ]
+    },
+    {
+      "effect_id": "WINDBLADE_JOKER_ACT",
+      "effect_type": "ACTIVATED",
+      "condition": {
+        "type": "CARD_COUNT_GTE",
+        "zone": "FIELD",
+        "controller": "YOU",
+        "name_contains": "Miserea",
+        "count": 1
+      },
+      "effects": [
+        {
+          "effect_id": "WINDBLADE_TO_GAUGE",
+          "effect_type": "MOVE_THIS_CARD",
+          "destination": "GAUGE"
+        },
+        {
+          "effect_id": "WINDBLADE_HEAL",
+          "effect_type": "LIFE_GAIN",
+          "amount": 1
+        }
+      ]
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "[An/Turn] \"Your Order!\" When this card enters the field, reveal up to a total of three [Omni Lord] cards or cards with \"Joker\" in their name from your deck, put up to one into your hand, drop the rest, and shuffle your deck.\n【Act】 If you have a card with \"Miserea\" in its name on your field, you may put this card from your field into your gauge and heal 1 life!",
+      "segments": [
+        {
+          "tag": "TRIGGER",
+          "text": "[An/Turn] \"Your Order!\" When this card enters the field, reveal up to a total of three [Omni Lord] cards or cards with \"Joker\" in their name from your deck, put up to one into your hand, drop the rest, and shuffle your deck."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "【Act】 If you have a card with \"Miserea\" in its name on your field, you may put this card from your field into your gauge and heal 1 life!"
+        }
+      ]
+    },
+    "th": {
+      "plain": "[An/Turn] \"คำสั่งของคุณ!\" เมื่อการ์ดนี้เข้าสู่สนาม, เปิดเผยการ์ด [ราชันรอบทิศ] หรือการ์ดที่มีคำว่า \"โจ๊กเกอร์\" ในชื่อการ์ดรวมกันได้สูงสุด 3 ใบจากในกองการ์ดของคุณ, นำขึ้นมือได้สูงสุด 1 ใบ, ทิ้งการ์ดที่เหลือลงช่องดรอป, และสับกองการ์ดของคุณ\n【Act】 ถ้าคุณมีการ์ดที่มีคำว่า \"มิเซเรีย\" ในชื่อการ์ดอยู่บนสนามของคุณ, คุณสามารถนำการ์ดนี้จากบนสนามของคุณเข้าสู่ช่องเกจ และฟื้นฟู 1 พลังชีวิต!",
+      "segments": [
+        {
+          "tag": "TRIGGER",
+          "text": "[An/Turn] \"คำสั่งของคุณ!\" เมื่อการ์ดนี้เข้าสู่สนาม, เปิดเผยการ์ด [ราชันรอบทิศ] หรือการ์ดที่มีคำว่า \"โจ๊กเกอร์\" ในชื่อการ์ดรวมกันได้สูงสุด 3 ใบจากในกองการ์ดของคุณ, นำขึ้นมือได้สูงสุด 1 ใบ, ทิ้งการ์ดที่เหลือลงช่องดรอป, และสับกองการ์ดของคุณ"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "【Act】 ถ้าคุณมีการ์ดที่มีคำว่า \"มิเซเรีย\" ในชื่อการ์ดอยู่บนสนามของคุณ, คุณสามารถนำการ์ดนี้จากบนสนามของคุณเข้าสู่ช่องเกจ และฟื้นฟู 1 พลังชีวิต!"
+        }
+      ]
+    }
+  },
+  "image": null
+}

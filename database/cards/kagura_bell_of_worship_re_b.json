@@ -1,0 +1,124 @@
+{
+  "card_id": "KAGURA_BELL_OF_WORSHIP_RE_B",
+  "name": "Kagura-bell of Worship \"Re:B\"",
+  "type": "ITEM",
+  "power": 3000,
+  "critical": 1,
+  "cost": {
+    "gauge": 0,
+    "life": 0
+  },
+  "world": [
+    "KATANA_WORLD"
+  ],
+  "attributes": [
+    "ELECTRODEITY",
+    "WEAPON"
+  ],
+  "effects": [
+    {
+      "effect_id": "KAGURA_BELL_PROTECTION",
+      "effect_type": "PROTECTION",
+      "target": "THIS_CARD",
+      "protection": {
+        "cannot_be_destroyed": true
+      }
+    },
+    {
+      "effect_id": "KAGURA_BELL_IN_SOUL_PROTECTION",
+      "effect_type": "PROTECTION",
+      "condition": {
+        "type": "CARD_IS_IN_SOUL",
+        "host_card_type": "ITEM"
+      },
+      "target": "THIS_CARD",
+      "protection": {
+        "cannot_be_dropped_from_soul": true,
+        "host_cannot_be_returned_to_hand": true,
+        "source": "OPPONENT_CARD_EFFECT"
+      }
+    },
+    {
+      "effect_id": "KAGURA_BELL_END_TURN_RE_EQUIP",
+      "effect_type": "TRIGGERED",
+      "trigger": {
+        "event": "TURN_END"
+      },
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "Re:TH/001TH",
+        "ability_reference": "Re:TH/001TH: At the end of each player's turn, equip this card from an item's soul, and return the previously equipped card to hand.",
+        "missing_capability": "AUTO_EQUIP_FROM_SOUL_AND_BOUNCE_PREVIOUS",
+        "what_is_known": "At each turn end, equips this card out of the host item's soul, and bounces the host item to hand.",
+        "information_needed": [
+          "Approved schema for soul-to-equipped transition with previous host return."
+        ]
+      }
+    },
+    {
+      "effect_id": "KAGURA_BELL_ACT",
+      "effect_type": "ACTIVATED",
+      "name": "Kagura-bell of Worship",
+      "is_counter": true,
+      "condition": {
+        "type": "COUNT_PER_TURN",
+        "count": 1
+      },
+      "unsupported_mechanic": {
+        "status": "UNSUPPORTED_MECHANIC",
+        "card_reference": "Re:TH/001TH",
+        "ability_reference": "Re:TH/001TH: [Counter] 【Act】 [An/Turn] \"Kagura-bell of Worship\" If this card is equipped as an item, put a size 3 《Electrodeity》 from your hand on top of this card. The card put on top is treated as an item until it leaves the field.",
+        "missing_capability": "STACK_MONSTER_AS_ITEM_OVER_ITEM",
+        "what_is_known": "Places a size 3 monster from hand over this equipped item, converting its card type to ITEM until it leaves the field.",
+        "information_needed": [
+          "Approved schema for stack card over item with temporary card type mutation to ITEM."
+        ]
+      }
+    }
+  ],
+  "effect_text": {
+    "en": {
+      "plain": "This card on the field and items with this card in their souls cannot be destroyed.\nIf this card is in the soul of an item, this card cannot be dropped from the soul, and that item cannot be returned to hand, by your opponent's card effects.\nAt the end of each player's turn, equip this card from an item's soul, and return the previously equipped card to hand.\n[Counter] 【Act】 [An/Turn] \"Kagura-bell of Worship\" If this card is equipped as an item, put a size 3 《Electrodeity》 from your hand on top of this card. The card put on top is treated as an item until it leaves the field.",
+      "segments": [
+        {
+          "tag": "EFFECT",
+          "text": "This card on the field and items with this card in their souls cannot be destroyed."
+        },
+        {
+          "tag": "EFFECT",
+          "text": "If this card is in the soul of an item, this card cannot be dropped from the soul, and that item cannot be returned to hand, by your opponent's card effects."
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "At the end of each player's turn, equip this card from an item's soul, and return the previously equipped card to hand."
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] 【Act】 [An/Turn] \"Kagura-bell of Worship\" If this card is equipped as an item, put a size 3 《Electrodeity》 from your hand on top of this card. The card put on top is treated as an item until it leaves the field."
+        }
+      ]
+    },
+    "th": {
+      "plain": "การ์ดนี้บนสนาม และไอเท็มที่มีการ์ดนี้อยู่ในโซลไม่สามารถถูกทำลายได้\nถ้าการ์ดนี้อยู่ในโซลของไอเท็ม, การ์ดนี้ไม่สามารถถูกนำออกจากโซลลงช่องดรอป, และไอเท็มนั้นไม่สามารถถูกนำกลับขึ้นมือ โดยความสามารถการ์ดของคู่แข่ง\nเมื่อสิ้นสุดเทิร์นของผู้เล่นแต่ละคน, สวมใส่การ์ดนี้จากในโซลของไอเท็ม, และนำการ์ดที่สวมใส่อยู่ก่อนหน้านี้กลับขึ้นมือ\n[Counter] 【Act】 [An/Turn] \"กระดิ่งคางุระแห่งการบูชา\" ถ้าการ์ดนี้ถูกสวมใส่อยู่ในฐานะไอเท็ม, วาง 《เทพสายฟ้าแลบ》 ไซส์ 3 จากบนมือของคุณทับลงบนการ์ดนี้ การ์ดที่วางทับจะถือว่าเป็นไอเท็มจนกว่าจะออกจากสนาม",
+      "segments": [
+        {
+          "tag": "EFFECT",
+          "text": "การ์ดนี้บนสนาม และไอเท็มที่มีการ์ดนี้อยู่ในโซลไม่สามารถถูกทำลายได้"
+        },
+        {
+          "tag": "EFFECT",
+          "text": "ถ้าการ์ดนี้อยู่ในโซลของไอเท็ม, การ์ดนี้ไม่สามารถถูกนำออกจากโซลลงช่องดรอป, และไอเท็มนั้นไม่สามารถถูกนำกลับขึ้นมือ โดยความสามารถการ์ดของคู่แข่ง"
+        },
+        {
+          "tag": "TRIGGER",
+          "text": "เมื่อสิ้นสุดเทิร์นของผู้เล่นแต่ละคน, สวมใส่การ์ดนี้จากในโซลของไอเท็ม, และนำการ์ดที่สวมใส่อยู่ก่อนหน้านี้กลับขึ้นมือ"
+        },
+        {
+          "tag": "COUNTER",
+          "text": "[Counter] 【Act】 [An/Turn] \"กระดิ่งคางุระแห่งการบูชา\" ถ้าการ์ดนี้ถูกสวมใส่อยู่ในฐานะไอเท็ม, วาง 《เทพสายฟ้าแลบ》 ไซส์ 3 จากบนมือของคุณทับลงบนการ์ดนี้ การ์ดที่วางทับจะถือว่าเป็นไอเท็มจนกว่าจะออกจากสนาม"
+        }
+      ]
+    }
+  },
+  "image": null
+}

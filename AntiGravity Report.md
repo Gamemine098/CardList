@@ -70,11 +70,13 @@
 ---
 
 ## 2026-09-24
-- **Total New Cards Added**: 28 cards (`FD09/001`–`FD09/028`)
-- **Total Canonical Cards Migrated**: 28 cards (`FD09` to `database/cards/` and `database/images/`)
-- **Total Set Card Mappings Added**: 55 mappings across 12 sets
+- **Total New Cards Added**: 64 cards (`FD09/001`–`FD09/028`, `Re:TH/001TH`–`Re:TH/016TH`, `Re:TH/018TH`–`Re:TH/028TH`, `Re:TH/030TH`, `Re:TH/032TH`–`Re:TH/035TH`, `Re:TH/039TH`, `BFO-RP01/S001`–`BFO-RP01/S003`)
+- **Total Canonical Cards Migrated**: 64 cards (`FD09`, `Re:TH`, `BFO-RP01` to `database/cards/` and `database/images/`)
+- **Total Set Card Mappings Added**: 92 mappings across 14 sets
 - **Sets Processed**:
   - `FD09`: 28 card definitions (migrated to `database/cards/` and `database/images/`), 28 set mappings (`WIP/fighter_decks/FD09/fd09.json` and `database/sets/fd09.json`)
+  - `Re:TH`: 33 card definitions (migrated to `database/cards/` and `database/images/`), 34 set mappings (`WIP/Re-TH/Re-TH.json` and `database/sets/re-th.json`)
+  - `BFO-RP01`: 3 card definitions (migrated to `database/cards/` and `database/images/`), 3 set mappings (`WIP/bfo-rp01/bfo-rp01.json` and `database/sets/bfo-rp01.json`)
   - `S-SP`: 5 set mappings (`S-SP/0002`, `S-SP/0011`, `S-SP/0015`, `S-SP/0025`, `S-SP/0026` in `database/sets/s-sp.json`)
   - `X-BT04`: 1 set mapping (`X-BT04/0103` in `database/sets/x-bt04.json`)
   - `X-BT03`: 7 set mappings (`X-BT03/0010`, `X-BT03/0036`, `X-BT03/0069`, `X-BT03/0073`, `X-BT03/0077`, `X-BT03/0100`, `X-BT03/0101` in `database/sets/x-bt03.json`)
